@@ -9,39 +9,75 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KarnelTravels
 build_property.RootNamespace = KarnelTravels
-build_property.ProjectDir = E:\Source\KarnelTravels\KarnelTravels\
+build_property.ProjectDir = C:\KarnelTravelSem3\KarnelTravels\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\Source\KarnelTravels\KarnelTravels
+build_property.MSBuildProjectDirectory = C:\KarnelTravelSem3\KarnelTravels
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/Source/KarnelTravels/KarnelTravels/Views/Home/Index.cshtml]
+[C:/KarnelTravelSem3/KarnelTravels/Views/Home/AboutUsView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KarnelTravelSem3/KarnelTravels/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Source/KarnelTravels/KarnelTravels/Views/Home/Privacy.cshtml]
+[C:/KarnelTravelSem3/KarnelTravels/Views/Home/NewsView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZXdzVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KarnelTravelSem3/KarnelTravels/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Source/KarnelTravels/KarnelTravels/Views/Shared/Error.cshtml]
+[C:/KarnelTravelSem3/KarnelTravels/Views/Home/ProductView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0Vmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KarnelTravelSem3/KarnelTravels/Views/Home/TravellingHotelView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nSG90ZWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KarnelTravelSem3/KarnelTravels/Views/Home/TravellingPackageView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nUGFja2FnZVZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KarnelTravelSem3/KarnelTravels/Views/Home/TravellingRestaurantView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nUmVzdGF1cmFudFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KarnelTravelSem3/KarnelTravels/Views/Home/TravellingSightView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nU2lnaHRWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KarnelTravelSem3/KarnelTravels/Views/Home/TravellingTourView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nVG91clZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KarnelTravelSem3/KarnelTravels/Views/Home/TravellingTransportView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nVHJhbnNwb3J0Vmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KarnelTravelSem3/KarnelTravels/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Source/KarnelTravels/KarnelTravels/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/KarnelTravelSem3/KarnelTravels/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Source/KarnelTravels/KarnelTravels/Views/_ViewImports.cshtml]
+[C:/KarnelTravelSem3/KarnelTravels/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Source/KarnelTravels/KarnelTravels/Views/_ViewStart.cshtml]
+[C:/KarnelTravelSem3/KarnelTravels/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Source/KarnelTravels/KarnelTravels/Views/Shared/_Layout.cshtml]
+[C:/KarnelTravelSem3/KarnelTravels/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-f6nql8pbdo
