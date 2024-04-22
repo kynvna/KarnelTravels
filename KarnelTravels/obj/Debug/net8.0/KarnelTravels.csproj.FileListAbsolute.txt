@@ -271,3 +271,4 @@ C:\KarnelTravelSem3\KarnelTravels\obj\Debug\net8.0\refint\KarnelTravels.dll
 C:\KarnelTravelSem3\KarnelTravels\obj\Debug\net8.0\KarnelTravels.pdb
 C:\KarnelTravelSem3\KarnelTravels\obj\Debug\net8.0\KarnelTravels.genruntimeconfig.cache
 C:\KarnelTravelSem3\KarnelTravels\obj\Debug\net8.0\ref\KarnelTravels.dll
+E:\Source\KarnelTravels\KarnelTravels\obj\Debug\net8.0\KarnelTravels.sourcelink.json

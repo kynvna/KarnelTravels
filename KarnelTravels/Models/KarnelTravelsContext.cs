@@ -91,6 +91,10 @@ public partial class KarnelTravelsContext : DbContext
             entity.HasOne(d => d.Cat).WithMany(p => p.TblHotelRestaurants)
                 .HasForeignKey(d => d.CatId)
                 .HasConstraintName("FK__tblHotel___CatId__4BAC3F29");
+
+            entity.HasOne(d => d.ImageLink).WithMany(p => p.TblHotelRestaurants)
+                .HasForeignKey(d => d.ImageLinkId)
+                .HasConstraintName("FK_tblHotel_Restaurant_tblImage_Url");
         });
 
         modelBuilder.Entity<TblImageUrl>(entity =>
@@ -141,6 +145,10 @@ public partial class KarnelTravelsContext : DbContext
             entity.Property(e => e.TotalPrice)
                 .HasColumnType("money")
                 .HasColumnName("Total_price");
+
+            entity.HasOne(d => d.ImageLink).WithMany(p => p.TblTourPackages)
+                .HasForeignKey(d => d.ImageLinkId)
+                .HasConstraintName("FK_tblTour_Packages_tblImage_Url");
         });
 
         modelBuilder.Entity<TblTouristPlace>(entity =>
@@ -151,6 +159,10 @@ public partial class KarnelTravelsContext : DbContext
 
             entity.Property(e => e.Name).HasMaxLength(255);
             entity.Property(e => e.Status).HasMaxLength(50);
+
+            entity.HasOne(d => d.ImageLink).WithMany(p => p.TblTouristPlaces)
+                .HasForeignKey(d => d.ImageLinkId)
+                .HasConstraintName("FK_tblTourist_Place_tblImage_Url");
 
             entity.HasOne(d => d.Sport).WithMany(p => p.TblTouristPlaces)
                 .HasForeignKey(d => d.SportId)
@@ -178,6 +190,10 @@ public partial class KarnelTravelsContext : DbContext
             entity.Property(e => e.SpotDestination).HasColumnName("Spot_Destination");
             entity.Property(e => e.Status).HasMaxLength(50);
             entity.Property(e => e.TransCategoryId).HasColumnName("Trans_CategoryId");
+
+            entity.HasOne(d => d.ImageLink).WithMany(p => p.TblTravels)
+                .HasForeignKey(d => d.ImageLinkId)
+                .HasConstraintName("FK_tblTravel_tblImage_Url");
 
             entity.HasOne(d => d.TransCategory).WithMany(p => p.TblTravels)
                 .HasForeignKey(d => d.TransCategoryId)

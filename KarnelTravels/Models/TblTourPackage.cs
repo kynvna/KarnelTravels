@@ -15,5 +15,9 @@ public partial class TblTourPackage
 
     public decimal? TotalPrice { get; set; }
 
+    public int? ImageLinkId { get; set; }
+
     public int? SportId { get; set; }
+
+    public virtual TblImageUrl? ImageLink { get; set; }
 }

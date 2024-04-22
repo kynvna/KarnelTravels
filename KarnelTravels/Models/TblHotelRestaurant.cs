@@ -19,7 +19,11 @@ public partial class TblHotelRestaurant
 
     public string? Description { get; set; }
 
+    public int? ImageLinkId { get; set; }
+
     public string? Status { get; set; }
 
     public virtual HrCategory? Cat { get; set; }
+
+    public virtual TblImageUrl? ImageLink { get; set; }
 }

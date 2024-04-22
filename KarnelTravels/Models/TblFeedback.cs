@@ -15,6 +15,8 @@ public partial class TblFeedback
 
     public string? Feedback { get; set; }
 
+    public int? NumberofStar { get; set; }
+
     public string? Status { get; set; }
 
     public virtual TblCustomer? Customer { get; set; }
