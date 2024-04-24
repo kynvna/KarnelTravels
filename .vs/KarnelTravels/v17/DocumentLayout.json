@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\Source\\KarnelTravels\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\models\\tbltravel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\models\\tbltravel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\models\\tbltouristplace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\models\\tbltouristplace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Source\\KarnelTravels\\KarnelTravels\\KarnelTravelsContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:KarnelTravels\\KarnelTravelsContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -73,6 +73,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\karneltravelscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\karneltravelscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,7 +98,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "KarnelTravels\\ScaffoldingReadMe.txt",
+              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "KarnelTravels\\ScaffoldingReadMe.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-04-24T13:02:33.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "TblTouristPlace.cs",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\TblTouristPlace.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\Models\\TblTouristPlace.cs",
@@ -102,12 +119,11 @@
               "RelativeToolTip": "KarnelTravels\\Models\\TblTouristPlace.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAAAAsAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T12:55:58.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-24T12:55:58.618Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TblTravel.cs",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\TblTravel.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\Models\\TblTravel.cs",
@@ -120,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 18,
               "Title": "KarnelTravelsContext.cs",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\KarnelTravelsContext.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\KarnelTravelsContext.cs",
@@ -128,8 +144,7 @@
               "RelativeToolTip": "KarnelTravels\\KarnelTravelsContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T12:51:20.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-24T12:51:20.475Z"
             },
             {
               "$type": "Document",
@@ -141,8 +156,7 @@
               "RelativeToolTip": "KarnelTravels\\Models\\TblFeedback.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T16:23:31.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-22T16:23:31.007Z"
             },
             {
               "$type": "Document",
@@ -190,8 +204,7 @@
               "RelativeToolTip": "KarnelTravels\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-20T10:03:29.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T10:03:29.602Z"
             },
             {
               "$type": "Document",
