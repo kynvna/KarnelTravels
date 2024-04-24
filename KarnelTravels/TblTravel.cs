@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace KarnelTravels.Models;
+namespace KarnelTravels;
 
 public partial class TblTravel
 {
@@ -19,10 +19,9 @@ public partial class TblTravel
 
     public int? ImageLinkId { get; set; }
 
-    public string? Status { get; set; }
     public string? Name { get; set; }
 
-    public virtual TblImageUrl? ImageLink { get; set; }
+    public string? Status { get; set; }
 
     public virtual TblTransportation? TransCategory { get; set; }
 }
