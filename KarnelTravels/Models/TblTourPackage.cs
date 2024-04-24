@@ -17,7 +17,7 @@ public partial class TblTourPackage
 
     public int? ImageLinkId { get; set; }
 
-    public int? SportId { get; set; }
+    public string? Name { get; set; }
 
-    public virtual TblImageUrl? ImageLink { get; set; }
+    public int? SportId { get; set; }
 }

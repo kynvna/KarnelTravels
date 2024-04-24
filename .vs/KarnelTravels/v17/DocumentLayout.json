@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "E:\\Source\\KarnelTravels\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\models\\tbltravel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\models\\tbltravel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\models\\tbltouristplace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\models\\tbltouristplace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\models\\karneltravelscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\models\\karneltravelscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\models\\tblfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\models\\tblfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\areas\\administrator\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\areas\\administrator\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\models\\karneltravelscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\models\\karneltravelscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\models\\tbltouristplace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\models\\tbltouristplace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\models\\tblfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\models\\tblfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\views\\home\\travellingtourview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -69,14 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\views\\home\\aboutusview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\aboutusview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|e:\\source\\karneltravels\\karneltravels\\karneltravelscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\karneltravelscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,20 +98,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ScaffoldingReadMe.txt",
-              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\ScaffoldingReadMe.txt",
-              "RelativeDocumentMoniker": "KarnelTravels\\ScaffoldingReadMe.txt",
-              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\ScaffoldingReadMe.txt",
-              "RelativeToolTip": "KarnelTravels\\ScaffoldingReadMe.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-04-24T13:02:33.618Z",
+              "DocumentIndex": 3,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Areas\\Administrator\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "KarnelTravels\\Areas\\Administrator\\Controllers\\AdminController.cs",
+              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\Areas\\Administrator\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "KarnelTravels\\Areas\\Administrator\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAcwAkAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T13:27:59.313Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "TblTouristPlace.cs",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\TblTouristPlace.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\Models\\TblTouristPlace.cs",
@@ -123,44 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TblTravel.cs",
-              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\TblTravel.cs",
-              "RelativeDocumentMoniker": "KarnelTravels\\Models\\TblTravel.cs",
-              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\TblTravel.cs",
-              "RelativeToolTip": "KarnelTravels\\Models\\TblTravel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T12:55:42.139Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "KarnelTravelsContext.cs",
-              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\KarnelTravelsContext.cs",
-              "RelativeDocumentMoniker": "KarnelTravels\\KarnelTravelsContext.cs",
-              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\KarnelTravelsContext.cs",
-              "RelativeToolTip": "KarnelTravels\\KarnelTravelsContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T12:51:20.475Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TblFeedback.cs",
-              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\TblFeedback.cs",
-              "RelativeDocumentMoniker": "KarnelTravels\\Models\\TblFeedback.cs",
-              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\TblFeedback.cs",
-              "RelativeToolTip": "KarnelTravels\\Models\\TblFeedback.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T16:23:31.007Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\Index.cshtml",
@@ -172,7 +135,82 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\appsettings.json",
+              "RelativeDocumentMoniker": "KarnelTravels\\appsettings.json",
+              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\appsettings.json",
+              "RelativeToolTip": "KarnelTravels\\appsettings.json",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwAsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-20T10:03:29.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "KarnelTravelsContext.cs",
+              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\KarnelTravelsContext.cs",
+              "RelativeDocumentMoniker": "KarnelTravels\\Models\\KarnelTravelsContext.cs",
+              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\KarnelTravelsContext.cs",
+              "RelativeToolTip": "KarnelTravels\\Models\\KarnelTravelsContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T09:57:01.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TblTravel.cs",
+              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\TblTravel.cs",
+              "RelativeDocumentMoniker": "KarnelTravels\\Models\\TblTravel.cs",
+              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\TblTravel.cs",
+              "RelativeToolTip": "KarnelTravels\\Models\\TblTravel.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T12:55:42.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Program.cs",
+              "RelativeDocumentMoniker": "KarnelTravels\\Program.cs",
+              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\Program.cs",
+              "RelativeToolTip": "KarnelTravels\\Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAA0AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T10:13:50.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TblFeedback.cs",
+              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\TblFeedback.cs",
+              "RelativeDocumentMoniker": "KarnelTravels\\Models\\TblFeedback.cs",
+              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\TblFeedback.cs",
+              "RelativeToolTip": "KarnelTravels\\Models\\TblFeedback.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T16:23:31.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "KarnelTravels\\ScaffoldingReadMe.txt",
+              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "KarnelTravels\\ScaffoldingReadMe.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-04-24T13:02:33.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Shared\\_Layout.cshtml",
@@ -184,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "TravellingTourView.cshtml",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Views\\Home\\TravellingTourView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\TravellingTourView.cshtml",
@@ -196,31 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\appsettings.json",
-              "RelativeDocumentMoniker": "KarnelTravels\\appsettings.json",
-              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\appsettings.json",
-              "RelativeToolTip": "KarnelTravels\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-20T10:03:29.602Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "KarnelTravelsContext.cs",
-              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\KarnelTravelsContext.cs",
-              "RelativeDocumentMoniker": "KarnelTravels\\Models\\KarnelTravelsContext.cs",
-              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\Models\\KarnelTravelsContext.cs",
-              "RelativeToolTip": "KarnelTravels\\Models\\KarnelTravelsContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T09:57:01.856Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "TravellingRestaurantView.cshtml",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Views\\Home\\TravellingRestaurantView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\TravellingRestaurantView.cshtml",
@@ -232,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "HomeController.cs",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\Controllers\\HomeController.cs",
@@ -244,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "NewsView.cshtml",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Views\\Home\\NewsView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\NewsView.cshtml",
@@ -256,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "TravellingHotelView.cshtml",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Views\\Home\\TravellingHotelView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\TravellingHotelView.cshtml",
@@ -268,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "TravellingSightView.cshtml",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Views\\Home\\TravellingSightView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\TravellingSightView.cshtml",
@@ -280,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "ProductView.cshtml",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Views\\Home\\ProductView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\ProductView.cshtml",
@@ -292,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "TravellingTransportView.cshtml",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Views\\Home\\TravellingTransportView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\TravellingTransportView.cshtml",
@@ -304,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "AboutUsView.cshtml",
               "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Views\\Home\\AboutUsView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\AboutUsView.cshtml",
@@ -313,18 +327,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-22T06:51:51.807Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Source\\KarnelTravels\\KarnelTravels\\Program.cs",
-              "RelativeDocumentMoniker": "KarnelTravels\\Program.cs",
-              "ToolTip": "E:\\Source\\KarnelTravels\\KarnelTravels\\Program.cs",
-              "RelativeToolTip": "KarnelTravels\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T10:13:50.296Z"
             }
           ]
         }

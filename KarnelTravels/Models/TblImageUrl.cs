@@ -7,17 +7,11 @@ public partial class TblImageUrl
 {
     public string? Description { get; set; }
 
-    public int Id { get; set; }
-
     public string? Url { get; set; }
 
-    public virtual ICollection<TblHotelRestaurant> TblHotelRestaurants { get; set; } = new List<TblHotelRestaurant>();
+    public int Id { get; set; }
 
-    public virtual ICollection<TblNews> TblNews { get; set; } = new List<TblNews>();
+    public string? UrlObject { get; set; }
 
-    public virtual ICollection<TblTourPackage> TblTourPackages { get; set; } = new List<TblTourPackage>();
-
-    public virtual ICollection<TblTouristPlace> TblTouristPlaces { get; set; } = new List<TblTouristPlace>();
-
-    public virtual ICollection<TblTravel> TblTravels { get; set; } = new List<TblTravel>();
+    public int? ObjectId { get; set; }
 }

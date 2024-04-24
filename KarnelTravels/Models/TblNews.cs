@@ -16,6 +16,4 @@ public partial class TblNews
     public string? Status { get; set; }
 
     public string? NewsObject { get; set; }
-
-    public virtual TblImageUrl? ImageLinkI { get; set; }
 }

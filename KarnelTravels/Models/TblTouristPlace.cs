@@ -17,7 +17,5 @@ public partial class TblTouristPlace
 
     public string? Status { get; set; }
 
-    public virtual TblImageUrl? ImageLink { get; set; }
-
     public virtual TblSpot? Sport { get; set; }
 }

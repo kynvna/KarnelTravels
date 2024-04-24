@@ -17,6 +17,8 @@ public partial class KarnelTravelsContext : DbContext
 
     public virtual DbSet<HrCategory> HrCategories { get; set; }
 
+    public virtual DbSet<TblAdminuser> TblAdminusers { get; set; }
+
     public virtual DbSet<TblCustomer> TblCustomers { get; set; }
 
     public virtual DbSet<TblFeedback> TblFeedbacks { get; set; }
@@ -50,6 +52,17 @@ public partial class KarnelTravelsContext : DbContext
 
             entity.Property(e => e.CatName).HasMaxLength(255);
             entity.Property(e => e.Status).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<TblAdminuser>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToTable("tblAdminuser");
+
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            entity.Property(e => e.PassWord).HasMaxLength(50);
+            entity.Property(e => e.UserName).HasMaxLength(50);
         });
 
         modelBuilder.Entity<TblCustomer>(entity =>
@@ -91,19 +104,16 @@ public partial class KarnelTravelsContext : DbContext
             entity.HasOne(d => d.Cat).WithMany(p => p.TblHotelRestaurants)
                 .HasForeignKey(d => d.CatId)
                 .HasConstraintName("FK__tblHotel___CatId__4BAC3F29");
-
-            entity.HasOne(d => d.ImageLink).WithMany(p => p.TblHotelRestaurants)
-                .HasForeignKey(d => d.ImageLinkId)
-                .HasConstraintName("FK_tblHotel_Restaurant_tblImage_Url");
         });
 
         modelBuilder.Entity<TblImageUrl>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__tblImage__3214EC0766DF4823");
+            entity.HasKey(e => e.Id).HasName("PK__tblImage__3214EC076455E956");
 
             entity.ToTable("tblImage_Url");
 
             entity.Property(e => e.Description).HasMaxLength(10);
+            entity.Property(e => e.UrlObject).HasMaxLength(50);
         });
 
         modelBuilder.Entity<TblNews>(entity =>
@@ -118,10 +128,6 @@ public partial class KarnelTravelsContext : DbContext
                 .HasMaxLength(10)
                 .IsFixedLength();
             entity.Property(e => e.Status).HasMaxLength(50);
-
-            entity.HasOne(d => d.ImageLinkI).WithMany(p => p.TblNews)
-                .HasForeignKey(d => d.ImageLinkIid)
-                .HasConstraintName("FK_tblNews_tblImage_Url");
         });
 
         modelBuilder.Entity<TblSpot>(entity =>
@@ -141,14 +147,11 @@ public partial class KarnelTravelsContext : DbContext
             entity.ToTable("tblTour_Packages");
 
             entity.Property(e => e.EndDate).HasColumnName("End_date");
+            entity.Property(e => e.Name).HasMaxLength(10);
             entity.Property(e => e.StartDate).HasColumnName("Start_date");
             entity.Property(e => e.TotalPrice)
                 .HasColumnType("money")
                 .HasColumnName("Total_price");
-
-            entity.HasOne(d => d.ImageLink).WithMany(p => p.TblTourPackages)
-                .HasForeignKey(d => d.ImageLinkId)
-                .HasConstraintName("FK_tblTour_Packages_tblImage_Url");
         });
 
         modelBuilder.Entity<TblTouristPlace>(entity =>
@@ -157,12 +160,8 @@ public partial class KarnelTravelsContext : DbContext
 
             entity.ToTable("tblTourist_Place");
 
-            entity.Property(e => e.Name).HasMaxLength(255);
+            entity.Property(e => e.Name).HasMaxLength(50);
             entity.Property(e => e.Status).HasMaxLength(50);
-
-            entity.HasOne(d => d.ImageLink).WithMany(p => p.TblTouristPlaces)
-                .HasForeignKey(d => d.ImageLinkId)
-                .HasConstraintName("FK_tblTourist_Place_tblImage_Url");
 
             entity.HasOne(d => d.Sport).WithMany(p => p.TblTouristPlaces)
                 .HasForeignKey(d => d.SportId)
@@ -185,15 +184,12 @@ public partial class KarnelTravelsContext : DbContext
 
             entity.ToTable("tblTravel");
 
+            entity.Property(e => e.Name).HasMaxLength(50);
             entity.Property(e => e.Price).HasColumnType("money");
             entity.Property(e => e.SpotDeparture).HasColumnName("Spot_Departure");
             entity.Property(e => e.SpotDestination).HasColumnName("Spot_Destination");
             entity.Property(e => e.Status).HasMaxLength(50);
             entity.Property(e => e.TransCategoryId).HasColumnName("Trans_CategoryId");
-
-            entity.HasOne(d => d.ImageLink).WithMany(p => p.TblTravels)
-                .HasForeignKey(d => d.ImageLinkId)
-                .HasConstraintName("FK_tblTravel_tblImage_Url");
 
             entity.HasOne(d => d.TransCategory).WithMany(p => p.TblTravels)
                 .HasForeignKey(d => d.TransCategoryId)
