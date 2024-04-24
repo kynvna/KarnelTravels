@@ -2,7 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-<<<<<<< HEAD
 /.vs/KarnelTravels/FileContentIndex/0dcfd825-8e8c-4df6-9e2c-c6a4a7da82ff.vsidx
 /.vs/KarnelTravels/FileContentIndex/1ea30baf-362e-4918-b8ed-d2d1a2e60a9b.vsidx
 /.vs/KarnelTravels/FileContentIndex/569912bb-7df5-4152-9713-cae30c4acdea.vsidx
@@ -14,16 +13,8 @@
 /.vs/KarnelTravels/FileContentIndex/b0678930-2e77-4329-87ea-d119d51631e7.vsidx
 /.vs/KarnelTravels/FileContentIndex/1fb335be-7979-4ac6-98a9-b5c7d62dc70a.vsidx
 /.vs/KarnelTravels/FileContentIndex/5e92bfe5-56e6-44d4-95da-3d53f01bb022.vsidx
-=======
-/.vs/KarnelTravels/FileContentIndex/569912bb-7df5-4152-9713-cae30c4acdea.vsidx
-/.vs/KarnelTravels/FileContentIndex/58439721-9106-4ce1-a132-294d15d46d95.vsidx
-/.vs/KarnelTravels/FileContentIndex/6bf0c887-2eb6-4dc0-a8be-15f38e17be8c.vsidx
-/.vs/KarnelTravels/FileContentIndex/727b2f78-3fc3-45aa-b766-8ffdee193f8f.vsidx
-/.vs/KarnelTravels/FileContentIndex/b0678930-2e77-4329-87ea-d119d51631e7.vsidx
-/.vs/KarnelTravels/FileContentIndex/e2fcd182-2899-4efe-a24d-1b5e76bf228f.vsidx
-/.vs/KarnelTravels/FileContentIndex/e5f3ced8-5bec-4273-b394-a02d7f23565b.vsidx
-/.vs/KarnelTravels/FileContentIndex/1ea30baf-362e-4918-b8ed-d2d1a2e60a9b.vsidx
-/.vs/KarnelTravels/FileContentIndex/62f5791b-8a64-4dea-907f-4e30fa851265.vsidx
-/.vs/KarnelTravels/FileContentIndex/7d6827fd-d9e0-4c39-ab4b-cde4e18a3ccd.vsidx
-/.vs/KarnelTravels/FileContentIndex/85e92776-3225-4cc0-acd8-1c9bb7f0b927.vsidx
->>>>>>> origin/vonguyenhaidang
+/.vs/KarnelTravels/FileContentIndex/1bcd334d-fbfe-45f5-8fd2-ff056710c843.vsidx
+/.vs/KarnelTravels/FileContentIndex/6616bbac-8fee-489d-adba-62ccfc37c378.vsidx
+/.vs/KarnelTravels/FileContentIndex/7da29a0e-9964-449a-8315-36531e43d7d8.vsidx
+/.vs/KarnelTravels/FileContentIndex/a74d51cb-bc80-41b1-8227-6e3197ad1ad8.vsidx
+*.vsidx
