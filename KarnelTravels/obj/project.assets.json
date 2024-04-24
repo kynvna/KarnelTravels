@@ -4106,23 +4106,39 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Admin\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\HAI DANG\\.nuget\\packages\\": {},
+>>>>>>> origin/vonguyenhaidang
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\C#\\LuanAnCuoiKy\\Code\\Dang\\KarnelTravels\\KarnelTravels.csproj",
       "projectName": "KarnelTravels",
       "projectPath": "C:\\C#\\LuanAnCuoiKy\\Code\\Dang\\KarnelTravels\\KarnelTravels.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "C:\\C#\\LuanAnCuoiKy\\Code\\Dang\\KarnelTravels\\obj\\",
+=======
+      "projectUniqueName": "C:\\KarnelTravelSem3\\KarnelTravels\\KarnelTravels.csproj",
+      "projectName": "KarnelTravels",
+      "projectPath": "C:\\KarnelTravelSem3\\KarnelTravels\\KarnelTravels.csproj",
+      "packagesPath": "C:\\Users\\HAI DANG\\.nuget\\packages\\",
+      "outputPath": "C:\\KarnelTravelSem3\\KarnelTravels\\obj\\",
+>>>>>>> origin/vonguyenhaidang
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\HAI DANG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> origin/vonguyenhaidang
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

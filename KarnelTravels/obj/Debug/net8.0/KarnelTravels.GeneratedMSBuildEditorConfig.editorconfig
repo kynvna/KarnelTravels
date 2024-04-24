@@ -18,12 +18,48 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\C#\LuanAnCuoiKy\Code\Dang\KarnelTravels
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/C\#/LuanAnCuoiKy/Code/Dang/KarnelTravels/Views/Home/AboutUsView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/C\#/LuanAnCuoiKy/Code/Dang/KarnelTravels/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/C\#/LuanAnCuoiKy/Code/Dang/KarnelTravels/Views/Home/NewsView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZXdzVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/C\#/LuanAnCuoiKy/Code/Dang/KarnelTravels/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/C\#/LuanAnCuoiKy/Code/Dang/KarnelTravels/Views/Home/ProductView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0Vmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/C\#/LuanAnCuoiKy/Code/Dang/KarnelTravels/Views/Home/TravellingHotelView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nSG90ZWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/C\#/LuanAnCuoiKy/Code/Dang/KarnelTravels/Views/Home/TravellingPackageView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nUGFja2FnZVZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/C\#/LuanAnCuoiKy/Code/Dang/KarnelTravels/Views/Home/TravellingRestaurantView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nUmVzdGF1cmFudFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/C\#/LuanAnCuoiKy/Code/Dang/KarnelTravels/Views/Home/TravellingSightView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nU2lnaHRWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/C\#/LuanAnCuoiKy/Code/Dang/KarnelTravels/Views/Home/TravellingTourView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nVG91clZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/C\#/LuanAnCuoiKy/Code/Dang/KarnelTravels/Views/Home/TravellingTransportView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nVHJhbnNwb3J0Vmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/C\#/LuanAnCuoiKy/Code/Dang/KarnelTravels/Views/Shared/Error.cshtml]
