@@ -271,3 +271,10 @@ C:\KarnelTravelSem3\KarnelTravels\obj\Debug\net8.0\refint\KarnelTravels.dll
 C:\KarnelTravelSem3\KarnelTravels\obj\Debug\net8.0\KarnelTravels.pdb
 C:\KarnelTravelSem3\KarnelTravels\obj\Debug\net8.0\KarnelTravels.genruntimeconfig.cache
 C:\KarnelTravelSem3\KarnelTravels\obj\Debug\net8.0\ref\KarnelTravels.dll
+C:\KarnelTravelSem3\KarnelTravels\bin\Debug\net8.0\System.Web.Mvc.dll
+C:\KarnelTravelSem3\KarnelTravels\bin\Debug\net8.0\System.Web.Razor.dll
+C:\KarnelTravelSem3\KarnelTravels\bin\Debug\net8.0\System.Web.Helpers.dll
+C:\KarnelTravelSem3\KarnelTravels\bin\Debug\net8.0\System.Web.WebPages.Deployment.dll
+C:\KarnelTravelSem3\KarnelTravels\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
+C:\KarnelTravelSem3\KarnelTravels\bin\Debug\net8.0\System.Web.WebPages.dll
+C:\KarnelTravelSem3\KarnelTravels\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll

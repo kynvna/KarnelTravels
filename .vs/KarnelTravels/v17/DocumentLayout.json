@@ -3,52 +3,80 @@
   "WorkspaceRootPath": "C:\\KarnelTravelSem3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\travellingtourview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\travellingtourview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\admin\\admintransportview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\admin\\admintransportview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\admin\\sitemap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\admin\\sitemap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\user\\aboutusview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\user\\aboutusview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\travellingpackageview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\travellingpackageview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\scripts\\ckeditor\\config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\scripts\\ckeditor\\config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\newsview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\newsview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\admin\\adminprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\admin\\adminprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\travellingsightview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\travellingsightview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\user\\travellingtourview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\user\\travellingtourview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\travellingrestaurantview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\travellingrestaurantview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\user\\travellingsightview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\user\\travellingsightview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\travellinghotelview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\travellinghotelview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\user\\travellingrestaurantview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\user\\travellingrestaurantview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\productview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\productview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\user\\travellingpackageview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\user\\travellingpackageview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\travellingtransportview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\travellingtransportview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\user\\travellinghotelview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\user\\travellinghotelview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\aboutusview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\aboutusview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\user\\newsview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\user\\newsview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\user\\travellingtransportview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\user\\travellingtransportview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\views\\home\\user\\productview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\user\\productview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\models\\karneltravelscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|c:\\karneltravelsem3\\karneltravels\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -81,67 +105,105 @@
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
+              "Title": "AboutUsView.cshtml",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\AboutUsView.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\AboutUsView.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\AboutUsView.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\AboutUsView.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T06:51:51.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "TravellingRestaurantView.cshtml",
-              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\TravellingRestaurantView.cshtml",
-              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\TravellingRestaurantView.cshtml",
-              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\TravellingRestaurantView.cshtml",
-              "RelativeToolTip": "KarnelTravels\\Views\\Home\\TravellingRestaurantView.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAkAAAA",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\TravellingRestaurantView.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingRestaurantView.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\TravellingRestaurantView.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\TravellingRestaurantView.cshtml",
+              "ViewState": "AQIAABEAAAAAAAAAAIBJwB0AAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-22T07:43:50.001Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "KarnelTravels\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAIwF0AAABLAAAA",
+              "DocumentIndex": 9,
+              "Title": "AdminProfile.cshtml",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\Admin\\AdminProfile.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\Admin\\AdminProfile.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\Admin\\AdminProfile.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\Admin\\AdminProfile.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-22T04:09:27.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-24T11:38:07.546Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TravellingTourView.cshtml",
-              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\TravellingTourView.cshtml",
-              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\TravellingTourView.cshtml",
-              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\TravellingTourView.cshtml",
-              "RelativeToolTip": "KarnelTravels\\Views\\Home\\TravellingTourView.cshtml",
-              "ViewState": "AQIAAKUBAAAAAAAAAAAIwLIBAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-22T07:02:23.815Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "KarnelTravels\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAPgBAAA1AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-20T10:33:37.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T10:33:37.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\Login.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\Login.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACwAAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-24T07:57:35.879Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "TravellingPackageView.cshtml",
-              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\TravellingPackageView.cshtml",
-              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\TravellingPackageView.cshtml",
-              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\TravellingPackageView.cshtml",
-              "RelativeToolTip": "KarnelTravels\\Views\\Home\\TravellingPackageView.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAmAAAA",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAIwFUAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-22T07:57:37.452Z"
+              "WhenOpened": "2024-04-22T04:09:27.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AQIAANMAAAAAAAAAAAAAAOUAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-24T07:56:47.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminTransportView.cshtml",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\Admin\\AdminTransportView.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\Admin\\AdminTransportView.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\Admin\\AdminTransportView.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\Admin\\AdminTransportView.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-24T11:37:31.16Z"
             },
             {
               "$type": "Document",
@@ -151,98 +213,133 @@
               "RelativeDocumentMoniker": "KarnelTravels\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Controllers\\HomeController.cs",
               "RelativeToolTip": "KarnelTravels\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAowEYAAAAJAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAiwDgAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T10:27:21.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T10:27:21.667Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NewsView.cshtml",
-              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\NewsView.cshtml",
-              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\NewsView.cshtml",
-              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\NewsView.cshtml",
-              "RelativeToolTip": "KarnelTravels\\Views\\Home\\NewsView.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAdAAAA",
+              "DocumentIndex": 3,
+              "Title": "Sitemap.cshtml",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\Admin\\Sitemap.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\Admin\\Sitemap.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\Admin\\Sitemap.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\Admin\\Sitemap.cshtml",
+              "ViewState": "AQIAABkAAAAAAAAAAAAmwBYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-22T07:51:40.406Z"
+              "WhenOpened": "2024-04-24T10:09:41.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TravellingTourView.cshtml",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\TravellingTourView.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingTourView.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\TravellingTourView.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\TravellingTourView.cshtml",
+              "ViewState": "AQIAAAIAAAAAAAAAAABRwB0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T07:02:23.815Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "config.js",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Scripts\\ckeditor\\config.js",
+              "RelativeDocumentMoniker": "KarnelTravels\\Scripts\\ckeditor\\config.js",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Scripts\\ckeditor\\config.js",
+              "RelativeToolTip": "KarnelTravels\\Scripts\\ckeditor\\config.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-24T13:48:17.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "TravellingHotelView.cshtml",
-              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\TravellingHotelView.cshtml",
-              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\TravellingHotelView.cshtml",
-              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\TravellingHotelView.cshtml",
-              "RelativeToolTip": "KarnelTravels\\Views\\Home\\TravellingHotelView.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAoAAAA",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\TravellingHotelView.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingHotelView.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\TravellingHotelView.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\TravellingHotelView.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAYwBkAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-22T06:57:45.466Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
+              "Title": "TravellingPackageView.cshtml",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\TravellingPackageView.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingPackageView.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\TravellingPackageView.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\TravellingPackageView.cshtml",
+              "ViewState": "AQIAABQAAAAAAAAAAIBJwC4AAAB+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T07:57:37.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "TravellingSightView.cshtml",
-              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\TravellingSightView.cshtml",
-              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\TravellingSightView.cshtml",
-              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\TravellingSightView.cshtml",
-              "RelativeToolTip": "KarnelTravels\\Views\\Home\\TravellingSightView.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAfAAAA",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAIBJwB4AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-22T07:01:55.921Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "ProductView.cshtml",
-              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\ProductView.cshtml",
-              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\ProductView.cshtml",
-              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\ProductView.cshtml",
-              "RelativeToolTip": "KarnelTravels\\Views\\Home\\ProductView.cshtml",
-              "ViewState": "AQIAAMYBAAAAAAAAAAAkwOIBAAAAAAAA",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\ProductView.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\ProductView.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\ProductView.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\ProductView.cshtml",
+              "ViewState": "AQIAAKoBAAAAAAAAAAAQwMABAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-22T04:55:21.674Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
+              "Title": "NewsView.cshtml",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\NewsView.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\NewsView.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\NewsView.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\NewsView.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAIBJwCwAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T07:51:40.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "TravellingTransportView.cshtml",
-              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\TravellingTransportView.cshtml",
-              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\TravellingTransportView.cshtml",
-              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\TravellingTransportView.cshtml",
-              "RelativeToolTip": "KarnelTravels\\Views\\Home\\TravellingTransportView.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\TravellingTransportView.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingTransportView.cshtml",
+              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\User\\TravellingTransportView.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\TravellingTransportView.cshtml",
+              "ViewState": "AQIAAAoAAAAAAAAAAIBJwB0AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-22T07:02:08.533Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AboutUsView.cshtml",
-              "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\AboutUsView.cshtml",
-              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\AboutUsView.cshtml",
-              "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Views\\Home\\AboutUsView.cshtml",
-              "RelativeToolTip": "KarnelTravels\\Views\\Home\\AboutUsView.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-22T06:51:51.807Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Program.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\Program.cs",
               "ToolTip": "C:\\KarnelTravelSem3\\KarnelTravels\\Program.cs",
               "RelativeToolTip": "KarnelTravels\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAlAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAD4vxsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T10:13:50.296Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\appsettings.json",
               "RelativeDocumentMoniker": "KarnelTravels\\appsettings.json",
@@ -254,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "KarnelTravelsContext.cs",
               "DocumentMoniker": "C:\\KarnelTravelSem3\\KarnelTravels\\Models\\KarnelTravelsContext.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\Models\\KarnelTravelsContext.cs",
