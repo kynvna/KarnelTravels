@@ -17,10 +17,10 @@ namespace KarnelTravels.Controllers
             _logger = logger;
         }
         //SITEMAP - a quick routing for debugging and quick access
-        public IActionResult Help()
-        {
-            return View("Admin/Sitemap");
-        }
+        //public IActionResult Help()
+        //{
+        //    return View("Admin/Sitemap");
+        //}
         //---------------------------------------------------------------------------
 
         //--ROUTINGS FOR REGULAR REDIRECT--
@@ -28,34 +28,34 @@ namespace KarnelTravels.Controllers
         {
             return View();
         }
-        public IActionResult AdminTransportView()
-        {
-            return View("Admin/AdminTransportView");
-        }
-        public IActionResult AdminTourView()
-        {
-            return View("Admin/AdminTourView");
-        }
-        public IActionResult AdminSightView()
-        {
-            return View("Admin/AdminSightView");
-        }
-        public IActionResult AdminSpotView()
-        {
-            return View("Admin/AdminSpotView");
-        }
-        public IActionResult AdminHotelView()
-        {
-            return View("Admin/AdminHotelView");
-        }
-        public IActionResult FeedbackOnObj()
-        {
-            return View("Admin/FeedbackOnObj");
-        }
-        public IActionResult FeedbackOnComp()
-        {
-            return View("Admin/FeedbackOnComp");
-        }
+        //public IActionResult AdminTransportView()
+        //{
+        //    return View("Admin/AdminTransportView");
+        //}
+        //public IActionResult AdminTourView()
+        //{
+        //    return View("Admin/AdminTourView");
+        //}
+        //public IActionResult AdminSightView()
+        //{
+        //    return View("Admin/AdminSightView");
+        //}
+        //public IActionResult AdminSpotView()
+        //{
+        //    return View("Admin/AdminSpotView");
+        //}
+        //public IActionResult AdminHotelView()
+        //{
+        //    return View("Admin/AdminHotelView");
+        //}
+        //public IActionResult FeedbackOnObj()
+        //{
+        //    return View("Admin/FeedbackOnObj");
+        //}
+        //public IActionResult FeedbackOnComp()
+        //{
+        //    return View("Admin/FeedbackOnComp");
+        //}
         public IActionResult ProductView()
         {
             return View("User/ProductView");
@@ -92,10 +92,10 @@ namespace KarnelTravels.Controllers
         {
             return View("User/NewsView");
         }
-        public IActionResult Login()
-        {
-            return View();
-        }
+        //public IActionResult Login()
+        //{
+        //    return View();
+        //}
         public IActionResult AdminProfile()
         {
             return View("Admin/AdminProfile");
