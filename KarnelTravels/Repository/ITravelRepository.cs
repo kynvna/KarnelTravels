@@ -28,11 +28,24 @@ namespace KarnelTravels.Repository
             return plane;
         }
 
+        
 
         public IEnumerable<TblTravel> GetAllTrain()
         {
             var train = _context.TblTravels.Where(c => c.TransCategoryId == 2).ToList();
             return train;
+        }
+
+        public IEnumerable<TblTransportation> GetAllTransportation()
+        {
+            var ls = _context.TblTransportations.ToList();
+            return ls;
+        }
+
+        public IEnumerable<TblTravel>SpotSearch(int tran, int spot , int spot1)
+        {
+            var ls = _context.TblTravels.Where(s => s.SpotDeparture == spot && s.SpotDestination == spot1 && s.TransCategoryId == tran).ToList();
+            return ls;
         }
         public IEnumerable<TblTravel> SearchTravel( string keyWord)
         {

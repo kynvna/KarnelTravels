@@ -162,13 +162,33 @@ namespace KarnelTravels.Controllers
         {
             GetCar_Plane_Train getTran = new GetCar_Plane_Train();
             ITravelRepository travelRepository = new ITravelRepository(_context);
+            ISpotRepository spotRepository = new ISpotRepository(_context);
+            var spot = spotRepository.GetAllSpot();
             var all = travelRepository.GetAllTrain();
             var car = travelRepository.GetAllCar();
             var plane = travelRepository.GetAllPlane();
             var train = travelRepository.GetAllTrain();
+            var Transportation = travelRepository.GetAllTransportation();
             getTran.All = all;
             getTran.Cars = car;
-            return View();
+            getTran.Spots = spot;
+            getTran.Transportations = Transportation;
+            return View(getTran);
+        }
+
+        public IActionResult TravellingTransportViewSearch(int tran,int spot,int spot1)
+        {
+            ITravelRepository travelRepository = new ITravelRepository(_context);
+            GetCar_Plane_Train getTran = new GetCar_Plane_Train();
+            ISpotRepository spotRepository = new ISpotRepository(_context);
+            var spotall = spotRepository.GetAllSpot();
+            
+            var Transportation = travelRepository.GetAllTransportation();
+            getTran.Spots = spotall;
+            getTran.Transportations = Transportation;
+            var q = travelRepository.SpotSearch(tran, spot, spot1);
+            getTran.All = q;
+            return View(getTran);
         }
         public IActionResult NewsView()
         {

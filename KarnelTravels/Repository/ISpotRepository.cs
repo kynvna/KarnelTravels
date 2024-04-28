@@ -9,6 +9,12 @@ namespace KarnelTravels.Repository
         {
             _context = context;
         }
+        public IEnumerable<TblSpot> GetAllSpot()
+        {
+            var all = _context.TblSpots.ToList();
+            return all;
+        }
+
 
         public TblSpot SearchSpot(string keyWord)
         {

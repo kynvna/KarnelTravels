@@ -6,5 +6,6 @@
         public IEnumerable<TblHotelRestaurant> HotelS{ get; set; }
         public IEnumerable<TblHotelRestaurant> Restaurants { get; set; }
         public IEnumerable<TblHotelRestaurant> Resortt {  get; set; }
+        
     }
 }
