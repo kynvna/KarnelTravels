@@ -18,48 +18,48 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\KARNELTRAVEL\KarnelTravels
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/KARNELTRAVEL/KarnelTravels/Views/Home/Admin/AdminHotelView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pblxBZG1pbkhvdGVsVmlldy5jc2h0bWw=
+[D:/KARNELTRAVEL/KarnelTravels/Views/Admin/AdminHotelView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Ib3RlbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/KARNELTRAVEL/KarnelTravels/Views/Home/Admin/AdminProfile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pblxBZG1pblByb2ZpbGUuY3NodG1s
+[D:/KARNELTRAVEL/KarnelTravels/Views/Admin/AdminProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Qcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/KARNELTRAVEL/KarnelTravels/Views/Home/Admin/AdminSightView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pblxBZG1pblNpZ2h0Vmlldy5jc2h0bWw=
+[D:/KARNELTRAVEL/KarnelTravels/Views/Admin/AdminSightView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5TaWdodFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/KARNELTRAVEL/KarnelTravels/Views/Home/Admin/AdminSpotView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pblxBZG1pblNwb3RWaWV3LmNzaHRtbA==
+[D:/KARNELTRAVEL/KarnelTravels/Views/Admin/AdminSpotView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5TcG90Vmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/KARNELTRAVEL/KarnelTravels/Views/Home/Admin/AdminTourView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pblxBZG1pblRvdXJWaWV3LmNzaHRtbA==
+[D:/KARNELTRAVEL/KarnelTravels/Views/Admin/AdminTourView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Ub3VyVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/KARNELTRAVEL/KarnelTravels/Views/Home/Admin/AdminTransportView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pblxBZG1pblRyYW5zcG9ydFZpZXcuY3NodG1s
+[D:/KARNELTRAVEL/KarnelTravels/Views/Admin/AdminTransportView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5UcmFuc3BvcnRWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/KARNELTRAVEL/KarnelTravels/Views/Home/Admin/FeedbackOnComp.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pblxGZWVkYmFja09uQ29tcC5jc2h0bWw=
+[D:/KARNELTRAVEL/KarnelTravels/Views/Admin/FeedbackOnComp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRmVlZGJhY2tPbkNvbXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/KARNELTRAVEL/KarnelTravels/Views/Home/Admin/FeedbackOnObj.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pblxGZWVkYmFja09uT2JqLmNzaHRtbA==
+[D:/KARNELTRAVEL/KarnelTravels/Views/Admin/FeedbackOnObj.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRmVlZGJhY2tPbk9iai5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/KARNELTRAVEL/KarnelTravels/Views/Home/Admin/Sitemap.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pblxTaXRlbWFwLmNzaHRtbA==
+[D:/KARNELTRAVEL/KarnelTravels/Views/Admin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KARNELTRAVEL/KarnelTravels/Views/Admin/Sitemap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2l0ZW1hcC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/KARNELTRAVEL/KarnelTravels/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/KARNELTRAVEL/KarnelTravels/Views/Home/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/KARNELTRAVEL/KarnelTravels/Views/Home/Privacy.cshtml]

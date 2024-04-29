@@ -17,6 +17,10 @@ public partial class TblTravel
 
     public string? Description { get; set; }
 
+    public int? ImageLinkId { get; set; }
+
+    public string? Name { get; set; }
+
     public string? Status { get; set; }
 
     public virtual TblTransportation? TransCategory { get; set; }

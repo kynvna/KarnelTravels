@@ -278,6 +278,7 @@ C:\KarnelTravelSem3\KarnelTravels\bin\Debug\net8.0\System.Web.WebPages.Deploymen
 C:\KarnelTravelSem3\KarnelTravels\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
 C:\KarnelTravelSem3\KarnelTravels\bin\Debug\net8.0\System.Web.WebPages.dll
 C:\KarnelTravelSem3\KarnelTravels\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll
+<<<<<<< HEAD
 D:\KARNELTRAVEL\KarnelTravels\bin\Debug\net8.0\appsettings.Development.json
 D:\KARNELTRAVEL\KarnelTravels\bin\Debug\net8.0\appsettings.json
 D:\KARNELTRAVEL\KarnelTravels\bin\Debug\net8.0\KarnelTravels.staticwebassets.runtime.json
@@ -422,3 +423,13 @@ D:\KARNELTRAVEL\KarnelTravels\obj\Debug\net8.0\refint\KarnelTravels.dll
 D:\KARNELTRAVEL\KarnelTravels\obj\Debug\net8.0\KarnelTravels.pdb
 D:\KARNELTRAVEL\KarnelTravels\obj\Debug\net8.0\KarnelTravels.genruntimeconfig.cache
 D:\KARNELTRAVEL\KarnelTravels\obj\Debug\net8.0\ref\KarnelTravels.dll
+=======
+E:\Source\KarnelTravels\KarnelTravels\bin\Debug\net8.0\System.Web.Mvc.dll
+E:\Source\KarnelTravels\KarnelTravels\bin\Debug\net8.0\System.Web.Razor.dll
+E:\Source\KarnelTravels\KarnelTravels\bin\Debug\net8.0\System.Web.Helpers.dll
+E:\Source\KarnelTravels\KarnelTravels\bin\Debug\net8.0\System.Web.WebPages.Deployment.dll
+E:\Source\KarnelTravels\KarnelTravels\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
+E:\Source\KarnelTravels\KarnelTravels\bin\Debug\net8.0\System.Web.WebPages.dll
+E:\Source\KarnelTravels\KarnelTravels\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll
+E:\Source\KarnelTravels\KarnelTravels\obj\Debug\net8.0\KarnelTravels.sourcelink.json
+>>>>>>> origin/ky
