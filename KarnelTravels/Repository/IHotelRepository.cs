@@ -1,4 +1,5 @@
 ﻿using KarnelTravels.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Security.AccessControl;
 namespace KarnelTravels.Repository
 {
@@ -30,6 +31,39 @@ namespace KarnelTravels.Repository
             return ls;
         }
 
+        public TblHotelRestaurant GetTblHotelRestaurantById(int id)
+        {
+            return _context.TblHotelRestaurants.FirstOrDefault(t => t.HrId == id);
+        }
+
+        public void EditHotelRestaurant(int id , TblHotelRestaurant model)
+        {
+            if(id != null && model != null)
+            {
+                var ht = _context.TblHotelRestaurants.Find(id);
+                if(ht != null)
+                {
+                    _context.Attach(ht);
+
+                    ht.Price = model.Price;
+                    ht.Name = model.Name;
+                    ht.Status = model.Status;
+                    ht.SpotId = model.SpotId;
+                    ht.Imglink = model.Imglink;
+                    ht.ImageLinkId = model.ImageLinkId;
+                    ht.CatId = model.CatId;
+
+
+
+                    _context.SaveChanges();
+                }
+            }
+        }
+        public IEnumerable<HrCategory> GetAllHR()
+        {
+            var ls = _context.HrCategories.ToList();
+            return ls;
+        }
 
         public IEnumerable<TblHotelRestaurant> SearchHotel(string keyWord)
         {
