@@ -17,7 +17,7 @@ namespace KarnelTravels.Controllers
         //SITEMAP - a quick routing for debugging and quick access
         public IActionResult Help()
         {
-            return View("Admin/Sitemap");
+            return View("Sitemap");
         }
         public IActionResult Login()
         {

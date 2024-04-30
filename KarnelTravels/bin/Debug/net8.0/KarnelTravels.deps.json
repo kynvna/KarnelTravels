@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v8.0": {
       "KarnelTravels/1.0.0": {
         "dependencies": {
-          "Azure.Identity": "1.10.3",
           "CKEditor": "3.6.4",
           "Microsoft.AspNet.Mvc": "5.3.0",
           "Microsoft.EntityFrameworkCore": "8.0.4",

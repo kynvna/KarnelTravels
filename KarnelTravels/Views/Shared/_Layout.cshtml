@@ -54,7 +54,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a asp-controller="Home" asp-action="Index" class="nav-item nav-link active">Home</a>
-                        <a asp-controller="Home" asp-action="TravellingPackageView" class="nav-item nav-link">Package Travelling</a>
+                        <a asp-controller="Home" asp-action="TravellingPackageView" class="nav-item nav-link">Package</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travelling</a>
                             
@@ -68,8 +68,9 @@
                         </div>
                         <a asp-controller="Home" asp-action="NewsView" class="nav-item nav-link">News</a>
                         <a asp-controller="Home" asp-action="AboutUsView" class="nav-item nav-link">About us</a>
+                        <a asp-controller="Admin" asp-action="Login" class="nav-item nav-link">Admin</a>
                     </div>
-                    <a class="btn btn-primary px-3 d-none d-lg-flex">Leave Feedback</a>
+                    <a class="btn btn-primary px-3 d-none d-lg-flex" asp-controller="Home" asp-action="FeedbackOnCompany">Leave Feedback</a>
                 </div>
             </nav>
         </div>

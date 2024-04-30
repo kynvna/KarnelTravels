@@ -92,15 +92,10 @@ namespace KarnelTravels.Controllers
         {
             return View("User/NewsView");
         }
-        //public IActionResult Login()
-        //{
-        //    return View();
-        //}
-        public IActionResult AdminProfile()
+        public IActionResult FeedbackOnCompany()
         {
-            return View("Admin/AdminProfile");
+            return View("User/FeedbackOnCompany");
         }
-
         public IActionResult Privacy()
         {
             _logger.LogInformation("Accessing Privacy page.");
