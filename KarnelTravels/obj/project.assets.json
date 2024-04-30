@@ -4112,11 +4112,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\C#\\LuanAnCuoiKy\\Code\\Dang\\KarnelTravels\\KarnelTravels.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\KarnelTravels\\KarnelTravels\\KarnelTravels.csproj",
       "projectName": "KarnelTravels",
-      "projectPath": "C:\\C#\\LuanAnCuoiKy\\Code\\Dang\\KarnelTravels\\KarnelTravels.csproj",
+      "projectPath": "C:\\Users\\Admin\\Source\\Repos\\KarnelTravels\\KarnelTravels\\KarnelTravels.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\C#\\LuanAnCuoiKy\\Code\\Dang\\KarnelTravels\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Source\\Repos\\KarnelTravels\\KarnelTravels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
