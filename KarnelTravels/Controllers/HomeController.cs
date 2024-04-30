@@ -16,6 +16,12 @@ namespace KarnelTravels.Controllers
             _context = context;
             _logger = logger;
         }
+        //SITEMAP - a quick routing for debugging and quick access
+        //public IActionResult Help()
+        //{
+        //    return View("Admin/Sitemap");
+        //}
+        //---------------------------------------------------------------------------
 
         public IActionResult Index()
         {
@@ -26,6 +32,81 @@ namespace KarnelTravels.Controllers
 
             return View();
         }
+<<<<<<< HEAD
+=======
+        //public IActionResult AdminTransportView()
+        //{
+        //    return View("Admin/AdminTransportView");
+        //}
+        //public IActionResult AdminTourView()
+        //{
+        //    return View("Admin/AdminTourView");
+        //}
+        //public IActionResult AdminSightView()
+        //{
+        //    return View("Admin/AdminSightView");
+        //}
+        //public IActionResult AdminSpotView()
+        //{
+        //    return View("Admin/AdminSpotView");
+        //}
+        //public IActionResult AdminHotelView()
+        //{
+        //    return View("Admin/AdminHotelView");
+        //}
+        //public IActionResult FeedbackOnObj()
+        //{
+        //    return View("Admin/FeedbackOnObj");
+        //}
+        //public IActionResult FeedbackOnComp()
+        //{
+        //    return View("Admin/FeedbackOnComp");
+        //}
+        public IActionResult ProductView()
+        {
+            return View("User/ProductView");
+        }
+        public IActionResult AboutUsView()
+        {
+            return View("User/AboutUsView");
+        }
+        public IActionResult TravellingHotelView()
+        {
+            return View("User/TravellingHotelView");
+        }
+        public IActionResult TravellingRestaurantView()
+        {
+            return View("User/TravellingRestaurantView");
+        }
+        public IActionResult TravellingSightView()
+        {
+            return View("User/TravellingSightView");
+        }
+        public IActionResult TravellingPackageView()
+        {
+            return View("User/TravellingPackageView");
+        }
+        public IActionResult TravellingTourView()
+        {
+            return View("User/TravellingTourView");
+        }
+        public IActionResult TravellingTransportView()
+        {
+            return View("User/TravellingTransportView");
+        }
+        public IActionResult NewsView()
+        {
+            return View("User/NewsView");
+        }
+        //public IActionResult Login()
+        //{
+        //    return View();
+        //}
+        public IActionResult AdminProfile()
+        {
+            return View("Admin/AdminProfile");
+        }
+>>>>>>> origin/ky
 
         public IActionResult Privacy()
         {

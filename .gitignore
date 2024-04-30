@@ -2,10 +2,22 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+<<<<<<< HEAD
 /.vs/KarnelTravels/FileContentIndex/0dcfd825-8e8c-4df6-9e2c-c6a4a7da82ff.vsidx
+=======
+/.vs/KarnelTravels/FileContentIndex/569912bb-7df5-4152-9713-cae30c4acdea.vsidx
+/.vs/KarnelTravels/FileContentIndex/58439721-9106-4ce1-a132-294d15d46d95.vsidx
+/.vs/KarnelTravels/FileContentIndex/6bf0c887-2eb6-4dc0-a8be-15f38e17be8c.vsidx
+/.vs/KarnelTravels/FileContentIndex/727b2f78-3fc3-45aa-b766-8ffdee193f8f.vsidx
+/.vs/KarnelTravels/FileContentIndex/b0678930-2e77-4329-87ea-d119d51631e7.vsidx
+/.vs/KarnelTravels/FileContentIndex/e2fcd182-2899-4efe-a24d-1b5e76bf228f.vsidx
+/.vs/KarnelTravels/FileContentIndex/e5f3ced8-5bec-4273-b394-a02d7f23565b.vsidx
+<<<<<<< HEAD
+>>>>>>> origin/ky
 /.vs/KarnelTravels/FileContentIndex/1ea30baf-362e-4918-b8ed-d2d1a2e60a9b.vsidx
 /.vs/KarnelTravels/FileContentIndex/569912bb-7df5-4152-9713-cae30c4acdea.vsidx
 /.vs/KarnelTravels/FileContentIndex/7d6827fd-d9e0-4c39-ab4b-cde4e18a3ccd.vsidx
+<<<<<<< HEAD
 /.vs/KarnelTravels/FileContentIndex/b0678930-2e77-4329-87ea-d119d51631e7.vsidx
 /.vs/KarnelTravels/FileContentIndex/569912bb-7df5-4152-9713-cae30c4acdea.vsidx
 /.vs/KarnelTravels/FileContentIndex/b0678930-2e77-4329-87ea-d119d51631e7.vsidx
@@ -18,3 +30,28 @@
 /.vs/KarnelTravels/FileContentIndex/7da29a0e-9964-449a-8315-36531e43d7d8.vsidx
 /.vs/KarnelTravels/FileContentIndex/a74d51cb-bc80-41b1-8227-6e3197ad1ad8.vsidx
 *.vsidx
+=======
+/.vs/KarnelTravels/FileContentIndex/85e92776-3225-4cc0-acd8-1c9bb7f0b927.vsidx
+=======
+/.vs/KarnelTravels/FileContentIndex/0ff2bc9b-7728-4c6c-99df-6fe2bcecfc80.vsidx
+/.vs/KarnelTravels/FileContentIndex/137d50b0-7c73-47c5-a08e-250d43f041d4.vsidx
+/.vs/KarnelTravels/FileContentIndex/2548f7a4-5904-4ff8-a229-671f095eb5d1.vsidx
+/.vs/KarnelTravels/FileContentIndex/772f675c-c6aa-4204-ad1f-8127f0384138.vsidx
+/.vs/KarnelTravels/FileContentIndex/a16339f0-3002-4bb9-bdbb-c6b9b3fea4e5.vsidx
+>>>>>>> DangVNH - Full UI - Moi nguoi code vao cac file co View nhe, sau do minh se format lai giao dien sau (26/04/2024)
+/.vs/KarnelTravels/FileContentIndex/12efde3b-8433-41cc-9b77-f1c774a0410c.vsidx
+/.vs/KarnelTravels/FileContentIndex/24894aa1-49f0-426a-9a2a-54345188cea8.vsidx
+/.vs/KarnelTravels/FileContentIndex/2f1b54cb-afad-4e3d-b9bf-74975be6738d.vsidx
+/.vs/KarnelTravels/FileContentIndex/4fda4ae8-d45d-435f-8a86-68b02ed52dc4.vsidx
+/.vs/KarnelTravels/FileContentIndex/c85c5693-136a-4a68-992c-9ffdf05ef985.vsidx
+/.vs/KarnelTravels/FileContentIndex/402b22db-4316-4ad4-b19b-07a2464c06ad.vsidx
+/.vs/KarnelTravels/FileContentIndex/4a906992-3dfd-4bfc-930c-fc2389d102a6.vsidx
+/.vs/KarnelTravels/FileContentIndex/971efc3d-866d-4521-9436-380c574c81c0.vsidx
+/.vs/KarnelTravels/FileContentIndex/9cdfafd2-3a71-4c37-a0b5-3012a3b0e289.vsidx
+/.vs/KarnelTravels/FileContentIndex/ac575722-7253-4d0a-a480-6ea10a028935.vsidx
+>>>>>>> origin/ky
+/.vs/KarnelTravels/FileContentIndex/05825ac7-fad4-42e6-b77c-50d8a7d906fc.vsidx
+/.vs/KarnelTravels/FileContentIndex/0ae284a4-ff1b-4c8c-aef2-8341578999cb.vsidx
+/.vs/KarnelTravels/FileContentIndex/45d8f2c2-79bf-442a-8147-4801fe551bcd.vsidx
+/.vs/KarnelTravels/FileContentIndex/530d2b09-6b2b-4ed5-9558-754c0fa24319.vsidx
+/.vs/KarnelTravels/FileContentIndex/eda42e74-1893-45e6-8197-8fd0381ef9ce.vsidx

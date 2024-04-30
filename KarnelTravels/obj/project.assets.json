@@ -46,6 +46,9 @@
           }
         }
       },
+      "CKEditor/3.6.4": {
+        "type": "package"
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -56,6 +59,71 @@
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNet.Mvc/5.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "3.3.0",
+          "Microsoft.AspNet.WebPages": "3.3.0"
+        },
+        "compile": {
+          "lib/net45/System.Web.Mvc.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/System.Web.Mvc.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNet.Razor/3.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.Web.Razor.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/System.Web.Razor.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNet.WebPages/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "3.3.0",
+          "Microsoft.Web.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/System.Web.Helpers.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/System.Web.WebPages.Deployment.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/System.Web.WebPages.Razor.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/System.Web.WebPages.dll": {
+            "related": ".Deployment.xml;.Razor.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/System.Web.Helpers.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/System.Web.WebPages.Deployment.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/System.Web.WebPages.Razor.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/System.Web.WebPages.dll": {
+            "related": ".Deployment.xml;.Razor.xml;.xml"
           }
         }
       },
@@ -856,6 +924,15 @@
           }
         }
       },
+      "Microsoft.Web.Infrastructure/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
+        }
+      },
       "Microsoft.Win32.SystemEvents/6.0.0": {
         "type": "package",
         "compile": {
@@ -1548,6 +1625,365 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
+    "CKEditor/3.6.4": {
+      "sha512": "roGF09wJmp7Zyyvq/bDzbLccKUfMumMpmgPav5U/naoVoDis1izPsSL8H/MEFG3hfFBC4HegSRwlYZG+PWHnaQ==",
+      "type": "package",
+      "path": "ckeditor/3.6.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/ckeditor/CHANGES.html",
+        "Content/Scripts/ckeditor/INSTALL.html",
+        "Content/Scripts/ckeditor/LICENSE.html",
+        "Content/Scripts/ckeditor/adapters/jquery.js",
+        "Content/Scripts/ckeditor/ckeditor.asp",
+        "Content/Scripts/ckeditor/ckeditor.js",
+        "Content/Scripts/ckeditor/ckeditor.pack",
+        "Content/Scripts/ckeditor/ckeditor.php",
+        "Content/Scripts/ckeditor/ckeditor_basic.js",
+        "Content/Scripts/ckeditor/ckeditor_basic_source.js",
+        "Content/Scripts/ckeditor/ckeditor_php4.php",
+        "Content/Scripts/ckeditor/ckeditor_php5.php",
+        "Content/Scripts/ckeditor/ckeditor_source.js",
+        "Content/Scripts/ckeditor/config.js",
+        "Content/Scripts/ckeditor/contents.css",
+        "Content/Scripts/ckeditor/images/spacer.gif",
+        "Content/Scripts/ckeditor/lang/_languages.js",
+        "Content/Scripts/ckeditor/lang/_translationstatus.txt",
+        "Content/Scripts/ckeditor/lang/af.js",
+        "Content/Scripts/ckeditor/lang/ar.js",
+        "Content/Scripts/ckeditor/lang/bg.js",
+        "Content/Scripts/ckeditor/lang/bn.js",
+        "Content/Scripts/ckeditor/lang/bs.js",
+        "Content/Scripts/ckeditor/lang/ca.js",
+        "Content/Scripts/ckeditor/lang/cs.js",
+        "Content/Scripts/ckeditor/lang/cy.js",
+        "Content/Scripts/ckeditor/lang/da.js",
+        "Content/Scripts/ckeditor/lang/de.js",
+        "Content/Scripts/ckeditor/lang/el.js",
+        "Content/Scripts/ckeditor/lang/en-au.js",
+        "Content/Scripts/ckeditor/lang/en-ca.js",
+        "Content/Scripts/ckeditor/lang/en-gb.js",
+        "Content/Scripts/ckeditor/lang/en.js",
+        "Content/Scripts/ckeditor/lang/eo.js",
+        "Content/Scripts/ckeditor/lang/es.js",
+        "Content/Scripts/ckeditor/lang/et.js",
+        "Content/Scripts/ckeditor/lang/eu.js",
+        "Content/Scripts/ckeditor/lang/fa.js",
+        "Content/Scripts/ckeditor/lang/fi.js",
+        "Content/Scripts/ckeditor/lang/fo.js",
+        "Content/Scripts/ckeditor/lang/fr-ca.js",
+        "Content/Scripts/ckeditor/lang/fr.js",
+        "Content/Scripts/ckeditor/lang/gl.js",
+        "Content/Scripts/ckeditor/lang/gu.js",
+        "Content/Scripts/ckeditor/lang/he.js",
+        "Content/Scripts/ckeditor/lang/hi.js",
+        "Content/Scripts/ckeditor/lang/hr.js",
+        "Content/Scripts/ckeditor/lang/hu.js",
+        "Content/Scripts/ckeditor/lang/id.js",
+        "Content/Scripts/ckeditor/lang/is.js",
+        "Content/Scripts/ckeditor/lang/it.js",
+        "Content/Scripts/ckeditor/lang/ja.js",
+        "Content/Scripts/ckeditor/lang/ka.js",
+        "Content/Scripts/ckeditor/lang/km.js",
+        "Content/Scripts/ckeditor/lang/ko.js",
+        "Content/Scripts/ckeditor/lang/lt.js",
+        "Content/Scripts/ckeditor/lang/lv.js",
+        "Content/Scripts/ckeditor/lang/mk.js",
+        "Content/Scripts/ckeditor/lang/mn.js",
+        "Content/Scripts/ckeditor/lang/ms.js",
+        "Content/Scripts/ckeditor/lang/nb.js",
+        "Content/Scripts/ckeditor/lang/nl.js",
+        "Content/Scripts/ckeditor/lang/no.js",
+        "Content/Scripts/ckeditor/lang/pl.js",
+        "Content/Scripts/ckeditor/lang/pt-br.js",
+        "Content/Scripts/ckeditor/lang/pt.js",
+        "Content/Scripts/ckeditor/lang/ro.js",
+        "Content/Scripts/ckeditor/lang/ru.js",
+        "Content/Scripts/ckeditor/lang/sk.js",
+        "Content/Scripts/ckeditor/lang/sl.js",
+        "Content/Scripts/ckeditor/lang/sr-latn.js",
+        "Content/Scripts/ckeditor/lang/sr.js",
+        "Content/Scripts/ckeditor/lang/sv.js",
+        "Content/Scripts/ckeditor/lang/th.js",
+        "Content/Scripts/ckeditor/lang/tr.js",
+        "Content/Scripts/ckeditor/lang/ug.js",
+        "Content/Scripts/ckeditor/lang/uk.js",
+        "Content/Scripts/ckeditor/lang/vi.js",
+        "Content/Scripts/ckeditor/lang/zh-cn.js",
+        "Content/Scripts/ckeditor/lang/zh.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/_translationstatus.txt",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/cs.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/cy.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/da.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/de.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/el.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/en.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/eo.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/fa.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/fi.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/fr.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/gu.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/he.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/it.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/mk.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/nb.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/nl.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/no.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/pt-br.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/ro.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/tr.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/ug.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/vi.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/zh-cn.js",
+        "Content/Scripts/ckeditor/plugins/about/dialogs/about.js",
+        "Content/Scripts/ckeditor/plugins/about/dialogs/logo_ckeditor.png",
+        "Content/Scripts/ckeditor/plugins/adobeair/plugin.js",
+        "Content/Scripts/ckeditor/plugins/ajax/plugin.js",
+        "Content/Scripts/ckeditor/plugins/autogrow/plugin.js",
+        "Content/Scripts/ckeditor/plugins/bbcode/plugin.js",
+        "Content/Scripts/ckeditor/plugins/clipboard/dialogs/paste.js",
+        "Content/Scripts/ckeditor/plugins/colordialog/dialogs/colordialog.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/_translationstatus.txt",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/bg.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/cs.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/cy.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/da.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/de.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/el.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/en.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/eo.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/et.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/fa.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/fi.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/fr.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/gu.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/he.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/hr.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/it.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/nb.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/nl.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/no.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/pl.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/pt-br.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/tr.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/ug.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/uk.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/vi.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/zh-cn.js",
+        "Content/Scripts/ckeditor/plugins/devtools/plugin.js",
+        "Content/Scripts/ckeditor/plugins/dialog/dialogDefinition.js",
+        "Content/Scripts/ckeditor/plugins/div/dialogs/div.js",
+        "Content/Scripts/ckeditor/plugins/docprops/dialogs/docprops.js",
+        "Content/Scripts/ckeditor/plugins/docprops/plugin.js",
+        "Content/Scripts/ckeditor/plugins/find/dialogs/find.js",
+        "Content/Scripts/ckeditor/plugins/flash/dialogs/flash.js",
+        "Content/Scripts/ckeditor/plugins/flash/images/placeholder.png",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/button.js",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/checkbox.js",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/form.js",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/hiddenfield.js",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/radio.js",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/select.js",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/textarea.js",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/textfield.js",
+        "Content/Scripts/ckeditor/plugins/forms/images/hiddenfield.gif",
+        "Content/Scripts/ckeditor/plugins/iframe/dialogs/iframe.js",
+        "Content/Scripts/ckeditor/plugins/iframe/images/placeholder.png",
+        "Content/Scripts/ckeditor/plugins/iframedialog/plugin.js",
+        "Content/Scripts/ckeditor/plugins/image/dialogs/image.js",
+        "Content/Scripts/ckeditor/plugins/link/dialogs/anchor.js",
+        "Content/Scripts/ckeditor/plugins/link/dialogs/link.js",
+        "Content/Scripts/ckeditor/plugins/link/images/anchor.gif",
+        "Content/Scripts/ckeditor/plugins/liststyle/dialogs/liststyle.js",
+        "Content/Scripts/ckeditor/plugins/pagebreak/images/pagebreak.gif",
+        "Content/Scripts/ckeditor/plugins/pastefromword/filter/default.js",
+        "Content/Scripts/ckeditor/plugins/pastetext/dialogs/pastetext.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/dialogs/placeholder.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/_translationstatus.txt",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/bg.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/cs.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/cy.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/da.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/de.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/el.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/en.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/eo.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/et.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/fa.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/fi.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/fr.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/he.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/hr.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/it.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/nb.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/nl.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/no.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/pl.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/pt-br.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/tr.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/ug.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/uk.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/vi.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/zh-cn.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/placeholder.gif",
+        "Content/Scripts/ckeditor/plugins/placeholder/plugin.js",
+        "Content/Scripts/ckeditor/plugins/preview/preview.html",
+        "Content/Scripts/ckeditor/plugins/scayt/dialogs/options.js",
+        "Content/Scripts/ckeditor/plugins/scayt/dialogs/toolbar.css",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_address.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_blockquote.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_div.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_h1.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_h2.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_h3.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_h4.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_h5.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_h6.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_p.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_pre.png",
+        "Content/Scripts/ckeditor/plugins/smiley/dialogs/smiley.js",
+        "Content/Scripts/ckeditor/plugins/smiley/images/angel_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/angry_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/broken_heart.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/confused_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/cry_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/devil_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/embaressed_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/envelope.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/heart.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/kiss.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/lightbulb.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/omg_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/regular_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/sad_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/shades_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/teeth_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/thumbs_down.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/thumbs_up.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/tounge_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/wink_smile.gif",
+        "Content/Scripts/ckeditor/plugins/specialchar/dialogs/specialchar.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/_translationstatus.txt",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/cs.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/cy.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/de.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/el.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/en.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/eo.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/et.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/fa.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/fi.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/fr.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/he.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/hr.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/it.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/nb.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/nl.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/no.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/pt-br.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/tr.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/ug.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/zh-cn.js",
+        "Content/Scripts/ckeditor/plugins/styles/styles/default.js",
+        "Content/Scripts/ckeditor/plugins/stylesheetparser/plugin.js",
+        "Content/Scripts/ckeditor/plugins/table/dialogs/table.js",
+        "Content/Scripts/ckeditor/plugins/tableresize/plugin.js",
+        "Content/Scripts/ckeditor/plugins/tabletools/dialogs/tableCell.js",
+        "Content/Scripts/ckeditor/plugins/templates/dialogs/templates.js",
+        "Content/Scripts/ckeditor/plugins/templates/templates/default.js",
+        "Content/Scripts/ckeditor/plugins/templates/templates/images/template1.gif",
+        "Content/Scripts/ckeditor/plugins/templates/templates/images/template2.gif",
+        "Content/Scripts/ckeditor/plugins/templates/templates/images/template3.gif",
+        "Content/Scripts/ckeditor/plugins/uicolor/dialogs/uicolor.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/_translationstatus.txt",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/bg.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/cs.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/cy.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/da.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/de.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/el.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/en.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/eo.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/et.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/fa.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/fi.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/fr.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/he.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/hr.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/it.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/mk.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/nb.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/nl.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/no.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/pl.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/pt-br.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/tr.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/ug.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/uk.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/vi.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/zh-cn.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/plugin.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/uicolor.gif",
+        "Content/Scripts/ckeditor/plugins/uicolor/yui/assets/hue_bg.png",
+        "Content/Scripts/ckeditor/plugins/uicolor/yui/assets/hue_thumb.png",
+        "Content/Scripts/ckeditor/plugins/uicolor/yui/assets/picker_mask.png",
+        "Content/Scripts/ckeditor/plugins/uicolor/yui/assets/picker_thumb.png",
+        "Content/Scripts/ckeditor/plugins/uicolor/yui/assets/yui.css",
+        "Content/Scripts/ckeditor/plugins/uicolor/yui/yui.js",
+        "Content/Scripts/ckeditor/plugins/wsc/dialogs/ciframe.html",
+        "Content/Scripts/ckeditor/plugins/wsc/dialogs/tmpFrameset.html",
+        "Content/Scripts/ckeditor/plugins/wsc/dialogs/wsc.css",
+        "Content/Scripts/ckeditor/plugins/wsc/dialogs/wsc.js",
+        "Content/Scripts/ckeditor/plugins/xml/plugin.js",
+        "Content/Scripts/ckeditor/skins/kama/dialog.css",
+        "Content/Scripts/ckeditor/skins/kama/editor.css",
+        "Content/Scripts/ckeditor/skins/kama/icons.png",
+        "Content/Scripts/ckeditor/skins/kama/icons_rtl.png",
+        "Content/Scripts/ckeditor/skins/kama/images/dialog_sides.gif",
+        "Content/Scripts/ckeditor/skins/kama/images/dialog_sides.png",
+        "Content/Scripts/ckeditor/skins/kama/images/dialog_sides_rtl.png",
+        "Content/Scripts/ckeditor/skins/kama/images/mini.gif",
+        "Content/Scripts/ckeditor/skins/kama/images/noimage.png",
+        "Content/Scripts/ckeditor/skins/kama/images/sprites.png",
+        "Content/Scripts/ckeditor/skins/kama/images/sprites_ie6.png",
+        "Content/Scripts/ckeditor/skins/kama/images/toolbar_start.gif",
+        "Content/Scripts/ckeditor/skins/kama/skin.js",
+        "Content/Scripts/ckeditor/skins/kama/templates.css",
+        "Content/Scripts/ckeditor/skins/office2003/dialog.css",
+        "Content/Scripts/ckeditor/skins/office2003/editor.css",
+        "Content/Scripts/ckeditor/skins/office2003/icons.png",
+        "Content/Scripts/ckeditor/skins/office2003/icons_rtl.png",
+        "Content/Scripts/ckeditor/skins/office2003/images/dialog_sides.gif",
+        "Content/Scripts/ckeditor/skins/office2003/images/dialog_sides.png",
+        "Content/Scripts/ckeditor/skins/office2003/images/dialog_sides_rtl.png",
+        "Content/Scripts/ckeditor/skins/office2003/images/mini.gif",
+        "Content/Scripts/ckeditor/skins/office2003/images/noimage.png",
+        "Content/Scripts/ckeditor/skins/office2003/images/sprites.png",
+        "Content/Scripts/ckeditor/skins/office2003/images/sprites_ie6.png",
+        "Content/Scripts/ckeditor/skins/office2003/skin.js",
+        "Content/Scripts/ckeditor/skins/office2003/templates.css",
+        "Content/Scripts/ckeditor/skins/v2/dialog.css",
+        "Content/Scripts/ckeditor/skins/v2/editor.css",
+        "Content/Scripts/ckeditor/skins/v2/icons.png",
+        "Content/Scripts/ckeditor/skins/v2/icons_rtl.png",
+        "Content/Scripts/ckeditor/skins/v2/images/dialog_sides.gif",
+        "Content/Scripts/ckeditor/skins/v2/images/dialog_sides.png",
+        "Content/Scripts/ckeditor/skins/v2/images/dialog_sides_rtl.png",
+        "Content/Scripts/ckeditor/skins/v2/images/mini.gif",
+        "Content/Scripts/ckeditor/skins/v2/images/noimage.png",
+        "Content/Scripts/ckeditor/skins/v2/images/sprites.png",
+        "Content/Scripts/ckeditor/skins/v2/images/sprites_ie6.png",
+        "Content/Scripts/ckeditor/skins/v2/images/toolbar_start.gif",
+        "Content/Scripts/ckeditor/skins/v2/skin.js",
+        "Content/Scripts/ckeditor/skins/v2/templates.css",
+        "Content/Scripts/ckeditor/themes/default/theme.js",
+        "ckeditor.3.6.4.nupkg.sha512",
+        "ckeditor.nuspec"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -1564,6 +2000,61 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNet.Mvc/5.3.0": {
+      "sha512": "Q1LcXRqTPmbXJAdf45PsxI6JYnCQP4vBfPCgDFd4dYf8ojxFTo4PH333PC4TzbOqRHxrUWGwgBdcR5T2jNwpHQ==",
+      "type": "package",
+      "path": "microsoft.aspnet.mvc/5.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Web.config.install.xdt",
+        "Content/Web.config.uninstall.xdt",
+        "NET.icon.png",
+        "NET_Library_EULA_ENU.txt",
+        "lib/net45/System.Web.Mvc.dll",
+        "lib/net45/System.Web.Mvc.xml",
+        "microsoft.aspnet.mvc.5.3.0.nupkg.sha512",
+        "microsoft.aspnet.mvc.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.Razor/3.3.0": {
+      "sha512": "5vJ0UKE/n381qcaKwFHxCwzb/YVuHzrm155iTgQhiv7+xdg2PE+54u+NPqu6C9AeRVOiwbh8/EOZwD16bLvWkg==",
+      "type": "package",
+      "path": "microsoft.aspnet.razor/3.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NET.icon.png",
+        "NET_Library_EULA_ENU.txt",
+        "lib/net45/System.Web.Razor.dll",
+        "lib/net45/System.Web.Razor.xml",
+        "microsoft.aspnet.razor.3.3.0.nupkg.sha512",
+        "microsoft.aspnet.razor.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.WebPages/3.3.0": {
+      "sha512": "2ATJrA8KNx2EpBWNjwy4P+NjQ06cZWjYsTZ5NqGNIHaU/i3NKmtpoaE90NGmVRaKF5rryGfADnvPQ56f61OuWg==",
+      "type": "package",
+      "path": "microsoft.aspnet.webpages/3.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Web.config.install.xdt",
+        "Content/Web.config.uninstall.xdt",
+        "NET.icon.png",
+        "NET_Library_EULA_ENU.txt",
+        "lib/net45/System.Web.Helpers.dll",
+        "lib/net45/System.Web.Helpers.xml",
+        "lib/net45/System.Web.WebPages.Deployment.dll",
+        "lib/net45/System.Web.WebPages.Deployment.xml",
+        "lib/net45/System.Web.WebPages.Razor.dll",
+        "lib/net45/System.Web.WebPages.Razor.xml",
+        "lib/net45/System.Web.WebPages.dll",
+        "lib/net45/System.Web.WebPages.xml",
+        "microsoft.aspnet.webpages.3.3.0.nupkg.sha512",
+        "microsoft.aspnet.webpages.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
@@ -2882,6 +3373,18 @@
         "microsoft.sqlserver.server.nuspec"
       ]
     },
+    "Microsoft.Web.Infrastructure/1.0.0": {
+      "sha512": "FNmvLn5m2LTU/Rs2KWVo0SIIh9Ek+U0ojex7xeDaSHw/zgEP77A8vY5cVWgUtBGS8MJfDGNn8rpXJWEIQaPwTg==",
+      "type": "package",
+      "path": "microsoft.web.infrastructure/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Microsoft.Web.Infrastructure.dll",
+        "microsoft.web.infrastructure.1.0.0.nupkg.sha512",
+        "microsoft.web.infrastructure.nuspec"
+      ]
+    },
     "Microsoft.Win32.SystemEvents/6.0.0": {
       "sha512": "hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "type": "package",
@@ -4100,30 +4603,45 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "CKEditor >= 3.6.4",
+      "Microsoft.AspNet.Mvc >= 5.3.0",
       "Microsoft.EntityFrameworkCore >= 8.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.4"
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+=======
+    "C:\\Users\\MININT-QHS5KT4-local\\.nuget\\packages\\": {}
+>>>>>>> origin/ky
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\KarnelTravels\\KarnelTravels\\KarnelTravels.csproj",
       "projectName": "KarnelTravels",
       "projectPath": "C:\\Users\\Admin\\Source\\Repos\\KarnelTravels\\KarnelTravels\\KarnelTravels.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Admin\\Source\\Repos\\KarnelTravels\\KarnelTravels\\obj\\",
+=======
+      "projectUniqueName": "E:\\Source\\KarnelTravels\\KarnelTravels\\KarnelTravels.csproj",
+      "projectName": "KarnelTravels",
+      "projectPath": "E:\\Source\\KarnelTravels\\KarnelTravels\\KarnelTravels.csproj",
+      "packagesPath": "C:\\Users\\MININT-QHS5KT4-local\\.nuget\\packages\\",
+      "outputPath": "E:\\Source\\KarnelTravels\\KarnelTravels\\obj\\",
+>>>>>>> origin/ky
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+        "C:\\Users\\MININT-QHS5KT4-local\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> origin/ky
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4131,7 +4649,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4150,6 +4667,14 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "CKEditor": {
+            "target": "Package",
+            "version": "[3.6.4, )"
+          },
+          "Microsoft.AspNet.Mvc": {
+            "target": "Package",
+            "version": "[5.3.0, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.4, )"
@@ -4184,8 +4709,54 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+>>>>>>> origin/ky
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Mvc 5.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Razor 3.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebPages 3.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

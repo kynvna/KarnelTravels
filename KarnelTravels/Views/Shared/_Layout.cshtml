@@ -17,6 +17,7 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+<<<<<<< HEAD
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
@@ -26,6 +27,51 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+=======
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a asp-controller="Home" asp-action="Index" class="nav-item nav-link active">Home</a>
+                        <a asp-controller="Home" asp-action="TravellingPackageView" class="nav-item nav-link">Package Travelling</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travelling</a>
+                            
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a asp-controller="Home" asp-action="TravellingTransportView" class="dropdown-item">Transportation</a>
+                                <a asp-controller="Home" asp-action="TravellingSightView" class="dropdown-item">Sights</a>
+                                <a asp-controller="Home" asp-action="TravellingHotelView" class="dropdown-item">Hotels & Resort</a>
+                                <a asp-controller="Home" asp-action="TravellingRestaurantView" class="dropdown-item">Restaurants</a>
+                                <a asp-controller="Home" asp-action="TravellingTourView" class="dropdown-item">Tours</a>
+                            </div>
+                        </div>
+                        <a asp-controller="Home" asp-action="NewsView" class="nav-item nav-link">News</a>
+                        <a asp-controller="Home" asp-action="AboutUsView" class="nav-item nav-link">About us</a>
+                    </div>
+                    <a class="btn btn-primary px-3 d-none d-lg-flex">Leave Feedback</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+        <!-- Header Start -->
+        <div class="container-fluid header bg-white p-0">
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 p-5 mt-lg-5">
+                    <h1 class="display-5 animated fadeIn mb-4">II'S ABOUT <span class="text-primary">A PERFECT</span><strong style="color:orange"> TRIP</strong> TO REMEMBER</h1>
+                    <p class="animated fadeIn mb-4 pb-2">
+                        KARNEL provides you with the best search engines and daily-updated information about
+                        every sight domestic and internationally. Hoping to bring you the best tour-planning experiences.
+                    </p>
+                    <a href="/Home/Admin/Sitemap" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Abous Karnel Travel Guide</a>
+                </div>
+                <div class="col-md-6 animated fadeIn">
+                    <div class="owl-carousel header-carousel">
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="/img/carousel-1.jpg" alt="">
+                        </div>
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="/img/carousel-2.jpg" alt="">
+                        </div>
+                    </div>
+>>>>>>> origin/ky
                 </div>
             </div>
         </nav>
