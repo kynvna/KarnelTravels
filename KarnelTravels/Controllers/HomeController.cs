@@ -1,5 +1,6 @@
 using KarnelTravels.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging; // Ensure ILogger is accessible
 using System.Diagnostics;
 
@@ -23,17 +24,11 @@ namespace KarnelTravels.Controllers
         //}
         //---------------------------------------------------------------------------
 
+        //--ROUTINGS FOR REGULAR REDIRECT--
         public IActionResult Index()
         {
-            // Example of using _context and _logger together
-            _logger.LogInformation("Loading Index with transportation count.");
-            int testdata = _context.TblTransportations.Count();
-            _logger.LogInformation("Transportation count: {Count}", testdata);
-
             return View();
         }
-<<<<<<< HEAD
-=======
         //public IActionResult AdminTransportView()
         //{
         //    return View("Admin/AdminTransportView");
@@ -70,10 +65,7 @@ namespace KarnelTravels.Controllers
         {
             return View("User/AboutUsView");
         }
-        public IActionResult TravellingHotelView()
-        {
-            return View("User/TravellingHotelView");
-        }
+        
         public IActionResult TravellingRestaurantView()
         {
             return View("User/TravellingRestaurantView");
@@ -106,19 +98,80 @@ namespace KarnelTravels.Controllers
         {
             return View("Admin/AdminProfile");
         }
->>>>>>> origin/ky
 
         public IActionResult Privacy()
         {
             _logger.LogInformation("Accessing Privacy page.");
             return View();
         }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             _logger.LogError("An error occurred.");
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+
+
+
+        //-------------------------------Hotel & Resort-------------------------------
+
+
+        [HttpGet]
+        public IActionResult TravellingHotelView()
+        {
+            Dictionary<int, List<HRViewModel>> hotelViewModelsBySpot = new Dictionary<int, List<HRViewModel>>();
+            try
+            {
+                // L?y danh sách khách s?n thu?c CatId 1 ho?c 2
+                List<TblHotelRestaurant> hotels = _context.TblHotelRestaurants.Where(r => r.CatId == 1 || r.CatId == 2).ToList();
+
+                // L?p qua t?ng khách s?n ?? nhóm chúng theo SpotId
+                foreach (var hotel in hotels)
+                {
+                    var spotId = hotel.SpotId;
+                    var spot = _context.TblSpots.FirstOrDefault(s => s.Id == spotId);
+
+                    if (spot != null)
+                    {
+                        var hotelViewModel = new HRViewModel
+                        {
+                            HrId = hotel.HrId,
+                            CatId = hotel.CatId,
+                            Name = hotel.Name,
+                            SpotName = spot.Name,
+                            Price = hotel.Price,
+                            Description = hotel.Description,
+                            ImageLinkId = hotel.ImageLinkId,
+                            Imglink = hotel.Imglink,
+                            Status = hotel.Status
+                        };
+
+                        // Ki?m tra n?u SpotId ?ã t?n t?i trong t? ?i?n
+                        if (hotelViewModelsBySpot.ContainsKey((int)spotId))
+                        {
+                            // N?u ?ã t?n t?i, thêm khách s?n vào danh sách t??ng ?ng
+                            hotelViewModelsBySpot[(int)spotId].Add(hotelViewModel);
+                        }
+                        else
+                        {
+                            // N?u ch?a t?n t?i, t?o m?i danh sách và thêm khách s?n vào
+                            hotelViewModelsBySpot[(int)spotId] = new List<HRViewModel> { hotelViewModel };
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = ex.Message;
+            }
+
+            return View(hotelViewModelsBySpot);
+        }
+
+
+
+
     }
 }
