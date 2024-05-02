@@ -4611,19 +4611,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MININT-QHS5KT4-local\\.nuget\\packages\\": {}
+    "C:\\Users\\dang\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Source\\KarnelTravels\\KarnelTravels\\KarnelTravels.csproj",
+      "projectUniqueName": "D:\\KARNELTRAVEL\\KarnelTravels\\KarnelTravels.csproj",
       "projectName": "KarnelTravels",
-      "projectPath": "E:\\Source\\KarnelTravels\\KarnelTravels\\KarnelTravels.csproj",
-      "packagesPath": "C:\\Users\\MININT-QHS5KT4-local\\.nuget\\packages\\",
-      "outputPath": "E:\\Source\\KarnelTravels\\KarnelTravels\\obj\\",
+      "projectPath": "D:\\KARNELTRAVEL\\KarnelTravels\\KarnelTravels.csproj",
+      "packagesPath": "C:\\Users\\dang\\.nuget\\packages\\",
+      "outputPath": "D:\\KARNELTRAVEL\\KarnelTravels\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\MININT-QHS5KT4-local\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4631,6 +4636,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

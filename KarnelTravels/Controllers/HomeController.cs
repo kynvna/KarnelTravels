@@ -16,7 +16,7 @@ namespace KarnelTravels.Controllers
             _context = context;
             _logger = logger;
         }
-        //SITEMAP - a quick routing for debugging and quick access
+        // SITEMAP - a quick routing for debugging and quick access
         //public IActionResult Help()
         //{
         //    return View("Admin/Sitemap");
@@ -92,19 +92,47 @@ namespace KarnelTravels.Controllers
         {
             return View("User/NewsView");
         }
-        //public IActionResult Login()
-        //{
-        //    return View();
-        //}
-        public IActionResult AdminProfile()
+        public IActionResult FeedbackOnCompany()
         {
-            return View("Admin/AdminProfile");
+            return View("User/FeedbackOnCompany");
         }
-
         public IActionResult Privacy()
         {
             _logger.LogInformation("Accessing Privacy page.");
             return View();
+        }
+        // This will go with an ID of a news - After which will be loaded to form the correspond news which is stored in a database
+        // NewsDetail/id
+        public IActionResult NewsDetail()
+        {
+            return View("User/NewsDetail");
+        }
+        // This will go with an ID of a tour in selection of the user - After which will be loaded to form
+        // the correspond item (tour, transport, etc..) which is stored in a database
+        // TourDetails/id
+        public IActionResult TourDetails()
+        {
+            return View("User/TourDetails");
+        }
+        public IActionResult SightDetails()
+        {
+            return View("User/SightDetails");
+        }
+        public IActionResult HotelDetails()
+        {
+            return View("User/HotelDetails");
+        }
+        public IActionResult TransportDetails()
+        {
+            return View("User/TransportDetails");
+        }
+        public IActionResult RestaurantDetails()
+        {
+            return View("User/RestaurantDetails");
+        }
+        public IActionResult AdvancedSearch()
+        {
+            return View("User/AdvancedSearch");
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
