@@ -5,8 +5,8 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h1 class="mb-3">Contact Us</h1>
-            <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+            <h1 class="mb-3">Leave a feedback for Karnel Travel Group</h1>
+            <p>Done experiencing Karnel Travel ? Leave a feedback for us to know how do you feel after using our services. Thank you for choosing Karnel Travel Group</p>
         </div>
         <div class="row g-4">
             <div class="col-12">
@@ -17,7 +17,7 @@
                                 <div class="icon me-3" style="width: 45px; height: 45px;">
                                     <i class="fa fa-map-marker-alt text-primary"></i>
                                 </div>
-                                <span>102 Nguyen Dinh Chinh Str, Ward 15, Phu Nhuan District</span>
+                                <span>102 Nguyen Dinh Chinh Str. </span>
                             </div>
                         </div>
                     </div>
@@ -44,8 +44,10 @@
                 </div>
             </div>
             <div class="col-md-12">
+                <!--Feedback here will have FeedbackObj as COMPANY and ObjectId as NULL set when created into the Database-->
+                <!--All of the feedback under every objects will be counted as the same Model-->
                 <div class="wow fadeInUp" data-wow-delay="0.5s">
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                    <p class="mb-4">Have something to ask ? Feeling unconfortable ? Please leave your information at the form below or <a asp-controller="Home" asp-action="Index">Go back to Home</a>.</p>
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -63,17 +65,17 @@
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
+                                    <label for="subject">What is your concern ?</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                    <label for="message">Message</label>
+                                    <label for="message">Inform us with a thorough description of your problem</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                <button class="btn btn-primary w-100 py-3" type="submit">Send to Karnel</button>
                             </div>
                         </div>
                     </form>
