@@ -42,6 +42,51 @@ namespace KarnelTravels.Repository
             return ls;
         }
 
+        public TblTravel GetTravelById(int id)
+        {
+            return _context.TblTravels.FirstOrDefault(t => t.TravelId == id);
+        }
+        public void DeleteTravel( int id)
+        {
+            try
+            {
+                if(id != null)
+                {
+                    var travels = _context.TblTravels.Find(id);
+                    if(travels != null)
+                    {
+                        _context.Remove(travels);
+                        _context.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception ex) { }
+        }
+
+        public void EditTravel(int id, TblTravel model)
+        {
+            if (id != null && model != null)
+            {
+                var ht = _context.TblTravels.Find(id);
+                if (ht != null)
+                {
+                    _context.Attach(ht);
+
+                    ht.Price = model.Price;
+                    ht.Name = model.Name;
+                    ht.Status = model.Status;
+                    ht.SpotDeparture = model.SpotDeparture;
+                    ht.SpotDestination = model.SpotDestination;
+                    
+                    ht.ImageLinkId = model.ImageLinkId;
+                   
+                    ht.TransCategoryId = model.TransCategoryId;
+
+
+                    _context.SaveChanges();
+                }
+            }
+        }
         public IEnumerable<TblTravel>SpotSearch(int tran, int spot , int spot1)
         {
             var ls = _context.TblTravels.Where(s => s.SpotDeparture == spot && s.SpotDestination == spot1 && s.TransCategoryId == tran).ToList();

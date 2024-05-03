@@ -59,6 +59,23 @@ namespace KarnelTravels.Repository
                 }
             }
         }
+
+        public void DeleteHotel(int id)
+        {
+            try
+            {
+                if (id != null)
+                {
+                    var hotel = _context.TblHotelRestaurants.Find(id);
+                    if (hotel != null)
+                    {
+                        _context.Remove(hotel);
+                        _context.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception ex) { }
+        }
         public IEnumerable<HrCategory> GetAllHR()
         {
             var ls = _context.HrCategories.ToList();

@@ -1,0 +1,131 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var q = ViewBag.pack as TblTourPackage;
+}
+@model GetHotel_Res_Re;
+<div class="ibox">
+    <div class="ibox-head">
+        <div class="ibox-title">Basic Validation</div>
+        <div class="ibox-tools">
+            <a class="ibox-collapse"><i class="fa fa-minus"></i></a>
+        </div>
+    </div>
+    <div class="ibox-body">
+        <form id="frmData" action="/Admin/EditAdminTourPackage" class="form-horizontal" method="post" enctype="multipart/form-data">
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">ID</label>
+                <div class="col-sm-10">
+                    <input value="@q.PackageId" class="form-control" type="text" name="PackageId">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10 ml-sm-auto">
+                    <input value="@q.Name" class="form-control" name="Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Price</label>
+                <div class="col-sm-10 ml-sm-auto">
+                    <input value="@q.TotalPrice" class="form-control" name="TotalPrice">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Start Date</label>
+                <div class="col-sm-10">
+                    @* //<input class="form-control" id="password1" type="datetime" name="StartDate"> *@
+                    <input type="date" value="@DateTime.Now" id="datepicker" name="StartDate">
+
+                    <script>
+                        $(function () {
+                            $("#datepicker").datepicker();
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">End Date</label>
+                <div class="col-sm-10 ml-sm-auto">
+                    <input name="EndDate" type="date">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Spot</label>
+                <select class="form-select border-0 py-3" name="SportId">
+
+                    <option selected>Vui Long Chon Spot</option>
+                    @foreach (var item in Model.tblSpots)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+            </div>
+           
+            <div class="form-group row">
+
+                <label class="col-sm-2 col-form-label">Img</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="file" name="FileImg">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Description</label>
+                <textarea id="editor" asp-for="@q.Description" class="form-control"></textarea>
+                <input type="hidden" name="mydata" id="mydata" value="" />
+
+
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10 ml-sm-auto">
+                    <button name="btnSave" id="btnSave" class="btn btn-info" type="submit">Submit</button>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+<script src="~/ckeditor/ckeditor.js" type="text/javascript"></script>
+
+@section scripts {
+
+    <script>
+        CKEDITOR.replace('editor');
+        //window.onload = function () {
+
+        //};
+        $(document).ready(function (e) {
+
+            $("#btnSave").click(function (e) {
+                e.preventDefault();
+                var dt = CKEDITOR.instances['editor'].getData();
+                $("#mydata").val(dt);
+                $("#frmData").submit();
+            });
+        });
+        var pathImg = "";
+        window.onload = () => {
+            var lsImage = document.querySelectorAll(".pic-rect>img");
+
+            for (i = 0; i < lsImage.length; i++) {
+                lsImage[i].onclick = (event) => {
+                    var current_img = event.target;
+                    pathImg = current_img.src;
+                }
+            }
+            setInterval(() => {
+                var q = document.querySelector("#cke_103_textInput");
+                if (q != null) {
+                    if (q.value == "") {
+                        q.value = pathImg;
+                        pathImg = "";
+                    }
+
+                }
+            }, 100);
+        }
+    </script>
+}
