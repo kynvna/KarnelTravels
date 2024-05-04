@@ -14,7 +14,7 @@
     <link href="/assets/vendors/jvectormap/jquery-jvectormap-2.0.3.css" rel="stylesheet" />
     <!-- THEME STYLES-->
     <link href="/assets/css/main.min.css" rel="stylesheet" />
-    
+
     <!-- PAGE LEVEL STYLES-->
 </head>
 
@@ -23,7 +23,7 @@
         <!-- START HEADER-->
         <header class="header">
             <div class="page-brand">
-                <a class="link" asp-area="" asp-controller="Home" asp-action="AdminProfile">
+                <a class="link" asp-area="" asp-controller="Admin" asp-action="AdminProfile">
                     <span class="brand">
                         ADMIN
                         <span class="brand-tip">GUI</span>
@@ -222,6 +222,12 @@
                             <li>
                                 <a asp-action="AdminSpotView" asp-controller="Admin">Spots</a>
                             </li>
+                            <li>
+                                <a asp-action="AdminTourPackage" asp-controller="Admin">Restaurant</a>
+                            </li>
+                            <li>
+                                <a asp-action="ViewUpload" asp-controller="Admin">Upload</a>
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -390,6 +396,8 @@
     </div>
     <!-- END PAGA BACKDROPS-->
     <!-- CORE PLUGINS-->
+    <script src="../Scripts/ckeditor/ckeditor.js"></script>
+
     <script src="/assets/vendors/jquery/dist/jquery.min.js" type="text/javascript"></script>
     <script src="/assets/vendors/popper.js/dist/umd/popper.min.js" type="text/javascript"></script>
     <script src="/assets/vendors/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>

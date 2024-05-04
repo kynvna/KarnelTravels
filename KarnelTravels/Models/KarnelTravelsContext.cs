@@ -40,7 +40,7 @@ public partial class KarnelTravelsContext : DbContext
     public virtual DbSet<TblTravel> TblTravels { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Name=ConnectionStrings:KarnelTravelsDatabase");
+        => optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=KarnelTravels;Persist Security Info=True;User ID=sa;Password=1234;Encrypt=True;Trust Server Certificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+@model GetHotel_Res_Re;
+<div class="row">
+    <form action="/admin/Upload" method="post" enctype="multipart/form-data">
+
+        <select class="form-select border-0 py-3" name="objectid">
+            <option selected>ObjectId</option>
+            @foreach (var item in Model.HrCategories)
+            {
+                <option value="@item.CatId">@item.CatName</option>
+            }
+        </select>
+        <select class="form-select border-0 py-3" name="objectname">
+            <option selected>ObjectName</option>
+            @foreach (var item in Model.HrCategories)
+            {
+                <option value="@item.CatName">@item.CatName</option>
+            }
+        </select>
+        <input type="file" name="files" multiple />
+
+        <input type="submit" value="Up">
+    </form>
+</div>

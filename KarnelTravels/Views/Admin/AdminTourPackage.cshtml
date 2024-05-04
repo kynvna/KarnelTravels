@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "FormCkeditor";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+@model GetAllPack;
+<div>
+    <a href="/admin/ViewCreateTourPackage">Create</a>
+</div>
+<div class="row">
+    @foreach(var item in Model.Packages)
+    {
+         <div class="card" style="width:250px;">
+            @* <img class="card-img-top" style="height:280px" src="~/Content/Upload/@item.ComImg" /> *@
+            <div class="card-body">
+                <h4 class="card-title">@item.Name</h4>
+                <div class="text-muted card-subtitle">@item.StartDate - @item.EndDate</div>
+                <p class="card-text">@item.Description</p>
+                <button class="btn btn-default btn-sm">
+                    <i class="fa fa-plus"></i>
+                    <a href="/teacher/EditCompetition?idt=@item.PackageId">Edit</a
+                </button>
+                <button class="btn btn-default btn-sm">
+                    <i class="fa fa-plus"></i>
+                    <a href="/teacher/ViewProduct?idt=@item.PackageId">View</a
+                </button>
+            </div>
+        </div>
+    }
+</div>

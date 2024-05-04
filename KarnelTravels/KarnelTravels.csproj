@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="Views\Home\AboutUsView.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\NewsView.cshtml" />
+    <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\Home\ProductView.cshtml" />
+    <None Include="Views\Home\TravellingHotelView.cshtml" />
+    <None Include="Views\Home\TravellingPackageView.cshtml" />
+    <None Include="Views\Home\TravellingRestaurantView.cshtml" />
+    <None Include="Views\Home\TravellingSightView.cshtml" />
+    <None Include="Views\Home\TravellingTourView.cshtml" />
+    <None Include="Views\Home\TravellingTransportView.cshtml" />
     <None Include="wwwroot\js\main.js" />
     <None Include="wwwroot\js\site.js" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
@@ -150,6 +161,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Administrator\Data\" />
+    <Folder Include="Areas\Administrator\Models\" />
+    <Folder Include="Areas\Administrator\Views\" />
   </ItemGroup>
 
 </Project>
