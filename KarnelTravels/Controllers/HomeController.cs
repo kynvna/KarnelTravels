@@ -22,7 +22,7 @@ namespace KarnelTravels.Controllers
         //--ROUTINGS FOR REGULAR REDIRECT--
         public IActionResult Index()
         {
-            return View();
+            return View("");
         }
         public IActionResult ProductView()
         {
@@ -44,7 +44,8 @@ namespace KarnelTravels.Controllers
             getHotel_Res_Re.HotelS = hotel;
             getHotel_Res_Re.Restaurants = res;
             getHotel_Res_Re.Resortt = re;
-            return View(getHotel_Res_Re);
+            var a = 1;
+            return View("User/TravellingHotelView",a);
         }
 
         public IActionResult TravellingHotelViewSearch(string keyWord)
@@ -190,14 +191,54 @@ namespace KarnelTravels.Controllers
             getTran.All = q;
             return View(getTran);
         }
-        public IActionResult NewsView()
-        {
-            return View();
-        }
+        
         public IActionResult Privacy()
         {
             _logger.LogInformation("Accessing Privacy page.");
             return View();
+        }
+
+        public IActionResult NewsView()
+        {
+            return View("User/NewsView");
+        }
+        public IActionResult FeedbackOnCompany()
+        {
+            return View("User/FeedbackOnCompany");
+        }
+        
+        // This will go with an ID of a news - After which will be loaded to form the correspond news which is stored in a database
+        // NewsDetail/id
+        public IActionResult NewsDetail()
+        {
+            return View("User/NewsDetail");
+        }
+        // This will go with an ID of a tour in selection of the user - After which will be loaded to form
+        // the correspond item (tour, transport, etc..) which is stored in a database
+        // TourDetails/id
+        public IActionResult TourDetails()
+        {
+            return View("User/TourDetails");
+        }
+        public IActionResult SightDetails()
+        {
+            return View("User/SightDetails");
+        }
+        public IActionResult HotelDetails()
+        {
+            return View("User/HotelDetails");
+        }
+        public IActionResult TransportDetails()
+        {
+            return View("User/TransportDetails");
+        }
+        public IActionResult RestaurantDetails()
+        {
+            return View("User/RestaurantDetails");
+        }
+        public IActionResult AdvancedSearch()
+        {
+            return View("User/AdvancedSearch");
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
