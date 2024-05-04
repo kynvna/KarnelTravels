@@ -13885,6 +13885,110 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\LeHouseDalat1.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\LeHouseDalat1.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\LeHouseDalat2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\LeHouseDalat2.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\LeHouseDalat3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\LeHouseDalat3.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\LeHouseDalat4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\LeHouseDalat4.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\MercureDalatResort1.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\MercureDalatResort1.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\MercureDalatResort2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\MercureDalatResort2.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\MercureDalatResort3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\MercureDalatResort3.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\MercureDalatResort4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\MercureDalatResort4.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Tour_Package\\DanangTour1.jpg",
+      "PackagePath": "staticwebassets\\img\\Tour_Package\\DanangTour1.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Tour_Package\\DanangTour2.jpg",
+      "PackagePath": "staticwebassets\\img\\Tour_Package\\DanangTour2.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Tour_Package\\HanoiTour1.jpg",
+      "PackagePath": "staticwebassets\\img\\Tour_Package\\HanoiTour1.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Tour_Package\\HanoiTour2.jpg",
+      "PackagePath": "staticwebassets\\img\\Tour_Package\\HanoiTour2.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Tourist_Place\\DLMK1.jpg",
+      "PackagePath": "staticwebassets\\img\\Tourist_Place\\DLMK1.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Tourist_Place\\DLMK2.jpg",
+      "PackagePath": "staticwebassets\\img\\Tourist_Place\\DLMK2.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Tourist_Place\\DLMK3.jpg",
+      "PackagePath": "staticwebassets\\img\\Tourist_Place\\DLMK3.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Tourist_Place\\DLMK4.jpg",
+      "PackagePath": "staticwebassets\\img\\Tourist_Place\\DLMK4.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Tourist_Place\\Flower1.jpg",
+      "PackagePath": "staticwebassets\\img\\Tourist_Place\\Flower1.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Tourist_Place\\Flower2.jpg",
+      "PackagePath": "staticwebassets\\img\\Tourist_Place\\Flower2.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Tourist_Place\\Flower3.jpg",
+      "PackagePath": "staticwebassets\\img\\Tourist_Place\\Flower3.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Tourist_Place\\Flower4.jpg",
+      "PackagePath": "staticwebassets\\img\\Tourist_Place\\Flower4.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\VietJet1.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\VietJet1.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\VietJet2.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\VietJet2.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\VietnamAirlines1.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\VietnamAirlines1.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\VietnamAirlines2.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\VietnamAirlines2.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\limousine1.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\limousine1.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\limousine2.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\limousine2.jpg"
+    },
+    {
       "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\about.jpg",
       "PackagePath": "staticwebassets\\img\\about.jpg"
     },

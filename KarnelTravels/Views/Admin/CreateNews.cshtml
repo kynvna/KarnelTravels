@@ -1,0 +1,113 @@
+﻿@model CreateNewsViewModel
+
+@{
+    ViewData["Title"] = "CreateNews";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>CreateNews</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateNews">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="News.NewsObject" class="control-label">News Object</label>
+                <select asp-for="News.NewsObject" asp-items="Model.NewsObjectList" class="form-control" id="News_NewsObject">
+                    <option value="">-- Select News Object --</option>
+                </select>
+                <span asp-validation-for="News.NewsObject" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="objectNameDropdown" class="control-label">Object Name</label>
+                <select id="objectNameDropdown" name="News.ObjectId" class="form-control">
+                    <option value="">-- Select Object --</option>
+                </select>
+                <span asp-validation-for="News.ObjectId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="News.Description" class="control-label">Description</label>
+                <input asp-for="News.Description" class="form-control" />
+                <span asp-validation-for="News.Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="News.Status" class="control-label">Status</label>
+                <select asp-for="News.Status" asp-items="Model.StatusList" class="form-control">
+                    <option value="">-- Select Status --</option>
+                </select>
+                <span asp-validation-for="News.Status" class="text-danger"></span>
+            </div>
+
+           @*  <div class="form-group">
+                <label asp-for="News.Date" class="control-label">Date</label>
+                <input asp-for="News.Date" class="form-control" />
+                <span asp-validation-for="News.Date" class="text-danger"></span>
+            </div> *@
+
+            <div class="form-group">
+                <label asp-for="News.NewsDetail" class="control-label">News Detail</label>
+                <input asp-for="News.NewsDetail" class="form-control" />
+                <span asp-validation-for="News.NewsDetail" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="News.HotNews" class="control-label">Hot News</label>
+                <div class="form-check">
+                    <input asp-for="News.HotNews" class="form-check-input" type="radio" value="1" id="hotNewsYes">
+                    <label class="form-check-label" for="hotNewsYes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input asp-for="News.HotNews" class="form-check-input" type="radio" value="0" id="hotNewsNo">
+                    <label class="form-check-label" for="hotNewsNo">No</label>
+                </div>
+                <span asp-validation-for="News.HotNews" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            console.log("Script loaded and event bound.");
+
+            $('#News_NewsObject').change(function () {
+                var newsObject = $(this).val();
+                $.ajax({
+                    url: '@Url.Action("GetObjectNames", "Admin")', // Ensure this points to the correct controller and action
+                    type: 'GET',
+                    data: { newsObject: newsObject },
+                    success: function (data) {
+                        var objectIdSelect = $('#objectNameDropdown');
+                        objectIdSelect.empty();
+                        objectIdSelect.append($('<option>', { value: "", text: "Select Object..." }));
+                        $.each(data, function (index, item) {
+                            objectIdSelect.append($('<option>', { value: item.id, text: item.name }));
+                        });
+                    },
+                    error: function (error) {
+                        console.error("Error fetching data: ", error);
+                    }
+                });
+            });
+        });
+    </script>
+}

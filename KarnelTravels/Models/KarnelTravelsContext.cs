@@ -112,7 +112,7 @@ public partial class KarnelTravelsContext : DbContext
 
             entity.ToTable("tblImage_Url");
 
-            entity.Property(e => e.Description).HasMaxLength(10);
+            entity.Property(e => e.Url).HasMaxLength(50);
             entity.Property(e => e.UrlObject).HasMaxLength(50);
         });
 
@@ -122,11 +122,7 @@ public partial class KarnelTravelsContext : DbContext
 
             entity.ToTable("tblNews");
 
-            entity.Property(e => e.ImageLinkIid).HasColumnName("ImageLinkIId");
             entity.Property(e => e.NewsObject).HasMaxLength(50);
-            entity.Property(e => e.ObjectId)
-                .HasMaxLength(10)
-                .IsFixedLength();
             entity.Property(e => e.Status).HasMaxLength(50);
         });
 
