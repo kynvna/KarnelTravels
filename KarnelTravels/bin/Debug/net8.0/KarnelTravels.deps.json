@@ -53,9 +53,7 @@
           }
         }
       },
-<<<<<<< HEAD
       "CKEditor/3.6.4": {},
-=======
       "Humanizer/2.14.1": {
         "dependencies": {
           "Humanizer.Core.af": "2.14.1",
@@ -108,7 +106,6 @@
           "Humanizer.Core.zh-Hant": "2.14.1"
         }
       },
->>>>>>> origin/dannguyen
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -117,53 +114,6 @@
           }
         }
       },
-<<<<<<< HEAD
-      "Microsoft.AspNet.Mvc/5.3.0": {
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "3.3.0",
-          "Microsoft.AspNet.WebPages": "3.3.0"
-        },
-        "runtime": {
-          "lib/net45/System.Web.Mvc.dll": {
-            "assemblyVersion": "5.3.0.0",
-            "fileVersion": "5.3.61130.707"
-          }
-        }
-      },
-      "Microsoft.AspNet.Razor/3.3.0": {
-        "runtime": {
-          "lib/net45/System.Web.Razor.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.61130.707"
-          }
-        }
-      },
-      "Microsoft.AspNet.WebPages/3.3.0": {
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "3.3.0",
-          "Microsoft.Web.Infrastructure": "1.0.0"
-        },
-        "runtime": {
-          "lib/net45/System.Web.Helpers.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.61130.707"
-          },
-          "lib/net45/System.Web.WebPages.Deployment.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.61130.707"
-          },
-          "lib/net45/System.Web.WebPages.Razor.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.61130.707"
-          },
-          "lib/net45/System.Web.WebPages.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.61130.707"
-          }
-        }
-      },
-      "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
-=======
       "Humanizer.Core.af/2.14.1": {
         "dependencies": {
           "Humanizer.Core": "2.14.1"
@@ -644,6 +594,50 @@
           }
         }
       },
+      "Microsoft.AspNet.Mvc/5.3.0": {
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "3.3.0",
+          "Microsoft.AspNet.WebPages": "3.3.0"
+        },
+        "runtime": {
+          "lib/net45/System.Web.Mvc.dll": {
+            "assemblyVersion": "5.3.0.0",
+            "fileVersion": "5.3.61130.707"
+          }
+        }
+      },
+      "Microsoft.AspNet.Razor/3.3.0": {
+        "runtime": {
+          "lib/net45/System.Web.Razor.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.61130.707"
+          }
+        }
+      },
+      "Microsoft.AspNet.WebPages/3.3.0": {
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "3.3.0",
+          "Microsoft.Web.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "lib/net45/System.Web.Helpers.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.61130.707"
+          },
+          "lib/net45/System.Web.WebPages.Deployment.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.61130.707"
+          },
+          "lib/net45/System.Web.WebPages.Razor.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.61130.707"
+          },
+          "lib/net45/System.Web.WebPages.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.61130.707"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Razor.Language/6.0.24": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Language.dll": {
@@ -653,7 +647,6 @@
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
->>>>>>> origin/dannguyen
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
             "assemblyVersion": "7.0.0.0",
@@ -1428,23 +1421,11 @@
           }
         }
       },
-<<<<<<< HEAD
-      "Microsoft.Web.Infrastructure/1.0.0": {
-        "runtime": {
-          "lib/net40/Microsoft.Web.Infrastructure.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.20105.407"
-          }
-        }
-      },
-      "Microsoft.Win32.SystemEvents/6.0.0": {
-=======
       "Microsoft.VisualStudio.Web.CodeGeneration/8.0.2": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "8.0.2"
         },
->>>>>>> origin/dannguyen
         "runtime": {
           "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {
             "assemblyVersion": "8.0.2.0",
@@ -1526,6 +1507,14 @@
           "lib/net8.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {
             "assemblyVersion": "8.0.2.0",
             "fileVersion": "8.0.224.15101"
+          }
+        }
+      },
+      "Microsoft.Web.Infrastructure/1.0.0": {
+        "runtime": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.20105.407"
           }
         }
       },
@@ -1955,21 +1944,19 @@
       "path": "azure.identity/1.10.3",
       "hashPath": "azure.identity.1.10.3.nupkg.sha512"
     },
-<<<<<<< HEAD
     "CKEditor/3.6.4": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-roGF09wJmp7Zyyvq/bDzbLccKUfMumMpmgPav5U/naoVoDis1izPsSL8H/MEFG3hfFBC4HegSRwlYZG+PWHnaQ==",
       "path": "ckeditor/3.6.4",
       "hashPath": "ckeditor.3.6.4.nupkg.sha512"
-=======
+    },
     "Humanizer/2.14.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-/FUTD3cEceAAmJSCPN9+J+VhGwmL/C12jvwlyM1DFXShEMsBzvLzLqSrJ2rb+k/W2znKw7JyflZgZpyE+tI7lA==",
       "path": "humanizer/2.14.1",
       "hashPath": "humanizer.2.14.1.nupkg.sha512"
->>>>>>> origin/dannguyen
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -1978,32 +1965,7 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
-<<<<<<< HEAD
-    "Microsoft.AspNet.Mvc/5.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Q1LcXRqTPmbXJAdf45PsxI6JYnCQP4vBfPCgDFd4dYf8ojxFTo4PH333PC4TzbOqRHxrUWGwgBdcR5T2jNwpHQ==",
-      "path": "microsoft.aspnet.mvc/5.3.0",
-      "hashPath": "microsoft.aspnet.mvc.5.3.0.nupkg.sha512"
-    },
-    "Microsoft.AspNet.Razor/3.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-5vJ0UKE/n381qcaKwFHxCwzb/YVuHzrm155iTgQhiv7+xdg2PE+54u+NPqu6C9AeRVOiwbh8/EOZwD16bLvWkg==",
-      "path": "microsoft.aspnet.razor/3.3.0",
-      "hashPath": "microsoft.aspnet.razor.3.3.0.nupkg.sha512"
-    },
-    "Microsoft.AspNet.WebPages/3.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2ATJrA8KNx2EpBWNjwy4P+NjQ06cZWjYsTZ5NqGNIHaU/i3NKmtpoaE90NGmVRaKF5rryGfADnvPQ56f61OuWg==",
-      "path": "microsoft.aspnet.webpages/3.3.0",
-      "hashPath": "microsoft.aspnet.webpages.3.3.0.nupkg.sha512"
-    },
-    "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
-=======
     "Humanizer.Core.af/2.14.1": {
->>>>>>> origin/dannguyen
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-BoQHyu5le+xxKOw+/AUM7CLXneM/Bh3++0qh1u0+D95n6f9eGt9kNc8LcAHLIOwId7Sd5hiAaaav0Nimj3peNw==",
@@ -2338,6 +2300,27 @@
       "sha512": "sha512-VIXB7HCUC34OoaGnO3HJVtSv2/wljPhjV7eKH4+TFPgQdJj2lvHNKY41Dtg0Bphu7X5UaXFR4zrYYyo+GNOjbA==",
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
+    },
+    "Microsoft.AspNet.Mvc/5.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Q1LcXRqTPmbXJAdf45PsxI6JYnCQP4vBfPCgDFd4dYf8ojxFTo4PH333PC4TzbOqRHxrUWGwgBdcR5T2jNwpHQ==",
+      "path": "microsoft.aspnet.mvc/5.3.0",
+      "hashPath": "microsoft.aspnet.mvc.5.3.0.nupkg.sha512"
+    },
+    "Microsoft.AspNet.Razor/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5vJ0UKE/n381qcaKwFHxCwzb/YVuHzrm155iTgQhiv7+xdg2PE+54u+NPqu6C9AeRVOiwbh8/EOZwD16bLvWkg==",
+      "path": "microsoft.aspnet.razor/3.3.0",
+      "hashPath": "microsoft.aspnet.razor.3.3.0.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebPages/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2ATJrA8KNx2EpBWNjwy4P+NjQ06cZWjYsTZ5NqGNIHaU/i3NKmtpoaE90NGmVRaKF5rryGfADnvPQ56f61OuWg==",
+      "path": "microsoft.aspnet.webpages/3.3.0",
+      "hashPath": "microsoft.aspnet.webpages.3.3.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Language/6.0.24": {
       "type": "package",
@@ -2682,18 +2665,7 @@
       "path": "microsoft.sqlserver.server/1.0.0",
       "hashPath": "microsoft.sqlserver.server.1.0.0.nupkg.sha512"
     },
-<<<<<<< HEAD
-    "Microsoft.Web.Infrastructure/1.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-FNmvLn5m2LTU/Rs2KWVo0SIIh9Ek+U0ojex7xeDaSHw/zgEP77A8vY5cVWgUtBGS8MJfDGNn8rpXJWEIQaPwTg==",
-      "path": "microsoft.web.infrastructure/1.0.0",
-      "hashPath": "microsoft.web.infrastructure.1.0.0.nupkg.sha512"
-    },
-    "Microsoft.Win32.SystemEvents/6.0.0": {
-=======
     "Microsoft.VisualStudio.Web.CodeGeneration/8.0.2": {
->>>>>>> origin/dannguyen
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-SSHxLQVxaSSLBDHnCwEU3LFcxKfhdC0i6xi+XMaF0lI++zy1SKdMRxgDSn9TEcSCAYNFAoEf28Y0hiYG2NgU5Q==",
@@ -2741,6 +2713,13 @@
       "sha512": "sha512-eRn0vFzk+B/TIqrf3a4cOuU3HqwNweAGeuF53/X5nK+DKsjM0w8tjA5YxZKEONapM2E6YTKlZtKqXXs4oufRdQ==",
       "path": "microsoft.visualstudio.web.codegenerators.mvc/8.0.2",
       "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.8.0.2.nupkg.sha512"
+    },
+    "Microsoft.Web.Infrastructure/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FNmvLn5m2LTU/Rs2KWVo0SIIh9Ek+U0ojex7xeDaSHw/zgEP77A8vY5cVWgUtBGS8MJfDGNn8rpXJWEIQaPwTg==",
+      "path": "microsoft.web.infrastructure/1.0.0",
+      "hashPath": "microsoft.web.infrastructure.1.0.0.nupkg.sha512"
     },
     "Microsoft.Win32.SystemEvents/7.0.0": {
       "type": "package",
