@@ -183,6 +183,10 @@
     <Folder Include="Areas\Administrator\Models\" />
     <Folder Include="Areas\Administrator\Views\" />
     <Folder Include="Models\TouristPlaceViewModel\" />
+    <Folder Include="wwwroot\img\Hotel_Restaurant\" />
+    <Folder Include="wwwroot\img\TblTour_Package\" />
+    <Folder Include="wwwroot\img\TblTourist_Place\" />
+    <Folder Include="wwwroot\img\Travels\" />
     <Folder Include="wwwroot\upload\Hotel\" />
     <Folder Include="wwwroot\upload\Resort\" />
   </ItemGroup>

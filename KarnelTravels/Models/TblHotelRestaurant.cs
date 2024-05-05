@@ -15,11 +15,7 @@ public partial class TblHotelRestaurant
 
     public int? SpotId { get; set; }
 
-    public string? Imglink { get; set; }
-
     public string? Description { get; set; }
-
-    public int? ImageLinkId { get; set; }
 
     public string? Status { get; set; }
 

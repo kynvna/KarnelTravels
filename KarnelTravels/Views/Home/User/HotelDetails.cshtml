@@ -1,0 +1,25 @@
+﻿@model KarnelTravels.Models.HRUserViewModel
+
+@{
+    ViewData["Title"] = "Sight Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Sight Details Start -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>@Model.Name</h2>
+            <p>@Model.Description</p>
+            <h3>Price : @Model.Price</h3>
+        </div>
+    </div>
+    <div class="row mt-4">
+        @foreach (var imageUrl in Model.ImageUrl)
+        {
+            <div class="col-md-4 mb-3">
+                <img src="~/img/Hotel_Restaurant/@Url.Content(imageUrl)" class="img-fluid" alt="Tourist Place Image">
+            </div>
+        }
+    </div>
+</div>

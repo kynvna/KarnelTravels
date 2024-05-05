@@ -11,7 +11,6 @@
 
         public int? SpotId { get; set; }
 
-        public IFormFile Imglink { get; set; }
 
         public string? Description { get; set; }
 

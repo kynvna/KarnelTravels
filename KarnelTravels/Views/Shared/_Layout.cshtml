@@ -54,10 +54,16 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a asp-controller="Home" asp-action="Index" class="nav-item nav-link active">Home</a>
-                        <a asp-controller="Home" asp-action="TravellingPackageView" class="nav-item nav-link">Package Travelling</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a asp-controller="Home" asp-action="AdvancedSearch" class="dropdown-item">Advanced Search</a>
+                                <a asp-controller="Home" asp-action="TravellingPackageView" class="dropdown-item">Package</a>
+                            </div>
+                        </div>
+                        
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travelling</a>
-                            
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a asp-controller="Home" asp-action="TravellingTransportView" class="dropdown-item">Transportation</a>
                                 <a asp-controller="Home" asp-action="TravellingSightView" class="dropdown-item">Sights</a>
@@ -66,10 +72,22 @@
                                 <a asp-controller="Home" asp-action="TravellingTourView" class="dropdown-item">Tours</a>
                             </div>
                         </div>
-                        <a asp-controller="Home" asp-action="NewsView" class="nav-item nav-link">News</a>
-                        <a asp-controller="Home" asp-action="AboutUsView" class="nav-item nav-link">About us</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">News & Interest</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a asp-controller="Home" asp-action="NewsView" class="dropdown-item">News</a>
+                                <a asp-controller="Home" asp-action="AboutUsView" class="dropdown-item">About us</a>    
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Misc</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a asp-controller="Admin" asp-action="Login" class="dropdown-item">Admin</a>
+                                <a asp-controller="Admin" asp-action="Help" class="dropdown-item">Sitemap</a>
+                            </div>
+                        </div>
                     </div>
-                    <a class="btn btn-primary px-3 d-none d-lg-flex">Leave Feedback</a>
+                    <a class="btn btn-primary px-3 d-none d-lg-flex" asp-controller="Home" asp-action="FeedbackOnCompany">Leave Feedback</a>
                 </div>
             </nav>
         </div>

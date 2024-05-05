@@ -1221,6 +1221,10 @@
       "PackagePath": "staticwebassets\\assets\\js\\scripts\\charts_morris_demo.js"
     },
     {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\assets\\js\\scripts\\ckeditor.js",
+      "PackagePath": "staticwebassets\\assets\\js\\scripts\\ckeditor.js"
+    },
+    {
       "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\assets\\js\\scripts\\dashboard_1_demo.js",
       "PackagePath": "staticwebassets\\assets\\js\\scripts\\dashboard_1_demo.js"
     },
@@ -13869,16 +13873,2272 @@
       "PackagePath": "staticwebassets\\assets\\vendors\\themify-icons\\ie7\\ie7.js"
     },
     {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\CHANGES.html",
+      "PackagePath": "staticwebassets\\ckeditor\\CHANGES.html"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\INSTALL.html",
+      "PackagePath": "staticwebassets\\ckeditor\\INSTALL.html"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\LICENSE.html",
+      "PackagePath": "staticwebassets\\ckeditor\\LICENSE.html"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\adapters\\jquery.js",
+      "PackagePath": "staticwebassets\\ckeditor\\adapters\\jquery.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\ckeditor.asp",
+      "PackagePath": "staticwebassets\\ckeditor\\ckeditor.asp"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\ckeditor.js",
+      "PackagePath": "staticwebassets\\ckeditor\\ckeditor.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\ckeditor.pack",
+      "PackagePath": "staticwebassets\\ckeditor\\ckeditor.pack"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\ckeditor.php",
+      "PackagePath": "staticwebassets\\ckeditor\\ckeditor.php"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\ckeditor_basic.js",
+      "PackagePath": "staticwebassets\\ckeditor\\ckeditor_basic.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\ckeditor_basic_source.js",
+      "PackagePath": "staticwebassets\\ckeditor\\ckeditor_basic_source.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\ckeditor_php4.php",
+      "PackagePath": "staticwebassets\\ckeditor\\ckeditor_php4.php"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\ckeditor_php5.php",
+      "PackagePath": "staticwebassets\\ckeditor\\ckeditor_php5.php"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\ckeditor_source.js",
+      "PackagePath": "staticwebassets\\ckeditor\\ckeditor_source.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\config.js",
+      "PackagePath": "staticwebassets\\ckeditor\\config.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\contents.css",
+      "PackagePath": "staticwebassets\\ckeditor\\contents.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\images\\spacer.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\images\\spacer.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\_languages.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\_languages.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\_translationstatus.txt",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\_translationstatus.txt"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\af.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\af.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\ar.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ar.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\bg.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\bg.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\bn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\bn.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\bs.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\bs.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\ca.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ca.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\cs.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\cs.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\cy.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\cy.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\da.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\da.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\de.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\de.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\el.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\el.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\en-au.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\en-au.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\en-ca.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\en-ca.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\en-gb.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\en-gb.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\en.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\en.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\eo.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\eo.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\es.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\es.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\et.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\et.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\eu.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\eu.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\fa.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\fi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\fi.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\fo.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\fo.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\fr-ca.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\fr-ca.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\fr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\fr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\gl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\gl.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\gu.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\gu.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\he.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\he.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\hi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\hi.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\hr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\hr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\hu.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\hu.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\id.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\id.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\is.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\is.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\it.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\it.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\ja.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ja.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\ka.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ka.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\km.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\km.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\ko.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ko.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\lt.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\lt.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\lv.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\lv.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\mk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\mk.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\mn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\mn.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\ms.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ms.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\nb.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\nb.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\nl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\nl.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\no.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\no.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\pl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\pl.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\pt-br.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\pt-br.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\pt.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\pt.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\ro.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ro.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\ru.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ru.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\sk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\sk.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\sl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\sl.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\sr-latn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\sr-latn.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\sr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\sr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\sv.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\sv.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\th.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\th.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\tr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\tr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\ug.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ug.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\uk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\uk.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\vi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\vi.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\zh-cn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\lang\\zh.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\zh.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\a11yhelp.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\a11yhelp.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\_translationstatus.txt",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\_translationstatus.txt"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\cs.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\cs.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\cy.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\cy.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\da.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\da.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\de.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\de.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\el.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\el.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\en.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\en.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\eo.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\eo.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\fa.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\fi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\fi.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\fr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\fr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\gu.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\gu.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\he.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\he.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\it.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\it.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\mk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\mk.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\nb.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\nb.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\nl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\nl.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\no.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\no.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\pt-br.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\pt-br.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\ro.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\ro.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\tr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\tr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\ug.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\ug.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\vi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\vi.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\a11yhelp\\lang\\zh-cn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\lang\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\about\\dialogs\\about.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\about\\dialogs\\about.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\about\\dialogs\\logo_ckeditor.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\about\\dialogs\\logo_ckeditor.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\adobeair\\plugin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\adobeair\\plugin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\ajax\\plugin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\ajax\\plugin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\autogrow\\plugin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\autogrow\\plugin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\bbcode\\plugin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\bbcode\\plugin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\clipboard\\dialogs\\paste.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\clipboard\\dialogs\\paste.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\colordialog\\dialogs\\colordialog.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\colordialog\\dialogs\\colordialog.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\_translationstatus.txt",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\_translationstatus.txt"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\bg.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\bg.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\cs.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\cs.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\cy.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\cy.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\da.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\da.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\de.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\de.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\el.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\el.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\en.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\en.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\eo.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\eo.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\et.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\et.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\fa.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\fi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\fi.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\fr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\fr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\gu.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\gu.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\he.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\he.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\hr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\hr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\it.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\it.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\nb.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\nb.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\nl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\nl.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\no.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\no.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\pl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\pl.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\pt-br.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\pt-br.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\tr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\tr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\ug.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\ug.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\uk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\uk.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\vi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\vi.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\lang\\zh-cn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\lang\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\devtools\\plugin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\devtools\\plugin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\dialog\\dialogDefinition.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\dialog\\dialogDefinition.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\div\\dialogs\\div.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\div\\dialogs\\div.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\docprops\\dialogs\\docprops.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\docprops\\dialogs\\docprops.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\docprops\\plugin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\docprops\\plugin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\find\\dialogs\\find.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\find\\dialogs\\find.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\flash\\dialogs\\flash.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\flash\\dialogs\\flash.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\flash\\images\\placeholder.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\flash\\images\\placeholder.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\button.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\button.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\checkbox.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\checkbox.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\form.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\form.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\hiddenfield.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\hiddenfield.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\radio.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\radio.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\select.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\select.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\textarea.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\textarea.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\textfield.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\textfield.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\forms\\images\\hiddenfield.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\images\\hiddenfield.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\iframe\\dialogs\\iframe.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\iframe\\dialogs\\iframe.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\iframe\\images\\placeholder.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\iframe\\images\\placeholder.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\iframedialog\\plugin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\iframedialog\\plugin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\image\\dialogs\\image.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\image\\dialogs\\image.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\link\\dialogs\\anchor.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\link\\dialogs\\anchor.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\link\\dialogs\\link.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\link\\dialogs\\link.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\link\\images\\anchor.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\link\\images\\anchor.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\liststyle\\dialogs\\liststyle.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\liststyle\\dialogs\\liststyle.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\pagebreak\\images\\pagebreak.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\pagebreak\\images\\pagebreak.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\pastefromword\\filter\\default.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\pastefromword\\filter\\default.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\pastetext\\dialogs\\pastetext.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\pastetext\\dialogs\\pastetext.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\dialogs\\placeholder.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\dialogs\\placeholder.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\_translationstatus.txt",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\_translationstatus.txt"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\bg.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\bg.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\cs.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\cs.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\cy.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\cy.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\da.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\da.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\de.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\de.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\el.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\el.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\en.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\en.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\eo.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\eo.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\et.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\et.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\fa.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\fi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\fi.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\fr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\fr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\he.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\he.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\hr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\hr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\it.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\it.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\nb.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\nb.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\nl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\nl.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\no.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\no.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\pl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\pl.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\pt-br.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\pt-br.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\tr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\tr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\ug.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\ug.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\uk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\uk.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\vi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\vi.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\lang\\zh-cn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\lang\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\placeholder.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\placeholder.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\placeholder\\plugin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\placeholder\\plugin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\preview\\preview.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\preview\\preview.html"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\scayt\\dialogs\\options.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\scayt\\dialogs\\options.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\scayt\\dialogs\\toolbar.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\scayt\\dialogs\\toolbar.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_address.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_address.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_blockquote.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_blockquote.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_div.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_div.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h1.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h1.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h2.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h2.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h3.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h3.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h4.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h4.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h5.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h5.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h6.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h6.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_p.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_p.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_pre.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_pre.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\dialogs\\smiley.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\dialogs\\smiley.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\angel_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\angel_smile.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\angry_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\angry_smile.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\broken_heart.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\broken_heart.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\confused_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\confused_smile.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\cry_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\cry_smile.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\devil_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\devil_smile.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\embaressed_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\embaressed_smile.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\envelope.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\envelope.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\heart.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\heart.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\kiss.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\kiss.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\lightbulb.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\lightbulb.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\omg_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\omg_smile.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\regular_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\regular_smile.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\sad_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\sad_smile.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\shades_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\shades_smile.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\teeth_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\teeth_smile.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\thumbs_down.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\thumbs_down.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\thumbs_up.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\thumbs_up.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\tounge_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\tounge_smile.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\whatchutalkingabout_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\whatchutalkingabout_smile.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\smiley\\images\\wink_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\wink_smile.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\specialchar.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\specialchar.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\_translationstatus.txt",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\_translationstatus.txt"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\cs.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\cs.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\cy.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\cy.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\de.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\de.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\el.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\el.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\en.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\en.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\eo.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\eo.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\et.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\et.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\fa.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\fi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\fi.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\fr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\fr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\he.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\he.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\hr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\hr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\it.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\it.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\nb.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\nb.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\nl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\nl.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\no.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\no.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\pt-br.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\pt-br.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\tr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\tr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\ug.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\ug.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\specialchar\\lang\\zh-cn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\lang\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\styles\\styles\\default.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\styles\\styles\\default.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\stylesheetparser\\plugin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\stylesheetparser\\plugin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\table\\dialogs\\table.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\table\\dialogs\\table.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\tableresize\\plugin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\tableresize\\plugin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\tabletools\\dialogs\\tableCell.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\tabletools\\dialogs\\tableCell.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\templates\\dialogs\\templates.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\dialogs\\templates.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\templates\\templates\\default.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\templates\\default.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\templates\\templates\\images\\template1.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\templates\\images\\template1.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\templates\\templates\\images\\template2.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\templates\\images\\template2.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\templates\\templates\\images\\template3.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\templates\\images\\template3.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\dialogs\\uicolor.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\dialogs\\uicolor.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\_translationstatus.txt",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\_translationstatus.txt"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\bg.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\bg.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\cs.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\cs.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\cy.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\cy.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\da.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\da.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\de.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\de.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\el.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\el.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\en.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\en.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\eo.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\eo.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\et.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\et.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\fa.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\fi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\fi.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\fr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\fr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\he.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\he.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\hr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\hr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\it.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\it.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\mk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\mk.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\nb.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\nb.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\nl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\nl.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\no.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\no.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\pl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\pl.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\pt-br.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\pt-br.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\tr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\tr.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\ug.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\ug.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\uk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\uk.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\vi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\vi.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\lang\\zh-cn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\lang\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\plugin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\plugin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\uicolor.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\uicolor.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\yui\\assets\\hue_bg.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\yui\\assets\\hue_bg.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\yui\\assets\\hue_thumb.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\yui\\assets\\hue_thumb.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\yui\\assets\\picker_mask.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\yui\\assets\\picker_mask.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\yui\\assets\\picker_thumb.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\yui\\assets\\picker_thumb.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\yui\\assets\\yui.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\yui\\assets\\yui.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\uicolor\\yui\\yui.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\uicolor\\yui\\yui.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\wsc\\dialogs\\ciframe.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\wsc\\dialogs\\ciframe.html"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\wsc\\dialogs\\tmpFrameset.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\wsc\\dialogs\\tmpFrameset.html"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\wsc\\dialogs\\wsc.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\wsc\\dialogs\\wsc.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\wsc\\dialogs\\wsc.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\wsc\\dialogs\\wsc.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\plugins\\xml\\plugin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\xml\\plugin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\kama\\dialog.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\kama\\dialog.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\kama\\editor.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\kama\\editor.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\kama\\icons.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\kama\\icons.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\kama\\icons_rtl.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\kama\\icons_rtl.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\kama\\images\\dialog_sides.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\kama\\images\\dialog_sides.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\kama\\images\\dialog_sides.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\kama\\images\\dialog_sides.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\kama\\images\\dialog_sides_rtl.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\kama\\images\\dialog_sides_rtl.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\kama\\images\\mini.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\kama\\images\\mini.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\kama\\images\\noimage.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\kama\\images\\noimage.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\kama\\images\\sprites.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\kama\\images\\sprites.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\kama\\images\\sprites_ie6.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\kama\\images\\sprites_ie6.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\kama\\images\\toolbar_start.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\kama\\images\\toolbar_start.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\kama\\skin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\kama\\skin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\kama\\templates.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\kama\\templates.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\office2003\\dialog.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\office2003\\dialog.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\office2003\\editor.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\office2003\\editor.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\office2003\\icons.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\office2003\\icons.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\office2003\\icons_rtl.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\office2003\\icons_rtl.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\office2003\\images\\dialog_sides.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\office2003\\images\\dialog_sides.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\office2003\\images\\dialog_sides.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\office2003\\images\\dialog_sides.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\office2003\\images\\dialog_sides_rtl.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\office2003\\images\\dialog_sides_rtl.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\office2003\\images\\mini.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\office2003\\images\\mini.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\office2003\\images\\noimage.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\office2003\\images\\noimage.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\office2003\\images\\sprites.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\office2003\\images\\sprites.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\office2003\\images\\sprites_ie6.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\office2003\\images\\sprites_ie6.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\office2003\\skin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\office2003\\skin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\office2003\\templates.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\office2003\\templates.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\v2\\dialog.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\v2\\dialog.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\v2\\editor.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\v2\\editor.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\v2\\icons.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\v2\\icons.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\v2\\icons_rtl.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\v2\\icons_rtl.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\v2\\images\\dialog_sides.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\v2\\images\\dialog_sides.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\v2\\images\\dialog_sides.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\v2\\images\\dialog_sides.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\v2\\images\\dialog_sides_rtl.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\v2\\images\\dialog_sides_rtl.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\v2\\images\\mini.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\v2\\images\\mini.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\v2\\images\\noimage.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\v2\\images\\noimage.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\v2\\images\\sprites.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\v2\\images\\sprites.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\v2\\images\\sprites_ie6.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\v2\\images\\sprites_ie6.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\v2\\images\\toolbar_start.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\v2\\images\\toolbar_start.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\v2\\skin.js",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\v2\\skin.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\skins\\v2\\templates.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\v2\\templates.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\ckeditor\\themes\\default\\theme.js",
+      "PackagePath": "staticwebassets\\ckeditor\\themes\\default\\theme.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
       "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
       "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\image\\Restaurant\\638499505827396641pic1.png",
+      "PackagePath": "staticwebassets\\image\\Restaurant\\638499505827396641pic1.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\image\\Restaurant\\638499505913918034pic2.png",
+      "PackagePath": "staticwebassets\\image\\Restaurant\\638499505913918034pic2.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\image\\Restaurant\\638499505923861839pic3.png",
+      "PackagePath": "staticwebassets\\image\\Restaurant\\638499505923861839pic3.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\image\\Restaurant\\638499534014033239pic3.png",
+      "PackagePath": "staticwebassets\\image\\Restaurant\\638499534014033239pic3.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\image\\Restaurant\\638499535038387503Ami fat cat size to (3).gif",
+      "PackagePath": "staticwebassets\\image\\Restaurant\\638499535038387503Ami fat cat size to (3).gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\image\\Restaurant\\638500163824898101MyAvatar.jpg",
+      "PackagePath": "staticwebassets\\image\\Restaurant\\638500163824898101MyAvatar.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\image\\Restaurant\\638500243392991209103614644_148680330082107_7242194846769361826_n.jpg",
+      "PackagePath": "staticwebassets\\image\\Restaurant\\638500243392991209103614644_148680330082107_7242194846769361826_n.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\image\\Restaurant\\638500245190704958103614644_148680330082107_7242194846769361826_n.jpg",
+      "PackagePath": "staticwebassets\\image\\Restaurant\\638500245190704958103614644_148680330082107_7242194846769361826_n.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\image\\Restaurant\\638500247355398420ho-con-rua-jupu.jpg",
+      "PackagePath": "staticwebassets\\image\\Restaurant\\638500247355398420ho-con-rua-jupu.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\image\\Restaurant\\638500249113708174bao-boi-bich-ke-than-thien.jpeg",
+      "PackagePath": "staticwebassets\\image\\Restaurant\\638500249113708174bao-boi-bich-ke-than-thien.jpeg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\image\\Restaurant\\638500253179802778363406899_665194158975304_402319069448735372_n.jpg",
+      "PackagePath": "staticwebassets\\image\\Restaurant\\638500253179802778363406899_665194158975304_402319069448735372_n.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\image\\Restaurant\\638500258793060864381448947_718113597026113_5155617388012812176_n.jpg",
+      "PackagePath": "staticwebassets\\image\\Restaurant\\638500258793060864381448947_718113597026113_5155617388012812176_n.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\image\\Restaurant\\638500260952492703ho-con-rua-jupu.jpg",
+      "PackagePath": "staticwebassets\\image\\Restaurant\\638500260952492703ho-con-rua-jupu.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Caravelle Saigon1.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Caravelle Saigon1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Caravelle Saigon2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Caravelle Saigon2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Caravelle Saigon3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Caravelle Saigon3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Caravelle Saigon4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Caravelle Saigon4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Dalat Boutique PNP Hotel.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Dalat Boutique PNP Hotel.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Dalat Boutique PNP Hotel2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Dalat Boutique PNP Hotel2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Dalat Boutique PNP Hotel3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Dalat Boutique PNP Hotel3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Dalat Boutique PNP Hotel4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Dalat Boutique PNP Hotel4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\InterContinental Saigon1.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\InterContinental Saigon1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\InterContinental Saigon2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\InterContinental Saigon2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\InterContinental Saigon3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\InterContinental Saigon3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\InterContinental Saigon4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\InterContinental Saigon4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\LeHouseDalat1.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\LeHouseDalat1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\LeHouseDalat2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\LeHouseDalat2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\LeHouseDalat3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\LeHouseDalat3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\LeHouseDalat4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\LeHouseDalat4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Malibu Hotel.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Malibu Hotel.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Malibu Hotel2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Malibu Hotel2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Malibu Hotel3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Malibu Hotel3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Malibu Hotel4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Malibu Hotel4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\MercureDalatResort1.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\MercureDalatResort1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\MercureDalatResort2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\MercureDalatResort2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\MercureDalatResort3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\MercureDalatResort3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\MercureDalatResort4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\MercureDalatResort4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Mùa Dalat Wellness Hotel1.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Mùa Dalat Wellness Hotel1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Mùa Dalat Wellness Hotel2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Mùa Dalat Wellness Hotel2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Mùa Dalat Wellness Hotel3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Mùa Dalat Wellness Hotel3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Mùa Dalat Wellness Hotel4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Mùa Dalat Wellness Hotel4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Park Hyatt Saigon1.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Park Hyatt Saigon1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Park Hyatt Saigon2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Park Hyatt Saigon2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Park Hyatt Saigon3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Park Hyatt Saigon3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Park Hyatt Saigon4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Park Hyatt Saigon4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Pullman Vung Tau.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Pullman Vung Tau.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Pullman Vung Tau2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Pullman Vung Tau2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Pullman Vung Tau3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Pullman Vung Tau3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Pullman Vung Tau4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Pullman Vung Tau4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Rex Hotel1.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Rex Hotel1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Rex Hotel2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Rex Hotel2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Rex Hotel3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Rex Hotel3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Rex Hotel4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Rex Hotel4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Seaside Resort Vung Tau1.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Seaside Resort Vung Tau1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Seaside Resort Vung Tau2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Seaside Resort Vung Tau2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Seaside Resort Vung Tau3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Seaside Resort Vung Tau3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Seaside Resort Vung Tau4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Seaside Resort Vung Tau4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\The Imperial Hotel Vũng Tàu.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\The Imperial Hotel Vũng Tàu.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\The Imperial Hotel Vũng Tàu2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\The Imperial Hotel Vũng Tàu2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\The Imperial Hotel Vũng Tàu3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\The Imperial Hotel Vũng Tàu3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\The Imperial Hotel Vũng Tàu4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\The Imperial Hotel Vũng Tàu4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\bath-room.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\bath-room.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\exterior.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\exterior.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\havana-nha-trang-hotel.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\havana-nha-trang-hotel.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\khu-nghi-duo-ng-merperle.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\khu-nghi-duo-ng-merperle.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\landscape (1).jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\landscape (1).jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\landscape.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\landscape.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\merperle-hon-tam-resort.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\merperle-hon-tam-resort.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\pool.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\pool.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\restaurant.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\restaurant.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\sky-blu-lounge.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\sky-blu-lounge.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\skylight-havana-nha-trang.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\skylight-havana-nha-trang.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\the-empyrean-nha-trang1.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\the-empyrean-nha-trang1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\vinpearl-condotel-beachfront (1).jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\vinpearl-condotel-beachfront (1).jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\vinpearl-condotel-beachfront.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\vinpearl-condotel-beachfront.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\vinpearl-resort-spa-nha.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\vinpearl-resort-spa-nha.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\638505239268017658Screenshot 2023-03-24 002140.png",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\638505239268017658Screenshot 2023-03-24 002140.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Back Beach1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Back Beach1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Back Beach2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Back Beach2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Back Beach3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Back Beach3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Back Beach4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Back Beach4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\BaiTranh1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\BaiTranh1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\BaiTranh2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\BaiTranh2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\BaiTranh3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\BaiTranh3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\BaiTranh4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\BaiTranh4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Ben Nha rong1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Ben Nha rong1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Ben Nha rong2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Ben Nha rong2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Ben Nha rong3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Ben Nha rong3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Ben Nha rong4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Ben Nha rong4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Ben Thanh Market1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Ben Thanh Market1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Ben Thanh Market2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Ben Thanh Market2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Ben Thanh Market3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Ben Thanh Market3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Ben Thanh Market4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Ben Thanh Market4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Buddha Sanctuary pagoda.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Buddha Sanctuary pagoda.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Buddha Sanctuary pagoda2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Buddha Sanctuary pagoda2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Buddha Sanctuary pagoda3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Buddha Sanctuary pagoda3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Buddha Sanctuary pagoda4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Buddha Sanctuary pagoda4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Bui Vien Street1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Bui Vien Street1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Bui Vien Street2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Bui Vien Street2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Bui Vien Street3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Bui Vien Street3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Bui Vien Street4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Bui Vien Street4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Catheral1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Catheral1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Catheral2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Catheral2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Catheral3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Catheral3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Catheral4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Catheral4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\DLMK1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\DLMK1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\DLMK2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\DLMK2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\DLMK3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\DLMK3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\DLMK4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\DLMK4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Flower1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Flower1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Flower2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Flower2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Flower3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Flower3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Flower4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Flower4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HoMay1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HoMay1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HoMay2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HoMay2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HoMay3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HoMay3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HoMay4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HoMay4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HoXuanHuong1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HoXuanHuong1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HoXuanHuong2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HoXuanHuong2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HoXuanHuong3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HoXuanHuong3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HoXuanHuong4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HoXuanHuong4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HonMun1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HonMun1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HonMun2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HonMun2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HonMun3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HonMun3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HonMun4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HonMun4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HonTam1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HonTam1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HonTam2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HonTam2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HonTam3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HonTam3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HonTam4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HonTam4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HonTre1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HonTre1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HonTre2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HonTre2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HonTre3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HonTre3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\HonTre4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\HonTre4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Independence Palace1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Independence Palace1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Independence Palace2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Independence Palace2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Independence Palace3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Independence Palace3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Independence Palace4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Independence Palace4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Jesus Christ Statue1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Jesus Christ Statue1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Jesus Christ Statue2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Jesus Christ Statue2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Jesus Christ Statue3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Jesus Christ Statue3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Jesus Christ Statue4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Jesus Christ Statue4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LangBiangMountain1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LangBiangMountain1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LangBiangMountain2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LangBiangMountain2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LangBiangMountain3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LangBiangMountain3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LangBiangMountain4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LangBiangMountain4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LightHouse1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LightHouse1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LightHouse2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LightHouse2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LightHouse3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LightHouse3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LightHouse4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LightHouse4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LinhPhuoc.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LinhPhuoc.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LinhPhuoc2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LinhPhuoc2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LinhPhuoc3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LinhPhuoc3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LinhPhuoc4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LinhPhuoc4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LongSon1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LongSon1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LongSon2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LongSon2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LongSon3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LongSon3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\LongSon4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\LongSon4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Love2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Love2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Love3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Love3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Nguyen Hue Walking Street.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Nguyen Hue Walking Street.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Nguyen Hue Walking Street2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Nguyen Hue Walking Street2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Nguyen Hue Walking Street3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Nguyen Hue Walking Street3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Nguyen Hue Walking Street4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Nguyen Hue Walking Street4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Notre Dame Cathedral1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Notre Dame Cathedral1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Notre Dame Cathedral2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Notre Dame Cathedral2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Notre Dame Cathedral3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Notre Dame Cathedral3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Tempel_Po_Nagar_Nha_Trang.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Tempel_Po_Nagar_Nha_Trang.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Tempel_Po_Nagar_Nha_Trang2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Tempel_Po_Nagar_Nha_Trang2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\ThanTho1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\ThanTho1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\ThanTho2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\ThanTho2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\ThanTho3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\ThanTho3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\ThanTho4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\ThanTho4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\War Remnants Museum1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\War Remnants Museum1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\War Remnants Museum2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\War Remnants Museum2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\War Remnants Museum3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\War Remnants Museum3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\War Remnants Museum4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\War Remnants Museum4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\White Palace1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\White Palace1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\White Palace2.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\White Palace2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\White Palace3.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\White Palace3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\White Palace4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\White Palace4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\love1.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\love1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\love4.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\love4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\about.jpg",
+      "PackagePath": "staticwebassets\\img\\about.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\call-to-action.jpg",
+      "PackagePath": "staticwebassets\\img\\call-to-action.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\carousel-1.jpg",
+      "PackagePath": "staticwebassets\\img\\carousel-1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\carousel-2.jpg",
+      "PackagePath": "staticwebassets\\img\\carousel-2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\header.jpg",
+      "PackagePath": "staticwebassets\\img\\header.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\icon-apartment.png",
+      "PackagePath": "staticwebassets\\img\\icon-apartment.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\icon-building.png",
+      "PackagePath": "staticwebassets\\img\\icon-building.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\icon-condominium.png",
+      "PackagePath": "staticwebassets\\img\\icon-condominium.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\icon-deal.png",
+      "PackagePath": "staticwebassets\\img\\icon-deal.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\icon-house.png",
+      "PackagePath": "staticwebassets\\img\\icon-house.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\icon-housing.png",
+      "PackagePath": "staticwebassets\\img\\icon-housing.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\icon-luxury.png",
+      "PackagePath": "staticwebassets\\img\\icon-luxury.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\icon-neighborhood.png",
+      "PackagePath": "staticwebassets\\img\\icon-neighborhood.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\icon-search.png",
+      "PackagePath": "staticwebassets\\img\\icon-search.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\icon-villa.png",
+      "PackagePath": "staticwebassets\\img\\icon-villa.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\property-1.jpg",
+      "PackagePath": "staticwebassets\\img\\property-1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\property-2.jpg",
+      "PackagePath": "staticwebassets\\img\\property-2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\property-3.jpg",
+      "PackagePath": "staticwebassets\\img\\property-3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\property-4.jpg",
+      "PackagePath": "staticwebassets\\img\\property-4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\property-5.jpg",
+      "PackagePath": "staticwebassets\\img\\property-5.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\property-6.jpg",
+      "PackagePath": "staticwebassets\\img\\property-6.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\team-1.jpg",
+      "PackagePath": "staticwebassets\\img\\team-1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\team-2.jpg",
+      "PackagePath": "staticwebassets\\img\\team-2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\team-3.jpg",
+      "PackagePath": "staticwebassets\\img\\team-3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\team-4.jpg",
+      "PackagePath": "staticwebassets\\img\\team-4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\testimonial-1.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-1.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\testimonial-2.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-2.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\testimonial-3.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-3.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\testimonial-4.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-4.jpg"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
       "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\animate\\animate.css",
+      "PackagePath": "staticwebassets\\lib\\animate\\animate.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\animate\\animate.min.css",
+      "PackagePath": "staticwebassets\\lib\\animate\\animate.min.css"
     },
     {
       "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -14061,6 +16321,14 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.min.js"
+    },
+    {
       "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
@@ -14107,6 +16375,394 @@
     {
       "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\waypoints\\links.php",
+      "PackagePath": "staticwebassets\\lib\\waypoints\\links.php"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\waypoints\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\lib\\waypoints\\waypoints.min.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\wow\\wow.js",
+      "PackagePath": "staticwebassets\\lib\\wow\\wow.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\lib\\wow\\wow.min.js",
+      "PackagePath": "staticwebassets\\lib\\wow\\wow.min.js"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_containers.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\wwwroot\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.KarnelTravels.Microsoft.AspNetCore.StaticWebAssets.props",

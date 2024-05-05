@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+<h2>Create New Resort</h2>
 <form method="post" action="CreateResort" class="mt-3" autocomplete="off" enctype="multipart/form-data">
 
     <div class="mb-3">
@@ -13,9 +14,14 @@
     </div>
 
     <div class="mb-3">
-        <label class="form-lable">Spot Id</label>
-        <input type="number" class="form-control" asp-for="SpotId" />
-        <span asp-validation-for="SpotId" class="text-danger"></span>
+        <label class="form-lable">Spot</label>
+        <select class="form-control form-control-lg" asp-for="SpotId" aria-describedby="basic-addon1"
+                required>
+            <option value="1">Nha trang</option>
+            <option value="2">Da Lat</option>
+            <option value="3">Vung Tau</option>
+            <option value="4">TpHCM</option>
+        </select>
     </div>
 
     <div class="mb-3">
@@ -31,21 +37,16 @@
     </div>
 
     <div class="mb-3">
-        <label class="form-lable">Image id</label>
-        <input type="number" class="form-control" asp-for="ImageLinkId" />
-        <span asp-validation-for="ImageLinkId" class="text-danger"></span>
+        <label class="form-lable">Status</label>
+        <select class="form-control form-control-lg" asp-for="Status" aria-describedby="basic-addon1"
+                required>
+            <option>True</option>
+            <option>False</option>
+        </select>
     </div>
-
-    <div class="mb-3">
-        <label class="form-lable">Image Link</label>
-        <input type="file" class="form-control" asp-for="Imglink" />
-        <span asp-validation-for="Imglink" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3">
-        <label class="form-label">Status</label>
-        <input type="checkbox" class="form-check-input" asp-for="Status" />
-        <span asp-validation-for="Status" class="text-danger"></span>
+    <div class="form-group">
+        <label for="files">Image:</label>
+        <input type="file" id="files" name="files" class="form-control-file" multiple />
     </div>
 
 

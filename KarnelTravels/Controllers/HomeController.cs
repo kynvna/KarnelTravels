@@ -1,4 +1,4 @@
-using KarnelTravels.Models;
+﻿using KarnelTravels.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging; // Ensure ILogger is accessible
@@ -70,10 +70,7 @@ namespace KarnelTravels.Controllers
         {
             return View("User/TravellingRestaurantView");
         }
-        public IActionResult TravellingSightView()
-        {
-            return View("User/TravellingSightView");
-        }
+
         public IActionResult TravellingPackageView()
         {
             return View("User/TravellingPackageView");
@@ -124,10 +121,10 @@ namespace KarnelTravels.Controllers
             Dictionary<int, List<HRViewModel>> hotelViewModelsBySpot = new Dictionary<int, List<HRViewModel>>();
             try
             {
-                // L?y danh s�ch kh�ch s?n thu?c CatId 1 ho?c 2
+                // L?y danh sách khách s?n thu?c CatId 1 ho?c 2
                 List<TblHotelRestaurant> hotels = _context.TblHotelRestaurants.Where(r => r.CatId == 1 || r.CatId == 2).ToList();
 
-                // L?p qua t?ng kh�ch s?n ?? nh�m ch�ng theo SpotId
+                // L?p qua t?ng khách s?n ?? nhóm chúng theo SpotId
                 foreach (var hotel in hotels)
                 {
                     var spotId = hotel.SpotId;
@@ -135,6 +132,7 @@ namespace KarnelTravels.Controllers
 
                     if (spot != null)
                     {
+                        var imageUrl = _context.TblImageUrls.FirstOrDefault(i => i.ObjectId == hotel.HrId && i.UrlObject == "Hotel_Restaurant");
                         var hotelViewModel = new HRViewModel
                         {
                             HrId = hotel.HrId,
@@ -143,20 +141,19 @@ namespace KarnelTravels.Controllers
                             SpotName = spot.Name,
                             Price = hotel.Price,
                             Description = hotel.Description,
-                            ImageLinkId = hotel.ImageLinkId,
-                            Imglink = hotel.Imglink,
-                            Status = hotel.Status
+                            Status = hotel.Status,
+                            ImageUrl = imageUrl?.Url // Assign the image URL
                         };
 
-                        // Ki?m tra n?u SpotId ?� t?n t?i trong t? ?i?n
+                        // Ki?m tra n?u SpotId ?ã t?n t?i trong t? ?i?n
                         if (hotelViewModelsBySpot.ContainsKey((int)spotId))
                         {
-                            // N?u ?� t?n t?i, th�m kh�ch s?n v�o danh s�ch t??ng ?ng
+                            // N?u ?ã t?n t?i, thêm khách s?n vào danh sách t??ng ?ng
                             hotelViewModelsBySpot[(int)spotId].Add(hotelViewModel);
                         }
                         else
                         {
-                            // N?u ch?a t?n t?i, t?o m?i danh s�ch v� th�m kh�ch s?n v�o
+                            // N?u ch?a t?n t?i, t?o m?i danh sách và thêm khách s?n vào
                             hotelViewModelsBySpot[(int)spotId] = new List<HRViewModel> { hotelViewModel };
                         }
                     }
@@ -167,11 +164,149 @@ namespace KarnelTravels.Controllers
                 TempData["errorMessage"] = ex.Message;
             }
 
-            return View(hotelViewModelsBySpot);
+            return View("User/TravellingHotelView", hotelViewModelsBySpot);
         }
+
+
+        public IActionResult HotelDetails(int id)
+        {
+            try
+            {
+                var Hotel = _context.TblHotelRestaurants.FirstOrDefault(tp => tp.HrId == id);
+
+                if (Hotel != null)
+                {
+                    var imageUrls = _context.TblImageUrls
+    .Where(i => i.ObjectId == Hotel.HrId && i.UrlObject == "Hotel_Restaurant")
+    .Select(i => i.Url)
+    .ToList();
+
+                    var viewModel = new HRUserViewModel
+                    {
+                        HrId = Hotel.HrId,
+                        Name = Hotel.Name,
+                        Description = Hotel.Description,
+                        Price = Hotel.Price,
+                        ImageUrl = imageUrls
+
+
+                    };
+
+                    return View("User/HotelDetails", viewModel);
+                }
+                else
+                {
+                    TempData["errorMessage"] = "Tourist place not found.";
+                    return RedirectToAction("TravellingSightView"); // Redirect to a view displaying all tourist places
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = $"Error occurred while retrieving tourist place details: {ex.Message}";
+                return RedirectToAction("TravellingSightView"); // Redirect to a view displaying all tourist places
+            }
+        }
+
+
+
+
+
+        //-------------------------------Tourist Place---------------------------------------------------------------------------------------------
+
+
+        [HttpGet]
+        public IActionResult TravellingSightView()
+        {
+            Dictionary<int, List<TouristPlaceViewModel>> touristPlaceViewModelsBySpot = new Dictionary<int, List<TouristPlaceViewModel>>();
+            try
+            {
+                // Lấy danh sách các điểm du lịch
+                List<TblTouristPlace> touristPlaces = _context.TblTouristPlaces.ToList();
+
+                // Lặp qua từng điểm du lịch để nhóm chúng theo SpotId
+                foreach (var touristPlace in touristPlaces)
+                {
+                    var spotId = touristPlace.SportId;
+                    var spot = _context.TblSpots.FirstOrDefault(s => s.Id == spotId);
+
+                    if (spot != null)
+                    {
+                        var imageUrl = _context.TblImageUrls.FirstOrDefault(i => i.ObjectId == touristPlace.Id && i.UrlObject == "TblTourist_Place");
+                        var touristPlaceViewModel = new TouristPlaceViewModel
+                        {
+                            Id = touristPlace.Id,
+                            Name = touristPlace.Name,
+                            Description = touristPlace.Description,
+                            Status = touristPlace.Status,
+                            ImageUrl = imageUrl?.Url,
+                            Namespot = spot.Name
+                        };
+
+                        // Kiểm tra nếu SpotId đã tồn tại trong từ điển
+                        if (touristPlaceViewModelsBySpot.ContainsKey((int)spotId))
+                        {
+                            // Nếu đã tồn tại, thêm điểm du lịch vào danh sách tương ứng
+                            touristPlaceViewModelsBySpot[(int)spotId].Add(touristPlaceViewModel);
+                        }
+                        else
+                        {
+                            // Nếu chưa tồn tại, tạo mới danh sách và thêm điểm du lịch vào
+                            touristPlaceViewModelsBySpot[(int)spotId] = new List<TouristPlaceViewModel> { touristPlaceViewModel };
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = ex.Message;
+            }
+
+            return View("User/TravellingSightView",touristPlaceViewModelsBySpot);
+        }
+
+
+        public IActionResult SightDetails(int id)
+        {
+            try
+            {
+                var touristPlace = _context.TblTouristPlaces.FirstOrDefault(tp => tp.Id == id);
+
+                if (touristPlace != null)
+                {
+                    var imageUrls = _context.TblImageUrls
+                        .Where(i => i.ObjectId == touristPlace.Id && i.UrlObject == "TblTourist_Place")
+                        .Select(i => i.Url)
+                        .ToList();
+
+                    var viewModel = new TouristPlaceUserViewModel
+                    {
+                        Id = touristPlace.Id,
+                        Name = touristPlace.Name,
+                        Description = touristPlace.Description,
+                        ImageUrl = imageUrls
+                    };
+
+                    return View("User/SightDetails", viewModel);
+                }
+                else
+                {
+                    TempData["errorMessage"] = "Tourist place not found.";
+                    return RedirectToAction("TravellingSightView"); // Redirect to a view displaying all tourist places
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = $"Error occurred while retrieving tourist place details: {ex.Message}";
+                return RedirectToAction("TravellingSightView"); // Redirect to a view displaying all tourist places
+            }
+        }
+
+
 
 
 
 
     }
 }
+
+

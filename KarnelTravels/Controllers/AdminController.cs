@@ -1,5 +1,6 @@
 ﻿using KarnelTravels.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace KarnelTravels.Controllers
 {
@@ -69,6 +70,7 @@ namespace KarnelTravels.Controllers
 
         [HttpGet]
         public IActionResult AdminHotel()
+        
         {
             List<HRViewModel> hotelViewModels = new List<HRViewModel>();
             try
@@ -79,6 +81,7 @@ namespace KarnelTravels.Controllers
                     var spot = _context.TblSpots.FirstOrDefault(s => s.Id == hotel.SpotId);
                     if (spot != null)
                     {
+                        var imageUrl = _context.TblImageUrls.FirstOrDefault(i => i.ObjectId == hotel.HrId && i.UrlObject == "Hotel_Restaurant");
                         var hotelViewModel = new HRViewModel
                         {
                             HrId = hotel.HrId,
@@ -87,9 +90,8 @@ namespace KarnelTravels.Controllers
                             SpotName = spot.Name,
                             Price = hotel.Price,
                             Description = hotel.Description,
-                            ImageLinkId = hotel.ImageLinkId,
-                            Imglink = hotel.Imglink,
-                            Status = hotel.Status
+                            Status = hotel.Status,
+                            ImageUrl = imageUrl?.Url // Assign the image URL
                         };
                         hotelViewModels.Add(hotelViewModel);
                     }
@@ -103,6 +105,7 @@ namespace KarnelTravels.Controllers
         }
 
 
+
         [HttpGet]
         public IActionResult CreateHotel()
         {
@@ -110,22 +113,15 @@ namespace KarnelTravels.Controllers
             return View();
         }
 
+
         [HttpPost]
-        public IActionResult CreateHotel(CreateHRModel model)
+        public IActionResult CreateHotel(TblHotelRestaurant model,List<IFormFile> files)
         {
 
             if (ModelState.IsValid)
             {
 
 
-
-                string path = _environment.WebRootPath;
-                var ticks = DateTime.Now.Ticks;
-                var filename = model.Imglink.FileName;
-
-                string savePath = path + "/image/Hotel" + filename;
-                var stream = System.IO.File.Create(savePath);
-                model.Imglink.CopyTo(stream);
                 var catid = 1;
 
                 var hotel = new TblHotelRestaurant
@@ -134,20 +130,38 @@ namespace KarnelTravels.Controllers
                     Name = model.Name,
                     Price = model.Price,
                     SpotId = model.SpotId,
-                    Imglink = filename,
                     Status = model.Status,
                     Description = model.Description,
-                    ImageLinkId = model.ImageLinkId,
 
                 };
                 _context.TblHotelRestaurants.Add(hotel);
                 _context.SaveChanges();
+                if (files != null)
+                {
+                    foreach (var file in files)
+                    {
+                        string path = _environment.WebRootPath;
+                        var filename = file.FileName;
 
-                // Redirect to a success page or return a success message
-                return RedirectToAction("AdminHotel");
+                        string savePath = path + "/img" + "/Hotel_Restaurant/" + filename;
+                        var stream = System.IO.File.Create(savePath);
+                        file.CopyTo(stream);
 
+                        var url = new TblImageUrl
+                        {
+                            Description = "hotel",
+                            Url = filename,
+                            ObjectId = hotel.HrId,
+                            UrlObject = "Hotel_Restaurant"
+                        };
+                        _context.TblImageUrls.Add(url);
+                    }
+                    
+                    _context.SaveChanges();
+                }
 
-
+                    // Redirect to a success page or return a success message
+                    return RedirectToAction("AdminHotel");
 
             }
             else
@@ -158,7 +172,6 @@ namespace KarnelTravels.Controllers
             }
 
         }
-
 
 
         [HttpGet]
@@ -176,10 +189,8 @@ namespace KarnelTravels.Controllers
                         Name = hotel.Name,
                         Price = hotel.Price,
                         SpotId = hotel.SpotId,
-                        Imglink = hotel.Imglink,
                         Status = hotel.Status,
                         Description = hotel.Description,
-                        ImageLinkId = hotel.ImageLinkId,
                         CatId = hotel.CatId,
                     };
                     return View(HotelView);
@@ -201,49 +212,74 @@ namespace KarnelTravels.Controllers
 
 
         [HttpPost]
-        public IActionResult EditHotel(EditHRModel model)
+        public IActionResult EditHotel(TblHotelRestaurant model,List<IFormFile> files)
         {
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
+
+
+                var catid = 1;
+
+                var hotel = new TblHotelRestaurant
                 {
-                    string path = _environment.WebRootPath;
-                    var ticks = DateTime.Now.Ticks;
-                    var filename = model.Imglink.FileName;
+                    HrId = model.HrId,
+                    CatId = catid,
+                    Name = model.Name,
+                    Price = model.Price,
+                    SpotId = model.SpotId,
+                    Status = model.Status,
+                    Description = model.Description,
 
-                    string savePath = path + "/image/Hotel" + filename;
-                    var stream = System.IO.File.Create(savePath);
-                    model.Imglink.CopyTo(stream);
-                    var catid = 1;
-
-                    var hotel = new TblHotelRestaurant
+                };
+                _context.TblHotelRestaurants.Update(hotel);
+                _context.SaveChanges();
+                if (files != null)
+                {
+                    foreach(var file in files)
                     {
-                        HrId = model.HrId,
-                        CatId = catid,
-                        Name = model.Name,
-                        Price = model.Price,
-                        SpotId = model.SpotId,
-                        Imglink = filename,
-                        Status = model.Status,
-                        Description = model.Description,
-                        ImageLinkId = model.ImageLinkId,
+                        string path = _environment.WebRootPath;
+                        var filename = file.FileName;
 
-                    };
-                    _context.TblHotelRestaurants.Update(hotel);
+                        string savePath = path + "/img/Hotel_Restaurant/" + filename;
+
+                        var stream = System.IO.File.Create(savePath);
+                        file.CopyTo(stream);
+
+                        var existingImageUrl = _context.TblImageUrls.FirstOrDefault(i => i.ObjectId == hotel.HrId && i.UrlObject == "Hotel_Restaurant");
+                        if (existingImageUrl != null)
+                        {
+                            // Update existing image URL
+                            existingImageUrl.Description = "hotel";
+                            existingImageUrl.Url = filename;
+                            _context.TblImageUrls.Update(existingImageUrl);
+                            _context.SaveChanges();
+                        }
+                        else
+                        {
+                            // Create new image URL if it doesn't exist
+                            var newImageUrl = new TblImageUrl
+                            {
+                                Description = "hotel",
+                                Url = filename,
+                                ObjectId = hotel.HrId,
+                                UrlObject = "Hotel_Restaurant"
+                            };
+                            _context.TblImageUrls.Add(newImageUrl);
+                            
+                        }
+                    }
                     _context.SaveChanges();
-                    TempData["successMessage"] = "Hotel details update successfully";
-                    return RedirectToAction("AdminHotel");
                 }
-                else
-                {
-                    TempData["errorMessage"] = "Model data is not valid!";
-                    return View();
-                }
+
+                // Redirect to a success page or return a success message
+                return RedirectToAction("AdminHotel");
+
             }
-            catch (Exception ex)
+            else
             {
-                TempData["errorMessage"] = ex.Message;
+                TempData["errorMessage"] = "Model data is not valid!";
                 return View();
+
             }
         }
 
@@ -257,6 +293,20 @@ namespace KarnelTravels.Controllers
                 var hotel = _context.TblHotelRestaurants.SingleOrDefault(x => x.HrId == id);
                 if (hotel != null)
                 {
+                    // Retrieve the image URL
+                    var imageUrls = _context.TblImageUrls.Where(i => i.ObjectId == id && i.UrlObject == "Hotel_Restaurant").ToList();
+                    foreach(var imageUrl in imageUrls)
+                    {
+                        _context.TblImageUrls.Remove(imageUrl);
+                        _context.SaveChanges();
+                        // Delete the image file from the server
+                        string path = _environment.WebRootPath;
+                        var imagePath = path + "/img/Hotel_Restaurant/" + imageUrl.Url;
+                        System.IO.File.Delete(imagePath);
+
+                    }
+
+                    // Delete the hotel
                     _context.TblHotelRestaurants.Remove(hotel);
                     _context.SaveChanges();
                     TempData["successMessage"] = "Hotel deleted successfully";
@@ -285,11 +335,10 @@ namespace KarnelTravels.Controllers
 
 
 
-
         [HttpGet]
         public IActionResult AdminResort()
         {
-            List<HRViewModel> resortt = new List<HRViewModel>();
+            List<HRViewModel> resortViewModels = new List<HRViewModel>();
             try
             {
                 List<TblHotelRestaurant> resorts = _context.TblHotelRestaurants.Where(r => r.CatId == 2).ToList();
@@ -298,6 +347,7 @@ namespace KarnelTravels.Controllers
                     var spot = _context.TblSpots.FirstOrDefault(s => s.Id == resort.SpotId);
                     if (spot != null)
                     {
+                        var imageUrl = _context.TblImageUrls.FirstOrDefault(i => i.ObjectId == resort.HrId && i.UrlObject == "Hotel_Restaurant");
                         var resortViewModel = new HRViewModel
                         {
                             HrId = resort.HrId,
@@ -306,11 +356,10 @@ namespace KarnelTravels.Controllers
                             SpotName = spot.Name,
                             Price = resort.Price,
                             Description = resort.Description,
-                            ImageLinkId = resort.ImageLinkId,
-                            Imglink = resort.Imglink,
-                            Status = resort.Status
+                            Status = resort.Status,
+                            ImageUrl = imageUrl?.Url // Assign the image URL
                         };
-                        resortt.Add(resortViewModel);
+                        resortViewModels.Add(resortViewModel);
                     }
                 }
             }
@@ -318,8 +367,9 @@ namespace KarnelTravels.Controllers
             {
                 TempData["errorMessage"] = ex.Message;
             }
-            return View(resortt);
+            return View(resortViewModels);
         }
+
 
 
         [HttpGet]
@@ -330,22 +380,11 @@ namespace KarnelTravels.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateResort(CreateHRModel model)
+        public IActionResult CreateResort(TblHotelRestaurant model,List <IFormFile> files)
         {
-
             if (ModelState.IsValid)
             {
-
-
-
-                string path = _environment.WebRootPath;
-                var ticks = DateTime.Now.Ticks;
-                var filename = model.Imglink.FileName;
-
-                string savePath = path + "/image/Resort" + filename;
-                var stream = System.IO.File.Create(savePath);
-                model.Imglink.CopyTo(stream);
-                var catid = 2;
+                var catid = 2; // Assuming CatId 2 represents resorts
 
                 var resort = new TblHotelRestaurant
                 {
@@ -353,29 +392,44 @@ namespace KarnelTravels.Controllers
                     Name = model.Name,
                     Price = model.Price,
                     SpotId = model.SpotId,
-                    Imglink = filename,
                     Status = model.Status,
                     Description = model.Description,
-                    ImageLinkId = model.ImageLinkId,
-
                 };
                 _context.TblHotelRestaurants.Add(resort);
                 _context.SaveChanges();
 
+                if (files != null)
+                {
+                    foreach(var file in files)
+                    {
+                        string path = _environment.WebRootPath;
+                        var filename = DateTime.Now.Ticks + file.FileName;
+
+                        string savePath = path + "/img" + "/Hotel_Restaurant/" + filename;
+                        var stream = System.IO.File.Create(savePath);
+                        file.CopyTo(stream);
+
+                        var url = new TblImageUrl
+                        {
+                            Description = "resort",
+                            Url = filename,
+                            ObjectId = resort.HrId,
+                            UrlObject = "Hotel_Restaurant"
+                        };
+                        _context.TblImageUrls.Add(url);
+                    }
+                    
+                    _context.SaveChanges();
+                }
+
                 // Redirect to a success page or return a success message
                 return RedirectToAction("AdminResort");
-
-
-
-
             }
             else
             {
                 TempData["errorMessage"] = "Model data is not valid!";
                 return View();
-
             }
-
         }
 
 
@@ -394,10 +448,8 @@ namespace KarnelTravels.Controllers
                         Name = hotel.Name,
                         Price = hotel.Price,
                         SpotId = hotel.SpotId,
-                        Imglink = hotel.Imglink,
                         Status = hotel.Status,
                         Description = hotel.Description,
-                        ImageLinkId = hotel.ImageLinkId,
                         CatId = hotel.CatId,
                         HrId = hotel.HrId,
                     };
@@ -417,52 +469,72 @@ namespace KarnelTravels.Controllers
 
         }
         [HttpPost]
-        public IActionResult EditResort(EditHRModel model)
+        public IActionResult EditResort(TblHotelRestaurant model,List <IFormFile> files)
         {
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
+                var catid = 2; // Assuming CatId 2 represents resorts
+
+                var resort = new TblHotelRestaurant
                 {
-                    string path = _environment.WebRootPath;
-                    var ticks = DateTime.Now.Ticks;
-                    var filename = model.Imglink.FileName;
+                    HrId = model.HrId,
+                    CatId = catid,
+                    Name = model.Name,
+                    Price = model.Price,
+                    SpotId = model.SpotId,
+                    Status = model.Status,
+                    Description = model.Description,
+                };
+                _context.TblHotelRestaurants.Update(resort);
+                _context.SaveChanges();
 
-                    string savePath = path + "/image/Resort" + filename;
-                    var stream = System.IO.File.Create(savePath);
-                    model.Imglink.CopyTo(stream);
-                    var catid = 2;
-
-                    var resort = new TblHotelRestaurant
+                if (files != null)
+                {
+                    foreach (var file in files)
                     {
-                        HrId = model.HrId,
-                        CatId = catid,
-                        Name = model.Name,
-                        Price = model.Price,
-                        SpotId = model.SpotId,
-                        Imglink = filename,
-                        Status = model.Status,
-                        Description = model.Description,
-                        ImageLinkId = model.ImageLinkId,
+                        string path = _environment.WebRootPath;
+                        var filename = file.FileName;
 
-                    };
-                    _context.TblHotelRestaurants.Update(resort);
-                    _context.SaveChanges();
-                    TempData["successMessage"] = "Resort details update successfully";
-                    return RedirectToAction("AdminResort");
+                        string savePath = path + "/img/Hotel_Restaurant/" + filename;
+                        var stream = System.IO.File.Create(savePath);
+                        file.CopyTo(stream);
+                        var existingImageUrl = _context.TblImageUrls.FirstOrDefault(i => i.ObjectId == resort.HrId && i.UrlObject == "Hotel_Restaurant");
+                        if (existingImageUrl != null)
+                        {
+                            // Update existing image URL
+                            existingImageUrl.Description = "resort";
+                            existingImageUrl.Url = filename;
+                            _context.TblImageUrls.Update(existingImageUrl);
+                            _context.SaveChanges();
+                        }
+                        else
+                        {
+                            // Create new image URL if it doesn't exist
+                            var newImageUrl = new TblImageUrl
+                            {
+                                Description = "hotel",
+                                Url = filename,
+                                ObjectId = resort.HrId,
+                                UrlObject = "Hotel_Restaurant"
+                            };
+                            _context.TblImageUrls.Add(newImageUrl);
+                            _context.SaveChanges();
+                        }
+
+
+                    }
+
                 }
-                else
-                {
-                    TempData["errorMessage"] = "Model data is not valid!";
-                    return View();
-                }
+
+                // Redirect to a success page or return a success message
+                return RedirectToAction("AdminResort");
             }
-            catch (Exception ex)
+            else
             {
-                TempData["errorMessage"] = ex.Message;
+                TempData["errorMessage"] = "Model data is not valid!";
                 return View();
             }
         }
-
 
         [HttpPost]
         public IActionResult DeleteResort(int id)
@@ -472,13 +544,27 @@ namespace KarnelTravels.Controllers
                 var resort = _context.TblHotelRestaurants.SingleOrDefault(x => x.HrId == id);
                 if (resort != null)
                 {
+                    // Retrieve the image URL
+                    var imageUrls = _context.TblImageUrls.Where(i => i.ObjectId == id && i.UrlObject == "Hotel_Restaurant").ToList();
+                    foreach(var imageUrl in imageUrls)
+                    {
+                        // Delete the image file from the server
+                        _context.TblImageUrls.Remove(imageUrl);
+                        _context.SaveChanges();
+
+                        string path = _environment.WebRootPath;
+                        var imagePath = path + "/img/Hotel_Restaurant/" + imageUrl.Url;
+                        System.IO.File.Delete(imagePath);
+                    }
+
+                    // Delete the resort from the database
                     _context.TblHotelRestaurants.Remove(resort);
                     _context.SaveChanges();
-                    TempData["successMessage"] = "resort deleted successfully";
+                    TempData["successMessage"] = "Resort deleted successfully";
                 }
                 else
                 {
-                    TempData["errorMessage"] = $"resort with ID {id} not found";
+                    TempData["errorMessage"] = $"Resort with ID {id} not found";
                 }
             }
             catch (Exception ex)
@@ -663,13 +749,13 @@ namespace KarnelTravels.Controllers
                     var spot = _context.TblSpots.FirstOrDefault(s => s.Id == t.SportId);
                     if (spot != null)
                     {
+                        var imageUrl = _context.TblImageUrls.FirstOrDefault(i => i.ObjectId == t.Id && i.UrlObject == "TblTourist_Place");
                         var TouristPlaceViewModel = new TouristPlaceViewModel
                         {
                             Id = t.Id,
-
                             Name = t.Name,
                             Description = t.Description,
-                            ImageLinkId = t.ImageLinkId,
+                            ImageUrl = imageUrl?.Url,
                             Status = t.Status,
                             Namespot = spot.Name                   
                         };
@@ -696,7 +782,7 @@ namespace KarnelTravels.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateTouristPlace(TblTouristPlace model)
+        public IActionResult CreateTouristPlace(TblTouristPlace model, List<IFormFile> files)
         {
             try
             {
@@ -705,18 +791,40 @@ namespace KarnelTravels.Controllers
                     var TouristPlace = new TblTouristPlace
                     {
                         Name = model.Name,
-                        Id = model.Id,
                         Status = model.Status,
                         SportId = model.SportId,
                         Description = model.Description,
-                        ImageLinkId = model.ImageLinkId,
 
                     };
                     _context.TblTouristPlaces.Add(model);
                     _context.SaveChanges();
+                    if (files != null)
+                    {
+                        string path = _environment.WebRootPath;
+                        foreach (var file in files)
+                        {
+                            var filename = DateTime.Now.Ticks + file.FileName;
+
+                            string savePath = path + "/img" + "/TblTourist_Place/" + filename;
+                            var stream = System.IO.File.Create(savePath);
+                            file.CopyTo(stream);
+
+                            var url = new TblImageUrl
+                            {
+                                Description = "Tourist Place",
+                                Url = filename,
+                                ObjectId = model.Id,
+                                UrlObject = "TblTourist_Place"
+                            };
+                            _context.TblImageUrls.Add(url);
+
+                        }
+                       
+                        _context.SaveChanges();
+                    }
 
                     TempData["successMessage"] = "Tourist place created successfully";
-                    return RedirectToAction("TouristPlace"); // Redirect to a success page 
+                    return RedirectToAction("AdminTouristPlace"); // Redirect to a success page 
                 }
                 else
                 {
@@ -743,14 +851,13 @@ namespace KarnelTravels.Controllers
 
                 if (tour != null)
                 {
-                    var tours = new TblTouristPlace
+                    var tours = new TblTouristPlace()
                     {
                         Name = tour.Name,
                         Id = tour.Id,
                         Status = tour.Status,
                         SportId = tour.SportId,
                         Description = tour.Description,
-                        ImageLinkId = tour.ImageLinkId
                     };
                     return View(tours);
                 }
@@ -768,7 +875,7 @@ namespace KarnelTravels.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditTouristPlace(TblTouristPlace model)
+        public IActionResult EditTouristPlace(TblTouristPlace model,List<IFormFile> files)
         {
             try
             {
@@ -781,10 +888,49 @@ namespace KarnelTravels.Controllers
                         Status = model.Status,
                         SportId = model.SportId,
                         Description = model.Description,
-                        ImageLinkId = model.ImageLinkId,
                     };
                     _context.TblTouristPlaces.Update(tour);
                     _context.SaveChanges();
+                    if (files != null)
+                    {
+                        foreach (var file in files)
+                        {
+                            string path = _environment.WebRootPath;
+                            var filename = file.FileName;
+
+                            string savePath = path + "/img/TblTourist_Place/" + filename;
+
+                            var stream = System.IO.File.Create(savePath);
+                            file.CopyTo(stream);
+
+                            var existingImageUrl = _context.TblImageUrls.FirstOrDefault(i => i.ObjectId == tour.Id && i.UrlObject == "TblTourist_Place");
+                            if (existingImageUrl != null)
+                            {
+                                // Update existing image URL
+                                existingImageUrl.Description = "Tourist Place";
+                                existingImageUrl.Url = filename;
+                                _context.TblImageUrls.Update(existingImageUrl);
+                                _context.SaveChanges();
+                            }
+                            else
+                            {
+                                // Create new image URL if it doesn't exist
+                                var newImageUrl = new TblImageUrl
+                                {
+                                    Description = "Tourist Place",
+                                    Url = filename,
+                                    ObjectId = tour.Id,
+                                    UrlObject = "TblTourist_Place"
+                                };
+                                _context.TblImageUrls.Add(newImageUrl);
+                            }
+
+                        }
+                            _context.SaveChanges();
+                        
+                    }
+
+
                     TempData["successMessage"] = "Resort details update successfully";
                     return RedirectToAction("AdminTouristPlace");
                 }
@@ -811,6 +957,17 @@ namespace KarnelTravels.Controllers
                 var tour = _context.TblTouristPlaces.SingleOrDefault(x => x.Id == id);
                 if (tour != null)
                 {
+                    var imageUrls = _context.TblImageUrls.Where(i => i.ObjectId == id && i.UrlObject == "TblTourist_Place").ToList();
+                    foreach (var imageUrl in imageUrls)
+                    {
+                        _context.TblImageUrls.Remove(imageUrl);
+                        _context.SaveChanges();
+                        string path = _environment.WebRootPath;
+                        var imagePath = path + "/img/TblTourist_Place/" + imageUrl.Url;
+                        System.IO.File.Delete(imagePath);
+                    }
+                   
+
                     _context.TblTouristPlaces.Remove(tour);
                     _context.SaveChanges();
                     TempData["successMessage"] = "Place deleted successfully";

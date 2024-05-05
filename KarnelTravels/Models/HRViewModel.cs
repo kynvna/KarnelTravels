@@ -10,10 +10,10 @@ namespace KarnelTravels.Models
         public string SpotName { get; set; }
         public decimal? Price { get; set; }
         public string Description { get; set; }
-        public int? ImageLinkId { get; set; }
-        public string Imglink { get; set; }
+        public string ImageUrl { get; set; } // Changed from Imglink to ImageUrl
         public string Status { get; set; }
         public virtual HrCategory? Cat { get; set; }
-
     }
+
 }
+

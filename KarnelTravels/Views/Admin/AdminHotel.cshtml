@@ -10,11 +10,12 @@
     <table class="table table-responsive table-hover">
         <thead>
             <tr class="table active">
-                <th class="text-center">Name</th>
-                <th class="text-center">Price</th>
-                <th class="text-center">Description</th>
-                <th class="text-center">image</th>
-                <th class="text-center">Spot</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Image</th>
             </tr>
         </thead>
         <tbody>
@@ -23,11 +24,12 @@
                 @foreach (var hotel in Model)
                 {
                     <tr>
-                        <td class="text-center">@hotel.Name</td>
-                        <td class="text-center">@hotel.Price</td>
-                        <td class="text-center">@hotel.Description</td>
-                        <td class="text-center"><img src="~/image/Hotel/@hotel.Imglink" class="hinh"></td>
-                        <td class="text-center">@hotel.SpotName</td>
+                        <td>@hotel.Name</td>
+                        <td>@hotel.SpotName</td>
+                        <td>@hotel.Price</td>
+                        <td>@hotel.Description</td>
+                        <td>@hotel.Status</td>
+                        <td><img src="~/img/Hotel_Restaurant/@hotel.ImageUrl" alt="Hotel Image" style="width: 100px; height: 100px;" /></td>
                         <td>
                             <div class="btn-group btn-group-sm">
                                 <a asp-controller="Admin" asp-action="EditHotel" asp-route-id="@hotel.HrId" class="btn btn-primary">Edit</a>
