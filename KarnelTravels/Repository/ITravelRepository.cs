@@ -77,7 +77,7 @@ namespace KarnelTravels.Repository
                     ht.Status = model.Status;
                     ht.SpotDeparture = model.SpotDeparture;
                     ht.SpotDestination = model.SpotDestination;
-                    
+                    ht.Description = model.Description;
                     ht.ImageLinkId = model.ImageLinkId;
                    
                     ht.TransCategoryId = model.TransCategoryId;

@@ -87,7 +87,7 @@ namespace KarnelTravels.Controllers
             {
                 FileImg.CopyTo(stream);
             }
-            if (val == null)
+            if (val != null)
             {
                 tblTourPackage.StartDate = model.StartDate;
                 tblTourPackage.EndDate = model.EndDate;

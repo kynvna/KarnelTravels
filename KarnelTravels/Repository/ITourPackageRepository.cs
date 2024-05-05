@@ -26,7 +26,7 @@ namespace KarnelTravels.Repository
             {
                 if (id != null)
                 {
-                    var pack = _context.TblTransportations.Find(id);
+                    var pack = _context.TblTourPackages.Find(id);
                     if (pack != null)
                     {
                         _context.Remove(pack);
