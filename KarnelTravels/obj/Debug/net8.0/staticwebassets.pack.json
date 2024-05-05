@@ -13917,6 +13917,18 @@
       "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\MercureDalatResort4.jpg"
     },
     {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\banana.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\banana.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\durian.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\durian.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\grape.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\grape.jpg"
+    },
+    {
       "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Tour_Package\\DanangTour1.jpg",
       "PackagePath": "staticwebassets\\img\\Tour_Package\\DanangTour1.jpg"
     },

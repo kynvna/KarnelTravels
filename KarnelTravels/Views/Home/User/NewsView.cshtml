@@ -77,14 +77,14 @@
                     {
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <a href="@Url.Action("NewsDetail", "Home", new { id = item.NewsItem.NewsId })" class="text-decoration-none">
-                                <img src="@($"/img/{item.NewsItem.NewsObject}/{item.ImageUrls.FirstOrDefault()?.Url}.jpg")" alt="Description" style="width: 100%; height: auto;">
+                                <img src="@($"/img/{item.NewsItem.NewsObject}/{item.ImageUrls.FirstOrDefault()?.Url}")" alt="Description" style="width: 100%; height: auto;">
                                 <h2>@item.NewsItem.Description</h2>
-                                <ul>
+                                @* <ul>
                                     @foreach (var imageUrl in item.ImageUrls)
                                     {
                                         <li>@imageUrl.Url</li>
                                     }
-                                </ul>
+                                </ul> *@
                             </a>
                         </div>
                     }
