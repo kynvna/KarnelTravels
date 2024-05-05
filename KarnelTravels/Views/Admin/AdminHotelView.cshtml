@@ -5,30 +5,47 @@
 }
 @model GetHotel_Res_Re;
 <div>
-    <a href="/admin/CreateAdminHotelView">Create</a>
+    <a class="btn btn-info" href="/admin/CreateAdminHotelView">Create New Hotel/Resort</a> <span> <a class="btn btn-info" href="/admin/ViewUploadImageHotel">UpLoad image for existing hotels</a></span>
 </div>
-<div>
-    <a href="/admin/ViewUploadImageHotel">UpLoadImage</a>
-</div>
+<br />
 <div class="row">
+    
+</div>
 
-    @foreach(var item in Model.All)
-    {
-         <div class="card" style="width:250px;">
-            <img class="card-img-top" style="height:280px" src="~/image/Restaurant/@item.Imglink" />
-            <div class="card-body">
-                <h4 class="card-title">@item.Name</h4>
-                <div class="text-muted card-subtitle">@item.Price</div>
-               @Html.Raw(item.Description) 
-                <button class="btn btn-default btn-sm">
-                    <i class="fa fa-plus"></i>
-                    <a href="/Admin/ViewEditAdminHotel?idt=@item.HrId">Edit</a
-                </button>
-                <button class="btn btn-default btn-sm">
-                    <i class="fa fa-plus"></i>
-                    <a href="/teacher/ViewProduct?idt=@item.HrId">View</a
-                </button>
+<div class="row">
+    <div class="ibox">
+        <div class="ibox-head">
+            <div class="ibox-title">Hotel and Resort List</div>
+            <div class="ibox-tools">
+                <a class="ibox-collapse"><i class="fa fa-minus"></i></a>
             </div>
         </div>
-    }
+        <div class="ibox-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card-deck">
+                        @foreach (var item in Model.All)
+                        {
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <!--<img class="card-img-top" src="~/image/Hotel_Restaurant/@item.Imglink" />-->
+                                    <img class="card-img-top" src="https://149345965.v2.pressablecdn.com/wp-content/uploads/img-hotels-IADGV_006-Dusk-Exterior-home.jpg" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">@item.Name</h5>
+                                        <div class="text-muted card-subtitle">@item.Price</div>
+                                        <div>@item.Description</div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="btn btn-info" href="/Admin/ViewEditAdminHotel?idt=@item.HrId"><i class="fa fa-plus"></i> Edit</a>
+                                        <a class="btn btn-warning" href="/teacher/ViewProduct?idt=@item.HrId"><i class="fa fa-plus"></i> View</a>
+                                        <a class="btn btn-danger" href="/teacher/DeleteAdminHotel?idt=@item.HrId"><i class="fa fa-plus"></i> Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -78,7 +78,7 @@ namespace KarnelTravels.Controllers
             getHotel_Res_Re.HotelS = hotel;
             getHotel_Res_Re.Restaurants = res;
             getHotel_Res_Re.Resortt = re;
-            return View(getHotel_Res_Re);
+            return View("User/TravellingHotelView",getHotel_Res_Re);
         }
 
         public IActionResult TravellingHotelViewSearch(string keyWord)
@@ -139,7 +139,7 @@ namespace KarnelTravels.Controllers
 
             var all = touristPlaceRepository.GetAllTour();
             getAllTour.ToursPlace = all;
-            return View(getAllTour);
+            return View("User/TravellingTourView",getAllTour);
         }
 
         public IActionResult TravellingTourViewSearch(string keyWord)

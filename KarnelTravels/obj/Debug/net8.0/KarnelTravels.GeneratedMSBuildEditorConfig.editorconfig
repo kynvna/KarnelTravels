@@ -90,42 +90,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1VwbG9hZEltYWdlSG90ZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SEM3/KarnelTravels/Views/Home/AdminUp.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pblVwLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/SEM3/KarnelTravels/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/SEM3/KarnelTravels/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/SEM3/KarnelTravels/Views/Home/TravellingHotelView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nSG90ZWxWaWV3LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/SEM3/KarnelTravels/Views/Home/TravellingHotelViewSearch.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nSG90ZWxWaWV3U2VhcmNoLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/SEM3/KarnelTravels/Views/Home/TravellingPackageViewSearch.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nUGFja2FnZVZpZXdTZWFyY2guY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/SEM3/KarnelTravels/Views/Home/TravellingTourViewSearch.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nVG91clZpZXdTZWFyY2guY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/SEM3/KarnelTravels/Views/Home/TravellingTransportView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nVHJhbnNwb3J0Vmlldy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/SEM3/KarnelTravels/Views/Home/TravellingTransportViewSearch.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmF2ZWxsaW5nVHJhbnNwb3J0Vmlld1NlYXJjaC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/SEM3/KarnelTravels/Views/Home/User/AboutUsView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyXEFib3V0VXNWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -174,8 +138,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyXFRyYXZlbGxpbmdIb3RlbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/SEM3/KarnelTravels/Views/Home/User/TravellingHotelViewSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyXFRyYXZlbGxpbmdIb3RlbFZpZXdTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/SEM3/KarnelTravels/Views/Home/User/TravellingPackageView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyXFRyYXZlbGxpbmdQYWNrYWdlVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SEM3/KarnelTravels/Views/Home/User/TravellingPackageViewSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyXFRyYXZlbGxpbmdQYWNrYWdlVmlld1NlYXJjaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SEM3/KarnelTravels/Views/Home/User/TravellingRestaurantView.cshtml]
@@ -190,8 +162,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyXFRyYXZlbGxpbmdUb3VyVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/SEM3/KarnelTravels/Views/Home/User/TravellingTourViewSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyXFRyYXZlbGxpbmdUb3VyVmlld1NlYXJjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/SEM3/KarnelTravels/Views/Home/User/TravellingTransportView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyXFRyYXZlbGxpbmdUcmFuc3BvcnRWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SEM3/KarnelTravels/Views/Home/User/TravellingTransportViewSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyXFRyYXZlbGxpbmdUcmFuc3BvcnRWaWV3U2VhcmNoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SEM3/KarnelTravels/Views/Shared/Error.cshtml]
