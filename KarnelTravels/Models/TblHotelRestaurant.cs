@@ -5,7 +5,7 @@ namespace KarnelTravels.Models;
 
 public partial class TblHotelRestaurant
 {
-    public int? HrId { get; set; }
+    public int HrId { get; set; }
 
     public int? CatId { get; set; }
 
