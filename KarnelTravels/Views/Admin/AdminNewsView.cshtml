@@ -1,0 +1,80 @@
+﻿@model IEnumerable<KarnelTravels.Models.TblNews>
+
+@{
+    ViewData["Title"] = "AdminNewsView";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>AdminNewsView</h1>
+
+<p>
+    <a asp-action="CreateNews">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ObjectId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewsObject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HotNews)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewsDetail)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ObjectId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NewsObject)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HotNews)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @{
+                        var detail = item.NewsDetail;
+                        if (detail.Length > 110)
+                        {
+                            detail = detail.Substring(0, 110) + "...";
+                        }
+                    }
+                    @Html.Raw(detail)
+                </td>
+                <td>
+                    <a asp-action="EditNews" asp-route-id="@item.NewsId">Edit</a> |
+                    <a asp-controller="Home" asp-action="NewsDetail" asp-route-id="@item.NewsId">Details</a>
+                    <a asp-action="DeleteNews" asp-route-id="@item.NewsId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

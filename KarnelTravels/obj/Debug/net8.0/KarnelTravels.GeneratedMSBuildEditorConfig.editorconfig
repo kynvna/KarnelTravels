@@ -30,6 +30,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Ib3RlbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/SEM3/KarnelTravels/Views/Admin/AdminNewsView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5OZXdzVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/SEM3/KarnelTravels/Views/Admin/AdminProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Qcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,6 +56,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/SEM3/KarnelTravels/Views/Admin/AdminTransportView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5UcmFuc3BvcnRWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SEM3/KarnelTravels/Views/Admin/CreateNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlTmV3cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SEM3/KarnelTravels/Views/Admin/DeleteNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlTmV3cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SEM3/KarnelTravels/Views/Admin/EditNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdE5ld3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SEM3/KarnelTravels/Views/Admin/FeedbackOnComp.cshtml]

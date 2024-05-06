@@ -1,0 +1,242 @@
+﻿@* @model KarnelTravels.Models.CreateNewsViewModel
+
+@{
+    ViewData["Title"] = "Edit News";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Edit News</h1>
+
+<style>
+    form {
+        max-width: 600px;
+        margin: auto;
+        padding: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    div {
+        margin-bottom: 10px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"], input[type="date"], select, textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+<form asp-action="EditNews" method="post">
+    <input type="hidden" asp-for="News.NewsItem.NewsId" />
+    <input type="hidden" asp-for="News.NewsItem.ObjectId" />
+    <input type="hidden" asp-for="News.NewsItem.NewsObject" />
+
+    <div>
+        <label asp-for="News.NewsItem.Description">Description</label>
+        <input asp-for="News.NewsItem.Description" />
+        <span asp-validation-for="News.NewsItem.Description"></span>
+    </div>
+    <div>
+        <label asp-for="News.NewsItem.Status">Status</label>
+        <select asp-for="News.NewsItem.Status" asp-items="Model.StatusList"></select>
+    </div>
+    <div>
+        <label asp-for="News.NewsItem.NewsObject">News Object</label>
+        <select asp-for="News.NewsItem.NewsObject" asp-items="Model.NewsObjectList" disabled></select>
+    </div>
+    <div>
+        <label asp-for="News.NewsItem.HotNews">Hot News</label>
+        <input asp-for="News.NewsItem.HotNews" />
+    </div>
+    <div>
+        <label asp-for="News.NewsItem.Date">Date</label>
+        <input asp-for="News.NewsItem.Date" type="date" disabled />
+    </div>
+    <div>
+        <label asp-for="News.NewsItem.NewsDetail">News Detail</label>
+        <textarea asp-for="News.NewsItem.NewsDetail"></textarea>
+    </div>
+    <button type="submit">Save Changes</button>
+</form>
+
+<a asp-action="AdminNewsView">Back to List</a>
+ *@
+
+@model KarnelTravels.Models.CreateNewsViewModel
+
+@{
+    ViewData["Title"] = "Edit News";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Edit News</h1>
+
+<div class="container">
+    <form asp-action="EditNews" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="News.NewsItem.NewsId" />
+        <input type="hidden" asp-for="News.NewsItem.ObjectId" />
+        <input type="hidden" asp-for="News.NewsItem.NewsObject" />
+
+        <div class="row">
+            <!-- Left Column for Other Inputs -->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="News.NewsItem.Description">Description</label>
+                    <input asp-for="News.NewsItem.Description" class="form-control" />
+                    <span asp-validation-for="News.NewsItem.Description"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="News.NewsItem.Status">Status</label>
+                    <select asp-for="News.NewsItem.Status" asp-items="Model.StatusList" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="News.NewsItem.NewsObject">News Object</label>
+                    <select asp-for="News.NewsItem.NewsObject" asp-items="Model.NewsObjectList" disabled class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="News.NewsItem.HotNews">Hot News</label>
+                    <div class="form-check">
+                        <input asp-for="News.NewsItem.HotNews" class="form-check-input" type="radio" value="1" id="hotNewsYes">
+                        <label class="form-check-label" for="hotNewsYes">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input asp-for="News.NewsItem.HotNews" class="form-check-input" type="radio" value="0" id="hotNewsNo">
+                        <label class="form-check-label" for="hotNewsNo">No</label>
+                    </div>
+                    <span asp-validation-for="News.NewsItem.HotNews" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="News.NewsItem.Date">Date(original)</label>
+                    <input asp-for="News.NewsItem.Date" type="date" disabled class="form-control" />
+                </div>
+            </div>
+
+            <!-- Right Column for News Detail and Image Management -->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="News.NewsItem.NewsDetail">News Detail</label>
+                    <textarea asp-for="News.NewsItem.NewsDetail" class="form-control" rows="10"></textarea>
+                    <span asp-validation-for="News.NewsItem.NewsDetail" class="text-danger"></span>
+                </div>
+
+                <!-- Existing Images Area -->
+                <div class="form-group">
+                    <label>Existing Images</label>
+                    <div id="existing-images">
+                        @if (Model.News.ImageUrls != null && Model.News.ImageUrls.Count > 0)
+                        {
+                            foreach (var imageUrl in Model.News.ImageUrls)
+                            {
+                                // Construct the full path using the NewsObject and image file name
+                                string fullImagePath = $"/img/{Model.News.NewsItem.NewsObject}/{imageUrl.Url}";
+                                <img src="@fullImagePath" alt="Thumbnail" style="width: 100px; height: 100px; margin-right: 5px;">
+                            }
+                        }
+                        else
+                        {
+                            <p>No thumbnails available.</p>
+                        }
+                    </div>
+                </div>
+
+                <!-- New Image Upload Area -->
+                <div class="form-group">
+                    <label for="imageUpload">Upload New Images</label>
+                    <input type="file" class="form-control-file" id="imageUpload" name="files" multiple>
+                </div>
+                <div id="imagePreview"></div> <!-- Container for previewing images -->
+            </div>
+
+            <div class="form-group col-md-12">
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div>
+    <a asp-action="AdminNewsView">Back to List</a>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            // Function to update existing images via AJAX
+            function updateExistingImages(newsObject, objectId) {
+                $.ajax({
+                    url: '@Url.Action("GetExistingImages", "Admin")',
+                    type: 'GET',
+                    data: { objectId: objectId, newsObject: newsObject },
+                    success: function (data) {
+                        var imagesDiv = $('#existing-images');
+                        imagesDiv.empty();
+                        if (data && data.length > 0) {
+                            data.forEach(function (imageUrl) {
+                                imagesDiv.append('<img src="/img/' + newsObject + '/' + imageUrl.url + '" alt="Thumbnail" style="width: 100px; height: 100px; margin-right: 5px;">');
+                            });
+                        } else {
+                            imagesDiv.append('<p>No thumbnails available.</p>');
+                        }
+                    },
+                    error: function (error) {
+                        console.error("Error fetching images:", error);
+                        $('#existing-images').html('<p>Unable to load images.</p>'); // Optional error message
+                    }
+                });
+            }
+
+            // Preview new images before upload
+            document.getElementById('imageUpload').addEventListener('change', function (event) {
+                var files = event.target.files;
+                var imagePreviewDiv = document.getElementById('imagePreview');
+                imagePreviewDiv.innerHTML = ''; // Clear existing previews
+
+                for (var i = 0; i < files.length; i++) {
+                    var file = files[i];
+
+                    // Ensure the file is an image
+                    if (file.type.startsWith('image/')) {
+                        var reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            var imgElement = document.createElement('img');
+                            imgElement.src = e.target.result;
+                            imgElement.style.width = '100px'; // Adjust size if necessary
+                            imgElement.style.height = '100px';
+                            imgElement.style.marginRight = '5px';
+                            imagePreviewDiv.appendChild(imgElement);
+                        };
+
+                        reader.readAsDataURL(file); // Read the file as a Data URL to preview it
+                    }
+                }
+            });
+        });
+    </script>
+}
+

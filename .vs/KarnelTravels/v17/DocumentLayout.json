@@ -151,7 +151,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -164,6 +164,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -224,7 +228,7 @@
               "RelativeDocumentMoniker": "KarnelTravels\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\SEM3\\KarnelTravels\\Controllers\\HomeController.cs",
               "RelativeToolTip": "KarnelTravels\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAKMAAAAAAAAAAAAkwLoAAAA4AAAA",
+              "ViewState": "AQIAAAoBAAAAAAAAAAAkwCEBAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T10:27:21.667Z",
               "EditorCaption": ""
@@ -263,7 +267,7 @@
               "RelativeDocumentMoniker": "KarnelTravels\\Controllers\\AdminController.cs",
               "ToolTip": "D:\\SEM3\\KarnelTravels\\Controllers\\AdminController.cs",
               "RelativeToolTip": "KarnelTravels\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAFgBAAAAAAAAAAAAAGsBAAA3AAAA",
+              "ViewState": "AQIAAGUBAAAAAAAAAAAAAHgBAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-29T10:54:02.544Z",
               "EditorCaption": ""
@@ -373,11 +377,12 @@
               "Title": "KarnelTravels.csproj",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\KarnelTravels.csproj",
               "RelativeDocumentMoniker": "KarnelTravels\\KarnelTravels.csproj",
-              "ToolTip": "D:\\SEM3\\KarnelTravels\\KarnelTravels.csproj",
-              "RelativeToolTip": "KarnelTravels\\KarnelTravels.csproj",
+              "ToolTip": "D:\\SEM3\\KarnelTravels\\KarnelTravels.csproj*",
+              "RelativeToolTip": "KarnelTravels\\KarnelTravels.csproj*",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-29T10:48:11.311Z"
+              "WhenOpened": "2024-04-29T10:48:11.311Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

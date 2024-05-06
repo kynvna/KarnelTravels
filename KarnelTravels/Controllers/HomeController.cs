@@ -2,6 +2,7 @@ using KarnelTravels.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging; // Ensure ILogger is accessible
 using System.Diagnostics;
+using System.Linq;
 using KarnelTravels.Repository;
 
 namespace KarnelTravels.Controllers
@@ -30,34 +31,7 @@ namespace KarnelTravels.Controllers
         {
             return View();
         }
-        //public IActionResult AdminTransportView()
-        //{
-        //    return View("Admin/AdminTransportView");
-        //}
-        //public IActionResult AdminTourView()
-        //{
-        //    return View("Admin/AdminTourView");
-        //}
-        //public IActionResult AdminSightView()
-        //{
-        //    return View("Admin/AdminSightView");
-        //}
-        //public IActionResult AdminSpotView()
-        //{
-        //    return View("Admin/AdminSpotView");
-        //}
-        //public IActionResult AdminHotelView()
-        //{
-        //    return View("Admin/AdminHotelView");
-        //}
-        //public IActionResult FeedbackOnObj()
-        //{
-        //    return View("Admin/FeedbackOnObj");
-        //}
-        //public IActionResult FeedbackOnComp()
-        //{
-        //    return View("Admin/FeedbackOnComp");
-        //}
+        
         public IActionResult ProductView()
         {
             return View("User/ProductView");
@@ -232,9 +206,111 @@ namespace KarnelTravels.Controllers
             return View();
         }
 
-        public IActionResult NewsView()
+        public IActionResult NewsView(string filterType = "HotNews", int page = 1, int pageSize = 6)
         {
-            return View("User/NewsView");
+            ViewBag.SelectedTab = filterType ?? "HotNews"; // Ensure the default selected tab is HotNews
+            var viewModel = GetFilteredNewsViewModel(filterType, page, pageSize);
+            return View("User/NewsView", viewModel);
+        }
+
+
+        private NewsViewModel GetFilteredNewsViewModel(string filterType, int page, int pageSize)
+        {
+            IQueryable<TblNews> query;
+
+            switch (filterType)
+            {
+                case "HotNews":
+                    query = _context.TblNews.Where(n => n.HotNews == 1);
+                    break;
+                case "Hotel_Restaurant":
+                    query = _context.TblNews.Where(n => n.NewsObject == "Hotel_Restaurant");
+                    break;
+                case "Travel":
+                    query = _context.TblNews.Where(n => n.NewsObject == "Travel");
+                    break;
+                case "Tourist_Place":
+                    query = _context.TblNews.Where(n => n.NewsObject == "Tourist_Place");
+                    break;
+                case "Tour_Package":
+                    query = _context.TblNews.Where(n => n.NewsObject == "Tour_Package");
+                    break;
+                default:
+                    query = _context.TblNews;
+                    break;
+            }
+
+            var totalNews = query.Count();
+            var totalPages = (int)Math.Ceiling((double)totalNews / pageSize);
+
+            // Fetch image URLs for each news item
+            var newsItems = query.OrderBy(n => n.Date) // Assuming there's a Date field
+                                 .Skip((page - 1) * pageSize)
+                                 .Take(pageSize)
+                                 .Select(news => new TblNewsWithImageUrls
+                                 {
+                                     NewsItem = news,
+                                     ImageUrls = _context.TblImageUrls
+                                                      .Where(i => i.ObjectId == news.ObjectId && i.UrlObject == news.NewsObject)
+                                                      .ToList()
+                                 })
+                                 .ToList(); // Execute the query
+
+            return new NewsViewModel
+            {
+                TotalNews = totalNews,
+                TotalPages = totalPages,
+                CurrentPage = page,
+                PageSize = pageSize,
+                News = newsItems
+            };
+        }
+
+        //-------process for a detail of news ----------------------//
+
+        public IActionResult NewsDetail(int id)
+        {
+            // First, get the news item based on the provided ID.
+            var newsItem = _context.TblNews.FirstOrDefault(n => n.NewsId == id);
+
+            // Check if the news item exists; if not, return a NotFound result.
+            if (newsItem == null)
+            {
+                return NotFound();
+            }
+
+            // Get related news items
+            var relatedNewsItems = _context.TblNews
+                .Where(n => n.NewsObject == newsItem.NewsObject && n.ObjectId == newsItem.ObjectId && n.NewsId != id)
+                .ToList();
+
+            // Manually collect images for each related news item
+            var relatedNewsWithImages = relatedNewsItems.Select(news => new TblNewsWithImageUrls
+            {
+                NewsItem = news,
+                ImageUrls = _context.TblImageUrls
+                            .Where(i => i.ObjectId == news.ObjectId && i.UrlObject == news.NewsObject)
+                            .ToList()
+            }).ToList();
+
+            // Now, create a new TblNewsWithImageUrls object that includes the news item and its associated image URLs.
+            var newsWithImages = new TblNewsWithImageUrls
+            {
+                NewsItem = newsItem,
+                ImageUrls = _context.TblImageUrls
+                            .Where(i => i.ObjectId == newsItem.ObjectId && i.UrlObject == newsItem.NewsObject)
+                            .ToList()
+            };
+
+            // Prepare the ViewModel
+            var viewModel = new NewsDetailViewModel
+            {
+                MainNewsWithImages = newsWithImages,
+                RelatedNewsWithImages = relatedNewsWithImages // This is now a list of TblNewsWithImageUrls
+            };
+
+            // Return the view with the constructed ViewModel.
+            return View("User/NewsDetail", viewModel);
         }
         public IActionResult FeedbackOnCompany()
         {

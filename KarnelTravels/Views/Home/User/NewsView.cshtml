@@ -2,6 +2,41 @@
     ViewData["Title"] = "News";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model KarnelTravels.Models.NewsViewModel
+<!-- Search Start -->
+<div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
+    <div class="container">
+        <div class="row g-2">
+            <div class="col-md-10">
+                <div class="row g-2">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control border-0 py-3" placeholder="What are you looking for ?">
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select border-0 py-3">
+                            <option selected>Search by location</option>
+                            <option value="1">Property Type 1</option>
+                            <option value="2">Property Type 2</option>
+                            <option value="3">Property Type 3</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select border-0 py-3">
+                            <option selected>Search by spots</option>
+                            <option value="1">Location 1</option>
+                            <option value="2">Location 2</option>
+                            <option value="3">Location 3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-dark border-0 w-100 py-3">Find</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Search End -->
 <!-- Property List Start -->
 <div class="container-xxl py-5">
     <div class="container">
@@ -15,368 +50,76 @@
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
                 <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
                     <li class="nav-item me-2">
-                        <a class="btn btn-outline-danger active" data-bs-toggle="pill" href="#tab-1">Hot</a>
+                        <a class="btn btn-outline-danger @(ViewBag.SelectedTab == "HotNews" ? "active" : "")" asp-action="NewsView" asp-route-filterType="HotNews">Hot</a>
                     </li>
                     <li class="nav-item me-2">
-                        <a class="btn btn-outline-info" data-bs-toggle="pill" href="#tab-2">Recent</a>
+                        <a class="btn btn-outline-primary @(ViewBag.SelectedTab == "PackageTours" ? "active" : "")" asp-action="NewsView" asp-route-filterType="Tour_Package">Tours</a>
                     </li>
                     <li class="nav-item me-2">
-                        <a class="btn btn-outline-info" data-bs-toggle="pill" href="#tab-3">Travel News</a>
+                        <a class="btn btn-outline-primary @(ViewBag.SelectedTab == "HotelRestaurant" ? "active" : "")" asp-action="NewsView" asp-route-filterType="Hotel_Restaurant">Hotel & Restaurant</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="btn btn-outline-primary @(ViewBag.SelectedTab == "Transportation" ? "active" : "")" asp-action="NewsView" asp-route-filterType="Travel">Transportation</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="btn btn-outline-primary @(ViewBag.SelectedTab == "TouristPlace" ? "active" : "")" asp-action="NewsView" asp-route-filterType="Tourist_Place">Place</a>
                     </li>
                 </ul>
+
             </div>
         </div>
+
         <div class="tab-content">
-            <div id="tab-1" class="tab-pane fade show p-0 active">
+            <!-- Assume that Model.News contains the filtered news items for the current page -->
+            <div id="tab-content-news" class="tab-pane fade show p-0 active">
                 <div class="row g-4">
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="https://ieltscaptoc.com.vn/wp-content/uploads/2023/02/talk-about-travelling-4.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" asp-action="NewsDetail" asp-controller="Home">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
+                    @foreach (var item in Model.News)
+                    {
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <a href="@Url.Action("NewsDetail", "Home", new { id = item.NewsItem.NewsId })" class="text-decoration-none">
+                                <img src="@($"/img/{item.NewsItem.NewsObject}/{item.ImageUrls.FirstOrDefault()?.Url}")" alt="Description" style="width: 100%; height: auto;">
+                                <h2>@item.NewsItem.Description</h2>
+                                @* <ul>
+                                    @foreach (var imageUrl in item.ImageUrls)
+                                    {
+                                        <li>@imageUrl.Url</li>
+                                    }
+                                </ul> *@
+                            </a>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" asp-action="NewsDetail" asp-controller="Home">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" asp-action="NewsDetail" asp-controller="Home">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a 
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" asp-action="NewsDetail" asp-controller="Home">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" asp-action="NewsDetail" asp-controller="Home">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
+                    }
+
+                    
                 </div>
-            </div>
-            <div id="tab-2" class="tab-pane fade show p-0">
-                <div class="row g-4">
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" href="">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" href="">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" href="">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" href="">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" href="">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" href="">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="tab-3" class="tab-pane fade show p-0">
-                <div class="row g-4">
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" href="">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" href="">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" href="">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" href="">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" href="">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="property-item rounded overflow-hidden" style="height:100%">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-danger rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Newsheads</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hot News</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <a class="d-block h5 mb-2" href="">Phuong Trang Bus services meets temporay delay due to compulsory government check.</a>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                    type specimen book.
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Posted 5 minutes ago</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
+                <!-- Pagination Controls -->
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        @if (Model.CurrentPage > 1)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" href="@Url.Action("NewsView", new { page = Model.CurrentPage - 1, pageSize = Model.PageSize })" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        }
+                        @for (int i = 1; i <= Model.TotalPages; i++)
+                        {
+                            <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                                <a class="page-link" href="@Url.Action("NewsView", new { page = i, pageSize = Model.PageSize })">@i</a>
+                            </li>
+                        }
+                        @if (Model.CurrentPage < Model.TotalPages)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" href="@Url.Action("NewsView", new { page = Model.CurrentPage + 1, pageSize = Model.PageSize })" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
