@@ -9,6 +9,6 @@
         public IEnumerable<TblSpot> Spots { get; set; }
 
         public IEnumerable<TblTransportation> Transportations { get; set; }
-
+         public string img {  get; set; }
     }
 }

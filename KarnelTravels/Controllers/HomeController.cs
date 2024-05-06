@@ -78,6 +78,7 @@ namespace KarnelTravels.Controllers
             getHotel_Res_Re.HotelS = hotel;
             getHotel_Res_Re.Restaurants = res;
             getHotel_Res_Re.Resortt = re;
+            
             return View("User/TravellingHotelView",getHotel_Res_Re);
         }
 
@@ -86,14 +87,14 @@ namespace KarnelTravels.Controllers
             IHotelRepository hotelRepository = new IHotelRepository(_context);
             if (string.IsNullOrEmpty(keyWord))
             {
-                return View();
+                return View("User/TravellingHotelView");
             }
             else
             {
                 SearchViewModel searchViewModel = new SearchViewModel();
                 var q = hotelRepository.SearchHotel(keyWord);
                 searchViewModel.HotelRestaurants = q;
-                return View(searchViewModel);
+                return View("User/TravellingHotelViewSearch", searchViewModel);
 
             }
 
@@ -112,13 +113,13 @@ namespace KarnelTravels.Controllers
             GetAllPack getAllPack = new GetAllPack();
             var all = tourPackageRepository.GetAllPackage();
             getAllPack.Packages = all;
-            return View(getAllPack);
+            return View("User/TravellingPackageView", getAllPack);
         }
         public IActionResult TravellingPackageViewSearch(string keyWord)
         {
             if (keyWord == null)
             {
-                return Redirect("/home/TravellingPackageView");
+                return Redirect("User/TravellingPackageView");
             }
             else
             {
@@ -126,7 +127,7 @@ namespace KarnelTravels.Controllers
                 ITourPackageRepository tourPackageRepository = new ITourPackageRepository(_context);
                 var pack = tourPackageRepository.SearchTourPackages(keyWord);
                 searchViewModel.ToursPackage = pack;
-                return View(searchViewModel);
+                return View("User/TravellingPackageViewSearch", searchViewModel);
             }
 
         }
@@ -139,14 +140,14 @@ namespace KarnelTravels.Controllers
 
             var all = touristPlaceRepository.GetAllTour();
             getAllTour.ToursPlace = all;
-            return View("User/TravellingTourView",getAllTour);
+            return View("User/TravellingTourView", getAllTour);
         }
 
         public IActionResult TravellingTourViewSearch(string keyWord)
         {
             if (keyWord == null)
             {
-                return Redirect("/home/TravellingTourView");
+                return Redirect("User/TravellingTourView");
             }
             else
             {
@@ -154,7 +155,7 @@ namespace KarnelTravels.Controllers
                 ITouristPlaceRepository touristPlaceRepository = new ITouristPlaceRepository(_context);
                 var q = touristPlaceRepository.SearchTouristPlace(keyWord);
                 searchViewModel.Tours = q;
-                return View(searchViewModel);
+                return View("User/TravellingTourViewSearch", searchViewModel);
             }
 
         }
@@ -207,7 +208,7 @@ namespace KarnelTravels.Controllers
             getTran.Cars = car;
             getTran.Spots = spot;
             getTran.Transportations = Transportation;
-            return View(getTran);
+            return View("User/TravellingTransportView", getTran);
         }
 
         public IActionResult TravellingTransportViewSearch(int tran,int spot,int spot1)
@@ -222,8 +223,15 @@ namespace KarnelTravels.Controllers
             getTran.Transportations = Transportation;
             var q = travelRepository.SpotSearch(tran, spot, spot1);
             getTran.All = q;
-            return View(getTran);
+            return View("User/TravellingTransportViewSearch", getTran);
         }
+        
+        public IActionResult Privacy()
+        {
+            _logger.LogInformation("Accessing Privacy page.");
+            return View();
+        }
+
         public IActionResult NewsView()
         {
             return View("User/NewsView");
@@ -232,10 +240,55 @@ namespace KarnelTravels.Controllers
         {
             return View("User/FeedbackOnCompany");
         }
-        public IActionResult Privacy()
+        
+        // This will go with an ID of a news - After which will be loaded to form the correspond news which is stored in a database
+        // NewsDetail/id
+        public IActionResult NewsDetail()
         {
-            _logger.LogInformation("Accessing Privacy page.");
-            return View();
+            return View("User/NewsDetail");
+        }
+        // This will go with an ID of a tour in selection of the user - After which will be loaded to form
+        // the correspond item (tour, transport, etc..) which is stored in a database
+        // TourDetails/id
+        public IActionResult TourDetails()
+        {
+            return View("User/TourDetails");
+        }
+        public IActionResult SightDetails()
+        {
+            return View("User/SightDetails");
+        }
+
+        public IActionResult PackageDetails()
+        {
+            int id = int.Parse(Request.Query["idt"]);
+            ITourPackageRepository tourPackageRepository = new ITourPackageRepository(_context);
+            var pack = tourPackageRepository.GetPackageById(id);
+            ViewBag.pack=pack;
+
+            return View("User/PackageDetails");
+        }
+
+        public IActionResult HotelDetails()
+        {
+            int id = int.Parse(Request.Query["idt"]);
+            IHotelRepository hotelRepository = new IHotelRepository(_context);
+            
+            var Hotel = hotelRepository.GetTblHotelRestaurantById(id);
+            ViewBag.Hotel = Hotel;
+            return View("User/HotelDetails");
+        }
+        public IActionResult TransportDetails()
+        {
+            return View("User/TransportDetails");
+        }
+        public IActionResult RestaurantDetails()
+        {
+            return View("User/RestaurantDetails");
+        }
+        public IActionResult AdvancedSearch()
+        {
+            return View("User/AdvancedSearch");
         }
         // This will go with an ID of a news - After which will be loaded to form the correspond news which is stored in a database
         // NewsDetail/id

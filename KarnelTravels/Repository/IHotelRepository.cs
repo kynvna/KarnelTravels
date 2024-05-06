@@ -51,6 +51,7 @@ namespace KarnelTravels.Repository
                     ht.SpotId = model.SpotId;
                     ht.Imglink = model.Imglink;
                     ht.ImageLinkId = model.ImageLinkId;
+                    ht.Description = model.Description;
                     ht.CatId = model.CatId;
 
 
@@ -58,6 +59,23 @@ namespace KarnelTravels.Repository
                     _context.SaveChanges();
                 }
             }
+        }
+
+        public void DeleteHotel(int id)
+        {
+            try
+            {
+                if (id != null)
+                {
+                    var hotel = _context.TblHotelRestaurants.Find(id);
+                    if (hotel != null)
+                    {
+                        _context.Remove(hotel);
+                        _context.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception ex) { }
         }
         public IEnumerable<HrCategory> GetAllHR()
         {

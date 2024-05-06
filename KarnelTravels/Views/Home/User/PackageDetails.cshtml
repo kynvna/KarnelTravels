@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "News";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var ht = ViewBag.Hotel as TblHotelRestaurant;
+    var ht = ViewBag.pack as TblTourPackage;
 }
 
 <!-- Property List Start -->
@@ -15,13 +15,14 @@
                     </div>
                     <div class="col-lg-8 col-md-8 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
                         <div class="p-4 pb-0">
-                            <a class="d-block h5 mb-2" asp-action="NewsDetail" asp-controller="Home">Tour Name</a><span><h5 class="text-primary mb-3">@ht.Price</h5></span>
-                            <p><strong>Going to: </strong>
+                            <a class="d-block h5 mb-2" asp-action="NewsDetail" asp-controller="Home">Tour Name</a><span><h5 class="text-primary mb-3">@ht.TotalPrice</h5></span>
+                            <p>
+                                <strong>Going to: </strong>
                                 City - City - City
                             </p>
                             <p>
                                 <strong>Transportation: </strong>
-                                Bus/Plane/ETC
+                                @ht.StartDate - @ht.EndDate
                             </p>
                             <p>
                                 <strong>Accomodation: </strong>
@@ -44,11 +45,11 @@
                                 <strong>
                                     Customer Rating:
                                 </strong>
-                                <i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 5.0 
+                                <i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 5.0
                                 &nbsp;&nbsp;<span><a class="btn btn-outline-warning" data-bs-toggle="pill" href="#tab-1">Already tried ? Rate this service</a></span>
                             </p>
                             <p>
-                                
+
                                 <strong>Description: </strong>
                                 @ht.Description
                             </p>
