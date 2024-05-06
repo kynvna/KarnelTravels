@@ -54,10 +54,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5UcmFuc3BvcnRWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SEM3/KarnelTravels/Views/Admin/CreateAdminHotelView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlQWRtaW5Ib3RlbFZpZXcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/SEM3/KarnelTravels/Views/Admin/FeedbackOnComp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRmVlZGJhY2tPbkNvbXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -74,12 +70,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2l0ZW1hcC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/SEM3/KarnelTravels/Views/Admin/ViewCreateAdminHotel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0NyZWF0ZUFkbWluSG90ZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SEM3/KarnelTravels/Views/Admin/ViewCreateAdminTransport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0NyZWF0ZUFkbWluVHJhbnNwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/SEM3/KarnelTravels/Views/Admin/ViewCreateTourPackage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0NyZWF0ZVRvdXJQYWNrYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SEM3/KarnelTravels/Views/Admin/ViewEditAdminHotel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0VkaXRBZG1pbkhvdGVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SEM3/KarnelTravels/Views/Admin/ViewEditAdminTourPackage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0VkaXRBZG1pblRvdXJQYWNrYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SEM3/KarnelTravels/Views/Admin/ViewEditAdminTransport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0VkaXRBZG1pblRyYW5zcG9ydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SEM3/KarnelTravels/Views/Admin/ViewUpload.cshtml]
@@ -116,6 +128,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/SEM3/KarnelTravels/Views/Home/User/NewsView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyXE5ld3NWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SEM3/KarnelTravels/Views/Home/User/PackageDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyXFBhY2thZ2VEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SEM3/KarnelTravels/Views/Home/User/ProductView.cshtml]
