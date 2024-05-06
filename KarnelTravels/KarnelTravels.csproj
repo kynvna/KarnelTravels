@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -7,13 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="Views\Home\AboutUsView.cshtml" />
-    <None Include="Views\Home\NewsView.cshtml" />
-    <None Include="Views\Home\ProductView.cshtml" />
-    <None Include="Views\Home\TravellingPackageView.cshtml" />
-    <None Include="Views\Home\TravellingRestaurantView.cshtml" />
-    <None Include="Views\Home\TravellingSightView.cshtml" />
-    <None Include="Views\Home\TravellingTourView.cshtml" />
     <None Include="wwwroot\js\main.js" />
     <None Include="wwwroot\js\site.js" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
