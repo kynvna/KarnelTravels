@@ -1,4 +1,6 @@
-﻿@{
+﻿@model KarnelTravels.Models.HRUserViewModel
+
+@{
     ViewData["Title"] = "News";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var ht = ViewBag.Hotel as TblHotelRestaurant;
@@ -54,9 +56,15 @@
                             </p>
                         </div>
                     </div>
-                </div>
-            </div>
         </div>
+    </div>
+    <div class="row mt-4">
+        @foreach (var imageUrl in Model.ImageUrl)
+        {
+            <div class="col-md-4 mb-3">
+                <img src="~/img/Hotel_Restaurant/@Url.Content(imageUrl)" class="img-fluid" alt="Tourist Place Image">
+            </div>
+        }
     </div>
 </div>
 <!-- Property List End -->

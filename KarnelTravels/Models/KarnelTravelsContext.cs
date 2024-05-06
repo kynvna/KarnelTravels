@@ -96,7 +96,6 @@ public partial class KarnelTravelsContext : DbContext
             entity.ToTable("tblHotel_Restaurant");
 
             entity.Property(e => e.HrId).HasColumnName("HR_Id");
-            entity.Property(e => e.Imglink).HasMaxLength(255);
             entity.Property(e => e.Name).HasMaxLength(255);
             entity.Property(e => e.Price).HasColumnType("money");
             entity.Property(e => e.Status).HasMaxLength(50);

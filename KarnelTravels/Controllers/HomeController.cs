@@ -1,5 +1,6 @@
-using KarnelTravels.Models;
+﻿using KarnelTravels.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging; // Ensure ILogger is accessible
 using System.Diagnostics;
 using System.Linq;
@@ -77,10 +78,7 @@ namespace KarnelTravels.Controllers
         {
             return View("User/TravellingRestaurantView");
         }
-        public IActionResult TravellingSightView()
-        {
-            return View("User/TravellingSightView");
-        }
+
         public IActionResult TravellingPackageView()
         {
             ITourPackageRepository tourPackageRepository = new ITourPackageRepository(_context);
@@ -378,3 +376,5 @@ namespace KarnelTravels.Controllers
 
     }
 }
+
+

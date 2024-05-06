@@ -1,0 +1,60 @@
+﻿@model List<KarnelTravels.Models.TouristPlaceViewModel>
+@{
+    ViewBag.Title = "FormCkeditor";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h1>TouristPlace List</h1>
+<form>
+    <button asp-action="CreateTouristPlace" asp-controller="Admin" class="btn btn-primary">Create Tourist Place</button>
+    <table class="table table-responsive table-hover">
+        <thead>
+            <tr class="table active">
+                <th class="text-center">Name Place</th>
+                <th class="text-center">Description</th>
+                <th class="text-center">image</th>
+                <th class="text-center">Spot</th>
+                <th class="text-center">Status</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var place in Model)
+                {
+                    <tr>
+                        <td class="text-center">@place.Name</td>
+                        <td class="text-center">@place.Description</td>
+                        <td><img src="~/img/TblTourist_Place/@place.ImageUrl" alt="Place Image" style="width: 100px; height: auto;" /></td>
+                        <td class="text-center">@place.Namespot</td>
+                        <td class="text-center">@place.Status</td>
+
+
+
+                        <td>
+                            <div class="btn-group btn-group-sm">
+                                <a asp-controller="Admin" asp-action="EditTouristPlace" asp-route-id="@place.Id" class="btn btn-primary">Edit</a>
+                                <form asp-controller="Admin" asp-action="DeleteTouristPlace" method="post">
+                                    <input type="hidden" name="id" value="@place.Id" />
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this hotel?')">Delete</button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5">
+                        <div>
+                            No Hotel available at this moment
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>

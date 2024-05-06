@@ -7,6 +7,32 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="Views\Admin\AdminHotelView.cshtml" />
+    <None Include="Views\Admin\AdminProfile.cshtml" />
+    <None Include="Views\Admin\AdminSightView.cshtml" />
+    <None Include="Views\Admin\AdminSpotView.cshtml" />
+    <None Include="Views\Admin\AdminTourView.cshtml" />
+    <None Include="Views\Admin\AdminTransportView.cshtml" />
+    <None Include="Views\Admin\FeedbackOnComp.cshtml" />
+    <None Include="Views\Admin\FeedbackOnObj.cshtml" />
+    <None Include="Views\Admin\Login.cshtml" />
+    <None Include="Views\Admin\Sitemap.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\Home\Restaurant.cshtml" />
+    <None Include="Views\Home\User\AboutUsView.cshtml" />
+    <None Include="Views\Home\User\NewsView.cshtml" />
+    <None Include="Views\Home\User\ProductView.cshtml" />
+    <None Include="Views\Home\User\TravellingHotelView.cshtml" />
+    <None Include="Views\Home\User\TravellingPackageView.cshtml" />
+    <None Include="Views\Home\User\TravellingRestaurantView.cshtml" />
+    <None Include="Views\Home\User\TravellingSightView.cshtml" />
+    <None Include="Views\Home\User\TravellingTourView.cshtml" />
+    <None Include="Views\Home\User\TravellingTransportView.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_AdminLayout.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
     <None Include="wwwroot\js\main.js" />
     <None Include="wwwroot\js\site.js" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
@@ -142,8 +168,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CKEditor" Version="3.6.4" />
-    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.3.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
       <PrivateAssets>all</PrivateAssets>

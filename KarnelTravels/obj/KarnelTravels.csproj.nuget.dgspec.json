@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\SEM3\\KarnelTravels\\KarnelTravels.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "D:\\SEM3\\KarnelTravels\\KarnelTravels.csproj",
         "packagesPath": "C:\\Users\\HAI DANG\\.nuget\\packages\\",
         "outputPath": "D:\\SEM3\\KarnelTravels\\obj\\",
+=======
+    "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\KarnelTravels.csproj": {}
+  },
+  "projects": {
+    "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\KarnelTravels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\KarnelTravels.csproj",
+        "projectName": "KarnelTravels",
+        "projectPath": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\KarnelTravels.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\C#\\LuanAnCuoiKy\\KarnelTravels\\KarnelTravels\\obj\\",
+>>>>>>> origin/khanh
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\HAI DANG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> origin/khanh
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,25 +57,12 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "CKEditor": {
-              "target": "Package",
-              "version": "[3.6.4, )"
-            },
-            "Microsoft.AspNet.Mvc": {
-              "target": "Package",
-              "version": "[5.3.0, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.4, )"
@@ -102,7 +107,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+>>>>>>> origin/khanh
         }
       }
     }
