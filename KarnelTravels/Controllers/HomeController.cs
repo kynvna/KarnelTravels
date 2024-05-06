@@ -292,37 +292,7 @@ namespace KarnelTravels.Controllers
         }
         // This will go with an ID of a news - After which will be loaded to form the correspond news which is stored in a database
         // NewsDetail/id
-        public IActionResult NewsDetail()
-        {
-            return View("User/NewsDetail");
-        }
-        // This will go with an ID of a tour in selection of the user - After which will be loaded to form
-        // the correspond item (tour, transport, etc..) which is stored in a database
-        // TourDetails/id
-        public IActionResult TourDetails()
-        {
-            return View("User/TourDetails");
-        }
-        public IActionResult SightDetails()
-        {
-            return View("User/SightDetails");
-        }
-        public IActionResult HotelDetails()
-        {
-            return View("User/HotelDetails");
-        }
-        public IActionResult TransportDetails()
-        {
-            return View("User/TransportDetails");
-        }
-        public IActionResult RestaurantDetails()
-        {
-            return View("User/RestaurantDetails");
-        }
-        public IActionResult AdvancedSearch()
-        {
-            return View("User/AdvancedSearch");
-        }
+        
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

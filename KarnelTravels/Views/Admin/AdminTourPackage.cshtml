@@ -5,28 +5,45 @@
 }
 @model GetAllPack;
 <div>
-    <a href="/admin/ViewCreateTourPackage">Create</a>
+    <a class="btn btn-info" href="/admin/ViewCreateTourPackage">Create New Tour</a>
 </div>
+<br/>
 <div class="row">
-    @foreach(var item in Model.Packages)
-    {
-         <div class="card" style="width:250px;">
-            @* <img class="card-img-top" style="height:280px" src="~/Content/Upload/@item.ComImg" /> *@
-            <div class="card-body">
-                <h4 class="card-title">@item.Name</h4>
-                <div class="text-muted card-subtitle">@item.StartDate - @item.EndDate</div>
-                @Html.Raw(item.Description)
-                @* <p class="card-text">@item.Description</p> *@
-                <button class="btn btn-default btn-sm">
-                    <i class="fa fa-plus"></i>
-                    <a href="/admin/ViewEditAdminTourPackage?idt=@item.PackageId">Edit</a
-                </button>
-                
-                 <button class="btn btn-default btn-sm">
-                    <i class="fa fa-plus"></i>
-                    <a href="/admin/DeleteAdminPackage?idt=@item.PackageId">Delete</a
-                </button>
+    <div class="col-md-12">
+        <div class="ibox">
+            <div class="ibox-head">
+                <div class="ibox-title">Hotel and Resort List</div>
+                <div class="ibox-tools">
+                    <a class="ibox-collapse"><i class="fa fa-minus"></i></a>
+                </div>
+            </div>
+            <div class="ibox-body">
+                <div class="row">
+                    <div>
+                        <div class="card-group">
+                            @foreach (var item in Model.Packages)
+                            {
+                                <div class="col-md-3 mt-1">
+                                    <div class="card h-100">
+                                        <img class="card-img-top" src="https://149345965.v2.pressablecdn.com/wp-content/uploads/img-hotels-IADGV_006-Dusk-Exterior-home.jpg" />
+                                        <div class="card-body">
+                                            <h5 class="card-title"><span><strong>Entity Name: </strong></span><span style="color:navy">@item.Name</span></h5>
+                                            <hr />
+                                            <div class="text-muted card-subtitle"><span><strong>Start Date: </strong></span>@item.StartDate</div>
+                                            <div class="text-muted card-subtitle"><span><strong>End Date: </strong></span>@item.EndDate</div>
+                                            <div class="text-muted card-subtitle"> <span><strong>Description: </strong></span>@Html.Raw(item.Description)</div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a class="btn btn-info" href="/admin/ViewEditAdminTourPackage?idt=@item.PackageId"><i class="fa fa-plus"></i> Edit</a>
+                                            <a class="btn btn-danger" href="/admin/DeleteAdminPackage?idt=@item.PackageId"><i class="fa fa-plus"></i> Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    }
+    </div>
 </div>

@@ -75,7 +75,9 @@ namespace KarnelTravels.Repository
                     }
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+            }
         }
         public IEnumerable<HrCategory> GetAllHR()
         {

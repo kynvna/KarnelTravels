@@ -157,6 +157,11 @@
     <Folder Include="Areas\Administrator\Data\" />
     <Folder Include="Areas\Administrator\Models\" />
     <Folder Include="Areas\Administrator\Views\" />
+    <Folder Include="wwwroot\image\Hotel_Restaurant\" />
+    <Folder Include="wwwroot\image\Tour_Package\" />
+    <Folder Include="wwwroot\image\Tourist_Place\" />
+    <Folder Include="wwwroot\image\Travel\" />
+    <Folder Include="wwwroot\image\tblTour_Packages\" />
   </ItemGroup>
 
   <ItemGroup>

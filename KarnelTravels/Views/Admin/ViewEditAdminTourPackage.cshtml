@@ -15,74 +15,74 @@
     </div>
     <div class="ibox-body">
         <form id="frmData" action="/Admin/EditAdminTourPackage" class="form-horizontal" method="post" enctype="multipart/form-data">
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">ID</label>
-                <div class="col-sm-10">
-                    <input value="@q.PackageId" class="form-control" type="text" name="PackageId">
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label>ID</label>
+                    <input readonly value="@q.PackageId" class="form-control" type="text" name="PackageId">
                 </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Name</label>
-                <div class="col-sm-10 ml-sm-auto">
+                <div class="form-group col-md-4">
+                    <label>Name</label>
                     <input value="@q.Name" class="form-control" name="Name">
                 </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Price</label>
-                <div class="col-sm-10 ml-sm-auto">
+                <div class="form-group col-md-4">
+                    <label>Price</label>
                     <input value="@q.TotalPrice" class="form-control" name="TotalPrice">
                 </div>
             </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Start Date</label>
-                <div class="col-sm-10">
-                    @* //<input class="form-control" id="password1" type="datetime" name="StartDate"> *@
-                    <input type="date" value="@DateTime.Now" id="datepicker" name="StartDate">
-
-                    <script>
-                        $(function () {
-                            $("#datepicker").datepicker();
-                        });
-                    </script>
+            <div class="row">
+                <div class="form-group col-md-6" id="date_1">
+                    <label class="font-normal">Start Date</label>
+                    <div class="input-group date">
+                        <span class="input-group-addon bg-white"><i class="fa fa-calendar"></i></span>
+                        <input class="form-control" type="date" value="@DateTime.Now" id="datepicker" name="StartDate">
+                        <script>
+                            $(function () {
+                                $("#datepicker").datepicker();
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="form-group col-md-6" id="date_2">
+                    <label class="font-normal">End Date</label>
+                    <div class="input-group date">
+                        <span class="input-group-addon bg-white"><i class="fa fa-calendar"></i></span>
+                        <input class="form-control" type="date" value="@DateTime.Now" id="datepicker" name="EndDate">
+                        <script>
+                            $(function () {
+                                $("#datepicker").datepicker();
+                            });
+                        </script>
+                    </div>
                 </div>
             </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">End Date</label>
-                <div class="col-sm-10 ml-sm-auto">
-                    <input name="EndDate" type="date">
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <label>Spot</label>
+                    <select class="form-control" name="spot">
+                        <option selected>Vui Long Chon Spot</option>
+                        @foreach (var item in Model.tblSpots)
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    </select>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Spot</label>
-                <select class="form-select border-0 py-3" name="SportId">
-
-                    <option selected>Vui Long Chon Spot</option>
-                    @foreach (var item in Model.tblSpots)
-                    {
-                        <option value="@item.Id">@item.Name</option>
-                    }
-                </select>
-            </div>
-           
-            <div class="form-group row">
-
-                <label class="col-sm-2 col-form-label">Img</label>
-                <div class="col-sm-10">
+                <div class="form-group col-md-6">
+                    <label>Img</label>
                     <input class="form-control" type="file" name="FileImg">
                 </div>
             </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Description</label>
-                <textarea id="editor" asp-for="@q.Description" class="form-control"></textarea>
-                <input type="hidden" name="mydata" id="mydata" value="" />
-
-
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-10 ml-sm-auto">
-                    <button name="btnSave" id="btnSave" class="btn btn-info" type="submit">Submit</button>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label class="col-sm-2 col-form-label">Description</label>
+                    <textarea id="editor" asp-for="@q.Description" class="form-control"></textarea>
+                    <input type="hidden" name="mydata" id="mydata" value="" />
                 </div>
-
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <button name="btnSave" id="btnSave" class="btn btn-info" type="submit">Submit Changes</button>
+                    <a class="btn btn-danger" asp-action="AdminTourPackage" asp-controller="Admin">Go back</a>
+                </div>
             </div>
 
         </form>

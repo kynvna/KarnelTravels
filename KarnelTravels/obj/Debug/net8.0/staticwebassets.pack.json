@@ -15281,6 +15281,26 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\image\\Hotel_Restaurant\\638506100029625271image.png",
+      "PackagePath": "staticwebassets\\image\\Hotel_Restaurant\\638506100029625271image.png"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\image\\Hotel_Restaurant\\638506126174945184Poster ICC.png",
+      "PackagePath": "staticwebassets\\image\\Hotel_Restaurant\\638506126174945184Poster ICC.png"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\image\\Hotel_Restaurant\\638506167907557860Ngo Anh Khoi.jpg",
+      "PackagePath": "staticwebassets\\image\\Hotel_Restaurant\\638506167907557860Ngo Anh Khoi.jpg"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\image\\Hotel_Restaurant\\638506170816994393image.png",
+      "PackagePath": "staticwebassets\\image\\Hotel_Restaurant\\638506170816994393image.png"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\image\\Hotel_Restaurant\\638506171377168664image.png",
+      "PackagePath": "staticwebassets\\image\\Hotel_Restaurant\\638506171377168664image.png"
+    },
+    {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\image\\Restaurant\\638499505827396641pic1.png",
       "PackagePath": "staticwebassets\\image\\Restaurant\\638499505827396641pic1.png"
     },
@@ -15347,6 +15367,10 @@
     {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\image\\Restaurant\\638505131694893097carousel-2.jpg",
       "PackagePath": "staticwebassets\\image\\Restaurant\\638505131694893097carousel-2.jpg"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\image\\tblTour_Packages\\638506077735721110Ngo Anh Khoi.jpg",
+      "PackagePath": "staticwebassets\\image\\tblTour_Packages\\638506077735721110Ngo Anh Khoi.jpg"
     },
     {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\about.jpg",

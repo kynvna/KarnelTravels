@@ -60,7 +60,9 @@ namespace KarnelTravels.Repository
                     }
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public void EditTravel(int id, TblTravel model)

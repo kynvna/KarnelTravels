@@ -117,7 +117,7 @@ namespace KarnelTravels.Controllers
             getHotel.tblSpots = list;
             return View(getHotel);
         }
-        public IActionResult EditAdminTourPackage(TourPackage model , IFormFile FileImg)
+        public IActionResult EditAdminTourPackage(TourPackage model, IFormFile FileImg)
         {
             ITourPackageRepository tourPackageRepository = new ITourPackageRepository(_context);
             TblTourPackage tblTourPackage = new TblTourPackage();
@@ -148,7 +148,7 @@ namespace KarnelTravels.Controllers
                 tourPackageRepository.EditPackage(a, tblTourPackage);
 
             }
-                return Redirect("/admin/AdminTourPackage");
+            return Redirect("/admin/AdminTourPackage");
         }
         public IActionResult DeleteAdminPackage()
         {
@@ -368,7 +368,7 @@ namespace KarnelTravels.Controllers
                 _context.SaveChanges();
 
             }
-            return Redirect("/admin/ViewCreateTourPackage");
+            return Redirect("/admin/AdminHotelView");
         }
 
         
