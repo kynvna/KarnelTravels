@@ -54,14 +54,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a asp-controller="Home" asp-action="Index" class="nav-item nav-link active">Home</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a asp-controller="Home" asp-action="AdvancedSearch" class="dropdown-item">Advanced Search</a>
-                                <a asp-controller="Home" asp-action="TravellingPackageView" class="dropdown-item">Package</a>
-                            </div>
-                        </div>
-                        
+                        <a asp-controller="Home" asp-action="AdvancedSearch" class="nav-item nav-link">Advanced Search</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travelling</a>
                             <div class="dropdown-menu rounded-0 m-0">
@@ -69,7 +62,7 @@
                                 <a asp-controller="Home" asp-action="TravellingSightView" class="dropdown-item">Sights</a>
                                 <a asp-controller="Home" asp-action="TravellingHotelView" class="dropdown-item">Hotels & Resort</a>
                                 <a asp-controller="Home" asp-action="TravellingRestaurantView" class="dropdown-item">Restaurants</a>
-                                <a asp-controller="Home" asp-action="TravellingTourView" class="dropdown-item">Tours</a>
+                                <a asp-controller="Home" asp-action="TravellingPackageView" class="dropdown-item">Package</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown">
@@ -116,6 +109,7 @@
             </div>
         </div>
         <!-- Header End -->
+        <hr/>
         @RenderBody()
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">

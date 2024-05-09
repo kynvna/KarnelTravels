@@ -41,6 +41,89 @@ namespace KarnelTravels.Controllers
         {
             return View("User/AboutUsView");
         }
+
+        [HttpGet]
+        public IActionResult TravellingSightView()
+        {
+            Dictionary<int, List<TouristPlaceViewModel>> touristPlaceViewModelsBySpot = new Dictionary<int, List<TouristPlaceViewModel>>();
+            try
+            {
+                // Lấy danh sách các điểm du lịch
+                List<TblTouristPlace> touristPlaces = _context.TblTouristPlaces.ToList();
+
+                // Lặp qua từng điểm du lịch để nhóm chúng theo SpotId
+                foreach (var touristPlace in touristPlaces)
+                {
+                    var spotId = touristPlace.SportId;
+                    var spot = _context.TblSpots.FirstOrDefault(s => s.Id == spotId);
+
+                    if (spot != null)
+                    {
+                        var imageUrl = _context.TblImageUrls.FirstOrDefault(i => i.ObjectId == touristPlace.Id && i.UrlObject == "TblTourist_Place");
+                        var touristPlaceViewModel = new TouristPlaceViewModel
+                        {
+                            Id = touristPlace.Id,
+                            Name = touristPlace.Name,
+                            Description = touristPlace.Description,
+                            Status = touristPlace.Status,
+                            ImageUrl = imageUrl?.Url,
+                            Namespot = spot.Name
+                        };
+
+                        // Kiểm tra nếu SpotId đã tồn tại trong từ điển
+                        if (touristPlaceViewModelsBySpot.ContainsKey((int)spotId))
+                        {
+                            // Nếu đã tồn tại, thêm điểm du lịch vào danh sách tương ứng
+                            touristPlaceViewModelsBySpot[(int)spotId].Add(touristPlaceViewModel);
+                        }
+                        else
+                        {
+                            // Nếu chưa tồn tại, tạo mới danh sách và thêm điểm du lịch vào
+                            touristPlaceViewModelsBySpot[(int)spotId] = new List<TouristPlaceViewModel> { touristPlaceViewModel };
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = ex.Message;
+            }
+
+            return View("User/TravellingSightView", touristPlaceViewModelsBySpot);
+        }
+
+        public IActionResult SightDetails(int id)
+        {
+            try
+            {
+                var touristPlace = _context.TblTouristPlaces.FirstOrDefault(tp => tp.Id == id);
+                if (touristPlace != null)
+                {
+                    var imageUrls = _context.TblImageUrls
+                        .Where(i => i.ObjectId == touristPlace.Id && i.UrlObject == "TblTourist_Place")
+                        .Select(i => i.Url)
+                        .ToList();
+                    var viewModel = new TouristPlaceUserViewModel
+                    {
+                        Id = touristPlace.Id,
+                        Name = touristPlace.Name,
+                        Description = touristPlace.Description,
+                        ImageUrl = imageUrls
+                    };
+                    return View("User/SightDetails", viewModel);
+                }
+                else
+                {
+                    TempData["errorMessage"] = "Tourist place not found.";
+                    return RedirectToAction("TravellingSightView"); // Redirect to a view displaying all tourist places
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = $"Error occurred while retrieving tourist place details: {ex.Message}";
+                return RedirectToAction("TravellingSightView"); // Redirect to a view displaying all tourist places
+            }
+        }
         public IActionResult TravellingHotelView()
         {
             IHotelRepository hotelRepository = new IHotelRepository(_context);
@@ -323,10 +406,6 @@ namespace KarnelTravels.Controllers
         public IActionResult TourDetails()
         {
             return View("User/TourDetails");
-        }
-        public IActionResult SightDetails()
-        {
-            return View("User/SightDetails");
         }
 
         public IActionResult PackageDetails()

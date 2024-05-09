@@ -46,16 +46,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5SZXNvcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SEM3/KarnelTravels/Views/Admin/AdminSightView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5TaWdodFZpZXcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/SEM3/KarnelTravels/Views/Admin/AdminSpot.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5TcG90LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/SEM3/KarnelTravels/Views/Admin/AdminSpotView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5TcG90Vmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SEM3/KarnelTravels/Views/Admin/AdminTouristPlace.cshtml]

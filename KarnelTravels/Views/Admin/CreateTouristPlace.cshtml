@@ -4,51 +4,58 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-
-<form method="post" action="CreateTouristPlace" class="mt-3" autocomplete="off" enctype="multipart/form-data">
-
-    <div class="mb-3">
-        <label class="form-lable">Name Tourist Place</label>
-        <input type="text" class="form-control" asp-for="Name" />
-        <span asp-validation-for="Name" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3">
-        <label class="form-lable">Spot</label>
-        <select class="form-control form-control-lg" asp-for="SportId" aria-describedby="basic-addon1"
-                required>
-            <option value="1">Nha trang</option>
-            <option value="2">Da Lat</option>
-            <option value="3">Vung Tau</option>
-            <option value="4">TpHCM</option>
-        </select>
-    </div>
-
-    <div class="mb-3">
-        <label class="form-lable">Descrirption</label>
-        <input type="text" class="form-control" asp-for="Description" />
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3">
-        <label class="form-lable">Status</label>
-        <select class="form-control form-control-lg" asp-for="Status" aria-describedby="basic-addon1"
-                required>
-            <option>True</option>
-            <option>False</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="files">Images:</label>
-        <input type="file" id="files" name="files" class="form-control-file" multiple />
-    </div>
-
-
-
-    <div class="mb-3">
-        <div class="col-lg-12 d-frid">
-            <button type="submit" class="btn btn-primary">Submit</button>
+<div class="ibox">
+    <div class="ibox-head">
+        <div class="ibox-title">Create new tourist place</div>
+        <div class="ibox-tools">
+            <a class="ibox-collapse"><i class="fa fa-minus"></i></a>
         </div>
     </div>
-</form>
+    <div class="ibox-body">
+        <form method="post" action="CreateTouristPlace" autocomplete="off" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" asp-for="Name" placeholder="Please name your tourist place" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label>Select spot</label>
+                    <select class="form-control" asp-for="SportId" aria-describedby="basic-addon1" required>
+                        <option selected>Select your spot</option>
+                        @*@foreach (var item in Model.tblSpots)
+                        {
+                        <option value="@item.Id">@item.Name</option>
+                        }*@
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <label>Descrirption</label>
+                    <textarea rows="10" type="text" class="form-control" asp-for="Description" placeholder="Please describe your tourist place"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <label>Image</label>
+                    <input type="file" id="files" name="files" class="form-control" multiple />
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label class="form-lable">Status</label>
+                    <select class="form-control" asp-for="Status" aria-describedby="basic-addon1" required>
+                        <option value="ACTIVE">Active</option>
+                        <option value="INACTIVE">Inactive</option>
+                    </select>
+                </div>
+            </div>
 
+            <div class="form-group">
+                <button name="btnSave" id="btnSave" class="btn btn-success" type="submit">Create with selected informations</button>
+                <a asp-controller="Admin" asp-action="AdminTouristPlace" class="btn btn-danger" type="submit">Go back</a>
+            </div>
+        </form>
+
+    </div>
+</div>

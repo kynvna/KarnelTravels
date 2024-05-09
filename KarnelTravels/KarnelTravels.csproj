@@ -9,8 +9,6 @@
   <ItemGroup>
     <None Include="Views\Admin\AdminHotelView.cshtml" />
     <None Include="Views\Admin\AdminProfile.cshtml" />
-    <None Include="Views\Admin\AdminSightView.cshtml" />
-    <None Include="Views\Admin\AdminSpotView.cshtml" />
     <None Include="Views\Admin\AdminTourView.cshtml" />
     <None Include="Views\Admin\AdminTransportView.cshtml" />
     <None Include="Views\Admin\FeedbackOnComp.cshtml" />
