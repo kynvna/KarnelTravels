@@ -15589,6 +15589,10 @@
       "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\The Imperial Hotel Vũng Tàu4.jpg"
     },
     {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Treisman-Scary-Stories.png",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Treisman-Scary-Stories.png"
+    },
+    {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\banana.jpg",
       "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\banana.jpg"
     },
@@ -15605,6 +15609,10 @@
       "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\exterior.jpg"
     },
     {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\glass.png",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\glass.png"
+    },
+    {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\grape.jpg",
       "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\grape.jpg"
     },
@@ -15615,6 +15623,10 @@
     {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\image.png",
       "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\image.png"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\key.png",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\key.png"
     },
     {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\khu-nghi-duo-ng-merperle.jpg",
@@ -15649,8 +15661,16 @@
       "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\skylight-havana-nha-trang.jpg"
     },
     {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\textured-glass.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\textured-glass.jpg"
+    },
+    {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\the-empyrean-nha-trang1.jpg",
       "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\the-empyrean-nha-trang1.jpg"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\tugo.png",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\tugo.png"
     },
     {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\vinpearl-condotel-beachfront (1).jpg",
@@ -16139,6 +16159,10 @@
     {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Tour_Package\\HanoiTour2.jpg",
       "PackagePath": "staticwebassets\\img\\Tour_Package\\HanoiTour2.jpg"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Tour_Package\\avalanched.jpg",
+      "PackagePath": "staticwebassets\\img\\Tour_Package\\avalanched.jpg"
     },
     {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Tourist_Place\\DLMK1.jpg",
