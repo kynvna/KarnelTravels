@@ -11,6 +11,7 @@
         public DateOnly? EndDate { get; set; }
 
         public int spot {  get; set; }
+        public string selectObject { get; set; }
 
     }
 }

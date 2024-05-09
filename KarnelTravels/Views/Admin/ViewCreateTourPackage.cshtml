@@ -39,8 +39,14 @@
                     }
                 </select>
             </div>
+            <select id="hotelDropdown" name="selectObject">
+                @foreach (var item in Model.selectObject)
+                {
+                    <option value="@item.Text">@item.Text</option>
+                }
+            </select>
             <div class="col-sm-10">
-                <input class="form-control" type="file" name="FileImg">
+                <input class="form-control" type="file" name="FileImg" multiple>
             </div>
             <div id="editor"></div>
             <input type="hidden" name="mydata" id="mydata" value="" />

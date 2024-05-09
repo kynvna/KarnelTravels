@@ -68,7 +68,7 @@
 
                 <label class="col-sm-2 col-form-label">Img</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="file" name="FileImg">
+                    <input class="form-control" type="file" name="FileImg" multiple>
                 </div>
             </div>
             <div class="form-group row">
@@ -78,6 +78,8 @@
 
 
             </div>
+            @Html.CheckBoxFor(Model => Model.Active)
+
             <div class="form-group row">
                 <div class="col-sm-10 ml-sm-auto">
                     <button name="btnSave" id="btnSave" class="btn btn-info" type="submit">Submit</button>
@@ -86,6 +88,19 @@
             </div>
 
         </form>
+        <div class="col-4" style="min-height:40rem;background-color:#0072a6;">
+
+            @foreach (var item in Model.HrImages)
+            {
+                <div class="pic-rect">
+                    <img id="hotelImage_@item.Id" src="~/img/tblTour_Packages/@item.Url" class="small-image" alt="">
+                    <button id="deletebtn" class="btn btn-default btn-sm delete-image-btn" data-image-id="@item.Id">
+                        <i class="fa fa-minus"></i>  Delete
+                    </button>
+                </div>
+            }
+
+        </div>
     </div>
 </div>
 <script src="~/ckeditor/ckeditor.js" type="text/javascript"></script>
@@ -126,6 +141,46 @@
 
                 }
             }, 100);
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Attach click event handler to all delete buttons with class "delete-image-btn"
+            $(".delete-image-btn").on("click", function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                const imageId = parseInt($(this).data("image-id"), 10); // Get image ID from data-attribute
+
+                if (confirm("Are you sure you want to delete this image?")) {
+                    deleteImage(imageId); // Call the deleteImage function
+                }
+            });
+        });
+
+        function deleteImage(imageId) {
+            const imageElement = $("#hotelImage_" + imageId);
+            const deletebtn = $("#deletebtn");
+            if (imageElement.length) { // Check if image element exists
+                // Remove image element from DOM
+                imageElement.remove();
+                deletebtn.remove();
+                // Send AJAX request to server for permanent deletion (optional)
+                $.ajax({
+                    url: "/Admin/DeletePackImg/" + imageId, // Assuming your server-side action URL
+                    method: "POST", // Assuming your server-side method expects POST
+                    data: { imageId: imageId }, // Send image ID as data
+                    success: function (data) {
+                        // Handle successful deletion response (optional)
+                        console.log("Image deletion status:", data);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        // Handle error response (e.g., display error message)
+                        console.error("Error deleting image:", xhr.status, thrownError);
+                    }
+                });
+            } else {
+                console.error("Image element with ID 'hotelImage_" + imageId + "' not found.");
+            }
         }
     </script>
 }

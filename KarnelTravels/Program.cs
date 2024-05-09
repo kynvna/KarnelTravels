@@ -6,6 +6,9 @@ using System.Linq;
 using System.Web;
 
 using Microsoft.AspNetCore.Session;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Azure;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -36,7 +39,18 @@ app.UseSession();
 app.UseRouting();
 
 app.UseAuthorization();
-app.MapGet("/Admin/", context =>
+/*app.MapGet("/Admin/", context =>
+{
+    var admin_id = context.Session.GetString("admin");
+    if (admin_id == null)
+    {
+        context.Response.Redirect("/home");
+    }
+    
+});*/
+
+
+/*app.MapGet("/Admin/", context =>
 {
     var admin_id = context.Session.GetString("admin");
     if (admin_id == null)
@@ -70,6 +84,7 @@ app.MapGet("/Admin/AdminProfile", context =>
     {
         context.Response.Redirect("/home");
     }
+
     return Task.CompletedTask;
 });
 app.MapGet("/Admin/AdminSpotView", context =>
@@ -179,10 +194,11 @@ app.MapGet("/Admin/ViewEditAdminTransport", context =>
         context.Response.Redirect("/home");
     }
     return Task.CompletedTask;
-});
+});*/
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 /*app.MapControllerRoute(
     name: "default",
