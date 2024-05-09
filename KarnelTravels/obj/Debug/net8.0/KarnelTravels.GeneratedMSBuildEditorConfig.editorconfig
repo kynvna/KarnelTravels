@@ -58,6 +58,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlTmV3cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Source/KarnelTravels/KarnelTravels/Views/Admin/DeleteFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlRmVlZGJhY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Source/KarnelTravels/KarnelTravels/Views/Admin/DeleteNews.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlTmV3cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,12 +70,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdE5ld3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Source/KarnelTravels/KarnelTravels/Views/Admin/FeedbackOnComp.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRmVlZGJhY2tPbkNvbXAuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Source/KarnelTravels/KarnelTravels/Views/Admin/FeedbackOnObj.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRmVlZGJhY2tPbk9iai5jc2h0bWw=
+[E:/Source/KarnelTravels/KarnelTravels/Views/Admin/GetAllFeedBacks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2V0QWxsRmVlZEJhY2tzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Source/KarnelTravels/KarnelTravels/Views/Admin/Login.cshtml]
@@ -80,6 +80,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Source/KarnelTravels/KarnelTravels/Views/Admin/Sitemap.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2l0ZW1hcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Source/KarnelTravels/KarnelTravels/Views/Admin/_FeedbackTableRows.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0ZlZWRiYWNrVGFibGVSb3dzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Source/KarnelTravels/KarnelTravels/Views/Home/Index.cshtml]
@@ -136,6 +140,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Source/KarnelTravels/KarnelTravels/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Source/KarnelTravels/KarnelTravels/Views/Shared/_FeedbackModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9GZWVkYmFja01vZGFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Source/KarnelTravels/KarnelTravels/Views/Shared/_ValidationScriptsPartial.cshtml]

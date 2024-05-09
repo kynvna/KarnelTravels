@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging; // Ensure ILogger is accessible
 using System.Diagnostics;
 using System.Linq;
+using System.Security.AccessControl;
 
 namespace KarnelTravels.Controllers
 {
@@ -184,9 +185,44 @@ namespace KarnelTravels.Controllers
             _logger.LogError("An error occurred.");
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        //-------------------------------
 
 
+
+        //----------submit feedbacks-----------------------//
+        [HttpPost]
+        public JsonResult SubmitFeedback(FeedbackViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var feedback = new TblFeedback
+                {
+                    CustomerId = model.CustomerEmail,
+                    Feedback = model.CommentText,
+                    FeedbackObject = model.FeedbackObject,
+                    ObjectId = model.ObjectId,
+                    Status = model.Status,
+                    Date= DateTime.Now,
+                    Rating=model.Rating
+                    
+                };
+                if (model.FeedbackObject == "Company")
+                {
+                    feedback.ObjectName = "Kernal"; // for company
+                }
+                else 
+                {
+                    feedback.ObjectName = "To be define"; // Adjust accordingly
+                }
+                _context.TblFeedbacks.Add(feedback);
+                _context.SaveChanges();
+
+                // Return JSON indicating success
+                return Json(new { success = true });
+            }
+
+            // Return JSON indicating failure
+            return Json(new { success = false });
+        }
 
 
     }

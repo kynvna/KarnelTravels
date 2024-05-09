@@ -69,8 +69,14 @@
                         <a asp-controller="Home" asp-action="NewsView" class="nav-item nav-link">News</a>
                         <a asp-controller="Home" asp-action="AboutUsView" class="nav-item nav-link">About us</a>
                     </div>
-                    <a class="btn btn-primary px-3 d-none d-lg-flex">Leave Feedback</a>
+                   @*  <a class="btn btn-primary px-3 d-none d-lg-flex">Leave Feedback</a> *@
+                    <!-- Trigger Button -->
+                    <a class="btn btn-primary px-3 d-none d-lg-flex" data-bs-toggle="modal" data-bs-target="#commentModal">Leave Feedback</a>
                 </div>
+                <!-- Include the Feedback Modal -->
+               @*  @Html.Partial("_FeedbackModal") *@
+                @Html.Partial("_FeedbackModal", new FeedbackViewModel { IsSubmitted = false })
+
             </nav>
         </div>
         <!-- Navbar End -->

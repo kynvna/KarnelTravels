@@ -92,77 +92,32 @@ namespace KarnelTravels.Controllers
 
             return View(model);
         }
-        //[HttpPost]
-        //public IActionResult CreateNews(CreateNewsViewModel model)
-        //{
-        //    //remove validation of those list//
-        //    ModelState.Remove("StatusList");
-        //    ModelState.Remove("NewsObjectList");
-        //    ModelState.Remove("ObjectNameList");
-
-        //    if (!ModelState.IsValid)
-        //    {
-        //        foreach (var entry in ModelState)
-        //        {
-        //            if (entry.Value.Errors.Count > 0)
-        //            {
-        //                // This will log the key of the model state entry and the error message
-        //                _logger.LogError($"ModelState error for {entry.Key}: {entry.Value.Errors.Select(e => e.ErrorMessage).FirstOrDefault()}");
-        //            }
-        //        }
-        //        return View(model); // Return the view with errors displayed
-        //    }
-        //    //create new news and assign values form model to it & save to database//
-        //    try
-        //    {
-        //        var news = new TblNews
-        //        {
-        //            ObjectId = model.News.NewsItem.ObjectId,
-        //            Description = model.News.NewsItem.Description,
-        //            Status = model.News.NewsItem.Status,
-        //            NewsObject = model.News.NewsItem.NewsObject,
-        //            HotNews = model.News.NewsItem.HotNews,
-        //            Date = DateTime.Now, // Assigning the current date and time
-        //            NewsDetail = model.News.NewsItem.NewsDetail
-        //        };
-
-        //        _context.TblNews.Add(news); // Correct usage: adding to the DbSet
-
-        //        _context.SaveChanges(); // Save changes in the database
-
-        //        return RedirectToAction("AdminNewsView", "Admin"); // Redirecting after successful operation
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.LogError($"Error occurred: {ex.Message}");
-        //        return View(model);
-        //    }
-        //}
+       
 
         [HttpPost]
-        public async Task<IActionResult> CreateNews(CreateNewsViewModel model, List<IFormFile> files)
+        public async Task<IActionResult> CreateNews(CreateNewsViewModel model, List<IFormFile> files, List<string> fileDescriptions)
         {
             // Remove validation of those lists
             ModelState.Remove("StatusList");
             ModelState.Remove("NewsObjectList");
             ModelState.Remove("ObjectNameList");
             ModelState.Remove("News.ImageUrls");
+
             if (!ModelState.IsValid)
             {
                 foreach (var entry in ModelState)
                 {
                     if (entry.Value.Errors.Count > 0)
                     {
-                        // Log the key of the model state entry and the error message
                         _logger.LogError($"ModelState error for {entry.Key}: {entry.Value.Errors.Select(e => e.ErrorMessage).FirstOrDefault()}");
                     }
                 }
                 return View(model); // Return the view with errors displayed
             }
 
-            // Create a new news item and assign values from the model to it
             try
             {
+                // Create a new news item and assign values from the model to it
                 var news = new TblNews
                 {
                     ObjectId = model.News.NewsItem.ObjectId,
@@ -175,10 +130,9 @@ namespace KarnelTravels.Controllers
                 };
 
                 _context.TblNews.Add(news); // Add to the DbSet
-
                 await _context.SaveChangesAsync(); // Save changes in the database
 
-                // Check and save uploaded files
+                // Check and save uploaded files along with their descriptions
                 if (files != null && files.Count > 0)
                 {
                     var uploadsFolderPath = Path.Combine(_environment.WebRootPath, "img", news.NewsObject);
@@ -187,12 +141,24 @@ namespace KarnelTravels.Controllers
                         Directory.CreateDirectory(uploadsFolderPath);
                     }
 
-                    foreach (var formFile in files)
+                    for (int i = 0; i < files.Count; i++)
                     {
+                        var formFile = files[i];
+                        var description = (i < fileDescriptions.Count) ? fileDescriptions[i] : "No Description Provided";
+
                         if (formFile.Length > 0)
                         {
-                            var fileName = Path.GetFileName(formFile.FileName);
-                            var filePath = Path.Combine(uploadsFolderPath, fileName);
+                            // Get the file extension of the original file
+                            var fileExtension = Path.GetExtension(formFile.FileName);
+
+                            // Adjust to UTC+7
+                            var utcPlus7Time = DateTime.UtcNow.AddHours(7);
+
+                            // Generate a new file name using the adjusted time's ticks
+                            var newFileName = $"{utcPlus7Time.Ticks}{fileExtension}";
+
+                            // Combine the new file name with the target directory path
+                            var filePath = Path.Combine(uploadsFolderPath, newFileName);
 
                             // Save the file to the specified folder
                             using (var stream = new FileStream(filePath, FileMode.Create))
@@ -200,15 +166,16 @@ namespace KarnelTravels.Controllers
                                 await formFile.CopyToAsync(stream);
                             }
 
-                            // Add file info to the database if required
+                            // Add file info to the database with its associated description
                             var imageUrl = new TblImageUrl
                             {
-                                //Url = Path.Combine("img", news.NewsObject, fileName), // Store the relative path
-                                Url = fileName,
+                                // Store the relative path
+                                Url = newFileName,
                                 ObjectId = news.ObjectId,
                                 UrlObject = news.NewsObject,
-                                Description = fileName
+                                Description = description
                             };
+
                             _context.TblImageUrls.Add(imageUrl);
                         }
                     }
@@ -224,6 +191,7 @@ namespace KarnelTravels.Controllers
                 return View(model);
             }
         }
+
 
         //get object names by cases of news object selection as "hotel_restaurant" or "travel" or tourist_place" or "tour_package"//
         private IEnumerable<ObjectNameItem> GetObjectNamesFor(string newsObject)
@@ -285,7 +253,7 @@ namespace KarnelTravels.Controllers
         // POST: Admin/Edit a specific news item
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditNews(int id, CreateNewsViewModel model, List<IFormFile> files)
+        public async Task<IActionResult> EditNews(int id, CreateNewsViewModel model, List<IFormFile> files, List<string> fileDescriptions)
         {
             ModelState.Remove("StatusList");
             ModelState.Remove("NewsObjectList");
@@ -327,28 +295,32 @@ namespace KarnelTravels.Controllers
                             Directory.CreateDirectory(uploadsFolderPath);
                         }
 
-                        foreach (var formFile in files)
+                        for (int i = 0; i < files.Count; i++)
                         {
+                            var formFile = files[i];
+                            var description = (i < fileDescriptions.Count) ? fileDescriptions[i] : "No Description Provided";
+
                             if (formFile.Length > 0)
                             {
-                                var fileName = Path.GetFileName(formFile.FileName);
-                                var filePath = Path.Combine(uploadsFolderPath, fileName);
+                                var fileExtension = Path.GetExtension(formFile.FileName);
+                                var utcPlus7Time = DateTime.UtcNow.AddHours(7);
+                                var newFileName = $"{utcPlus7Time.Ticks}{fileExtension}";
+                                var filePath = Path.Combine(uploadsFolderPath, newFileName);
 
-                                // Save the file to the specified folder
                                 using (var stream = new FileStream(filePath, FileMode.Create))
                                 {
                                     await formFile.CopyToAsync(stream);
                                 }
 
-                                // Add file info to the database if required
+                                // Add new image URLs with descriptions to the database
                                 var imageUrl = new TblImageUrl
                                 {
-                                    //Url = Path.Combine("img", news.NewsObject, fileName), // Store the relative path
-                                    Url = fileName,
+                                    Url = newFileName,
                                     ObjectId = newsToUpdate.ObjectId,
                                     UrlObject = newsToUpdate.NewsObject,
-                                    Description = fileName
+                                    Description = description
                                 };
+
                                 _context.TblImageUrls.Add(imageUrl);
                             }
                         }
@@ -456,68 +428,202 @@ namespace KarnelTravels.Controllers
             }
         }
 
-        //---------upload more images when creating news------------------//
+        //--------------------Feedbacks administration------------------------------//
 
-        //[HttpPost]
-        //public async Task<IActionResult> UploadImages(List<IFormFile> files, string newsObject, int objectId)
-        //{
-        //    if (files == null || files.Count == 0)
-        //    {
-        //        return BadRequest("No files uploaded.");  // Or return to the form with an error message
-        //    }
+        // Method to toggle the status
+        [HttpPost]
+        public IActionResult ToggleStatus(int id)
+        {
+            var feedback = _context.TblFeedbacks.Find(id);
+            if (feedback == null)
+            {
+                return NotFound();
+            }
 
-        //    long size = files.Sum(f => f.Length);
+            // Toggle between "Active" and "Not Active"
+            feedback.Status = feedback.Status == "Active" ? "Not Active" : "Active";
+            _context.SaveChanges();
 
-        //    var filePath = Path.Combine(_environment.WebRootPath, "img", newsObject);
-        //    foreach (var formFile in files)
-        //    {
-        //        if (formFile.Length > 0)
-        //        {
-        //            var fileName = Path.GetFileName(formFile.FileName);
-        //            var fullPath = Path.Combine(filePath, fileName);
+            return RedirectToAction(nameof(GetAllFeedBacks));
+        }
 
-        //            try
-        //            {
-        //                if (!Directory.Exists(filePath))
-        //                {
-        //                    Directory.CreateDirectory(filePath);
-        //                }
+        // GET: Feedback/EditFeedback/5
+        [HttpGet]
+        public IActionResult EditFeedback(int id)
+        {
+            var feedback = _context.TblFeedbacks.Find(id);
+            if (feedback == null)
+            {
+                return NotFound();
+            }
 
-        //                using (var stream = new FileStream(fullPath, FileMode.Create))
-        //                {
-        //                    await formFile.CopyToAsync(stream);
-        //                }
+            return View(feedback);
+        }
 
-        //                var imageUrl = new TblImageUrl
-        //                {
-        //                    UrlObject = newsObject,
-        //                    Url = fullPath,  // Consider storing only the relative path or just the filename
-        //                    ObjectId = objectId,
-        //                    Description = fileName
-        //                };
-        //                _context.TblImageUrls.Add(imageUrl);
-        //            }
-        //            catch (Exception ex)
-        //            {
-        //                // Log the error (consider using ILogger)
-        //                // Return or handle the error appropriately
-        //                return StatusCode(500, "Internal server error: " + ex.Message);
-        //            }
-        //        }
-        //    }
+        // POST: Feedback/EditFeedback/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditFeedback(int id, [Bind("FeedbackId,Status")] TblFeedback updatedFeedback)
+        {
+            var feedback = _context.TblFeedbacks.Find(id);
 
-        //    try
-        //    {
-        //        await _context.SaveChangesAsync();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // Handle exceptions from DB saving, e.g., log and return an error message
-        //        return StatusCode(500, "Database save error: " + ex.Message);
-        //    }
+            if (feedback == null)
+            {
+                return NotFound();
+            }
 
-        //    return RedirectToAction("Success");
-        //}
+            feedback.Status = updatedFeedback.Status;
+
+            try
+            {
+                _context.SaveChanges();
+                return RedirectToAction(nameof(GetAllFeedBacks));
+            }
+            catch
+            {
+                ModelState.AddModelError(string.Empty, "Unable to update status. Try again later.");
+                return View(updatedFeedback);
+            }
+        }
+
+        // GET: Feedback/DeleteFeedback/5
+        [HttpGet]
+        public IActionResult DeleteFeedback(int id)
+        {
+            var feedback = _context.TblFeedbacks.Find(id);
+            if (feedback == null)
+            {
+                return NotFound();
+            }
+
+            return View(feedback);
+        }
+
+        // POST: Feedback/DeleteFeedback/5
+        [HttpPost, ActionName("DeleteFeedback")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteFeedbackConfirmed(int id)
+        {
+            var feedback = _context.TblFeedbacks.Find(id);
+            if (feedback == null)
+            {
+                return NotFound();
+            }
+
+            _context.TblFeedbacks.Remove(feedback);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(GetAllFeedBacks));
+        }
+
+        // Assume this method already exists
+        public IActionResult GetAllFeedBacks()
+        {
+            var feedbacks = _context.TblFeedbacks.OrderByDescending(f => f.Date).ToList();
+
+            //foreach (var feedback in feedbacks)
+            //{
+            //    switch (feedback.FeedbackObject)
+            //    {
+            //        case "Company":
+            //            // Simulate fetching company name based on ObjectId
+            //            feedback.ObjectName = "KerNal";
+            //            break;
+            //        case "Hotel_Restaurant":
+            //            // Fetch the matching record from the TblHotelRestaurants table
+            //            var hotelRestaurant = _context.TblHotelRestaurants
+            //                 .FirstOrDefault(h => h.HrId == feedback.ObjectId);
+
+            //            // Ensure that a result was found before accessing its properties
+            //            feedback.ObjectName = hotelRestaurant?.Name ?? "Unknown Hotel/Restaurant";
+            //            break;
+            //        case "Travel":
+            //            var travel = _context.TblTravels
+            //                 .FirstOrDefault(h => h.TravelId == feedback.ObjectId);
+
+            //            // Ensure that a result was found before accessing its properties
+            //            feedback.ObjectName = travel?.Name ?? "Unknown travel";
+            //            break;
+            //        case "Tourist_Place":
+            //            var touristplace = _context.TblTouristPlaces
+            //                 .FirstOrDefault(h => h.Id == feedback.ObjectId);
+
+            //            // Ensure that a result was found before accessing its properties
+            //            feedback.ObjectName = touristplace?.Name ?? "Unknown touristplace";
+            //            break;
+            //        case "Tour_Package":
+            //            var tourpackage = _context.TblTourPackages
+            //                 .FirstOrDefault(h => h.PackageId == feedback.ObjectId);
+
+            //            // Ensure that a result was found before accessing its properties
+            //            feedback.ObjectName = tourpackage?.Name ?? "Unknown tourpackage";
+            //            break;
+            //        default:
+            //            feedback.ObjectName = "Unknown";
+            //            break;
+            //    }
+            //}
+            GetObjectname(feedbacks);
+            return View(feedbacks);
+        }
+
+        private void GetObjectname(List<TblFeedback> feedbacks)
+        {
+            foreach (var feedback in feedbacks)
+            {
+                switch (feedback.FeedbackObject)
+                {
+                    case "Company":
+                        // Simulate fetching company name based on ObjectId
+                        feedback.ObjectName = "KerNal";
+                        break;
+                    case "Hotel_Restaurant":
+                        var hotelRestaurant = _context.TblHotelRestaurants
+                            .FirstOrDefault(h => h.HrId == feedback.ObjectId);
+                        feedback.ObjectName = hotelRestaurant?.Name ?? "Unknown Hotel/Restaurant";
+                        break;
+                    case "Travel":
+                        var travel = _context.TblTravels
+                            .FirstOrDefault(t => t.TravelId == feedback.ObjectId);
+                        feedback.ObjectName = travel?.Name ?? "Unknown travel";
+                        break;
+                    case "Tourist_Place":
+                        var touristplace = _context.TblTouristPlaces
+                            .FirstOrDefault(tp => tp.Id == feedback.ObjectId);
+                        feedback.ObjectName = touristplace?.Name ?? "Unknown touristplace";
+                        break;
+                    case "Tour_Package":
+                        var tourpackage = _context.TblTourPackages
+                            .FirstOrDefault(tp => tp.PackageId == feedback.ObjectId);
+                        feedback.ObjectName = tourpackage?.Name ?? "Unknown tourpackage";
+                        break;
+                    default:
+                        feedback.ObjectName = "Unknown";
+                        break;
+                }
+            }
+        }
+
+        // filter feedbacks accoring to feedbackobjects//
+        public IActionResult GetFilteredFeedbacks(string category)
+        {
+            // Materialize the query to a list immediately to avoid deferred execution issues
+            var feedbacks = _context.TblFeedbacks.ToList();
+            GetObjectname(feedbacks);
+            // Apply filtering logic based on the category
+            if (!string.IsNullOrEmpty(category) && category != "All")
+            {
+                feedbacks = feedbacks.Where(f => f.FeedbackObject == category).ToList();
+                GetObjectname(feedbacks);
+            }
+
+            // Order by date
+            var sortedFeedbacks = feedbacks.OrderByDescending(f => f.Date).ToList();
+
+            return PartialView("_FeedbackTableRows", sortedFeedbacks);
+        }
+
+
 
     }
 }

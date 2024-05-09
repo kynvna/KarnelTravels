@@ -1,0 +1,23 @@
+﻿@model IEnumerable<KarnelTravels.Models.TblFeedback>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.FeedbackObject)</td>
+        <td>@Html.DisplayFor(modelItem => item.ObjectName)</td>
+        <td>@Html.DisplayFor(modelItem => item.CustomerId)</td>
+        <td>@Html.DisplayFor(modelItem => item.Feedback)</td>
+        <td>@Html.DisplayFor(modelItem => item.Rating)</td>
+        <td>@Html.DisplayFor(modelItem => item.Status)</td>
+        <td>@Html.DisplayFor(modelItem => item.Date)</td>
+        <td>
+            <div class="btn-group" role="group">
+                <form asp-action="ToggleStatus" method="post" style="display:inline">
+                    <input type="hidden" name="id" value="@item.FeedbackId" />
+                    <input type="submit" value="@((item.Status == "Active") ? "Deactivate" : "Activate")" class="@((item.Status == "Active") ? "btn btn-warning" : "btn btn-success")" style="width: 100px;" />
+                </form>
+                <a asp-action="DeleteFeedback" asp-route-id="@item.FeedbackId" class="btn btn-danger" style="width: 100px;">Delete</a>
+            </div>
+        </td>
+    </tr>
+}

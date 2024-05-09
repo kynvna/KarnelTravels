@@ -1,88 +1,4 @@
-﻿@* @model KarnelTravels.Models.CreateNewsViewModel
-
-@{
-    ViewData["Title"] = "Edit News";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-}
-
-<h1>Edit News</h1>
-
-<style>
-    form {
-        max-width: 600px;
-        margin: auto;
-        padding: 15px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    div {
-        margin-bottom: 10px;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 5px;
-    }
-
-    input[type="text"], input[type="date"], select, textarea {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    button {
-        width: 100%;
-        padding: 10px;
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-</style>
-
-<form asp-action="EditNews" method="post">
-    <input type="hidden" asp-for="News.NewsItem.NewsId" />
-    <input type="hidden" asp-for="News.NewsItem.ObjectId" />
-    <input type="hidden" asp-for="News.NewsItem.NewsObject" />
-
-    <div>
-        <label asp-for="News.NewsItem.Description">Description</label>
-        <input asp-for="News.NewsItem.Description" />
-        <span asp-validation-for="News.NewsItem.Description"></span>
-    </div>
-    <div>
-        <label asp-for="News.NewsItem.Status">Status</label>
-        <select asp-for="News.NewsItem.Status" asp-items="Model.StatusList"></select>
-    </div>
-    <div>
-        <label asp-for="News.NewsItem.NewsObject">News Object</label>
-        <select asp-for="News.NewsItem.NewsObject" asp-items="Model.NewsObjectList" disabled></select>
-    </div>
-    <div>
-        <label asp-for="News.NewsItem.HotNews">Hot News</label>
-        <input asp-for="News.NewsItem.HotNews" />
-    </div>
-    <div>
-        <label asp-for="News.NewsItem.Date">Date</label>
-        <input asp-for="News.NewsItem.Date" type="date" disabled />
-    </div>
-    <div>
-        <label asp-for="News.NewsItem.NewsDetail">News Detail</label>
-        <textarea asp-for="News.NewsItem.NewsDetail"></textarea>
-    </div>
-    <button type="submit">Save Changes</button>
-</form>
-
-<a asp-action="AdminNewsView">Back to List</a>
- *@
-
-@model KarnelTravels.Models.CreateNewsViewModel
+﻿@model KarnelTravels.Models.CreateNewsViewModel
 
 @{
     ViewData["Title"] = "Edit News";
@@ -139,7 +55,7 @@
                     <span asp-validation-for="News.NewsItem.NewsDetail" class="text-danger"></span>
                 </div>
 
-                <!-- Existing Images Area -->
+                <!-- Existing Thumbnails Display Area -->
                 <div class="form-group">
                     <label>Existing Images</label>
                     <div id="existing-images">
@@ -147,9 +63,7 @@
                         {
                             foreach (var imageUrl in Model.News.ImageUrls)
                             {
-                                // Construct the full path using the NewsObject and image file name
-                                string fullImagePath = $"/img/{Model.News.NewsItem.NewsObject}/{imageUrl.Url}";
-                                <img src="@fullImagePath" alt="Thumbnail" style="width: 100px; height: 100px; margin-right: 5px;">
+                                <img src="/img/@Model.News.NewsItem.NewsObject/@imageUrl.Url" alt="Thumbnail" style="width: 100px; height: 100px; margin-right: 5px;">
                             }
                         }
                         else
@@ -159,25 +73,25 @@
                     </div>
                 </div>
 
+
                 <!-- New Image Upload Area -->
                 <div class="form-group">
                     <label for="imageUpload">Upload New Images</label>
                     <input type="file" class="form-control-file" id="imageUpload" name="files" multiple>
+
+                    <label for="fileDescriptions">Descriptions</label>
+                    <div id="fileDescriptions">
+                        <!-- JavaScript will add description inputs dynamically here -->
+                    </div>
                 </div>
-                <div id="imagePreview"></div> <!-- Container for previewing images -->
+                <div id="imagePreview"></div> <!-- Container for showing image previews -->
             </div>
 
-            <div class="form-group col-md-12">
-                <button type="submit" class="btn btn-primary">Save Changes</button>
-            </div>
-        </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
     </form>
 </div>
-
-<div>
-    <a asp-action="AdminNewsView">Back to List</a>
-</div>
-
 
 @section Scripts {
     @{
@@ -186,57 +100,43 @@
 
     <script>
         $(document).ready(function () {
-            // Function to update existing images via AJAX
-            function updateExistingImages(newsObject, objectId) {
-                $.ajax({
-                    url: '@Url.Action("GetExistingImages", "Admin")',
-                    type: 'GET',
-                    data: { objectId: objectId, newsObject: newsObject },
-                    success: function (data) {
-                        var imagesDiv = $('#existing-images');
-                        imagesDiv.empty();
-                        if (data && data.length > 0) {
-                            data.forEach(function (imageUrl) {
-                                imagesDiv.append('<img src="/img/' + newsObject + '/' + imageUrl.url + '" alt="Thumbnail" style="width: 100px; height: 100px; margin-right: 5px;">');
-                            });
-                        } else {
-                            imagesDiv.append('<p>No thumbnails available.</p>');
-                        }
-                    },
-                    error: function (error) {
-                        console.error("Error fetching images:", error);
-                        $('#existing-images').html('<p>Unable to load images.</p>'); // Optional error message
-                    }
-                });
-            }
+            $('#imageUpload').on('change', function () {
+                var files = this.files;
+                var fileDescriptionsDiv = $('#fileDescriptions');
+                var imagePreviewDiv = $('#imagePreview');
 
-            // Preview new images before upload
-            document.getElementById('imageUpload').addEventListener('change', function (event) {
-                var files = event.target.files;
-                var imagePreviewDiv = document.getElementById('imagePreview');
-                imagePreviewDiv.innerHTML = ''; // Clear existing previews
+                // Clear existing previews and description inputs
+                fileDescriptionsDiv.empty();
+                imagePreviewDiv.empty();
 
                 for (var i = 0; i < files.length; i++) {
                     var file = files[i];
 
-                    // Ensure the file is an image
+                    // Add a description input for each file
+                    var descriptionInput = $('<input>', {
+                        type: 'text',
+                        name: 'fileDescriptions[' + i + ']',
+                        class: 'form-control',
+                        placeholder: 'Description for ' + file.name
+                    });
+                    fileDescriptionsDiv.append(descriptionInput);
+
+                    // Ensure the file is an image for preview
                     if (file.type.startsWith('image/')) {
                         var reader = new FileReader();
 
                         reader.onload = function (e) {
-                            var imgElement = document.createElement('img');
-                            imgElement.src = e.target.result;
-                            imgElement.style.width = '100px'; // Adjust size if necessary
-                            imgElement.style.height = '100px';
-                            imgElement.style.marginRight = '5px';
-                            imagePreviewDiv.appendChild(imgElement);
+                            var imgElement = $('<img>', {
+                                src: e.target.result,
+                                style: 'width: 100px; height: 100px; margin-right: 5px;'
+                            });
+                            imagePreviewDiv.append(imgElement);
                         };
 
-                        reader.readAsDataURL(file); // Read the file as a Data URL to preview it
+                        reader.readAsDataURL(file); // Read the file for preview
                     }
                 }
             });
         });
     </script>
 }
-
