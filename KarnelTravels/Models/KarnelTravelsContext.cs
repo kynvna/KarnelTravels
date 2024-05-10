@@ -19,8 +19,6 @@ public partial class KarnelTravelsContext : DbContext
 
     public virtual DbSet<TblAdminuser> TblAdminusers { get; set; }
 
-    public virtual DbSet<TblCustomer> TblCustomers { get; set; }
-
     public virtual DbSet<TblFeedback> TblFeedbacks { get; set; }
 
     public virtual DbSet<TblHotelRestaurant> TblHotelRestaurants { get; set; }
@@ -65,16 +63,6 @@ public partial class KarnelTravelsContext : DbContext
             entity.Property(e => e.UserName).HasMaxLength(50);
         });
 
-        modelBuilder.Entity<TblCustomer>(entity =>
-        {
-            entity.HasKey(e => e.CustomerId).HasName("PK__tblCusto__A4AE64D88CC5D9AB");
-
-            entity.ToTable("tblCustomer");
-
-            entity.Property(e => e.Email).HasMaxLength(255);
-            entity.Property(e => e.Phone).HasMaxLength(50);
-        });
-
         modelBuilder.Entity<TblFeedback>(entity =>
         {
             entity.HasKey(e => e.FeedbackId).HasName("PK__tblFeedb__6A4BEDD6A4D66BCF");
@@ -84,9 +72,7 @@ public partial class KarnelTravelsContext : DbContext
             entity.Property(e => e.FeedbackObject).HasMaxLength(50);
             entity.Property(e => e.Status).HasMaxLength(50);
 
-            entity.HasOne(d => d.Customer).WithMany(p => p.TblFeedbacks)
-                .HasForeignKey(d => d.CustomerId)
-                .HasConstraintName("FK__tblFeedba__Custo__5EBF139D");
+            
         });
 
         modelBuilder.Entity<TblHotelRestaurant>(entity =>

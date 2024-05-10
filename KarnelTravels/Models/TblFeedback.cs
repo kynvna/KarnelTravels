@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KarnelTravels.Models;
 
@@ -11,13 +12,16 @@ public partial class TblFeedback
 
     public int? ObjectId { get; set; }
 
-    public int? CustomerId { get; set; }
+    [NotMapped]
+    public string ObjectName { get; set; }
+
+    public string? CustomerId { get; set; }
 
     public string? Feedback { get; set; }
 
-    public int? NumberofStar { get; set; }
+    public int? Rating { get; set; }
 
     public string? Status { get; set; }
 
-    public virtual TblCustomer? Customer { get; set; }
+    public DateTime? Date { get; set; }
 }

@@ -52,29 +52,32 @@
                     <textarea asp-for="News.NewsItem.NewsDetail" class="form-control" rows="10"></textarea>
                     <span asp-validation-for="News.NewsItem.NewsDetail" class="text-danger"></span>
                 </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-4">
-                        <label>Existing Images</label>
-                        <div id="existing-images">
-                            @if (Model.News.ImageUrls != null && Model.News.ImageUrls.Count > 0)
+
+                <!-- Existing Thumbnails Display Area -->
+                <div class="form-group">
+                    <label>Existing Images</label>
+                    <div id="existing-images">
+                        @if (Model.News.ImageUrls != null && Model.News.ImageUrls.Count > 0)
+                        {
+                            foreach (var imageUrl in Model.News.ImageUrls)
                             {
-                                foreach (var imageUrl in Model.News.ImageUrls)
-                                {
-                                    // Construct the full path using the NewsObject and image file name
-                                    string fullImagePath = $"/img/{Model.News.NewsItem.NewsObject}/{imageUrl.Url}";
-                                    <img src="@fullImagePath" alt="Thumbnail" style="width: 100px; height: 100px; margin-right: 5px;">
-                                }
+                                <img src="/img/@Model.News.NewsItem.NewsObject/@imageUrl.Url" alt="Thumbnail" style="width: 100px; height: 100px; margin-right: 5px;">
                             }
-                            else
-                            {
-                                <p>No thumbnails available.</p>
-                            }
+                        }
+                        else
+                        {
+                            <p>No thumbnails available.</p>
+                        }
                     </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="imageUpload">Upload New Images</label>
                     <input type="file" class="form-control-file" id="imageUpload" name="files" multiple>
+
+                    <label for="fileDescriptions">Descriptions</label>
+                    <div id="fileDescriptions">
+                        <!-- JavaScript will add description inputs dynamically here -->
+                    </div>
                 </div>
                 <div class="form-group col-md-2">
                     <div id="imagePreview"></div>
@@ -97,57 +100,43 @@ s
 
     <script>
         $(document).ready(function () {
-            // Function to update existing images via AJAX
-            function updateExistingImages(newsObject, objectId) {
-                $.ajax({
-                    url: '@Url.Action("GetExistingImages", "Admin")',
-                    type: 'GET',
-                    data: { objectId: objectId, newsObject: newsObject },
-                    success: function (data) {
-                        var imagesDiv = $('#existing-images');
-                        imagesDiv.empty();
-                        if (data && data.length > 0) {
-                            data.forEach(function (imageUrl) {
-                                imagesDiv.append('<img src="/img/' + newsObject + '/' + imageUrl.url + '" alt="Thumbnail" style="width: 100px; height: 100px; margin-right: 5px;">');
-                            });
-                        } else {
-                            imagesDiv.append('<p>No thumbnails available.</p>');
-                        }
-                    },
-                    error: function (error) {
-                        console.error("Error fetching images:", error);
-                        $('#existing-images').html('<p>Unable to load images.</p>'); // Optional error message
-                    }
-                });
-            }
+            $('#imageUpload').on('change', function () {
+                var files = this.files;
+                var fileDescriptionsDiv = $('#fileDescriptions');
+                var imagePreviewDiv = $('#imagePreview');
 
-            // Preview new images before upload
-            document.getElementById('imageUpload').addEventListener('change', function (event) {
-                var files = event.target.files;
-                var imagePreviewDiv = document.getElementById('imagePreview');
-                imagePreviewDiv.innerHTML = ''; // Clear existing previews
+                // Clear existing previews and description inputs
+                fileDescriptionsDiv.empty();
+                imagePreviewDiv.empty();
 
                 for (var i = 0; i < files.length; i++) {
                     var file = files[i];
 
-                    // Ensure the file is an image
+                    // Add a description input for each file
+                    var descriptionInput = $('<input>', {
+                        type: 'text',
+                        name: 'fileDescriptions[' + i + ']',
+                        class: 'form-control',
+                        placeholder: 'Description for ' + file.name
+                    });
+                    fileDescriptionsDiv.append(descriptionInput);
+
+                    // Ensure the file is an image for preview
                     if (file.type.startsWith('image/')) {
                         var reader = new FileReader();
 
                         reader.onload = function (e) {
-                            var imgElement = document.createElement('img');
-                            imgElement.src = e.target.result;
-                            imgElement.style.width = '100px'; // Adjust size if necessary
-                            imgElement.style.height = '100px';
-                            imgElement.style.marginRight = '5px';
-                            imagePreviewDiv.appendChild(imgElement);
+                            var imgElement = $('<img>', {
+                                src: e.target.result,
+                                style: 'width: 100px; height: 100px; margin-right: 5px;'
+                            });
+                            imagePreviewDiv.append(imgElement);
                         };
 
-                        reader.readAsDataURL(file); // Read the file as a Data URL to preview it
+                        reader.readAsDataURL(file); // Read the file for preview
                     }
                 }
             });
         });
     </script>
 }
-
