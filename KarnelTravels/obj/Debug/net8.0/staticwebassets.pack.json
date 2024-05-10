@@ -15301,6 +15301,10 @@
       "PackagePath": "staticwebassets\\image\\Hotel_Restaurant\\638506171377168664image.png"
     },
     {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\image\\Hotel_Restaurant\\638509624484428770airbusta350.jpg",
+      "PackagePath": "staticwebassets\\image\\Hotel_Restaurant\\638509624484428770airbusta350.jpg"
+    },
+    {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\image\\Restaurant\\638499505827396641pic1.png",
       "PackagePath": "staticwebassets\\image\\Restaurant\\638499505827396641pic1.png"
     },
@@ -15379,6 +15383,14 @@
     {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\image\\Travel\\638509620302322146airbusta350.jpg",
       "PackagePath": "staticwebassets\\image\\Travel\\638509620302322146airbusta350.jpg"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\image\\Travel\\638509655088811310lb1.jpg",
+      "PackagePath": "staticwebassets\\image\\Travel\\638509655088811310lb1.jpg"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\image\\Travel\\638509656031940041airbusta350.jpg",
+      "PackagePath": "staticwebassets\\image\\Travel\\638509656031940041airbusta350.jpg"
     },
     {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\image\\tblTour_Packages\\638506077735721110Ngo Anh Khoi.jpg",

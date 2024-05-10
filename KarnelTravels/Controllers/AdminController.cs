@@ -226,31 +226,33 @@ namespace KarnelTravels.Controllers
             getCar_Plane_Train.Spots = spot;
             return View(getCar_Plane_Train);
         }
-
+        // Erro
         public IActionResult CreateAdminTransport(IFormFile FileImg, TranSpot model)
         {
-            TblTravel tblTravel = new TblTravel();
-            string fileName = DateTime.Now.Ticks + FileImg.FileName;
-            string uploadPath = Path.Combine(_env.WebRootPath, "image", "Travel");
+            
+                TblTravel tblTravel = new TblTravel();
+                string fileName = DateTime.Now.Ticks + FileImg.FileName;
+                string uploadPath = Path.Combine(_env.WebRootPath, "image", "Travel");
 
-            string filePath = Path.Combine(uploadPath, fileName);
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                FileImg.CopyTo(stream);
-            }
-            var val = Request.Form["mydata"].ToString();
-            if (val != null)
-            {
-                tblTravel.SpotDeparture = model.spot;
-                tblTravel.SpotDestination = model.spot1;
-                tblTravel.Name = model.Name;
-                tblTravel.Price = model.Price;
-                tblTravel.Status = "true";
-                tblTravel.Description = val;
-                tblTravel.TransCategoryId = model.Tran;
-                _context.TblTravels.Add(tblTravel);
-                _context.SaveChanges();
-            }
+                string filePath = Path.Combine(uploadPath, fileName);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    FileImg.CopyTo(stream);
+                }
+                var val = Request.Form["mydata"].ToString();
+                if (val != null)
+                {
+                    tblTravel.SpotDeparture = model.spot;
+                    tblTravel.SpotDestination = model.spot1;
+                    tblTravel.Name = model.Name;
+                    tblTravel.Price = model.Price;
+                    tblTravel.Status = "true";
+                    tblTravel.Description = val;
+                    tblTravel.TransCategoryId = model.Tran;
+                    _context.TblTravels.Add(tblTravel);
+                    _context.SaveChanges();
+                }
+            
             return Redirect("/admin/AdminTransportView");
         }
 
@@ -272,36 +274,36 @@ namespace KarnelTravels.Controllers
 
         public IActionResult EditAdminTransport(IFormFile FileImg, TranSpot model)
         {
-            ITravelRepository travelRepository = new ITravelRepository(_context);
-            TblTravel tblTravel = new TblTravel();
-            var val = Request.Form["mydata"].ToString();
-            int a = model.id;
-            var ls = travelRepository.GetTravelById(a);
-            string deletepath = Path.Combine(_env.WebRootPath, "image", "Travel");
-            /*string fileDelete = Path.Combine(deletepath, ls.);*/
-            /*System.IO.File.Delete(fileDelete);*/
-            string fileName = DateTime.Now.Ticks + FileImg.FileName;
-            string uploadPath = Path.Combine(_env.WebRootPath, "image", "Travel");
+            
+            
+                ITravelRepository travelRepository = new ITravelRepository(_context);
+                TblTravel tblTravel = new TblTravel();
+                var val = Request.Form["mydata"].ToString();
+                int a = model.id;
+                var ls = travelRepository.GetTravelById(a);
+                string deletepath = Path.Combine(_env.WebRootPath, "image", "Travel");
+                /*string fileDelete = Path.Combine(deletepath, ls.);*/
+                /*System.IO.File.Delete(fileDelete);*/
+                string fileName = DateTime.Now.Ticks + FileImg.FileName;
+                string uploadPath = Path.Combine(_env.WebRootPath, "image", "Travel");
 
-            string filePath = Path.Combine(uploadPath, fileName);
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                FileImg.CopyTo(stream);
-            }
-            if (val != null)
-            {
-                tblTravel.Name = model.Name;
-                tblTravel.Description = val;
-                tblTravel.SpotDeparture = model.spot;
-                tblTravel.SpotDestination = model.spot1;
-                tblTravel.Price = model.Price;
-                tblTravel.Status = "true";
-                tblTravel.ImageLinkId = null;
-                tblTravel.TransCategoryId = model.Tran;
-                travelRepository.EditTravel(a, tblTravel);
-
-            }
-
+                string filePath = Path.Combine(uploadPath, fileName);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    FileImg.CopyTo(stream);
+                }
+                if (val != null)
+                {
+                    tblTravel.Name = model.Name;
+                    tblTravel.Description = val;
+                    tblTravel.SpotDeparture = model.spot;
+                    tblTravel.SpotDestination = model.spot1;
+                    tblTravel.Price = model.Price;
+                    tblTravel.Status = "true";
+                    tblTravel.ImageLinkId = null;
+                    tblTravel.TransCategoryId = model.Tran;
+                    travelRepository.EditTravel(a, tblTravel);
+                }
             return Redirect("/admin/AdminTransportView");
         }
 
@@ -351,29 +353,32 @@ namespace KarnelTravels.Controllers
         }
         public IActionResult CreateAdminHotel(HotelRestaurant model, IFormFile FileImg, string editor)
         {
-            TblHotelRestaurant tblHotelRestaurant = new TblHotelRestaurant();
-            string fileName = DateTime.Now.Ticks + FileImg.FileName;
-            string uploadPath = Path.Combine(_env.WebRootPath, "image", "Hotel_Restaurant");
-
-            string filePath = Path.Combine(uploadPath, fileName);
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            if(FileImg != null)
             {
-                FileImg.CopyTo(stream);
-            }
-            var val = Request.Form["mydata"].ToString();
-            if (val != null)
-            {
-                tblHotelRestaurant.Name = model.Name;
-                tblHotelRestaurant.Price = model.Price;
-                tblHotelRestaurant.SpotId = model.spot;
-                tblHotelRestaurant.Status = "true";
-                tblHotelRestaurant.Description = val;
-                tblHotelRestaurant.CatId = model.catid;
-                tblHotelRestaurant.Imglink = fileName;
-                tblHotelRestaurant.ImageLinkId = 1;
-                _context.TblHotelRestaurants.Add(tblHotelRestaurant);
-                _context.SaveChanges();
+                TblHotelRestaurant tblHotelRestaurant = new TblHotelRestaurant();
+                string fileName = DateTime.Now.Ticks + FileImg.FileName;
+                string uploadPath = Path.Combine(_env.WebRootPath, "image", "Hotel_Restaurant");
 
+                string filePath = Path.Combine(uploadPath, fileName);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    FileImg.CopyTo(stream);
+                }
+                var val = Request.Form["mydata"].ToString();
+                if (val != null)
+                {
+                    tblHotelRestaurant.Name = model.Name;
+                    tblHotelRestaurant.Price = model.Price;
+                    tblHotelRestaurant.SpotId = model.spot;
+                    tblHotelRestaurant.Status = "true";
+                    tblHotelRestaurant.Description = val;
+                    tblHotelRestaurant.CatId = model.catid;
+                    tblHotelRestaurant.Imglink = fileName;
+                    tblHotelRestaurant.ImageLinkId = 1;
+                    _context.TblHotelRestaurants.Add(tblHotelRestaurant);
+                    _context.SaveChanges();
+
+                }
             }
             return Redirect("/admin/AdminHotelView");
         }
@@ -398,34 +403,37 @@ namespace KarnelTravels.Controllers
 
         public IActionResult EditAdminHotel(HotelRestaurant model, IFormFile FileImg)
         {
-            IHotelRepository hotelRepository = new IHotelRepository(_context);
-            TblHotelRestaurant tblHotelRestaurant = new TblHotelRestaurant();
-            var val = Request.Form["mydata"].ToString();
-            int a = model.Hrid;
-            var ls = hotelRepository.GetTblHotelRestaurantById(a);
-            string deletepath = Path.Combine(_env.WebRootPath, "image", "Hotel_Restaurant");
-            string fileDelete = Path.Combine(deletepath, ls.Imglink);
-            System.IO.File.Delete(fileDelete);
-            string fileName = DateTime.Now.Ticks + FileImg.FileName;
-            string uploadPath = Path.Combine(_env.WebRootPath, "image", "Hotel_Restaurant");
-
-            string filePath = Path.Combine(uploadPath, fileName);
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            if(FileImg != null)
             {
-                FileImg.CopyTo(stream);
-            }
-            if (val != null)
-            {
-                tblHotelRestaurant.Name = model.Name;
-                tblHotelRestaurant.Price = model.Price;
-                tblHotelRestaurant.SpotId = model.spot;
-                tblHotelRestaurant.Status = "true";
-                tblHotelRestaurant.Description = val;
-                tblHotelRestaurant.CatId = model.catid;
-                tblHotelRestaurant.Imglink = fileName;
-                tblHotelRestaurant.ImageLinkId = 1;
-                hotelRepository.EditHotelRestaurant(a, tblHotelRestaurant);
+                IHotelRepository hotelRepository = new IHotelRepository(_context);
+                TblHotelRestaurant tblHotelRestaurant = new TblHotelRestaurant();
+                var val = Request.Form["mydata"].ToString();
+                int a = model.Hrid;
+                var ls = hotelRepository.GetTblHotelRestaurantById(a);
+                string deletepath = Path.Combine(_env.WebRootPath, "image", "Hotel_Restaurant");
+                string fileDelete = Path.Combine(deletepath, ls.Imglink);
+                System.IO.File.Delete(fileDelete);
+                string fileName = DateTime.Now.Ticks + FileImg.FileName;
+                string uploadPath = Path.Combine(_env.WebRootPath, "image", "Hotel_Restaurant");
 
+                string filePath = Path.Combine(uploadPath, fileName);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    FileImg.CopyTo(stream);
+                }
+                if (val != null)
+                {
+                    tblHotelRestaurant.Name = model.Name;
+                    tblHotelRestaurant.Price = model.Price;
+                    tblHotelRestaurant.SpotId = model.spot;
+                    tblHotelRestaurant.Status = "true";
+                    tblHotelRestaurant.Description = val;
+                    tblHotelRestaurant.CatId = model.catid;
+                    tblHotelRestaurant.Imglink = fileName;
+                    tblHotelRestaurant.ImageLinkId = 1;
+                    hotelRepository.EditHotelRestaurant(a, tblHotelRestaurant);
+
+                }
             }
             return Redirect("/admin/AdminHotelview");
 
@@ -1194,6 +1202,8 @@ namespace KarnelTravels.Controllers
         [HttpGet]
         public IActionResult CreateTouristPlace()
         {
+            var spots = _context.TblSpots.ToList();
+            ViewBag.Spots = spots;
             return View();
         }
 
@@ -1265,8 +1275,11 @@ namespace KarnelTravels.Controllers
         [HttpGet]
         public IActionResult EditTouristPlace(int id)
         {
+            
             try
             {
+                var spots = _context.TblSpots.ToList();
+                ViewBag.Spots = spots;
                 var tour = _context.TblTouristPlaces.FirstOrDefault(s => s.Id == id);
 
                 if (tour != null)
