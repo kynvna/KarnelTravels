@@ -1194,6 +1194,9 @@ namespace KarnelTravels.Controllers
         [HttpGet]
         public IActionResult CreateTouristPlace()
         {
+            var spots = _context.TblSpots.ToList();
+            ViewBag.Spots = spots;
+
             return View();
         }
 
@@ -1267,6 +1270,9 @@ namespace KarnelTravels.Controllers
         {
             try
             {
+                var spots = _context.TblSpots.ToList();
+                ViewBag.Spots = spots;
+
                 var tour = _context.TblTouristPlaces.FirstOrDefault(s => s.Id == id);
 
                 if (tour != null)

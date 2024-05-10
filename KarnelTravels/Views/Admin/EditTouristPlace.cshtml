@@ -28,10 +28,10 @@
                     <label>Select spot</label>
                     <select class="form-control" asp-for="SportId" aria-describedby="basic-addon1" required>
                         <option selected>Select your spot</option>
-                        @*@foreach (var item in Model.tblSpots)
+                        @foreach (var spot in ViewBag.Spots)
                         {
-                        <option value="@item.Id">@item.Name</option>
-                        }*@
+                            <option value="@spot.Id">@spot.Name</option>
+                        }
                     </select>
                 </div>
             </div>
