@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "D:\\SEM3\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|d:\\sem3\\karneltravels\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -46,6 +47,8 @@
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\models\\hruserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+=======
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|d:\\sem3\\karneltravels\\views\\home\\user\\travellingsightview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\home\\user\\travellingsightview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -195,6 +198,7 @@
           "Children": [
             {
               "$type": "Bookmark",
+<<<<<<< HEAD
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
@@ -245,6 +249,17 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-10T13:26:10.154Z",
               "EditorCaption": ""
+=======
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
             },
             {
               "$type": "Document",
@@ -254,27 +269,43 @@
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\CreateTouristPlace.cshtml",
               "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\CreateTouristPlace.cshtml",
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\CreateTouristPlace.cshtml",
+<<<<<<< HEAD
               "ViewState": "AQIAAAYAAAAAAAAAAAAUwBcAAABsAAAA",
+=======
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAdAAAA",
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-10T11:31:27.979Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 2,
+=======
+              "DocumentIndex": 4,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "EditTouristPlace.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\EditTouristPlace.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\EditTouristPlace.cshtml",
               "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\EditTouristPlace.cshtml",
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\EditTouristPlace.cshtml",
+<<<<<<< HEAD
               "ViewState": "AQIAAAsAAAAAAAAAAAAUwBwAAABsAAAA",
+=======
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACEAAAAZAAAA",
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-10T11:30:58.077Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 15,
+=======
+              "DocumentIndex": 8,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "NewsView.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\NewsView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\NewsView.cshtml",
@@ -287,19 +318,28 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
+=======
+              "DocumentIndex": 2,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "AdminController.cs",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\Controllers\\AdminController.cs",
               "ToolTip": "D:\\SEM3\\KarnelTravels\\Controllers\\AdminController.cs",
               "RelativeToolTip": "KarnelTravels\\Controllers\\AdminController.cs",
+<<<<<<< HEAD
               "ViewState": "AQIAANQBAAAAAAAAAAAswOUBAAAtAAAA",
+=======
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-10T01:53:21.284Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 7,
               "Title": "HotelDetails.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\HotelDetails.cshtml",
@@ -327,6 +367,43 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
+=======
+              "DocumentIndex": 6,
+              "Title": "EditNews.cshtml",
+              "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\EditNews.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\EditNews.cshtml",
+              "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\EditNews.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Admin\\EditNews.cshtml",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAG4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T09:14:15.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TravellingSightView.cshtml",
+              "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
+              "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAmwGYAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T11:32:51.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\Controllers\\HomeController.cs",
@@ -339,6 +416,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 9,
               "Title": "ViewHotelUser.cs",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Models\\ViewHotelUser.cs",
@@ -379,6 +457,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 12,
+=======
+              "DocumentIndex": 5,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "EditSpot.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\EditSpot.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\EditSpot.cshtml",
@@ -391,7 +472,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 16,
+=======
+              "DocumentIndex": 9,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "TravellingPackageViewSearch.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingPackageViewSearch.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingPackageViewSearch.cshtml",
@@ -404,7 +489,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 14,
+=======
+              "DocumentIndex": 7,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "TravellingRestaurantView.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingRestaurantView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingRestaurantView.cshtml",
@@ -417,7 +506,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 17,
+=======
+              "DocumentIndex": 10,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "TravellingPackageView.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingPackageView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingPackageView.cshtml",
@@ -430,7 +523,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 20,
+=======
+              "DocumentIndex": 13,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -440,7 +537,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 18,
+=======
+              "DocumentIndex": 11,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "_AdminLayout.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Shared\\_AdminLayout.cshtml",
@@ -453,7 +554,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 19,
+=======
+              "DocumentIndex": 12,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Shared\\_Layout.cshtml",
@@ -466,7 +571,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 21,
+=======
+              "DocumentIndex": 14,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "TblHotelRestaurant.cs",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Models\\TblHotelRestaurant.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\Models\\TblHotelRestaurant.cs",
@@ -479,7 +588,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 22,
+=======
+              "DocumentIndex": 15,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "TblTouristPlace.cs",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Models\\TblTouristPlace.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\Models\\TblTouristPlace.cs",
@@ -492,20 +605,28 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 29,
+=======
+              "DocumentIndex": 22,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "AdminTourPackage.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\AdminTourPackage.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\AdminTourPackage.cshtml",
               "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\AdminTourPackage.cshtml",
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\AdminTourPackage.cshtml",
-              "ViewState": "AQIAAAEAAAAAAAAAAEBVwAsAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-10T08:58:17.795Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 23,
+=======
+              "DocumentIndex": 16,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "SightDetails.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\SightDetails.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\SightDetails.cshtml",
@@ -518,7 +639,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 43,
+=======
+              "DocumentIndex": 36,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "_FeedbackModal.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Shared\\_FeedbackModal.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Shared\\_FeedbackModal.cshtml",
@@ -531,7 +656,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 36,
+=======
+              "DocumentIndex": 29,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "AdminNewsView.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\AdminNewsView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\AdminNewsView.cshtml",
@@ -544,7 +673,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 24,
+=======
+              "DocumentIndex": 17,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "NewsDetail.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\NewsDetail.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\NewsDetail.cshtml",
@@ -557,46 +690,62 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 25,
+=======
+              "DocumentIndex": 18,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "ViewEditAdminTransport.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\ViewEditAdminTransport.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\ViewEditAdminTransport.cshtml",
               "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\ViewEditAdminTransport.cshtml",
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\ViewEditAdminTransport.cshtml",
-              "ViewState": "AQIAAAoAAAAAAAAAAEBVwBoAAABEAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAADQAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-10T10:09:22.924Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 26,
+=======
+              "DocumentIndex": 19,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "AdminTransportView.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\AdminTransportView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\AdminTransportView.cshtml",
               "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\AdminTransportView.cshtml",
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\AdminTransportView.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAoAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAACBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-10T09:16:32.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 27,
+=======
+              "DocumentIndex": 20,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "ViewCreateAdminTransport.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\ViewCreateAdminTransport.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\ViewCreateAdminTransport.cshtml",
               "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\ViewCreateAdminTransport.cshtml",
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\ViewCreateAdminTransport.cshtml",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAkwAsAAAAAAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAkwDwAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-10T09:43:19.165Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 28,
+=======
+              "DocumentIndex": 21,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "EditHotel.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\EditHotel.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\EditHotel.cshtml",
@@ -609,7 +758,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 31,
+=======
+              "DocumentIndex": 24,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "ViewEditAdminTourPackage.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\ViewEditAdminTourPackage.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\ViewEditAdminTourPackage.cshtml",
@@ -622,20 +775,28 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 30,
+=======
+              "DocumentIndex": 23,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "ViewCreateTourPackage.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\ViewCreateTourPackage.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\ViewCreateTourPackage.cshtml",
               "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\ViewCreateTourPackage.cshtml",
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\ViewCreateTourPackage.cshtml",
-              "ViewState": "AQIAADIAAAAAAAAAAAAkwDQAAAARAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAAkwEMAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-10T07:54:53.654Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 41,
+=======
+              "DocumentIndex": 34,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "ViewUploadImageHotel.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\ViewUploadImageHotel.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\ViewUploadImageHotel.cshtml",
@@ -648,7 +809,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 42,
+=======
+              "DocumentIndex": 35,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "ViewUpload.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\ViewUpload.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\ViewUpload.cshtml",
@@ -661,7 +826,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 34,
+=======
+              "DocumentIndex": 27,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "AdminSpot.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\AdminSpot.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\AdminSpot.cshtml",
@@ -674,7 +843,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 33,
+=======
+              "DocumentIndex": 26,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "CreateSpot.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\CreateSpot.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\CreateSpot.cshtml",
@@ -687,7 +860,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 32,
+=======
+              "DocumentIndex": 25,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "EditResort.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\EditResort.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\EditResort.cshtml",
@@ -700,7 +877,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 39,
+=======
+              "DocumentIndex": 32,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "AdminHotel.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\AdminHotel.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\AdminHotel.cshtml",
@@ -713,7 +894,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 38,
+=======
+              "DocumentIndex": 31,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "AdminHotelView.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\AdminHotelView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\AdminHotelView.cshtml",
@@ -726,7 +911,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 35,
+=======
+              "DocumentIndex": 28,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "CreateNews.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\CreateNews.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\CreateNews.cshtml",
@@ -739,7 +928,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 37,
+=======
+              "DocumentIndex": 30,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "AdminTouristPlace.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\AdminTouristPlace.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\AdminTouristPlace.cshtml",
@@ -752,7 +945,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 40,
+=======
+              "DocumentIndex": 33,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "FeedbackOnCompany.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\FeedbackOnCompany.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\FeedbackOnCompany.cshtml",
@@ -765,7 +962,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 44,
+=======
+              "DocumentIndex": 37,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "GetAllFeedBacks.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\GetAllFeedBacks.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\GetAllFeedBacks.cshtml",
@@ -778,7 +979,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 45,
+=======
+              "DocumentIndex": 38,
+>>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
               "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
