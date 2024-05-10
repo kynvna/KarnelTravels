@@ -1,43 +1,41 @@
-﻿@model Dictionary<int, List<KarnelTravels.Models.TouristPlaceViewModel>>
+﻿
 
+<!-- Search Start -->
+@model Dictionary<int, List<KarnelTravels.Models.TouristPlaceViewModel>>
 @{
     ViewData["Title"] = "Sights";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<!-- Search Start -->
 <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
     <div class="container">
-        <form method="get" action="@Url.Action("TravellingSightView", "Home")">
-            <div class="row g-2">
-                <div class="col-md-10">
-                    <div class="row g-2">
-                        <div class="col-md-12">
-                            <input type="text" name="searchString" class="form-control border-0 py-3" placeholder="What are you looking for ?">
-                        </div>
+        <div class="row g-2">
+            <div class="col-md-10">
+                <div class="row g-2">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control border-0 py-3" placeholder="What are you looking for ?">
                     </div>
                 </div>
-                <div class="col-md-2">
-                    <button type="submit" class="btn btn-dark border-0 w-100 py-3">Find</button>
-                </div>
             </div>
-        </form>
+            <div class="col-md-2">
+                <button class="btn btn-dark border-0 w-100 py-3">Find</button>
+            </div>
+        </div>
     </div>
 </div>
-
+<!-- Search End -->
+<!-- Hotel & Resorts List Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-0 gx-5 align-items-end">
             <div class="col-lg-6">
                 <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
-                    <h1 class="mb-3">Tourist Places</h1>
+                    <h1 class="mb-3">Tourist Place</h1>
                 </div>
             </div>
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
-                <!-- Chọn Spot -->
                 <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-danger active" data-bs-toggle="pill" href="#all">All</a>
-                    </li>
                     @foreach (var spot in Model)
                     {
                         <li class="nav-item me-2">
@@ -47,48 +45,21 @@
                 </ul>
             </div>
         </div>
-
-        <!-- Tab Content -->
         <div class="tab-content">
-            <div id="all" class="tab-pane fade show active p-0">
-                <div class="row g-4">
-                    @foreach (var spot in Model)
-                    {
-                        foreach (var place in spot.Value)
-                        {
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="product_box">
-                                    <h4 class="bursh_text">@place.Name</h4>
-                                    <img src="~/img/TblTourist_Place/@place.ImageUrl" alt="Place Image" style="width: 100px; height: auto;" />
-                                    <!-- Mô tả hoặc các thông tin khác về địa điểm -->
-                                    <div class="btn_main">
-                                        <div class="buy_bt">
-                                            <ul>
-                                                <button class="btn btn-info btn-rounded" onclick="location.href='@Url.Action("SightDetails", "Home", new { id = place.Id })'">Detail</button>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        }
-                    }
-                </div>
-            </div>
             @foreach (var spot in Model)
             {
-                <div id="tab-@spot.Key" class="tab-pane fade p-0">
+                <div id="tab-@spot.Key" class="tab-pane fade show p-0">
                     <div class="row g-4">
-                        @foreach (var place in spot.Value)
+                        @foreach (var item in spot.Value)
                         {
                             <div class="col-lg-3 col-sm-6">
                                 <div class="product_box">
-                                    <h4 class="bursh_text">@place.Name</h4>
-                                    <img src="~/img/TblTourist_Place/@place.ImageUrl" alt="Place Image" style="width: 100px; height: auto;" />
-                                    <!-- Mô tả hoặc các thông tin khác về địa điểm -->
+                                    <h4 class="bursh_text">@item.Name</h4>
+                                    <td><img src="~/img/TblTourist_Place/@item.ImageUrl" alt="Place Image" style="width: 100px; height: auto;" /></td>
                                     <div class="btn_main">
                                         <div class="buy_bt">
                                             <ul>
-                                                <button class="btn btn-info btn-rounded" onclick="location.href='@Url.Action("SightDetails", "Home", new { id = place.Id })'">Detail</button>
+                                                <button class="btn btn-info btn-rounded" onclick="location.href='@Url.Action("SightDetails", "Home", new { id = item.Id })'">Detail</button>
                                             </ul>
                                         </div>
                                     </div>
@@ -101,3 +72,4 @@
         </div>
     </div>
 </div>
+<!-- Hotel & Resorts List End -->

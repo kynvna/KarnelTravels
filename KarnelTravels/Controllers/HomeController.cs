@@ -44,7 +44,7 @@ namespace KarnelTravels.Controllers
         }
 
         [HttpGet]
-        public IActionResult TravellingSightView(string searchString)
+        public IActionResult TravellingSightView()
         {
             Dictionary<int, List<TouristPlaceViewModel>> touristPlaceViewModelsBySpot = new Dictionary<int, List<TouristPlaceViewModel>>();
             try
@@ -52,7 +52,7 @@ namespace KarnelTravels.Controllers
                 // Lấy danh sách các điểm du lịch
                 List<TblTouristPlace> touristPlaces = _context.TblTouristPlaces.ToList();
 
-                // Lặp qua từng điểm du lịch để nhóm chúng theo SpotId và thực hiện tìm kiếm
+                // Lặp qua từng điểm du lịch để nhóm chúng theo SpotId
                 foreach (var touristPlace in touristPlaces)
                 {
                     var spotId = touristPlace.SportId;
@@ -60,37 +60,30 @@ namespace KarnelTravels.Controllers
 
                     if (spot != null)
                     {
-                        // Filter based on search string for place name or spot name
-                        if (string.IsNullOrEmpty(searchString) ||
-                            touristPlace.Name.Contains(searchString, StringComparison.OrdinalIgnoreCase) ||
-                            spot.Name.Contains(searchString, StringComparison.OrdinalIgnoreCase))
+                        var imageUrl = _context.TblImageUrls.FirstOrDefault(i => i.ObjectId == touristPlace.Id && i.UrlObject == "TblTourist_Place");
+                        var touristPlaceViewModel = new TouristPlaceViewModel
                         {
-                            var imageUrl = _context.TblImageUrls.FirstOrDefault(i => i.ObjectId == touristPlace.Id && i.UrlObject == "TblTourist_Place");
-                            var touristPlaceViewModel = new TouristPlaceViewModel
-                            {
-                                Id = touristPlace.Id,
-                                Name = touristPlace.Name,
-                                Description = touristPlace.Description,
-                                Status = touristPlace.Status,
-                                ImageUrl = imageUrl?.Url,
-                                Namespot = spot.Name
-                            };
+                            Id = touristPlace.Id,
+                            Name = touristPlace.Name,
+                            Description = touristPlace.Description,
+                            Status = touristPlace.Status,
+                            ImageUrl = imageUrl?.Url,
+                            Namespot = spot.Name
+                        };
 
-                            // Kiểm tra nếu SpotId đã tồn tại trong từ điển
-                            if (touristPlaceViewModelsBySpot.ContainsKey((int)spotId))
-                            {
-                                // Nếu đã tồn tại, thêm điểm du lịch vào danh sách tương ứng
-                                touristPlaceViewModelsBySpot[(int)spotId].Add(touristPlaceViewModel);
-                            }
-                            else
-                            {
-                                // Nếu chưa tồn tại, tạo mới danh sách và thêm điểm du lịch vào
-                                touristPlaceViewModelsBySpot[(int)spotId] = new List<TouristPlaceViewModel> { touristPlaceViewModel };
-                            }
+                        // Kiểm tra nếu SpotId đã tồn tại trong từ điển
+                        if (touristPlaceViewModelsBySpot.ContainsKey((int)spotId))
+                        {
+                            // Nếu đã tồn tại, thêm điểm du lịch vào danh sách tương ứng
+                            touristPlaceViewModelsBySpot[(int)spotId].Add(touristPlaceViewModel);
+                        }
+                        else
+                        {
+                            // Nếu chưa tồn tại, tạo mới danh sách và thêm điểm du lịch vào
+                            touristPlaceViewModelsBySpot[(int)spotId] = new List<TouristPlaceViewModel> { touristPlaceViewModel };
                         }
                     }
                 }
-
             }
             catch (Exception ex)
             {

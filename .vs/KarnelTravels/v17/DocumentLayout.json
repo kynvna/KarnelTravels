@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\SEM3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|d:\\sem3\\karneltravels\\views\\admin\\editnews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\admin\\editnews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|d:\\sem3\\karneltravels\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -86,10 +90,6 @@
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\admin\\admintourpackage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|d:\\sem3\\karneltravels\\views\\admin\\editnews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\admin\\editnews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|d:\\sem3\\karneltravels\\views\\admin\\viewcreatetourpackage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{94356E16-D681-43E4-8FF8-2F6ADEA3533E}|KarnelTravels\\KarnelTravels.csproj|solutionrelative:karneltravels\\views\\admin\\viewcreatetourpackage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -164,74 +164,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TravellingRestaurantView.cshtml",
-              "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingRestaurantView.cshtml",
-              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingRestaurantView.cshtml",
-              "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingRestaurantView.cshtml",
-              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\TravellingRestaurantView.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T12:11:54.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TravellingPackageViewSearch.cshtml",
-              "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingPackageViewSearch.cshtml",
-              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingPackageViewSearch.cshtml",
-              "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingPackageViewSearch.cshtml",
-              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\TravellingPackageViewSearch.cshtml",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T12:11:13.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TravellingSightView.cshtml",
-              "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
-              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
-              "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
-              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGYAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T11:32:51.911Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\SEM3\\KarnelTravels\\Controllers\\HomeController.cs",
               "RelativeToolTip": "KarnelTravels\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAJ0BAAAAAAAAAAA7wK4BAAAMAAAA",
+              "ViewState": "AQIAAJYBAAAAAAAAAAA7wKcBAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-10T11:32:01.978Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "CreateTouristPlace.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\CreateTouristPlace.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\CreateTouristPlace.cshtml",
@@ -239,11 +193,12 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\CreateTouristPlace.cshtml",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T11:31:27.979Z"
+              "WhenOpened": "2024-05-10T11:31:27.979Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "EditTouristPlace.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\EditTouristPlace.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\EditTouristPlace.cshtml",
@@ -251,11 +206,12 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\EditTouristPlace.cshtml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAB8AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T11:30:58.077Z"
+              "WhenOpened": "2024-05-10T11:30:58.077Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "NewsView.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\NewsView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\NewsView.cshtml",
@@ -268,24 +224,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AdminController.cs",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\Controllers\\AdminController.cs",
               "ToolTip": "D:\\SEM3\\KarnelTravels\\Controllers\\AdminController.cs",
               "RelativeToolTip": "KarnelTravels\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAOEAAAAAAAAAAAAhwP4AAAAMAAAA",
+              "ViewState": "AQIAABkBAAAAAAAAAAAUwDABAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-10T01:53:21.284Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditNews.cshtml",
+              "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\EditNews.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\EditNews.cshtml",
+              "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\EditNews.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Admin\\EditNews.cshtml",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAG4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T09:14:15.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TravellingSightView.cshtml",
+              "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
+              "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\TravellingSightView.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGYAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T11:32:51.911Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "TravellingPackageViewSearch.cshtml",
+              "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingPackageViewSearch.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingPackageViewSearch.cshtml",
+              "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingPackageViewSearch.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\TravellingPackageViewSearch.cshtml",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T12:11:13.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TravellingRestaurantView.cshtml",
+              "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingRestaurantView.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingRestaurantView.cshtml",
+              "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingRestaurantView.cshtml",
+              "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\TravellingRestaurantView.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T12:11:54.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "TravellingPackageView.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\TravellingPackageView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\TravellingPackageView.cshtml",
@@ -298,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -308,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "_AdminLayout.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Shared\\_AdminLayout.cshtml",
@@ -321,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Shared\\_Layout.cshtml",
@@ -334,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "TblHotelRestaurant.cs",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Models\\TblHotelRestaurant.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\Models\\TblHotelRestaurant.cs",
@@ -342,11 +346,12 @@
               "RelativeToolTip": "KarnelTravels\\Models\\TblHotelRestaurant.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAxwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T11:42:26.255Z"
+              "WhenOpened": "2024-05-10T11:42:26.255Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "TblTouristPlace.cs",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Models\\TblTouristPlace.cs",
               "RelativeDocumentMoniker": "KarnelTravels\\Models\\TblTouristPlace.cs",
@@ -354,11 +359,12 @@
               "RelativeToolTip": "KarnelTravels\\Models\\TblTouristPlace.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T11:42:50.645Z"
+              "WhenOpened": "2024-05-10T11:42:50.645Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "AdminTourPackage.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\AdminTourPackage.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\AdminTourPackage.cshtml",
@@ -366,11 +372,12 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\AdminTourPackage.cshtml",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T08:58:17.795Z"
+              "WhenOpened": "2024-05-10T08:58:17.795Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "SightDetails.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\SightDetails.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\SightDetails.cshtml",
@@ -378,7 +385,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\SightDetails.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T11:37:04.093Z"
+              "WhenOpened": "2024-05-10T11:37:04.093Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -390,7 +398,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Shared\\_FeedbackModal.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T04:31:04.088Z"
+              "WhenOpened": "2024-05-10T04:31:04.088Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -402,7 +411,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\AdminNewsView.cshtml",
               "ViewState": "AQIAACEAAAAAAAAAAAAAABAAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T04:23:13.292Z"
+              "WhenOpened": "2024-05-10T04:23:13.292Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -414,23 +424,12 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\EditSpot.cshtml",
               "ViewState": "AQIAAAsAAAAAAAAAAAAkwBsAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T04:17:12.391Z"
+              "WhenOpened": "2024-05-10T04:17:12.391Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "EditNews.cshtml",
-              "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\EditNews.cshtml",
-              "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\EditNews.cshtml",
-              "ToolTip": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\EditNews.cshtml",
-              "RelativeToolTip": "KarnelTravels\\Views\\Admin\\EditNews.cshtml",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAAAF4AAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T09:14:15.508Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "NewsDetail.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Home\\User\\NewsDetail.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Home\\User\\NewsDetail.cshtml",
@@ -438,11 +437,12 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\NewsDetail.cshtml",
               "ViewState": "AQIAADAAAAAAAAAAAAAkwEwAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T11:21:39.206Z"
+              "WhenOpened": "2024-05-10T11:21:39.206Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "ViewEditAdminTransport.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\ViewEditAdminTransport.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\ViewEditAdminTransport.cshtml",
@@ -450,11 +450,12 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\ViewEditAdminTransport.cshtml",
               "ViewState": "AQIAABgAAAAAAAAAAAAAADQAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T10:09:22.924Z"
+              "WhenOpened": "2024-05-10T10:09:22.924Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "AdminTransportView.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\AdminTransportView.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\AdminTransportView.cshtml",
@@ -462,11 +463,12 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\AdminTransportView.cshtml",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAACBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T09:16:32.14Z"
+              "WhenOpened": "2024-05-10T09:16:32.14Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "ViewCreateAdminTransport.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\ViewCreateAdminTransport.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\ViewCreateAdminTransport.cshtml",
@@ -474,11 +476,12 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\ViewCreateAdminTransport.cshtml",
               "ViewState": "AQIAACkAAAAAAAAAAAAkwDwAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T09:43:19.165Z"
+              "WhenOpened": "2024-05-10T09:43:19.165Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "EditHotel.cshtml",
               "DocumentMoniker": "D:\\SEM3\\KarnelTravels\\Views\\Admin\\EditHotel.cshtml",
               "RelativeDocumentMoniker": "KarnelTravels\\Views\\Admin\\EditHotel.cshtml",
@@ -486,7 +489,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\EditHotel.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T07:33:22.404Z"
+              "WhenOpened": "2024-05-10T07:33:22.404Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -498,7 +502,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\ViewEditAdminTourPackage.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-09T08:46:47.863Z"
+              "WhenOpened": "2024-05-09T08:46:47.863Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -510,7 +515,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\ViewCreateTourPackage.cshtml",
               "ViewState": "AQIAADcAAAAAAAAAAAAkwEMAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T07:54:53.654Z"
+              "WhenOpened": "2024-05-10T07:54:53.654Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -522,7 +528,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\ViewUploadImageHotel.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T06:38:40.126Z"
+              "WhenOpened": "2024-05-10T06:38:40.126Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -534,7 +541,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\ViewUpload.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T06:38:45.007Z"
+              "WhenOpened": "2024-05-10T06:38:45.007Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -546,7 +554,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\AdminSpot.cshtml",
               "ViewState": "AQIAAAQAAAAAAAAAAAAkwBsAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T06:48:48.488Z"
+              "WhenOpened": "2024-05-10T06:48:48.488Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -558,7 +567,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\CreateSpot.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T07:00:30.384Z"
+              "WhenOpened": "2024-05-10T07:00:30.384Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -570,7 +580,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\EditResort.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T07:33:03.157Z"
+              "WhenOpened": "2024-05-10T07:33:03.157Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -582,7 +593,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\AdminHotel.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T06:54:52Z"
+              "WhenOpened": "2024-05-10T06:54:52Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -594,7 +606,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\AdminHotelView.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T06:54:58.636Z"
+              "WhenOpened": "2024-05-10T06:54:58.636Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -606,7 +619,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\CreateNews.cshtml",
               "ViewState": "AQIAAAkBAAAAAAAAAAAAACcBAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-09T08:42:54.877Z"
+              "WhenOpened": "2024-05-09T08:42:54.877Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -618,7 +632,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\AdminTouristPlace.cshtml",
               "ViewState": "AQIAABUAAAAAAAAAAAAAACkAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T07:10:17.224Z"
+              "WhenOpened": "2024-05-10T07:10:17.224Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -630,7 +645,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Home\\User\\FeedbackOnCompany.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T04:28:35.938Z"
+              "WhenOpened": "2024-05-10T04:28:35.938Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -642,7 +658,8 @@
               "RelativeToolTip": "KarnelTravels\\Views\\Admin\\GetAllFeedBacks.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T01:52:01.15Z"
+              "WhenOpened": "2024-05-10T01:52:01.15Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
