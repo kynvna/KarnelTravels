@@ -2,83 +2,88 @@
 
 @{
     ViewData["Title"] = "GetAllFeedBacks";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
-<h1>GetAllFeedBacks</h1>
-
 <!-- Selection Box -->
-<select id="feedbackFilter" class="form-control" onchange="filterFeedbacks()">
-    <option value="All">All</option>
-    <option value="Company">Company</option>
-    <option value="Hotel_Restaurant">Hotel_Restaurant</option>
-    <option value="Travel">Travel</option>
-    <option value="Tourist_Place">Tourist_Place</option>
-    <option value="Tour_Package">Tour_Package</option>
-</select>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Feedback Category</th>
-            <th>Feedback For</th>
-            <th>Customer</th>
-            <th>@Html.DisplayNameFor(model => model.Feedback)</th>
-            <th>@Html.DisplayNameFor(model => model.Rating)</th>
-            <th>@Html.DisplayNameFor(model => model.Status)</th>
-            <th>@Html.DisplayNameFor(model => model.Date)</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody id="feedbackTableBody">
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@Html.DisplayFor(modelItem => item.FeedbackObject)</td>
-                <td>@Html.DisplayFor(modelItem => item.ObjectName)</td>
-                <td>@Html.DisplayFor(modelItem => item.CustomerId)</td>
-                <td>@Html.DisplayFor(modelItem => item.Feedback)</td>
-                <td>@Html.DisplayFor(modelItem => item.Rating)</td>
-                <td>@Html.DisplayFor(modelItem => item.Status)</td>
-                <td>@Html.DisplayFor(modelItem => item.Date)</td>
-                <td>
-                    <div class="btn-group" role="group">
-                        <form asp-action="ToggleStatus" method="post" style="display:inline">
-                            <input type="hidden" name="id" value="@item.FeedbackId" />
-                            <input type="submit" value="@((item.Status == "Active") ? "Deactivate" : "Activate")" class="@((item.Status == "Active") ? "btn btn-warning" : "btn btn-success")" style="width: 100px;" />
-                        </form>
-                        <a asp-action="DeleteFeedback" asp-route-id="@item.FeedbackId" class="btn btn-danger" style="width: 100px;">Delete</a>
-                    </div>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-<script>
-    function filterFeedbacks() {
-        var selectedValue = document.getElementById("feedbackFilter").value;
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "/admin/GetFilteredFeedbacks?category=" + selectedValue, true);
-
-        // Log when the callback starts
-        console.log("AJAX request sent to /admin/GetFilteredFeedbacks with category:", selectedValue);
-
-        xhr.onreadystatechange = function () {
-            // Log on every state change
-            console.log("AJAX readyState changed:", xhr.readyState);
-
-            if (xhr.readyState === 4) {
-                console.log("AJAX status code:", xhr.status);
-
-                if (xhr.status === 200) {
-                    console.log("Filtered rows response:", xhr.responseText);
-                    document.getElementById("feedbackTableBody").innerHTML = xhr.responseText;
-                } else {
-                    console.log("Error with status:", xhr.status, "Response text:", xhr.responseText);
+<div class="ibox">
+    <div class="ibox-body">
+       <div class="row">
+            <div class="col-md-12 form-group">
+                <select id="feedbackFilter" class="form-control" onchange="filterFeedbacks()">
+                    <option value="All">All</option>
+                    <option value="Company">Company</option>
+                    <option value="Hotel_Restaurant">Hotel_Restaurant</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Tourist_Place">Tourist_Place</option>
+                    <option value="Tour_Package">Tour_Package</option>
+                </select>
+            </div>
+       </div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Feedback Category</th>
+                    <th>Feedback For</th>
+                    <th>Customer</th>
+                    <th>@Html.DisplayNameFor(model => model.Feedback)</th>
+                    <th>@Html.DisplayNameFor(model => model.Rating)</th>
+                    <th>@Html.DisplayNameFor(model => model.Status)</th>
+                    <th>@Html.DisplayNameFor(model => model.Date)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="feedbackTableBody">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.FeedbackObject)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ObjectName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CustomerId)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Feedback)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Rating)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Date)</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <form asp-action="ToggleStatus" method="post" style="display:inline">
+                                    <input type="hidden" name="id" value="@item.FeedbackId" />
+                                    <input type="submit" value="@((item.Status == "Active") ? "Deactivate" : "Activate")" class="@((item.Status == "Active") ? "btn btn-warning" : "btn btn-success")" style="width: 100px;" />
+                                </form>
+                                <a asp-action="DeleteFeedback" asp-route-id="@item.FeedbackId" class="btn btn-danger" style="width: 100px;">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
                 }
-            }
-        };
-        xhr.send();
-    }
+            </tbody>
+        </table>
+        <script>
+            function filterFeedbacks() {
+                var selectedValue = document.getElementById("feedbackFilter").value;
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "/admin/GetFilteredFeedbacks?category=" + selectedValue, true);
 
-</script>
+                // Log when the callback starts
+                console.log("AJAX request sent to /admin/GetFilteredFeedbacks with category:", selectedValue);
+
+                xhr.onreadystatechange = function () {
+                    // Log on every state change
+                    console.log("AJAX readyState changed:", xhr.readyState);
+
+                    if (xhr.readyState === 4) {
+                        console.log("AJAX status code:", xhr.status);
+
+                        if (xhr.status === 200) {
+                            console.log("Filtered rows response:", xhr.responseText);
+                            document.getElementById("feedbackTableBody").innerHTML = xhr.responseText;
+                        } else {
+                            console.log("Error with status:", xhr.status, "Response text:", xhr.responseText);
+                        }
+                    }
+                };
+                xhr.send();
+            }
+
+        </script>
+
+    </div>
+</div>

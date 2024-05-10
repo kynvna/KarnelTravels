@@ -52,9 +52,10 @@
                     <textarea asp-for="News.NewsItem.NewsDetail" class="form-control" rows="10"></textarea>
                     <span asp-validation-for="News.NewsItem.NewsDetail" class="text-danger"></span>
                 </div>
-
+            </div>
+            <div class="row">
                 <!-- Existing Thumbnails Display Area -->
-                <div class="form-group">
+                <div class="form-group col-md-4">
                     <label>Existing Images</label>
                     <div id="existing-images">
                         @if (Model.News.ImageUrls != null && Model.News.ImageUrls.Count > 0)
@@ -70,7 +71,7 @@
                         }
                     </div>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="imageUpload">Upload New Images</label>
                     <input type="file" class="form-control-file" id="imageUpload" name="files" multiple>
 
@@ -79,7 +80,7 @@
                         <!-- JavaScript will add description inputs dynamically here -->
                     </div>
                 </div>
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-4">
                     <div id="imagePreview"></div>
                 </div>
             </div>
@@ -92,7 +93,6 @@
         </form>
     </div>
 </div>
-s
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");

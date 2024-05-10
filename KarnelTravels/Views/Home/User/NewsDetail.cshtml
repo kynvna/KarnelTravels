@@ -71,12 +71,16 @@
 
             @foreach (var relatedNews in Model.RelatedNewsWithImages)
             {
-                <div class="testimonial-item bg-light rounded p-3">
-                    <div class="bg-white border rounded p-4">
-                        <p class="text-center">@relatedNews.NewsItem.Description</p>
-                        <p class="text-center"><a href="@Url.Action("NewsDetail", "Home", new { id = relatedNews.NewsItem.NewsId })">Click to view details</a></p>
+                <a href="@Url.Action("NewsDetail", "Home", new { id = relatedNews.NewsItem.NewsId })">
+                    <div class="testimonial-item bg-light rounded p-3">
+                        <div class="bg-white border rounded p-4">
+                            <br/>
+                            <p class="text-center">@relatedNews.NewsItem.Description</p>
+                            <p class="text-center"></p>
+                        </div>
                     </div>
-                </div>
+                </a>
+                
             }
         </div>
     </div>

@@ -27,11 +27,11 @@
                                     <div class="card h-100">
                                         <img class="card-img-top" src="https://149345965.v2.pressablecdn.com/wp-content/uploads/img-hotels-IADGV_006-Dusk-Exterior-home.jpg" />
                                         <div class="card-body">
-                                            <h5 class="card-title"><span><strong>Entity Name: </strong></span><span style="color:navy">@item.Name</span></h5>
+                                            <h5 class="card-title"><span><strong>Entity Name: </strong></span></h5>
+                                            <h6 class="card-title"><span style="color:navy">@item.Name</span></h6>
                                             <hr />
                                             <div class="text-muted card-subtitle"><span><strong>Start Date: </strong></span>@item.StartDate</div>
                                             <div class="text-muted card-subtitle"><span><strong>End Date: </strong></span>@item.EndDate</div>
-                                            <div class="text-muted card-subtitle"> <span><strong>Description: </strong></span>@Html.Raw(item.Description)</div>
                                         </div>
                                         <div class="card-footer">
                                             <a class="btn btn-info" href="/admin/ViewEditAdminTourPackage?idt=@item.PackageId"><i class="fa fa-plus"></i> Edit</a>

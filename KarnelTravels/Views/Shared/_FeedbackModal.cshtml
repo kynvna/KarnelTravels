@@ -4,7 +4,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="commentModalLabel">@(!Model.IsSubmitted ? "Add a Comment" : "Thank You!")</h5>
+                <h5 class="modal-title" id="commentModalLabel">@(!Model.IsSubmitted ? "Leave a Feedback" : "Thank You!")</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="feedbackModalBody">
@@ -12,36 +12,41 @@
                 {
                     <form id="feedbackForm">
                         <div class="form-outline mb-3">
-                            <input type="email" class="form-control" id="customerEmail" name="CustomerEmail" required />
-                            <label class="form-label" for="customerEmail">Your Email</label>
+                            <input type="email" class="form-control" id="customerEmail" name="CustomerEmail" placeholder="Please enter your name" required />
                         </div>
                         <div class="form-outline mb-3">
-                            <textarea class="form-control" id="commentText" name="CommentText" rows="4" required></textarea>
-                            <label class="form-label" for="commentText">What is your view?</label>
+                            <textarea class="form-control" id="commentText" name="CommentText" rows="4" placeholder="Tell us what you are concerning" required></textarea>
                         </div>
                         <!-- Stars organized horizontally with click event listeners -->
-                        <ul class="list-inline mb-3" id="starRating">
-                            <li class="list-inline-item"><i class="far fa-star fa-lg text-warning" data-rating="1"></i></li>
-                            <li class="list-inline-item"><i class="far fa-star fa-lg text-warning" data-rating="2"></i></li>
-                            <li class="list-inline-item"><i class="far fa-star fa-lg text-warning" data-rating="3"></i></li>
-                            <li class="list-inline-item"><i class="far fa-star fa-lg text-warning" data-rating="4"></i></li>
-                            <li class="list-inline-item"><i class="far fa-star fa-lg text-warning" data-rating="5"></i></li>
-                        </ul>
+                        <div class="form-outline mb-3">
+                            <p>Rating: 
+                                <span>
+                                    <ul class="list-inline mb-3" id="starRating">
+                                        <li class="list-inline-item"><i class="far fa-star fa-lg text-warning" data-rating="1"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star fa-lg text-warning" data-rating="2"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star fa-lg text-warning" data-rating="3"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star fa-lg text-warning" data-rating="4"></i></li>
+                                        <li class="list-inline-item"><i class="far fa-star fa-lg text-warning" data-rating="5"></i></li>
+                                    </ul>
+                                </span> 
+                            </p>
+                        </div>
+                        <hr/>
                         <input type="hidden" name="Rating" id="ratingValue" />
                         <input type="hidden" name="FeedbackObject" id="feedbackObject" />
                         <input type="hidden" name="ObjectId" id="objectId" />
                         <input type="hidden" name="Status" id="status" />
                         <div class="d-flex justify-content-between mt-3">
-                            <button type="button" class="btn btn-primary" id="submitFeedback">Submit</button>
+                            <button type="button" class="btn btn-primary" id="submitFeedback">Send feedback</button>
                         </div>
                     </form>
                 }
                 else
                 {
                     <div class="alert alert-success">
-                        <h5>Thank You for Your Feedback!</h5>
-                        <p>We appreciate your input and will use it to improve our services.</p>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <h5>Thank You for Your Feedback with KARNEL!</h5>
+                        <p>We appreciate your kindness and will use it to improve our services.</p>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Return to KARNEL</button>
                     </div>
                 }
             </div>

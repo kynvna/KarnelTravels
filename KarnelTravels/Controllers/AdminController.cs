@@ -18,6 +18,7 @@ namespace KarnelTravels.Controllers
         private readonly IWebHostEnvironment _env;
 
         //Consolidate the constructors into one
+        //Consolidate the constructors into one
         public AdminController(IWebHostEnvironment environment, KarnelTravelsContext context, ILogger<AdminController> logger, IWebHostEnvironment env)
         {
             _environment = environment;

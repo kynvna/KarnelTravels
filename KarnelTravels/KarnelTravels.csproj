@@ -11,8 +11,6 @@
     <None Include="Views\Admin\AdminProfile.cshtml" />
     <None Include="Views\Admin\AdminTourView.cshtml" />
     <None Include="Views\Admin\AdminTransportView.cshtml" />
-    <None Include="Views\Admin\FeedbackOnComp.cshtml" />
-    <None Include="Views\Admin\FeedbackOnObj.cshtml" />
     <None Include="Views\Admin\Login.cshtml" />
     <None Include="Views\Admin\Sitemap.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
