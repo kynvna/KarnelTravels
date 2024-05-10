@@ -2,6 +2,7 @@
     ViewData["Title"] = "News";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model ViewTravelUser;
 <!-- Property List Start -->
 <div class="container-xxl py-5">
     <div class="container">
@@ -9,17 +10,17 @@
             <div id="tab-1" class="tab-pane fade show p-0 active">
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                        <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="https://ieltscaptoc.com.vn/wp-content/uploads/2023/02/talk-about-travelling-4.jpg" alt=""></a>
+                        <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="/img/Travel/@Model.travelImg.url" alt=""></a>
                     </div>
                     <div class="col-lg-8 col-md-8 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
                         <div class="p-4 pb-0">
                             <a class="d-block h5 mb-2" asp-action="NewsDetail" asp-controller="Home">Tour Name</a><span><h5 class="text-primary mb-3">$12,345</h5></span>
                             <p><strong>Going to: </strong>
-                                City - City - City
+                                @Model.travelImg.Name
                             </p>
                             <p>
                                 <strong>Transportation: </strong>
-                                Bus/Plane/ETC
+                                @Model.travelImg.SpotDestination - @Model.travelImg.SpotDeparture
                             </p>
                             <p>
                                 <strong>Accomodation: </strong>
@@ -27,15 +28,14 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                        <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="https://ieltscaptoc.com.vn/wp-content/uploads/2023/02/talk-about-travelling-4.jpg" alt=""></a>
-                    </div>
-                    <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                        <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="https://ieltscaptoc.com.vn/wp-content/uploads/2023/02/talk-about-travelling-4.jpg" alt=""></a>
-                    </div>
-                    <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                        <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="https://ieltscaptoc.com.vn/wp-content/uploads/2023/02/talk-about-travelling-4.jpg" alt=""></a>
-                    </div>
+                    @foreach(var item in Model.tblImageUrls)
+                    {
+                        <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
+                            <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="/img/Travel/@item.Url" alt=""></a>
+                        </div>
+                    }
+                   
+                   
                     <div class="col-lg-12 col-md-12 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
                         <div class="p-0 pb-0">
                             <p>
@@ -48,16 +48,7 @@
                             <p>
                                 
                                 <strong>Description: </strong>
-                                Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it 
-                                looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely 
-                                approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.”
-                                As Cicero would put it, “Um, not so fast.”
-                                The placeholder text, beginning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like 
-                                Latin because in its youth, centuries ago, it was Latin.
-                                Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the 
-                                ubiquitous filler text. In seeing a sample of lorem ipsum, his interest was piqued by consectetur—a genuine, 
-                                albeit rare, Latin word. Consulting a Latin dictionary led McClintock to a passage from De Finibus Bonorum et 
-                                Malorum (“On the Extremes of Good and Evil”), a first-century B.C. text from the Roman philosopher Cicero.
+                                @Html.Raw(@Model.travelImg.Description)
                             </p>
                         </div>
                     </div>

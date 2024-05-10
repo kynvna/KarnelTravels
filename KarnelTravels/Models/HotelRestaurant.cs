@@ -1,4 +1,6 @@
-﻿namespace KarnelTravels.Models
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace KarnelTravels.Models
 {
     public class HotelRestaurant
     {
@@ -8,5 +10,8 @@
         public int spot { get; set; }
          public int catid { get; set; }
          /*public string Des {  get; set; }*/
+         public bool Active { get; set; }
+
+        public string selectObject { get; set; }
     }
 }

@@ -24,4 +24,6 @@ public partial class TblHotelRestaurant
     public string? Status { get; set; }
 
     public virtual HrCategory? Cat { get; set; }
+
+    
 }

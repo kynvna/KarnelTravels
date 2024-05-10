@@ -9,6 +9,34 @@ namespace KarnelTravels.Repository
         {
             _context = context;
         }
+        public GetAllPack GetAllPackImg(string Ob, int page, int pageSize)
+        {
+
+            int totalItems = _context.TblTourPackages.Count();
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+            var query = _context.TblTourPackages.Skip((page - 1) * pageSize)
+        .Take(pageSize).Select(a => new ViewPackageImg
+        {
+            PackageId = a.PackageId,
+            Description = a.Description,
+            SportId = a.SportId,
+            Name = a.Name,
+            TotalPrice = a.TotalPrice,
+            EndDate = a.EndDate,
+            StartDate = a.StartDate,
+            url = (from b in _context.TblImageUrls where b.ObjectId == a.PackageId && b.UrlObject == Ob select b.Url).FirstOrDefault()
+        }).ToList();
+            return new GetAllPack
+            {
+                TotalPages = totalPages,
+                CurrentPage = page,
+                PageSize = pageSize,
+                Packages = query // Use the paginated items collection
+            };
+
+        }
+    
+
 
         public IEnumerable<TblTourPackage> GetAllPackage()
         {
@@ -19,7 +47,29 @@ namespace KarnelTravels.Repository
         {
             return _context.TblTourPackages.FirstOrDefault(t => t.PackageId == id);
         }
+        public ViewPackageImg GetTblPackImgById(int id, string Ob)
+        {
+            // Combine filtering and projection into a single query for efficiency
+            var viewPackImg = _context.TblTourPackages
+                .Where(t => t.PackageId == id)
+                .Select(a => new ViewPackageImg
+                {
+                   PackageId = a.PackageId,
+                   Description = a.Description,
+                   Name = a.Name,
+                   EndDate = a.EndDate,
+                   StartDate = a.StartDate,
+                   SportId = a.SportId,
+                   TotalPrice = a.TotalPrice,
+                    url = _context.TblImageUrls
+                        .Where(b => b.ObjectId == a.PackageId && b.UrlObject == Ob)
+                        .Select(b => b.Url)
+                        .FirstOrDefault()
+                })
+                .FirstOrDefault();
 
+            return viewPackImg;
+        }
         public void DeletePack(int id)
         {
             try
@@ -60,10 +110,21 @@ namespace KarnelTravels.Repository
 
             }
         }
-        public IEnumerable<TblTourPackage> SearchTourPackages(string keyWord)
+        public IEnumerable<ViewPackageImg> SearchTourPackages(string keyWord , string Ob)
         {
-            var tourPackage = _context.TblTourPackages.Where(p => p.Description.Contains(keyWord) || p.Name.Contains(keyWord)).ToList();
-            return tourPackage;
+            var tourPackage = from a in _context.TblTourPackages.Where(p => p.Description.Contains(keyWord) || p.Name.Contains(keyWord))
+                              select new ViewPackageImg
+                              {
+                                  PackageId = a.PackageId,
+                                  Description = a.Description,
+                                  Name = a.Name,
+                                  EndDate = a.EndDate,
+                                  StartDate = a.StartDate,
+                                  SportId = a.SportId,
+                                  TotalPrice = a.TotalPrice,
+                                  url = (from b in _context.TblImageUrls where b.ObjectId == a.PackageId && b.UrlObject == Ob select b.Url).FirstOrDefault()
+                              };
+            return tourPackage.ToList();
         }
 
         public IEnumerable<TblTourPackage> SearchTourPackagesSpot(int id)

@@ -2,9 +2,9 @@
 {
     public class SearchViewModel
     {
-        public IEnumerable<TblHotelRestaurant> HotelRestaurants { get; set; }
-        public IEnumerable<TblTravel> Travels { get; set; }
+        public IEnumerable<ViewHotelImg> HotelRestaurants { get; set; }
+        public IEnumerable<ViewTravelImg> Travels { get; set; }
         public IEnumerable<TblTouristPlace> Tours { get; set; }
-        public IEnumerable<TblTourPackage> ToursPackage { get; set; }
+        public IEnumerable<ViewPackageImg> ToursPackage { get; set; }
     }
 }

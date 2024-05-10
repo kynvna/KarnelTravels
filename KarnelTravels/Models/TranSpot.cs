@@ -8,5 +8,7 @@
         public int spot1 { get; set; }
         public int Tran {  get; set; }
         public Decimal Price { get; set; }
+        public string selectObject { get; set; }
+        public bool Active { get; set; }
     }
 }

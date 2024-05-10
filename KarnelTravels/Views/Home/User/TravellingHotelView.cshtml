@@ -3,7 +3,10 @@
 @{
     ViewData["Title"] = "Hotel & Resort";
     Layout = "~/Views/Shared/_Layout.cshtml";
-
+    var All = ViewBag.all as GetHotel_Res_Re;
+    var hotel = ViewBag.hotel as GetHotel_Res_Re;
+    var res = ViewBag.res as GetHotel_Res_Re;
+    var re = ViewBag.re as GetHotel_Res_Re;
 }
 
 
@@ -75,12 +78,12 @@
             <div id="tab-1" class="tab-pane fade show p-0 active">
                 <div class="row g-4">
 
-                    @foreach (var item in Model.All)
+                    @foreach (var item in All.All)
                     {
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="property-item rounded overflow-hidden">
                                 <div class="position-relative overflow-hidden">
-                                    <a href=""><img class="img-fluid" src="https://japannews.yomiuri.co.jp/wp-content/uploads/2023/09/10789230.jpg" alt=""></a>
+                                    <a href=""><img class="img-fluid" src="/img/Hotel_Restaurant/@item.url" alt=""></a>
                                     <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">International Tour</div>
                                     <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">6 days 5 nights</div>
                                 </div>
@@ -99,45 +102,46 @@
                         </div>
                     }
                     }
-                    @* @foreach( var item in Model.Tours)
-                    {
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                    <a href=""><img class="img-fluid" src="https://japannews.yomiuri.co.jp/wp-content/uploads/2023/09/10789230.jpg" alt=""></a>
-                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">International Tour</div>
-                    <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">6 days 5 nights</div>
-                    </div>
-                    <div class="p-4 pb-0">
-                    <h5 class="text-primary mb-3">@item.Status</h5>
-                    <a class="d-block h5 mb-2" href="">@item.Name</a>
-                    <p><i class="fa fa-map-marker-alt text-primary me-2"></i>@item.Description</p>
-                    </div>
-                    <div class="d-flex border-top">
-                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                    <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                    </div>
-                    </div>
-                    </div>
-                    }
-                    *@
+                   
 
 
 
-                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
-                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            @if (All.CurrentPage > 1)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@Url.Action("TravellingHotelView", new { page =  All.CurrentPage - 1, pageSize =  All.PageSize })" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                            }
+                            @for (int i = 1; i <= All.TotalPages; i++)
+                            {
+                                <li class="page-item @(i ==  All.CurrentPage ? "active" : "")">
+                                    <a class="page-link" href="@Url.Action("TravellingHotelView", new { page = i, pageSize =  All.PageSize })">@i</a>
+                                </li>
+                            }
+                            @if (All.CurrentPage < All.TotalPages)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@Url.Action("TravellingHotelView", new { page =  All.CurrentPage + 1, pageSize =  All.PageSize })" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
                 </div>
             </div>
             <div id="tab-2" class="tab-pane fade show p-0">
                 <div class="row g-4">
-                    @foreach (var item in Model.HotelS)
+                    @foreach (var item in hotel.All)
                     {
                         <div class="col-lg-4 col-md-6">
                             <div class="property-item rounded overflow-hidden">
                                 <div class="position-relative overflow-hidden">
-                                    <a href=""><img class="img-fluid" src="/img/property-1.jpg" alt=""></a>
+                                    <a href=""><img class="img-fluid" src="/img/Hotel_Restaurant/@item.url" alt=""></a>
                                     <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
                                     <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
                                 </div>
@@ -253,19 +257,16 @@
                     }
 
 
-                    <div class="col-12 text-center">
-                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
-                    </div>
                 </div>
             </div>
             <div id="tab-3" class="tab-pane fade show p-0">
                 <div class="row g-4">
-                    @foreach (var item in Model.Restaurants)
+                    @foreach (var item in res.All)
                     {
                         <div class="col-lg-4 col-md-6">
                             <div class="property-item rounded overflow-hidden">
                                 <div class="position-relative overflow-hidden">
-                                    <a href=""><img class="img-fluid" src="/img/property-1.jpg" alt=""></a>
+                                    <a href=""><img class="img-fluid" src="/img/Hotel_Restaurant/@item.url" alt=""></a>
                                     <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
                                     <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
                                 </div>
@@ -290,20 +291,18 @@
 
                     }
 
-                    <div class="col-12 text-center">
-                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
-                    </div>
+                   
                 </div>
             </div>
             <div id="tab-4" class="tab-pane fade show p-0">
 
                 <div class="row g-4">
-                    @foreach (var item in Model.Resortt)
+                    @foreach (var item in re.All)
                     {
                         <div class="col-lg-4 col-md-6">
                             <div class="property-item rounded overflow-hidden">
                                 <div class="position-relative overflow-hidden">
-                                    <a href=""><img class="img-fluid" src="/img/property-1.jpg" alt=""></a>
+                                    <a href=""><img class="img-fluid" src="/img/Hotel_Restaurant/@item.url" alt=""></a>
                                     <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
                                     <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
                                 </div>
@@ -322,10 +321,6 @@
                         </div>
                     }
 
-
-                    <div class="col-12 text-center">
-                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
-                    </div>
                 </div>
             </div>
         </div>

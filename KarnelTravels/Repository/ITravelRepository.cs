@@ -11,29 +11,125 @@ namespace KarnelTravels.Repository
             _context = context;
         }
 
+        public GetCar_Plane_Train GetAllTravleImg(string Ob, int page, int pageSize)
+        {
+            var totalItem = _context.TblTravels.Count();
+            var TotalPages = (int)Math.Ceiling((double)(totalItem) / pageSize);
+            var query = _context.TblTravels.Skip((page - 1) * pageSize).Take(pageSize)
+                .Select(a => new ViewTravelImg
+                {
+                    Description = a.Description,
+                    Name = a.Name,
+                    Price = a.Price,
+                    SpotDeparture = a.SpotDeparture,
+                    SpotDestination = a.SpotDestination,
+                    Status = a.Status,
+                    TransCategoryId = a.TransCategoryId,
+                    TravelId = a.TravelId,
+                    url = (from b in _context.TblImageUrls where b.ObjectId == a.TravelId && b.UrlObject == Ob select b.Url).FirstOrDefault()
+                }).ToList();
+            return new GetCar_Plane_Train
+            {
+                PageSize = pageSize,
+
+                CurrentPage = page,
+                TotalPages = TotalPages,
+                All = query
+            };
+        }
         public IEnumerable<TblTravel> GetAllTran()
         {
             var tran = _context.TblTravels.ToList();
             return tran;
         }
-        public IEnumerable<TblTravel> GetAllCar()
+        public IEnumerable<ViewTravelImg> GetAllCar(string Ob)
         {
-            var car = _context.TblTravels.Where(c => c.TransCategoryId == 1).ToList();
-            return car;
+            var ls = from a in _context.TblTravels.Where(t => t.TransCategoryId == 1)
+                     select new ViewTravelImg
+                     {
+                         Name = a.Name,
+                         ImageLinkId = a.ImageLinkId,
+                         Description = a.Description,
+                         Price = a.Price,
+                         SpotDeparture = a.SpotDeparture,
+                         SpotDestination = a.SpotDestination,
+                         Status = a.Status,
+                         TransCategoryId = a.TransCategoryId,
+                         TravelId = a.TravelId,
+
+                         url = (from b in _context.TblImageUrls where b.ObjectId == a.TravelId && b.UrlObject == Ob select b.Url).FirstOrDefault()
+                     };
+            return ls;
+            
         }
 
-        public IEnumerable<TblTravel> GetAllPlane()
+        public IEnumerable<ViewTravelImg> GetAllPlane(string Ob)
         {
-            var plane = _context.TblTravels.Where(c => c.TransCategoryId == 3).ToList();
-            return plane;
+            var ls = from a in _context.TblTravels.Where(t => t.TransCategoryId == 3)
+                     select new ViewTravelImg
+                     {
+                         Name = a.Name,
+                         ImageLinkId = a.ImageLinkId,
+                         Description = a.Description,
+                         Price = a.Price,
+                         SpotDeparture = a.SpotDeparture,
+                         SpotDestination = a.SpotDestination,
+                         Status = a.Status,
+                         TransCategoryId = a.TransCategoryId,
+                         TravelId = a.TravelId,
+
+                         url = (from b in _context.TblImageUrls where b.ObjectId == a.TravelId && b.UrlObject == Ob select b.Url).FirstOrDefault()
+                     };
+            return ls;
         }
 
         
 
-        public IEnumerable<TblTravel> GetAllTrain()
+        public IEnumerable<ViewTravelImg> GetAllTrain(string Ob)
         {
-            var train = _context.TblTravels.Where(c => c.TransCategoryId == 2).ToList();
-            return train;
+            var ls = from a in _context.TblTravels.Where(t => t.TransCategoryId == 2)
+                     select new ViewTravelImg
+                     {
+                         Name = a.Name,
+                         ImageLinkId = a.ImageLinkId,
+                         Description = a.Description,
+                         Price = a.Price,
+                         SpotDeparture = a.SpotDeparture,
+                         SpotDestination = a.SpotDestination,
+                         Status = a.Status,
+                         TransCategoryId = a.TransCategoryId,
+                         TravelId = a.TravelId,
+
+                         url = (from b in _context.TblImageUrls where b.ObjectId == a.TravelId && b.UrlObject == Ob select b.Url).FirstOrDefault()
+                     };
+            return ls;
+        }
+
+        public ViewTravelImg GetTblTravelImgById(int id, string Ob)
+        {
+            // Combine filtering and projection into a single query for efficiency
+            var viewTravelImg = _context.TblTravels
+                .Where(t => t.TravelId == id)
+                .Select(a => new ViewTravelImg
+                {
+                    TravelId=a.TravelId,
+                    Name = a.Name,
+                    Description = a.Description,
+                    Price = a.Price,
+                    SpotDeparture = a.SpotDeparture,
+                    SpotDestination = a.SpotDestination,
+                    Status = a.Status,
+                    TransCategoryId = a.TransCategoryId,
+                    ImageLinkId=a.ImageLinkId,
+                    
+                    url = _context.TblImageUrls
+                        .Where(b => b.ObjectId == a.TravelId && b.UrlObject == Ob)
+                        .Select(b => b.Url)
+                        .FirstOrDefault()
+                })
+                .FirstOrDefault();
+
+            return viewTravelImg;
         }
 
         public IEnumerable<TblTransportation> GetAllTransportation()
@@ -89,9 +185,24 @@ namespace KarnelTravels.Repository
                 }
             }
         }
-        public IEnumerable<TblTravel>SpotSearch(int tran, int spot , int spot1)
+        public IEnumerable<ViewTravelImg> SpotSearch(string Ob,int tran, int spot , int spot1)
         {
-            var ls = _context.TblTravels.Where(s => s.SpotDeparture == spot && s.SpotDestination == spot1 && s.TransCategoryId == tran).ToList();
+
+            var ls = from a in _context.TblTravels.Where(s => s.SpotDeparture == spot && s.SpotDestination == spot1 && s.TransCategoryId == tran)
+                        select new ViewTravelImg
+            {
+                Name = a.Name,
+                ImageLinkId = a.ImageLinkId,
+                Description = a.Description,
+                Price = a.Price,
+                SpotDeparture = a.SpotDeparture,
+                SpotDestination = a.SpotDestination,
+                Status = a.Status,
+                TransCategoryId = a.TransCategoryId,
+                TravelId = a.TravelId,
+
+                url = (from b in _context.TblImageUrls where b.ObjectId == a.TravelId && b.UrlObject == Ob select b.Url).FirstOrDefault()
+            };
             return ls;
         }
         public IEnumerable<TblTravel> SearchTravel( string keyWord)

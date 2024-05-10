@@ -131,24 +131,29 @@ namespace KarnelTravels.Controllers
                 return RedirectToAction("TravellingSightView"); // Redirect to a view displaying all tourist places
             }
         }
-        public IActionResult TravellingHotelView()
+        public IActionResult TravellingHotelView(int page = 1 , int pageSize = 6)
         {
+            string a = "Hotel_Restaurant";
             IHotelRepository hotelRepository = new IHotelRepository(_context);
-            GetHotel_Res_Re getHotel_Res_Re = new GetHotel_Res_Re();
-            var all = hotelRepository.GetAllHotel_Res_Re();
-            var hotel = hotelRepository.GetAllHotel();
-            var res = hotelRepository.GetAllRestaurant();
-            var re = hotelRepository.GetAllResort();
-            getHotel_Res_Re.All = all;
+            ViewHotelUser viewHotelAll = new ViewHotelUser();
+            var all = hotelRepository.GetAllHotel_Res_Re(a,page,pageSize);
+            var hotel = hotelRepository.GetAllHotel(a,page,pageSize);
+            var res = hotelRepository.GetAllRestaurant(a, page, pageSize);
+            var re = hotelRepository.GetAllResort(a, page, pageSize);
+            /*getHotel_Res_Re.All = all;
             getHotel_Res_Re.HotelS = hotel;
             getHotel_Res_Re.Restaurants = res;
-            getHotel_Res_Re.Resortt = re;
-            
-            return View("User/TravellingHotelView",getHotel_Res_Re);
+            getHotel_Res_Re.Resortt = re;*/
+            ViewBag.all = all;
+            ViewBag.hotel = hotel;
+            ViewBag.res = res;
+            ViewBag.re = re;
+            return View("User/TravellingHotelView");
         }
 
         public IActionResult TravellingHotelViewSearch(string keyWord)
         {
+            string a = "Hotel_Restaurant";
             IHotelRepository hotelRepository = new IHotelRepository(_context);
             if (string.IsNullOrEmpty(keyWord))
             {
@@ -157,7 +162,7 @@ namespace KarnelTravels.Controllers
             else
             {
                 SearchViewModel searchViewModel = new SearchViewModel();
-                var q = hotelRepository.SearchHotel(keyWord);
+                var q = hotelRepository.SearchHotel(keyWord,a);
                 searchViewModel.HotelRestaurants = q;
                 return View("User/TravellingHotelViewSearch", searchViewModel);
 
@@ -168,26 +173,28 @@ namespace KarnelTravels.Controllers
         {
             return View("User/TravellingRestaurantView");
         }
-
-        public IActionResult TravellingPackageView()
+        public IActionResult TravellingPackageView(int page  = 1 , int pageSize = 6 )
         {
             ITourPackageRepository tourPackageRepository = new ITourPackageRepository(_context);
             GetAllPack getAllPack = new GetAllPack();
-            var all = tourPackageRepository.GetAllPackage();
-            getAllPack.Packages = all;
-            return View("User/TravellingPackageView", getAllPack);
+            string a = "Tour_Package";
+            var all = tourPackageRepository.GetAllPackImg(a , page , pageSize);
+            
+            return View("User/TravellingPackageView", all);
         }
         public IActionResult TravellingPackageViewSearch(string keyWord)
         {
+            string a = "Tour_Package";
             if (keyWord == null)
             {
                 return Redirect("User/TravellingPackageView");
             }
             else
             {
-                SearchViewModel searchViewModel = new SearchViewModel();
+
                 ITourPackageRepository tourPackageRepository = new ITourPackageRepository(_context);
-                var pack = tourPackageRepository.SearchTourPackages(keyWord);
+                SearchViewModel searchViewModel = new SearchViewModel();
+                var pack = tourPackageRepository.SearchTourPackages(keyWord ,a);
                 searchViewModel.ToursPackage = pack;
                 return View("User/TravellingPackageViewSearch", searchViewModel);
             }
@@ -255,26 +262,33 @@ namespace KarnelTravels.Controllers
             return View();
         }
 
-        public IActionResult TravellingTransportView()
+        public IActionResult TravellingTransportView(int page = 1 , int pageSize = 6)
         {
+            string a = "Travel";
             GetCar_Plane_Train getTran = new GetCar_Plane_Train();
             ITravelRepository travelRepository = new ITravelRepository(_context);
             ISpotRepository spotRepository = new ISpotRepository(_context);
             var spot = spotRepository.GetAllSpot();
-            var all = travelRepository.GetAllTrain();
-            var car = travelRepository.GetAllCar();
-            var plane = travelRepository.GetAllPlane();
-            var train = travelRepository.GetAllTrain();
+            var all = travelRepository.GetAllTravleImg(a,page,pageSize);
+            var car = travelRepository.GetAllCar(a);
+            var plane = travelRepository.GetAllPlane(a);
+            var train = travelRepository.GetAllTrain(a);
             var Transportation = travelRepository.GetAllTransportation();
-            getTran.All = all;
+            
             getTran.Cars = car;
             getTran.Spots = spot;
+            getTran.Planes = plane;
+            getTran.Trains = train;
+            
             getTran.Transportations = Transportation;
+            ViewBag.all = all;
             return View("User/TravellingTransportView", getTran);
         }
 
         public IActionResult TravellingTransportViewSearch(int tran,int spot,int spot1)
         {
+
+            string a = "Travel";
             ITravelRepository travelRepository = new ITravelRepository(_context);
             GetCar_Plane_Train getTran = new GetCar_Plane_Train();
             ISpotRepository spotRepository = new ISpotRepository(_context);
@@ -283,7 +297,7 @@ namespace KarnelTravels.Controllers
             var Transportation = travelRepository.GetAllTransportation();
             getTran.Spots = spotall;
             getTran.Transportations = Transportation;
-            var q = travelRepository.SpotSearch(tran, spot, spot1);
+            var q = travelRepository.SpotSearch(a,tran, spot, spot1);
             getTran.All = q;
             return View("User/TravellingTransportViewSearch", getTran);
         }
@@ -418,25 +432,45 @@ namespace KarnelTravels.Controllers
         public IActionResult PackageDetails()
         {
             int id = int.Parse(Request.Query["idt"]);
+            string a = "Tour_Package";
             ITourPackageRepository tourPackageRepository = new ITourPackageRepository(_context);
-            var pack = tourPackageRepository.GetPackageById(id);
-            ViewBag.pack=pack;
+            ImageRepository imageRepository = new ImageRepository(_context);
+            ViewPackageUser viewPackageUser = new ViewPackageUser();
+            var img = imageRepository.GetAllImg(id, a);
+            var pack = tourPackageRepository.GetTblPackImgById(id, a);
 
-            return View("User/PackageDetails");
+
+            viewPackageUser.packageImg = pack;
+            viewPackageUser.Images = img;
+
+            return View("User/PackageDetails",viewPackageUser);
         }
 
         public IActionResult HotelDetails()
         {
+            string a = "Hotel_Restaurant";
             int id = int.Parse(Request.Query["idt"]);
             IHotelRepository hotelRepository = new IHotelRepository(_context);
-            
-            var Hotel = hotelRepository.GetTblHotelRestaurantById(id);
-            ViewBag.Hotel = Hotel;
-            return View("User/HotelDetails");
+            ViewHotelUser viewHotelUser = new ViewHotelUser();
+            ImageRepository imageRepository = new ImageRepository(_context);
+            var img = imageRepository.GetAllImg(id, a);
+            var hotels = hotelRepository.GetTblHotelImgById(id, a);
+            viewHotelUser.Hotels = hotels;
+            viewHotelUser.Images = img;
+            return View("User/HotelDetails",viewHotelUser);
         }
         public IActionResult TransportDetails()
         {
-            return View("User/TransportDetails");
+            string a = "Travel";
+            int id = int.Parse(Request.Query["idt"]);
+            ITravelRepository travelRepository = new ITravelRepository(_context);
+            ViewTravelUser viewTravelUser = new ViewTravelUser();
+            ImageRepository imgRepository = new ImageRepository(_context);
+            var img = imgRepository.GetAllImg(id, a);
+            var travel = travelRepository.GetTblTravelImgById(id, a);
+            viewTravelUser.travelImg = travel;
+            viewTravelUser.tblImageUrls = img;
+            return View("User/TransportDetails", viewTravelUser);
         }
         public IActionResult RestaurantDetails()
         {
