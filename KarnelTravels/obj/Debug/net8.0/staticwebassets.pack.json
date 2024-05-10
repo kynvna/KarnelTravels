@@ -16197,43 +16197,63 @@
       "PackagePath": "staticwebassets\\img\\Tourist_Place\\Flower4.jpg"
     },
     {
-<<<<<<< HEAD
-      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\VietJet1.jpg",
-=======
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\638505996021068571.jpg",
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638505996021068571.jpg",
       "PackagePath": "staticwebassets\\img\\Travel\\638505996021068571.jpg"
     },
     {
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\638506253702356913.jpg",
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638506253702356913.jpg",
       "PackagePath": "staticwebassets\\img\\Travel\\638506253702356913.jpg"
     },
     {
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\638506841629085839.jpg",
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638506841629085839.jpg",
       "PackagePath": "staticwebassets\\img\\Travel\\638506841629085839.jpg"
     },
     {
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\638507121906880097.jpg",
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638507121906880097.jpg",
       "PackagePath": "staticwebassets\\img\\Travel\\638507121906880097.jpg"
     },
     {
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\638507141106588703.jpg",
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638507141106588703.jpg",
       "PackagePath": "staticwebassets\\img\\Travel\\638507141106588703.jpg"
     },
     {
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\638507141106801717.jpg",
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638507141106801717.jpg",
       "PackagePath": "staticwebassets\\img\\Travel\\638507141106801717.jpg"
     },
     {
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\638507157234508650.jpg",
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638507157234508650.jpg",
       "PackagePath": "staticwebassets\\img\\Travel\\638507157234508650.jpg"
     },
     {
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\638507162736556442.jpg",
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638507162736556442.jpg",
       "PackagePath": "staticwebassets\\img\\Travel\\638507162736556442.jpg"
     },
     {
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\VietJet1.jpg",
->>>>>>> origin/ky
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638508670261564404.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\638508670261564404.jpg"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638509277643675590.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\638509277643675590.jpg"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638509277643742397.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\638509277643742397.jpg"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638509277643773820.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\638509277643773820.jpg"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638509277643801265.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\638509277643801265.jpg"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638509277643808903.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\638509277643808903.jpg"
+    },
+    {
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\VietJet1.jpg",
       "PackagePath": "staticwebassets\\img\\Travel\\VietJet1.jpg"
     },
     {
@@ -16249,7 +16269,10 @@
       "PackagePath": "staticwebassets\\img\\Travel\\VietnamAirlines2.jpg"
     },
     {
-<<<<<<< HEAD
+      "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\banana.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\banana.jpg"
+    },
+    {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\durian.jpg",
       "PackagePath": "staticwebassets\\img\\Travel\\durian.jpg"
     },
@@ -16259,21 +16282,6 @@
     },
     {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\limousine1.jpg",
-=======
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\banana.jpg",
-      "PackagePath": "staticwebassets\\img\\Travel\\banana.jpg"
-    },
-    {
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\durian.jpg",
-      "PackagePath": "staticwebassets\\img\\Travel\\durian.jpg"
-    },
-    {
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\grape.jpg",
-      "PackagePath": "staticwebassets\\img\\Travel\\grape.jpg"
-    },
-    {
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\limousine1.jpg",
->>>>>>> origin/ky
       "PackagePath": "staticwebassets\\img\\Travel\\limousine1.jpg"
     },
     {
