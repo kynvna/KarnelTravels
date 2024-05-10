@@ -10,28 +10,26 @@
             <div class="col-md-10">
                 <div class="row g-2">
                     <div class="col-md-4">
-                        <input type="text" class="form-control border-0 py-3" placeholder="What are you looking for ?">
+                        <input type="text" id="searchInput" class="form-control border-0 py-3" placeholder="What are you looking for ?">
                     </div>
-                    <div class="col-md-4">
-                        <select class="form-select border-0 py-3">
-                            <option selected>Search by location</option>
+                    @* <div class="col-md-4">
+                        <select id="locationSelect" class="form-select border-0 py-3">
+                            <option value="" selected>Search by location</option>
                             <option value="1">Property Type 1</option>
                             <option value="2">Property Type 2</option>
                             <option value="3">Property Type 3</option>
                         </select>
-                    </div>
+                    </div> *@
                     <div class="col-md-4">
-                        <select class="form-select border-0 py-3">
-                            <option selected>Search by spots</option>
-                            <option value="1">Location 1</option>
-                            <option value="2">Location 2</option>
-                            <option value="3">Location 3</option>
+                        <select id="spotsSelect" class="form-select border-0 py-3">
+                            <option value="" selected>Search by spots</option>
+                            <!-- This will be populated dynamically with the spot names and IDs -->
                         </select>
                     </div>
                 </div>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-dark border-0 w-100 py-3">Find</button>
+                <button id="searchButton" class="btn btn-dark border-0 w-100 py-3">Find</button>
             </div>
         </div>
     </div>
@@ -140,3 +138,122 @@
     </div>
 </div>
 <!-- Property List End -->
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">Our Clients Say!</h1>
+            <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+        </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <div class="testimonial-item bg-light rounded p-3">
+                <div class="bg-white border rounded p-4">
+                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="/img/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                        <div class="ps-3">
+                            <h6 class="fw-bold mb-1">Client Name</h6>
+                            <small>Profession</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-3">
+                <div class="bg-white border rounded p-4">
+                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="/img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                        <div class="ps-3">
+                            <h6 class="fw-bold mb-1">Client Name</h6>
+                            <small>Profession</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-3">
+                <div class="bg-white border rounded p-4">
+                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="/img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                        <div class="ps-3">
+                            <h6 class="fw-bold mb-1">Client Name</h6>
+                            <small>Profession</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+<script>
+    document.getElementById("searchButton").addEventListener("click", function () {
+        // Retrieve values from input and selects
+        const searchText = document.getElementById("searchInput").value;
+        // const locationId = document.getElementById("locationSelect").value;
+        const spotsId = document.getElementById("spotsSelect").value;
+
+        // Construct data object for the AJAX request
+        const data = {
+            searchText: searchText,
+            // locationId: locationId ? parseInt(locationId) : null,
+            spotsId: spotsId ? parseInt(spotsId) : null
+        };
+
+        // Perform an AJAX request using jQuery's $.ajax method
+        $.ajax({
+            url: '/Home/SearchNews', // Adjust this URL to match your route
+            method: 'POST',
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+            data: $.param(data), // Convert the object to a URL-encoded string for POST
+            success: function (response) {
+                // Replace only the #tab-content-news section with the partial view response
+                document.getElementById("tab-content-news").innerHTML = response;
+            },
+            error: function (xhr, status, error) {
+                console.error("Search request failed:", status, error);
+                document.getElementById("tab-content-news").innerHTML = "<p>An error occurred while searching for news. Please try again later.</p>";
+            }
+        });
+    });
+
+
+    // Execute this when the DOM has fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+        // Fetch the list of spots via an AJAX GET request
+        $.ajax({
+            url: '/Home/GetAllSpots', // Adjust this URL to match your controller action
+            method: 'GET',
+            success: function (data) {
+                // Log data to understand its structure
+                console.log("Fetched spots data:", data);
+
+                // Verify data is an array of objects and populate the spots dropdown dynamically
+                if (Array.isArray(data)) {
+                    const spotsSelect = document.getElementById("spotsSelect");
+                    console.log("Spots select element:", spotsSelect);
+
+                    // Clear existing options and add the default option
+                    spotsSelect.innerHTML = '<option value="" selected>Search by spots</option>';
+
+                    // Add new options from the fetched spots data
+                    data.forEach(function (spot) {
+                        console.log("Creating option for spot:", spot);
+                        const option = document.createElement("option");
+                        option.value = spot.id; // Adjust property name to match your data
+                        option.textContent = spot.name; // Ensure this matches the JSON data properties
+                        spotsSelect.appendChild(option);
+                    });
+                } else {
+                    console.error("Unexpected data format:", data);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error("Error fetching spots:", error);
+            }
+        });
+    });
+
+
+
+</script>
