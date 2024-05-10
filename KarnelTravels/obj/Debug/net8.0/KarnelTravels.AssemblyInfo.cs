@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KarnelTravels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1efacd9f8a60d07135383dc97d9711c27b695d70")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d24a956c7efea1e68680a9cf4557a49fb514f447")]
->>>>>>> parent of abea5ee (DangVNH - Commit truoc khi merge code anh Ky - 10/05/2024)
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0fadbfc2087237f6d6d57e4e7a5bbbba33a3c49")]
 [assembly: System.Reflection.AssemblyProductAttribute("KarnelTravels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KarnelTravels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
