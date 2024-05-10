@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "Hash": "UCOBop0gB7dISNzGLcVcL4kA+MWd6YWxv8n9IjGIe/8=",
-=======
-  "Hash": "SwWnKzufgQI7eZMfz+8C4/jdz1vBo8UnaZDsPoU5AoI=",
->>>>>>> origin/ky
   "Source": "KarnelTravels",
   "BasePath": "_content/KarnelTravels",
   "Mode": "Default",
@@ -73323,7 +73319,6 @@
       "OriginalItemSpec": "wwwroot\\img\\header.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\638509278553163139.jpg",
       "SourceId": "KarnelTravels",
       "SourceType": "Discovered",
@@ -73553,9 +73548,6 @@
     },
     {
       "Identity": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\exterior.jpg",
-=======
-      "Identity": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\grape.jpg",
->>>>>>> origin/ky
       "SourceId": "KarnelTravels",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\SEM3\\KarnelTravels\\wwwroot\\",
@@ -77811,30 +77803,7 @@
       "OriginalItemSpec": "wwwroot\\img\\Travel\\638507162736556442.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638508670261564404.jpg",
-=======
-      "Identity": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\638508670261564404.jpg",
-      "SourceId": "KarnelTravels",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\",
-      "BasePath": "_content/KarnelTravels",
-      "RelativePath": "img/Travel/638508670261564404.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\Travel\\638508670261564404.jpg"
-    },
-    {
-      "Identity": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\banana.jpg",
->>>>>>> origin/ky
       "SourceId": "KarnelTravels",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\SEM3\\KarnelTravels\\wwwroot\\",

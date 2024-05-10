@@ -18,7 +18,8 @@ namespace KarnelTravels.Controllers
         private readonly IWebHostEnvironment _environment;
         private readonly KarnelTravelsContext _context;
         private readonly ILogger<AdminController> _logger;
-        private readonly string _storageFolderPath = "wwwroot/img";
+        private readonly IWebHostEnvironment _env;
+
         //Consolidate the constructors into one
         //Consolidate the constructors into one
         public AdminController(IWebHostEnvironment environment, KarnelTravelsContext context, ILogger<AdminController> logger, IWebHostEnvironment env)
@@ -1225,7 +1226,48 @@ namespace KarnelTravels.Controllers
         {
             var feedbacks = _context.TblFeedbacks.OrderByDescending(f => f.Date).ToList();
 
-            
+            //foreach (var feedback in feedbacks)
+            //{
+            //    switch (feedback.FeedbackObject)
+            //    {
+            //        case "Company":
+            //            // Simulate fetching company name based on ObjectId
+            //            feedback.ObjectName = "KerNal";
+            //            break;
+            //        case "Hotel_Restaurant":
+            //            // Fetch the matching record from the TblHotelRestaurants table
+            //            var hotelRestaurant = _context.TblHotelRestaurants
+            //                 .FirstOrDefault(h => h.HrId == feedback.ObjectId);
+
+            //            // Ensure that a result was found before accessing its properties
+            //            feedback.ObjectName = hotelRestaurant?.Name ?? "Unknown Hotel/Restaurant";
+            //            break;
+            //        case "Travel":
+            //            var travel = _context.TblTravels
+            //                 .FirstOrDefault(h => h.TravelId == feedback.ObjectId);
+
+            //            // Ensure that a result was found before accessing its properties
+            //            feedback.ObjectName = travel?.Name ?? "Unknown travel";
+            //            break;
+            //        case "Tourist_Place":
+            //            var touristplace = _context.TblTouristPlaces
+            //                 .FirstOrDefault(h => h.Id == feedback.ObjectId);
+
+            //            // Ensure that a result was found before accessing its properties
+            //            feedback.ObjectName = touristplace?.Name ?? "Unknown touristplace";
+            //            break;
+            //        case "Tour_Package":
+            //            var tourpackage = _context.TblTourPackages
+            //                 .FirstOrDefault(h => h.PackageId == feedback.ObjectId);
+
+            //            // Ensure that a result was found before accessing its properties
+            //            feedback.ObjectName = tourpackage?.Name ?? "Unknown tourpackage";
+            //            break;
+            //        default:
+            //            feedback.ObjectName = "Unknown";
+            //            break;
+            //    }
+            //}
             GetObjectname(feedbacks);
             return View(feedbacks);
         }
@@ -1650,91 +1692,42 @@ namespace KarnelTravels.Controllers
         }
 
 
-        public IActionResult GetAllImages()
-        {
-            var images=_context.TblImageUrls.ToList();
-            GetImageObjectname(images);
-            return View(images);
-        }
-        private void GetImageObjectname(List<TblImageUrl> images)
-        {
-            foreach (var image in images)
-            {
-                switch (image.UrlObject)
-                {
-                  
-                    case "Hotel_Restaurant":
-                        var hotelRestaurant = _context.TblHotelRestaurants
-                            .FirstOrDefault(h => h.HrId == image.ObjectId);
-                        image.ObjectName = hotelRestaurant?.Name ?? "Unknown Hotel/Restaurant";
-                        break;
-                    case "Travel":
-                        var travel = _context.TblTravels
-                            .FirstOrDefault(t => t.TravelId == image.ObjectId);
-                        image.ObjectName = travel?.Name ?? "Unknown travel";
-                        break;
-                    case "Tourist_Place":
-                        var touristplace = _context.TblTouristPlaces
-                            .FirstOrDefault(tp => tp.Id == image.ObjectId);
-                        image.ObjectName = touristplace?.Name ?? "Unknown touristplace";
-                        break;
-                    case "Tour_Package":
-                        var tourpackage = _context.TblTourPackages
-                            .FirstOrDefault(tp => tp.PackageId == image.ObjectId);
-                        image.ObjectName = tourpackage?.Name ?? "Unknown tourpackage";
-                        break;
-                    default:
-                        image.ObjectName = "Unknown";
-                        break;
-                }
-            }
-        }
-
-        //--------update image description-----------------//
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult UpdateImageDescription([FromBody] UpdateDescriptionModel model)
+        public IActionResult DeleteTouristPlace(int id)
         {
-            var imageUrl = _context.TblImageUrls.FirstOrDefault(i => i.Id == model.Id);
-            if (imageUrl == null)
+            try
             {
-                return NotFound();
+                var tour = _context.TblTouristPlaces.SingleOrDefault(x => x.Id == id);
+                if (tour != null)
+                {
+                    var imageUrls = _context.TblImageUrls.Where(i => i.ObjectId == id && i.UrlObject == "TblTourist_Place").ToList();
+                    foreach (var imageUrl in imageUrls)
+                    {
+                        _context.TblImageUrls.Remove(imageUrl);
+                        _context.SaveChanges();
+                        string path = _environment.WebRootPath;
+                        var imagePath = path + "/img/TblTourist_Place/" + imageUrl.Url;
+                        System.IO.File.Delete(imagePath);
+                    }
+
+
+                    _context.TblTouristPlaces.Remove(tour);
+                    _context.SaveChanges();
+                    TempData["successMessage"] = "Place deleted successfully";
+                }
+                else
+                {
+                    TempData["errorMessage"] = $"place with ID {id} not found";
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = $"Failed to delete tourist place: {ex.Message}";
             }
 
-            // Update the description
-            imageUrl.Description = model.Description;
-
-            // Save changes to the database
-            _context.SaveChanges();
-
-            return Ok();
+            return RedirectToAction("AdminTouristPlace");
         }
 
-        //delete an image//
-        [HttpGet]
-        public IActionResult DeleteImage(int id)
-        {
-            // Find the image record by Id
-            var image = _context.TblImageUrls.FirstOrDefault(i => i.Id == id);
-
-            if (image == null)
-            {
-                // If the image doesn't exist, return a 404 Not Found response
-                return NotFound();
-            }
-            //delete the file from appropriate folder
-            string filePath = Path.Combine(_storageFolderPath, image.UrlObject, image.Url);
-            if (System.IO.File.Exists(filePath))
-            {
-                System.IO.File.Delete(filePath);
-            }
-            // Remove the image from the database
-            _context.TblImageUrls.Remove(image);
-            _context.SaveChanges();
-
-            // Optionally, redirect to a listing page or another action after deletion
-            return RedirectToAction(nameof(GetAllImages)); // Adjust this action name accordingly
-        }
     }
 }

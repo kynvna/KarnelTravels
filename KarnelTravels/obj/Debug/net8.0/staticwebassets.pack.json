@@ -15509,7 +15509,6 @@
       "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\MercureDalatResort4.jpg"
     },
     {
-<<<<<<< HEAD
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Mùa Dalat Wellness Hotel1.jpg",
       "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Mùa Dalat Wellness Hotel1.jpg"
     },
@@ -15643,9 +15642,6 @@
     },
     {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\grape.jpg",
-=======
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\grape.jpg",
->>>>>>> origin/ky
       "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\grape.jpg"
     },
     {
@@ -16261,7 +16257,6 @@
       "PackagePath": "staticwebassets\\img\\Travel\\638507162736556442.jpg"
     },
     {
-<<<<<<< HEAD
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\638508670261564404.jpg",
       "PackagePath": "staticwebassets\\img\\Travel\\638508670261564404.jpg"
     },
@@ -16287,13 +16282,6 @@
     },
     {
       "Id": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\Travel\\VietJet1.jpg",
-=======
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\638508670261564404.jpg",
-      "PackagePath": "staticwebassets\\img\\Travel\\638508670261564404.jpg"
-    },
-    {
-      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Travel\\VietJet1.jpg",
->>>>>>> origin/ky
       "PackagePath": "staticwebassets\\img\\Travel\\VietJet1.jpg"
     },
     {
