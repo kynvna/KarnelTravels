@@ -7,7 +7,7 @@ public partial class TblTouristPlace
 {
     public int Id { get; set; }
 
-    public int? SportId { get; set; }
+    public int? SpotId { get; set; }
 
     public string? Name { get; set; }
 
