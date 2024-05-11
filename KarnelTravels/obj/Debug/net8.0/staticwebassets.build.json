@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DqdEyAHkunYxCLTyajN6fZ9aPq37Z52voYVN2fLY8Vc=",
+  "Hash": "EZjzbVmyqW7KGG6DZzVSnxaaJPoB+1vG9w5GDRzjIgo=",
   "Source": "KarnelTravels",
   "BasePath": "_content/KarnelTravels",
   "Mode": "Default",
@@ -75179,6 +75179,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\TblTourist_Place\\638506250393131246_board.png"
+    },
+    {
+      "Identity": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\638510131340824917_lb3.jpg",
+      "SourceId": "KarnelTravels",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SEM3\\KarnelTravels\\wwwroot\\",
+      "BasePath": "_content/KarnelTravels",
+      "RelativePath": "img/TblTourist_Place/638510131340824917_lb3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\TblTourist_Place\\638510131340824917_lb3.jpg"
     },
     {
       "Identity": "D:\\SEM3\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Back Beach1.jpg",

@@ -56,20 +56,26 @@
                     {
                         foreach (var place in spot.Value)
                         {
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="product_box">
-                                    <h4 class="bursh_text">@place.Name</h4>
-                                    <img src="~/img/TblTourist_Place/@place.ImageUrl" alt="Place Image" style="width: 100px; height: auto;" />
-                                    <!-- Mô tả hoặc các thông tin khác về địa điểm -->
-                                    <div class="btn_main">
-                                        <div class="buy_bt">
-                                            <ul>
-                                                <button class="btn btn-info btn-rounded" onclick="location.href='@Url.Action("SightDetails", "Home", new { id = place.Id })'">Detail</button>
-                                            </ul>
-                                        </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="~/img/TblTourist_Place/@place.ImageUrl"s alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">@place.Status</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">@place.Namespot</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">@place.Name</h5>
+                                        <a class="d-block h5 mb-2" href=""></a>
+                                        <button class="btn btn-info" onclick="location.href='@Url.Action("SightDetails", "Home", new { id = place.Id })'">Detail</button>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
                                     </div>
                                 </div>
                             </div>
+                            
                         }
                     }
                 </div>
