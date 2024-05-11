@@ -527,9 +527,54 @@ namespace KarnelTravels.Controllers
             // Return JSON indicating failure
             return Json(new { success = false });
         }
+        [HttpPost]
+        public IActionResult SearchNews(string searchText, int? spotsId)
+        {
+            // Query and filter the news data
+            var newsQuery = _context.TblNews.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(searchText))
+            {
+                newsQuery = newsQuery.Where(n => n.Description.Contains(searchText) || n.NewsDetail.Contains(searchText));
+            }
+
+            if (spotsId.HasValue)
+            {
+                newsQuery = newsQuery.Where(n =>
+                    (n.NewsObject == "Hotel_Restaurant" && _context.TblHotelRestaurants.Any(hr => hr.HrId == n.ObjectId && hr.SpotId == spotsId)) ||
+                    (n.NewsObject == "Tourist_Place" && _context.TblTouristPlaces.Any(tp => tp.Id == n.ObjectId && tp.SportId == spotsId)) ||
+                    (n.NewsObject == "Tour_Package" && _context.TblTourPackages.Any(tp => tp.PackageId == n.ObjectId && tp.SportId == spotsId)) ||
+                    (n.NewsObject == "Travel" && _context.TblTravels.Any(tt => tt.TravelId == n.ObjectId && tt.SpotDestination == spotsId))
+                );
+            }
+
+            // Select news data with image URLs
+            var newsList = newsQuery.Select(news => new TblNewsWithImageUrls
+            {
+                NewsItem = news,
+                ImageUrls = _context.TblImageUrls
+                    .Where(i => i.ObjectId == news.ObjectId && i.UrlObject == news.NewsObject)
+                    .ToList()
+            }).ToList();
+
+            // Return the partial view with filtered data
+            return PartialView("User/NewsListPartial", newsList);
+        }
 
 
+        //------get all spots----------------//
+        [HttpGet]
+        public JsonResult GetAllSpots()
+        {
+            var spots = _context.TblSpots
+                .Select(s => new { s.Id, s.Name }) // Adjust with actual column names
+                .ToList();
+
+            return Json(spots); // Return spots data as JSON
+        }
     }
 }
+
+
 
 

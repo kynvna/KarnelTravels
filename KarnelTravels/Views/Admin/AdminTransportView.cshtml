@@ -1,5 +1,5 @@
-﻿@{
-    ViewBag.Title = "FormCkeditor";
+﻿﻿@{
+    ViewBag.Title = "View All Transportation";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
@@ -8,32 +8,33 @@
     <a class="btn btn-info" href="/admin/ViewCreateAdminTransport">Create</a> &nbsp;
     <a class="btn btn-info" href="/admin/ViewUploadImageHotel">UpLoad Image</a>
 </div>
-@* <div>
-    <a href="/admin/ViewUploadImageHotel">UpLoadImage</a>
-</div> *@
-<div class="row">
-
-    @foreach(var item in Model.All)
-    {
-         <div class="card" style="width:250px;">
-             <img class="card-img-top" style="height:280px" src="~/img/Travel/@item.url" />
-            <div class="card-body">
-                <h4 class="card-title">@item.Name</h4>
-                <div class="text-muted card-subtitle">@item.Price</div>
-               @Html.Raw(item.Description) 
-                <button class="btn btn-default btn-sm">
-                    <i class="fa fa-plus"></i>
-                    <a href="/Admin/ViewEditAdminTransport?idt=@item.TravelId">Edit</a
-                </button>
-                
-               
-                 <button class="btn btn-default btn-sm">
-                    <i class="fa fa-plus"></i>
-                    <a href="/Admin/DeleteAdminTransport?idt=@item.TravelId">Delete</a
-                </button>
-            </div>
+<br />
+<div class="ibox">
+    <div class="ibox-head">
+        <h3 class="ibox-title">Transportation List</h3>
+    </div>
+    <div class="ibox-body">
+        <div class="card-group">
+            @foreach (var item in Model.All)
+            {
+                <div class="col-md-3 mt-1">
+                    <div class="card h-100">
+                        <img class="card-top-img" src="~/img/Travel/@item.url" height="400px" width="auto"/>
+                        <div class="card-body">
+                            <h5 class="card-title"><span><strong>Entity Name: </strong></span></h5>
+                            <h6 class="card-title"><span style="color:navy">@item.Name</span></h6>
+                            <hr />
+                            <div class="text-muted card-subtitle"><span><strong>Estimate Price: </strong></span>@item.Price</div>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-info" href="/Admin/ViewEditAdminTransport?idt=@item.TravelId"><i class="fa fa-plus"></i> Edit</a>
+                            <a class="btn btn-danger" href="/Admin/DeleteAdminTransport?idt=@item.TravelId"><i class="fa fa-plus"></i> Delete</a>
+                        </div>
+                    </div>
+                </div>
+            }
         </div>
-    }
+    </div>
 </div>
 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">

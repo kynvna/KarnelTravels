@@ -1,6 +1,6 @@
-﻿@{
+﻿﻿@{
     ViewData["Title"] = "News";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 @model KarnelTravels.Models.NewsViewModel
 <!-- Search Start -->
@@ -10,28 +10,26 @@
             <div class="col-md-10">
                 <div class="row g-2">
                     <div class="col-md-4">
-                        <input type="text" class="form-control border-0 py-3" placeholder="What are you looking for ?">
+                        <input type="text" id="searchInput" class="form-control border-0 py-3" placeholder="What are you looking for ?">
                     </div>
+                    @* <div class="col-md-4">
+                    <select id="locationSelect" class="form-select border-0 py-3">
+                    <option value="" selected>Search by location</option>
+                    <option value="1">Property Type 1</option>
+                    <option value="2">Property Type 2</option>
+                    <option value="3">Property Type 3</option>
+                    </select>
+                    </div> *@
                     <div class="col-md-4">
-                        <select class="form-select border-0 py-3">
-                            <option selected>Search by location</option>
-                            <option value="1">Property Type 1</option>
-                            <option value="2">Property Type 2</option>
-                            <option value="3">Property Type 3</option>
-                        </select>
-                    </div>
-                    <div class="col-md-4">
-                        <select class="form-select border-0 py-3">
-                            <option selected>Search by spots</option>
-                            <option value="1">Location 1</option>
-                            <option value="2">Location 2</option>
-                            <option value="3">Location 3</option>
+                        <select id="spotsSelect" class="form-select border-0 py-3">
+                            <option value="" selected>Search by spots</option>
+                            <!-- This will be populated dynamically with the spot names and IDs -->
                         </select>
                     </div>
                 </div>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-dark border-0 w-100 py-3">Find</button>
+                <button id="searchButton" class="btn btn-dark border-0 w-100 py-3">Find</button>
             </div>
         </div>
     </div>
@@ -75,36 +73,21 @@
                 <div class="row g-4">
                     @foreach (var item in Model.News)
                     {
-                        <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <a href="@Url.Action("NewsDetail", "Home", new { id = item.NewsItem.NewsId })" class="text-decoration-none">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <img src="@($"/img/{item.NewsItem.NewsObject}/{item.ImageUrls.FirstOrDefault()?.Url}")" alt="Description" style="width: 100%; height: auto;">
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">@item.NewsItem.NewsObject <span>news</span></div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <a class="d-block h5 mb-2" href="@Url.Action("NewsDetail", "Home", new { id = item.NewsItem.NewsId })">@item.NewsItem.Description</a>
-                                        <a>See more...</a>
-                                                    @* <ul>
-                                                    @foreach (var imageUrl in item.ImageUrls)
-                                                    {
-                                                    <li>@imageUrl.Url</li>
-                                                    }
-                                                    </ul> *@
-                                        
-                                    </div>
-                                    <br />
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-newspaper text-primary me-2"></i>@item.NewsItem.Date</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-check text-primary me-2"></i>@item.NewsItem.Status</small>
-                                    </div>
-                                </div>
+                                <img src="@($"/img/{item.NewsItem.NewsObject}/{item.ImageUrls.FirstOrDefault()?.Url}")" alt="Description" style="width: 100%; height: auto;">
+                                <h2>@item.NewsItem.Description</h2>
+                                @* <ul>
+                            @foreach (var imageUrl in item.ImageUrls)
+                            {
+                            <li>@imageUrl.Url</li>
+                            }
+                            </ul> *@
                             </a>
                         </div>
-                        
                     }
 
-                    
+
                 </div>
 
 
@@ -140,3 +123,74 @@
     </div>
 </div>
 <!-- Property List End -->
+<script>
+    document.getElementById("searchButton").addEventListener("click", function () {
+        // Retrieve values from input and selects
+        const searchText = document.getElementById("searchInput").value;
+        // const locationId = document.getElementById("locationSelect").value;
+        const spotsId = document.getElementById("spotsSelect").value;
+
+        // Construct data object for the AJAX request
+        const data = {
+            searchText: searchText,
+            // locationId: locationId ? parseInt(locationId) : null,
+            spotsId: spotsId ? parseInt(spotsId) : null
+        };
+
+        // Perform an AJAX request using jQuery's $.ajax method
+        $.ajax({
+            url: '/Home/SearchNews', // Adjust this URL to match your route
+            method: 'POST',
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+            data: $.param(data), // Convert the object to a URL-encoded string for POST
+            success: function (response) {
+                // Replace only the #tab-content-news section with the partial view response
+                document.getElementById("tab-content-news").innerHTML = response;
+            },
+            error: function (xhr, status, error) {
+                console.error("Search request failed:", status, error);
+                document.getElementById("tab-content-news").innerHTML = "<p>An error occurred while searching for news. Please try again later.</p>";
+            }
+        });
+    });
+
+
+    // Execute this when the DOM has fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+        // Fetch the list of spots via an AJAX GET request
+        $.ajax({
+            url: '/Home/GetAllSpots', // Adjust this URL to match your controller action
+            method: 'GET',
+            success: function (data) {
+                // Log data to understand its structure
+                console.log("Fetched spots data:", data);
+
+                // Verify data is an array of objects and populate the spots dropdown dynamically
+                if (Array.isArray(data)) {
+                    const spotsSelect = document.getElementById("spotsSelect");
+                    console.log("Spots select element:", spotsSelect);
+
+                    // Clear existing options and add the default option
+                    spotsSelect.innerHTML = '<option value="" selected>Search by spots</option>';
+
+                    // Add new options from the fetched spots data
+                    data.forEach(function (spot) {
+                        console.log("Creating option for spot:", spot);
+                        const option = document.createElement("option");
+                        option.value = spot.id; // Adjust property name to match your data
+                        option.textContent = spot.name; // Ensure this matches the JSON data properties
+                        spotsSelect.appendChild(option);
+                    });
+                } else {
+                    console.error("Unexpected data format:", data);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error("Error fetching spots:", error);
+            }
+        });
+    });
+
+
+
+</script>

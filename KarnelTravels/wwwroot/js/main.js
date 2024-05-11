@@ -1,6 +1,9 @@
 (function ($) {
     "use strict";
-
+ $(window).load(function() {
+ // executes when complete page is fully loaded, including all frames, objects and images
+ alert("window is loaded");
+});
     // Spinner
     var spinner = function () {
         setTimeout(function () {
@@ -10,7 +13,6 @@
         }, 1);
     };
     spinner();
-    
     
     // Initiate the wowjs
     new WOW().init();
@@ -25,7 +27,9 @@
         }
     });
     
-    
+
+
+ 
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
