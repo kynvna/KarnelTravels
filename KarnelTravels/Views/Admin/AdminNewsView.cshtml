@@ -18,9 +18,6 @@
                     <thead>
                         <tr>
                             <th>
-                                @Html.DisplayNameFor(model => model.ObjectId)
-                            </th>
-                            <th>
                                 @Html.DisplayNameFor(model => model.Description)
                             </th>
                             <th>
@@ -42,20 +39,32 @@
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td style="width: 90px;">
-                                    @Html.DisplayFor(modelItem => item.ObjectId)
-                                </td>
                                 <td >
                                     <a asp-controller="Home" asp-action="NewsDetail" asp-route-id="@item.NewsId">@Html.DisplayFor(modelItem => item.Description)</a>
                                 </td>
                                 <td>
-                                    <strong>@Html.DisplayFor(modelItem => item.Status)</strong>
+                                    @if (item.Status == "Active")
+                                    {
+                                        <strong style="color:limegreen">@Html.DisplayFor(modelItem => item.Status)</strong>
+                                    }
+                                    else
+                                    {
+                                        <strong style="color:red">@Html.DisplayFor(modelItem => item.Status)</strong>
+                                    }
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.NewsObject)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.HotNews)
+                                    @if (item.HotNews == 1)
+                                    {
+                                        <input type="checkbox" checked onclick="return false;" />
+                                    }
+                                    else
+                                    {
+                                        <input type="checkbox" onclick="return false;" />
+                                    }
+
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Date)

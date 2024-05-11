@@ -3,98 +3,110 @@
 
 }
 @model GetCar_Plane_Train;
-<div class="ibox">
-    <div class="ibox-head">
-        <h3 class="ibox-title">Creating new Transportation</h3>
-    </div>
-    <div class="ibox-body">
-        <form id="frmData" action="/admin/CreateAdminTransport" method="post" enctype="multipart/form-data">
-            <div>Name</div>
-            <input type="text" name="Name">
-            <div>Price</div>
-            <input type="text" name="Price">
-            <div>Diem di</div>
-            <select class="form-select border-0 py-3" name="spot">
-
-                <option selected>Chon</option>
-                @foreach (var item in Model.Spots)
-                {
-                    <option value="@item.Id">@item.Name</option>
-                }
-            </select>
-            <div>Diem Den</div>
-            <select class="form-select border-0 py-3" name="spot1">
-
-                <option selected>Chon</option>
-                @foreach (var item in Model.Spots)
-                {
-                    <option value="@item.Id">@item.Name</option>
-                }
-            </select>
-            <div>Phuong Tien</div>
-            
-            <select class="form-select border-0 py-3" name="Tran">
-
-                <option selected>Chon</option>
-                @foreach (var item in Model.Transportations)
-                {
-                    <option value="@item.CatId">@item.CatName</option>
-                }
-            </select>
-            <select id="hotelDropdown" name="selectObject">
-                @foreach (var item in Model.selectObject)
-                {
-                    <option value="@item.Text">@item.Text</option>
-                }
-            </select>
-            <div class="col-sm-10">
-                <input class="form-control" type="file" name="FileImg" multiple>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="ibox">
+            <div class="ibox-head">
+                <h3 class="ibox-title">Creating new Transportation</h3>
             </div>
+            <div class="ibox-body">
+                <form id="frmData" action="/admin/CreateAdminTransport" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <label>Transport Name: </label>
+                            <input type="text" class="form-control" name="Name" placeholder="Please enter transporation name -- Ex: AirBus A350"> 
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Accumulate Price: </label>
+                            <input type="number" class="form-control" name="Price" placeholder="Please enter accumulate price">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <select class="form-control" name="spot">
+                                <option selected>---Select Departure Spot---</option>
+                                @foreach (var item in Model.Spots)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <select class="form-control" name="spot1">
+                                <option selected>---Select Arrival Spot---</option>
+                                @foreach (var item in Model.Spots)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <select class="form-control" id="hotelDropdown" name="selectObject">
+                                @foreach (var item in Model.selectObject)
+                                {
+                                    <option value="@item.Text">@item.Text</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <input class="form-control" type="file" name="FileImg" multiple>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div id="editor"></div>
+                            <input type="hidden" name="mydata" id="mydata" value="" />
+                            @Html.CheckBoxFor(Model => Model.Active)
+                            <input type="submit" name="btnSave" id="btnSave" value="Save" />
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <script src="~/ckeditor/ckeditor.js" type="text/javascript"></script>
+            @section scripts {
 
-            <div id="editor"></div>
-            <input type="hidden" name="mydata" id="mydata" value="" />
-            @Html.CheckBoxFor(Model => Model.Active)
-            <input type="submit" name="btnSave" id="btnSave" value="Save" />
-        </form>
-    </div>
-    <script src="~/ckeditor/ckeditor.js" type="text/javascript"></script>
-    @section scripts {
+                <script>
+                    CKEDITOR.replace('editor');
+                    //window.onload = function () {
 
-        <script>
-            CKEDITOR.replace('editor');
-            //window.onload = function () {
+                    //};
+                    $(document).ready(function (e) {
 
-            //};
-            $(document).ready(function (e) {
+                        $("#btnSave").click(function (e) {
+                            e.preventDefault();
+                            var dt = CKEDITOR.instances['editor'].getData();
+                            $("#mydata").val(dt);
+                            $("#frmData").submit();
+                        });
+                    });
+                    var pathImg = "";
+                    window.onload = () => {
+                        var lsImage = document.querySelectorAll(".pic-rect>img");
 
-                $("#btnSave").click(function (e) {
-                    e.preventDefault();
-                    var dt = CKEDITOR.instances['editor'].getData();
-                    $("#mydata").val(dt);
-                    $("#frmData").submit();
-                });
-            });
-            var pathImg = "";
-            window.onload = () => {
-                var lsImage = document.querySelectorAll(".pic-rect>img");
-
-                for (i = 0; i < lsImage.length; i++) {
-                    lsImage[i].onclick = (event) => {
-                        var current_img = event.target;
-                        pathImg = current_img.src;
-                    }
-                }
-                setInterval(() => {
-                    var q = document.querySelector("#cke_103_textInput");
-                    if (q != null) {
-                        if (q.value == "") {
-                            q.value = pathImg;
-                            pathImg = "";
+                        for (i = 0; i < lsImage.length; i++) {
+                            lsImage[i].onclick = (event) => {
+                                var current_img = event.target;
+                                pathImg = current_img.src;
+                            }
                         }
+                        setInterval(() => {
+                            var q = document.querySelector("#cke_103_textInput");
+                            if (q != null) {
+                                if (q.value == "") {
+                                    q.value = pathImg;
+                                    pathImg = "";
+                                }
 
+                            }
+                        }, 100);
                     }
-                }, 100);
+                </script>
             }
-        </script>
-    }
+        </div>
+    </div>
+    <div class="col-md-3"></div>
 </div>

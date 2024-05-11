@@ -1,4 +1,4 @@
-﻿@{
+﻿﻿@{
     ViewData["Title"] = "Package Tours";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var ls = ViewBag.all as GetCar_Plane_Train;
@@ -13,7 +13,7 @@
                     <div class="row g-2">
                         <div class="col-md-4">
                             <select class="form-select border-0 py-3" name="tran">
-                                <option selected>Chon Phuong Tien</option>
+                                <option selected>--Pick A Mean Of Transport--</option>
                                 @foreach (var item in Model.Transportations)
                                 {
                                     <option value="@item.CatId">@item.CatName</option>
@@ -23,7 +23,7 @@
 
                         <div class="col-md-4">
                             <select class="form-select border-0 py-3" name="spot">
-                                <option selected>Chon Diem Di</option>
+                                <option selected>--Select Departure Spot--</option>
                                 @foreach (var item in Model.Spots)
                                 {
                                     <option value="@item.Id">@item.Name</option>
@@ -32,7 +32,7 @@
                         </div>
                         <div class="col-md-4">
                             <select class="form-select border-0 py-3" name="spot1">
-                                <option selected>Chon Diem Den</option>
+                                <option selected>--Select Arrival Spot--</option>
                                 @foreach (var item in Model.Spots)
                                 {
                                     <option value="@item.Id">@item.Name</option>
@@ -40,12 +40,10 @@
 
                             </select>
                         </div>
-
-
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <button class="btn btn-dark border-0 w-100 py-3">Find</button>
+                    <button class="btn btn-dark border-0 w-100 py-3">Filter</button>
                 </div>
             </div>
         </form>
@@ -65,7 +63,7 @@
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
                 <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
                     <li class="nav-item me-2">
-                        <a class="btn btn-outline-danger active" data-bs-toggle="pill" href="#tab-1">Hot</a>
+                        <a class="btn btn-outline-danger active" data-bs-toggle="pill" href="#tab-1">Recommend</a>
                     </li>
                     <li class="nav-item me-2">
                         <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-2">Cars</a>
@@ -74,7 +72,7 @@
                         <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Plane</a>
                     </li>
                     <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Train</a>
+                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-4">Train</a>
                     </li>
                 </ul>
             </div>
@@ -185,11 +183,6 @@
                         </div>
 
                     }
-
-
-                    <div class="col-12 text-center">
-                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
-                    </div>
                 </div>
             </div>
             <div id="tab-3" class="tab-pane fade show p-0">
@@ -217,10 +210,6 @@
                         </div>
 
                     }
-
-                    <div class="col-12 text-center">
-                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
-                    </div>
                 </div>
             </div>
             <div id="tab-4" class="tab-pane fade show p-0">
@@ -248,11 +237,6 @@
                             </div>
                         </div>
                     }
-
-
-                    <div class="col-12 text-center">
-                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -260,51 +244,3 @@
     </div>
 </div>
 <!-- Property List End -->
-<!-- Testimonial Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h1 class="mb-3">Our Clients Say!</h1>
-            <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-        </div>
-        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-            <div class="testimonial-item bg-light rounded p-3">
-                <div class="bg-white border rounded p-4">
-                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                    <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded" src="/img/testimonial-1.jpg" style="width: 45px; height: 45px;">
-                        <div class="ps-3">
-                            <h6 class="fw-bold mb-1">Client Name</h6>
-                            <small>Profession</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item bg-light rounded p-3">
-                <div class="bg-white border rounded p-4">
-                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                    <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded" src="/img/testimonial-2.jpg" style="width: 45px; height: 45px;">
-                        <div class="ps-3">
-                            <h6 class="fw-bold mb-1">Client Name</h6>
-                            <small>Profession</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item bg-light rounded p-3">
-                <div class="bg-white border rounded p-4">
-                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                    <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded" src="/img/testimonial-3.jpg" style="width: 45px; height: 45px;">
-                        <div class="ps-3">
-                            <h6 class="fw-bold mb-1">Client Name</h6>
-                            <small>Profession</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->

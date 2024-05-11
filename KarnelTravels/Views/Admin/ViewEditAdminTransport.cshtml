@@ -44,7 +44,7 @@
                 <div class="form-group col-md-4">
                     <label>Arrival Spot</label>
                     <select class="form-control" name="spot">
-                        <option selected value="@travel.SpotDestination">---Select Spot---</option>
+                        <option selected>---Select Spot---</option>
                         @foreach (var item in Model.Spots)
                         {
                             <option value="@item.Id">@item.Name</option>
@@ -56,7 +56,7 @@
                 <div class="form-group col-md-6">
                     <label>Transportation</label>
                     <select class="form-control" name="Tran">
-                        <option selected value="@travel.TransCategoryId">--Select means of transport---</option>
+                        <option selected">--Select means of transport---</option>
                         @foreach (var item in Model.Transportations)
                         {
                             <option value="@item.CatId">@item.CatName</option>

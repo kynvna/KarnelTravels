@@ -206,98 +206,117 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<div class="ibox">
-    <div class="ibox-head">
-        <h1 class="ibox-title">Create New View</h1>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="ibox">
+            <div class="ibox-body">
+                <form asp-action="CreateNews" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label asp-for="News.NewsItem.NewsObject">Category <span class="text-muted" style="font-size:10px">- Select news category</span></label>
+                            <select asp-for="News.NewsItem.NewsObject" asp-items="Model.NewsObjectList" class="form-control">
+                                <option value="">---Select News Category---</option>
+                            </select>
+                            
+                            <span asp-validation-for="News.NewsItem.NewsObject" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="objectNameDropdown">Target Object <span class="text-muted" style="font-size:10px">- Select news category first to reveal target objects</span></label>
+                            <select id="objectNameDropdown" name="News.NewsItem.ObjectId" class="form-control">
+                                <option value="">---Select Category Before Browsing---</option>
+                            </select>
+                            <span asp-validation-for="News.NewsItem.ObjectId" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label asp-for="News.NewsItem.Description">Description <span class="text-muted" style="font-size:10px">- Enter some descriptions</span></label>
+                            <input asp-for="News.NewsItem.Description" class="form-control" />
+                            <span asp-validation-for="News.NewsItem.Description" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label asp-for="News.NewsItem.Status">Status <span class="text-muted" style="font-size:10px">- Select status Active/DeActive</span></label>
+                            <select asp-for="News.NewsItem.Status" asp-items="Model.StatusList" class="form-control">
+                                <option value="">-- Select Status --</option>
+                            </select>
+                            <span asp-validation-for="News.NewsItem.Status" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label asp-for="News.NewsItem.HotNews">Hot News </label>
+                            <span class="text-muted" style="font-size:10px">- Put this in hot news ?</span>
+
+                            <div>
+                                <input asp-for="News.NewsItem.HotNews" type="radio" value="1" id="hotNewsYes">
+                                <label for="hotNewsYes">Yes</label> &nbsp;&nbsp;
+                                <input asp-for="News.NewsItem.HotNews" type="radio" value="0" id="hotNewsNo">
+                                <label for="hotNewsNo">No</label>
+                            </div>
+                            <span asp-validation-for="News.NewsItem.HotNews" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label asp-for="News.NewsItem.NewsDetail">News Detail <span class="text-muted" style="font-size:10px">- Enter some details/descriptions for your news, as this will be considered
+                                the content for your news.
+                            </span></label>
+                            <textarea asp-for="News.NewsItem.NewsDetail" class="form-control" rows="10"></textarea>
+                            <span asp-validation-for="News.NewsItem.NewsDetail" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label>Existing Images <span class="text-muted" style="font-size:10px">
+                                - Shown existed images for your news.
+                            </span></label>
+                            <div id="existing-images">
+                                @if (Model.News.ImageUrls != null && Model.News.ImageUrls.Count > 0)
+                                {
+                                    foreach (var imageUrl in Model.News.ImageUrls)
+                                    {
+                                        <img src="@imageUrl.Url" alt="Thumbnail" style="width: 100px; height: 100px; margin-right: 5px;">
+                                    }
+                                }
+                                else
+                                {
+                                    <p>No thumbnails available.</p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- New Image Upload Area -->
+                        <div class="form-group col-md-12">
+                            <label for="imageUpload">
+                                Upload New Images <span class="text-muted" style="font-size:10px">
+                                - Click the upload button to give your news photos.
+                                </span>
+                            </label>
+                            <input type="file" class="form-control-file" class="btn btn-info" id="imageUpload" name="files" multiple>
+                            <br/>
+                            <label for="fileDescriptions">
+                                Descriptions <span class="text-muted" style="font-size:10px">
+                                    - Enter descriptions for photos you've chosen.
+                                </span>
+                            </label>
+                            <div id="fileDescriptions">
+                                <!-- JavaScript will add description inputs dynamically here -->
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6" id="imagePreview"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <button type="submit" class="btn btn-success">Create News</button>
+                            <a class="btn btn-danger" asp-action="AdminNewsView">Back to Page</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="ibox-body">
-        <form asp-action="CreateNews" method="post" enctype="multipart/form-data">
-            <div class="row">
-                <div class="form-group col-md-6">
-                    <label asp-for="News.NewsItem.NewsObject">News Object</label>
-                    <select asp-for="News.NewsItem.NewsObject" asp-items="Model.NewsObjectList" class="form-control">
-                        <option value="">-- Select News Object --</option>
-                    </select>
-                    <span asp-validation-for="News.NewsItem.NewsObject" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="objectNameDropdown">Object Name</label>
-                    <select id="objectNameDropdown" name="News.NewsItem.ObjectId" class="form-control">
-                        <option value="">-- Select Object --</option>
-                    </select>
-                    <span asp-validation-for="News.NewsItem.ObjectId" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-3">
-                    <label>Existing Images</label>
-                    <div id="existing-images">
-                        @if (Model.News.ImageUrls != null && Model.News.ImageUrls.Count > 0)
-                        {
-                            foreach (var imageUrl in Model.News.ImageUrls)
-                            {
-                                <img src="@imageUrl.Url" alt="Thumbnail" style="width: 100px; height: 100px; margin-right: 5px;">
-                            }
-                        }
-                        else
-                        {
-                            <p>No thumbnails available.</p>
-                        }
-                    </div>
-                </div>
-                <!-- New Image Upload Area -->
-                <div class="form-group col-md-3">
-                    <label for="imageUpload">Upload New Images</label>
-                    <input type="file" class="form-control-file" id="imageUpload" name="files" multiple>
-                    <label for="fileDescriptions">Descriptions</label>
-                    <div id="fileDescriptions">
-                        <!-- JavaScript will add description inputs dynamically here -->
-                    </div>
-                </div>
-                <div class="form-group col-md-6" id="imagePreview"></div>
-            </div>
-                
-            <div class="row">
-                <div class="form-group col-md-6">
-                    <label asp-for="News.NewsItem.Description">Description</label>
-                    <input asp-for="News.NewsItem.Description" class="form-control"/>
-                    <span asp-validation-for="News.NewsItem.Description" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-6">
-                    <label asp-for="News.NewsItem.Status">Status</label>
-                    <select asp-for="News.NewsItem.Status" asp-items="Model.StatusList" class="form-control">
-                        <option value="">-- Select Status --</option>
-                    </select>
-                    <span asp-validation-for="News.NewsItem.Status" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-3">
-                    <label asp-for="News.NewsItem.HotNews">Hot News</label>
-                    <div>
-                        <input asp-for="News.NewsItem.HotNews" type="radio" value="1" id="hotNewsYes">
-                        <label for="hotNewsYes">Yes</label>
-                    </div>
-                    <div>
-                        <input asp-for="News.NewsItem.HotNews" type="radio" value="0" id="hotNewsNo">
-                        <label for="hotNewsNo">No</label>
-                    </div>
-                    <span asp-validation-for="News.NewsItem.HotNews" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-9">
-                    <label asp-for="News.NewsItem.NewsDetail">News Detail</label>
-                    <textarea asp-for="News.NewsItem.NewsDetail" class="form-control" rows="10"></textarea>
-                    <span asp-validation-for="News.NewsItem.NewsDetail" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-12">
-                    <button type="submit" class="btn btn-success">Create News</button>
-                    <a class="btn btn-danger" asp-action="AdminNewsView">Back to Page</a>
-                </div>
-            </div>
-        </form>
-    </div>
+    <div class="col-md-3"></div>
 </div>
 <div class="container">
     
