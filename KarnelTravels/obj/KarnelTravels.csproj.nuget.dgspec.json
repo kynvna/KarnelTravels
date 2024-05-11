@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SEM3\\KarnelTravels\\KarnelTravels.csproj": {}
+    "D:\\EProject_Sem3\\KarnelTravels\\KarnelTravels.csproj": {}
   },
   "projects": {
-    "D:\\SEM3\\KarnelTravels\\KarnelTravels.csproj": {
+    "D:\\EProject_Sem3\\KarnelTravels\\KarnelTravels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEM3\\KarnelTravels\\KarnelTravels.csproj",
+        "projectUniqueName": "D:\\EProject_Sem3\\KarnelTravels\\KarnelTravels.csproj",
         "projectName": "KarnelTravels",
-        "projectPath": "D:\\SEM3\\KarnelTravels\\KarnelTravels.csproj",
+        "projectPath": "D:\\EProject_Sem3\\KarnelTravels\\KarnelTravels.csproj",
         "packagesPath": "C:\\Users\\HAI DANG\\.nuget\\packages\\",
-        "outputPath": "D:\\SEM3\\KarnelTravels\\obj\\",
+        "outputPath": "D:\\EProject_Sem3\\KarnelTravels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
