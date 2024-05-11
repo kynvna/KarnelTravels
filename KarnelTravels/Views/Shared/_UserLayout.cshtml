@@ -69,7 +69,7 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">News & Interest</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a asp-controller="Home" asp-action="NewsView" class="dropdown-item">News</a>
-                                <a asp-controller="Home" asp-action="AboutUsView" class="dropdown-item">About us</a>    
+                                <a asp-controller="Home" asp-action="AboutUsView" class="dropdown-item">About us</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown">
@@ -80,42 +80,18 @@
                             </div>
                         </div>
                     </div>
-                   @*  <a class="btn btn-primary px-3 d-none d-lg-flex">Leave Feedback</a> *@
+                    @*  <a class="btn btn-primary px-3 d-none d-lg-flex">Leave Feedback</a> *@
                     <!-- Trigger Button -->
                     <a class="btn btn-primary px-3 d-none d-lg-flex" data-bs-toggle="modal" data-bs-target="#commentModal">Leave Feedback</a>
                 </div>
                 <!-- Include the Feedback Modal -->
-               @*  @Html.Partial("_FeedbackModal") *@
+                @*  @Html.Partial("_FeedbackModal") *@
                 @Html.Partial("_FeedbackModal", new FeedbackViewModel { IsSubmitted = false })
 
             </nav>
         </div>
         <!-- Navbar End -->
-        <!-- Header Start -->
-        <div class="container-fluid header bg-white p-0">
-            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-                <div class="col-md-6 p-5 mt-lg-5">
-                    <h1 class="display-5 animated fadeIn mb-4">II'S ABOUT <span class="text-primary">A PERFECT</span><strong style="color:orange"> TRIP</strong> TO REMEMBER</h1>
-                    <p class="animated fadeIn mb-4 pb-2">
-                        KARNEL provides you with the best search engines and daily-updated information about
-                        every sight domestic and internationally. Hoping to bring you the best tour-planning experiences.
-                    </p>
-                    <a asp-action="Index" asp-controller="Home" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Abous Karnel Travel Guide</a>
-                </div>
-                <div class="col-md-6 animated fadeIn">
-                    <div class="owl-carousel header-carousel">
-                        <div class="owl-carousel-item">
-                            <img class="img-fluid" src="/img/carousel-1.jpg" alt="">
-                        </div>
-                        <div class="owl-carousel-item">
-                            <img class="img-fluid" src="/img/carousel-2.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Header End -->
-        <br/>
+        <br />
         @RenderBody()
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
