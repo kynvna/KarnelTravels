@@ -19,5 +19,5 @@ public partial class TblTourPackage
 
     public string? Name { get; set; }
 
-    public int? SpotId { get; set; }
+    public int? SportId { get; set; }
 }

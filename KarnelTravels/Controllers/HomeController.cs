@@ -244,8 +244,8 @@ namespace KarnelTravels.Controllers
             {
                 newsQuery = newsQuery.Where(n =>
                     (n.NewsObject == "Hotel_Restaurant" && _context.TblHotelRestaurants.Any(hr => hr.HrId == n.ObjectId && hr.SpotId == spotsId)) ||
-                    (n.NewsObject == "Tourist_Place" && _context.TblTouristPlaces.Any(tp => tp.Id == n.ObjectId && tp.SpotId == spotsId)) ||
-                    (n.NewsObject == "Tour_Package" && _context.TblTourPackages.Any(tp => tp.PackageId == n.ObjectId && tp.SpotId == spotsId)) ||
+                    (n.NewsObject == "Tourist_Place" && _context.TblTouristPlaces.Any(tp => tp.Id == n.ObjectId && tp.SportId == spotsId)) ||
+                    (n.NewsObject == "Tour_Package" && _context.TblTourPackages.Any(tp => tp.PackageId == n.ObjectId && tp.SportId == spotsId)) ||
                     (n.NewsObject == "Travel" && _context.TblTravels.Any(tt => tt.TravelId == n.ObjectId && tt.SpotDestination == spotsId))
                 );
             }

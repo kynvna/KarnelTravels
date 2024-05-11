@@ -146,7 +146,7 @@ public partial class KarnelTravelsContext : DbContext
             entity.Property(e => e.Status).HasMaxLength(50);
 
             entity.HasOne(d => d.Sport).WithMany(p => p.TblTouristPlaces)
-                .HasForeignKey(d => d.SpotId)
+                .HasForeignKey(d => d.SportId)
                 .HasConstraintName("FK_tblTourist_Place_tblSpots");
         });
 
