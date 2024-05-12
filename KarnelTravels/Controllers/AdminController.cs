@@ -74,13 +74,13 @@ namespace KarnelTravels.Controllers
 
             var list = spotRepository.GetAllSpot();
             getHotel.tblSpots = list;
-            getHotel.selectObject = new SelectList(new List<string>
+           /* getHotel.selectObject = new SelectList(new List<string>
                 {
                     "Hotel_Restaurant",
                     "Travel",
                     "Tourist_Place",
                     "Tour_Package"
-                    });
+                    });*/
             return View(getHotel);
         }
         /*[HttpPost]*/
@@ -123,7 +123,7 @@ namespace KarnelTravels.Controllers
                             tblImage.Url = fileName;
                             tblImage.Description = "upload";
                             tblImage.ObjectId = newlyCreatedId;
-                            tblImage.UrlObject = model.selectObject;
+                            tblImage.UrlObject = "Tour_Package";
                             _context.TblImageUrls.Add(tblImage);
                             _context.SaveChanges();
 
@@ -196,7 +196,7 @@ namespace KarnelTravels.Controllers
                     tblImage.Url = fileName;
                     tblImage.Description = "upload";
                     tblImage.ObjectId = newlyCreatedId;
-                    tblImage.UrlObject = "tblTour_Packages";
+                    tblImage.UrlObject = "Tour_Package";
                     _context.TblImageUrls.Add(tblImage);
                     _context.SaveChanges();
 
@@ -308,13 +308,13 @@ namespace KarnelTravels.Controllers
             ISpotRepository spotRepository = new ISpotRepository(_context);
             var spot = spotRepository.GetAllSpot();
             var transpot = travelRepository.GetAllTransportation();
-            getCar_Plane_Train.selectObject = new SelectList(new List<string>
+           /* getCar_Plane_Train.selectObject = new SelectList(new List<string>
                 {
                     "Hotel_Restaurant",
                     "Travel",
                     "Tourist_Place",
                     "Tour_Package"
-                    });
+                    });*/
             getCar_Plane_Train.Transportations = transpot;
             getCar_Plane_Train.Spots = spot;
             return View(getCar_Plane_Train);
@@ -355,7 +355,7 @@ namespace KarnelTravels.Controllers
                             tblImage.Url = fileName;
                             tblImage.Description = "upload";
                             tblImage.ObjectId = newlyCreatedId;
-                            tblImage.UrlObject = model.selectObject;
+                            tblImage.UrlObject = "Travel";
 
                             _context.TblImageUrls.Add(tblImage);
                             _context.SaveChanges();
@@ -541,13 +541,13 @@ namespace KarnelTravels.Controllers
             getHotel.tblSpots = spot1;
             getHotel.HrCategories = list;
             getHotel.HrImages = image;
-            getHotel.selectObject = new SelectList(new List<string>
+           /* getHotel.selectObject = new SelectList(new List<string>
                 {
                     "Hotel_Restaurant",
                     "Travel",
                     "Tourist_Place",
                     "Tour_Package"
-                    });
+                    });*/
             return View(getHotel);
 
         }
@@ -587,7 +587,7 @@ namespace KarnelTravels.Controllers
                             tblImage.Url = fileName;
                             tblImage.Description = "upload";
                             tblImage.ObjectId = newlyCreatedId;
-                            tblImage.UrlObject = model.selectObject;
+                            tblImage.UrlObject = "Hotel_Restaurant";
                             _context.TblImageUrls.Add(tblImage);
                             _context.SaveChanges();
 
