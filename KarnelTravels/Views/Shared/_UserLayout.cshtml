@@ -60,8 +60,7 @@
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a asp-controller="Home" asp-action="TravellingTransportView" class="dropdown-item">Transportation</a>
                                 <a asp-controller="Home" asp-action="TravellingSightView" class="dropdown-item">Sights</a>
-                                <a asp-controller="Home" asp-action="TravellingHotelView" class="dropdown-item">Hotels & Resort</a>
-                                <a asp-controller="Home" asp-action="TravellingRestaurantView" class="dropdown-item">Restaurants</a>
+                                <a asp-controller="Home" asp-action="TravellingHotelView" class="dropdown-item">Hotels & Resort & Restaurant</a>
                                 <a asp-controller="Home" asp-action="TravellingPackageView" class="dropdown-item">Package</a>
                             </div>
                         </div>
@@ -85,13 +84,19 @@
                     <a class="btn btn-primary px-3 d-none d-lg-flex" data-bs-toggle="modal" data-bs-target="#commentModal">Leave Feedback</a>
                 </div>
                 <!-- Include the Feedback Modal -->
-                @*  @Html.Partial("_FeedbackModal") *@
-                @Html.Partial("_FeedbackModal", new FeedbackViewModel { IsSubmitted = false })
+                <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 
             </nav>
         </div>
         <!-- Navbar End -->
-        <br />
+        <div class="container-fluid header bg-white p-0">
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 p-5 mt-lg-5">
+                </div>
+                <div class="col-md-6 animated fadeIn">
+                </div>
+            </div>
+        </div>
         @RenderBody()
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">

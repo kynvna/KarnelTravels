@@ -1,6 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Package Tours";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 @model GetCar_Plane_Train;
 <!-- Search Start -->
@@ -8,11 +8,11 @@
     <div class="container">
         <form action="/home/TravellingTransportViewSearch">
             <div class="row g-2">
-                <div class="col-md-10">
+                <div class="col-md-8">
                     <div class="row g-2">
                         <div class="col-md-4">
                             <select class="form-select border-0 py-3" name="tran">
-                                <option selected>--Pick A Mean Of Transport--</option>
+                                <option selected>--- Select Transport Type ---</option>
                                 @foreach (var item in Model.Transportations)
                                 {
                                     <option value="@item.CatId">@item.CatName</option>
@@ -22,7 +22,7 @@
 
                         <div class="col-md-4">
                             <select class="form-select border-0 py-3" name="spot">
-                                <option selected>--Select Departure Spot--</option>
+                                <option selected>--- Departure Spot ---</option>
                                 @foreach (var item in Model.Spots)
                                 {
                                     <option value="@item.Id">@item.Name</option>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-md-4">
                             <select class="form-select border-0 py-3" name="spot1">
-                                <option selected>--Select Arrival Spot--</option>
+                                <option selected>--- Arrival Spot ---</option>
                                 @foreach (var item in Model.Spots)
                                 {
                                     <option value="@item.Id">@item.Name</option>
@@ -42,7 +42,11 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <button class="btn btn-dark border-0 w-100 py-3">Filter</button>
+                    <button class="btn btn-dark border-0 w-100 py-3">Find</button>
+                    
+                </div>
+                <div class="col-md-2">
+                    <span><a class="btn btn-warning border-0 w-100 py-3" asp-controller="Home" asp-action="TravellingTransportView">Clear filter</a></span>
                 </div>
             </div>
         </form>
@@ -55,8 +59,8 @@
         <div class="row g-0 gx-5 align-items-end">
             <div class="col-lg-12">
                 <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
-                    <h1 class="mb-3 text-center">Search Result For Transportation</h1>
-                    <p class="mb-3 text-center">Here is your search result based on what you've filtered'</p>
+                    <h1 class="mb-3 text-center">Transport Filtered</h1>
+                    <p class="text-center">Below are the means of transport which was fitered base on your preferences</p>
                 </div>
             </div>
         </div>
@@ -68,28 +72,26 @@
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="property-item rounded overflow-hidden">
                                 <div class="position-relative overflow-hidden">
-                                    <a href=""><img class="img-fluid" src="/img/Travel/@item.url" alt=""></a>
-                                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Domestic Tour</div>
-                                    <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
+                                    <a href="/home/TransportDetails?idt=@item.TravelId"><img class="img-fluid" src="/img/Travel/@item.url" alt=""></a>
+                                    @if (@item.Status == "true")
+                                    {
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Active</div>
+                                    }
+                                    else
+                                    {
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Not Active</div>
+                                    }
+                                    <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Transportation</div>
                                 </div>
                                 <div class="p-4 pb-0">
-                                    <h5 class="text-primary mb-3">@item.Name</h5>
-                                    <a class="d-block h5 mb-2" href="/home/TransportDetails?idt=@item.TravelId">@item.Price</a>
-                                    <p><i class="fa fa-map-marker-alt text-primary me-2"></i>@item.SpotDeparture - @item.SpotDestination</p>
+                                    <a href="/home/TransportDetails?idt=@item.TravelId" class="d-block h5 mb-2"><strong>From -> To: </strong> <span style="text-decoration:none">@item.Name</span></a>
                                 </div>
                                 <div class="d-flex border-top">
-                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                    <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-money text-primary me-2"></i><strong>Estimate Price: </strong><span>@item.Price</span>VND</small>
                                 </div>
                             </div>
                         </div>
                     }
-
-
-                    <div class="col-12 text-center">
-                        <a class="btn btn-primary py-3 px-5" asp-action="TravellingTransportView" asp-controller="Home">Return to transport page</a>
-                    </div>
                 </div>
             </div>
         </div>

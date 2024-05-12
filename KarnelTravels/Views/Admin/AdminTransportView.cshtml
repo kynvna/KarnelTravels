@@ -1,4 +1,4 @@
-﻿﻿@{
+﻿﻿﻿@{
     ViewBag.Title = "View All Transportation";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
@@ -19,7 +19,7 @@
             {
                 <div class="col-md-2 mt-1">
                     <div class="card h-100">
-                        <img class="card-top-img" src="~/img/Travel/@item.url" height="200px" width="auto"/>
+                        <img class="card-top-img" src="~/img/Travel/@item.url" height="200px" width="auto" />
                         <div class="card-body">
                             <h5 class="card-title"><span><strong>Entity Name: </strong></span></h5>
                             <h6 class="card-title"><span style="color:navy">@item.Name</span></h6>
@@ -37,28 +37,28 @@
     </div>
 </div>
 <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        @if (Model.CurrentPage > 1)
-                        {
-                            <li class="page-item">
-                                <a class="page-link" href="@Url.Action("AdminTransportView", new { page = Model.CurrentPage - 1, pageSize = Model.PageSize })" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                        }
-                        @for (int i = 1; i <= Model.TotalPages; i++)
-                        {
-                            <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
-                                <a class="page-link" href="@Url.Action("AdminTransportView", new { page = i, pageSize = Model.PageSize })">@i</a>
-                            </li>
-                        }
-                        @if (Model.CurrentPage < Model.TotalPages)
-                        {
-                            <li class="page-item">
-                                <a class="page-link" href="@Url.Action("AdminTransportView", new { page = Model.CurrentPage + 1, pageSize = Model.PageSize })" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        }
-                    </ul>
-                </nav>
+    <ul class="pagination justify-content-center">
+        @if (Model.CurrentPage > 1)
+        {
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("AdminTransportView", new { page = Model.CurrentPage - 1, pageSize = Model.PageSize })" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+        }
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                <a class="page-link" href="@Url.Action("AdminTransportView", new { page = i, pageSize = Model.PageSize })">@i</a>
+            </li>
+        }
+        @if (Model.CurrentPage < Model.TotalPages)
+        {
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("AdminTransportView", new { page = Model.CurrentPage + 1, pageSize = Model.PageSize })" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        }
+    </ul>
+</nav>

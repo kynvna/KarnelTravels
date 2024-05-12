@@ -15741,6 +15741,10 @@
       "PackagePath": "staticwebassets\\img\\TblTourist_Place\\638510131340824917_lb3.jpg"
     },
     {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\638511093616737225_property-6.jpg",
+      "PackagePath": "staticwebassets\\img\\TblTourist_Place\\638511093616737225_property-6.jpg"
+    },
+    {
       "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\TblTourist_Place\\Back Beach1.jpg",
       "PackagePath": "staticwebassets\\img\\TblTourist_Place\\Back Beach1.jpg"
     },
@@ -16189,26 +16193,6 @@
       "PackagePath": "staticwebassets\\img\\TblTourist_Place\\walltexture.png"
     },
     {
-      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Tour_Package\\DanangTour1.jpg",
-      "PackagePath": "staticwebassets\\img\\Tour_Package\\DanangTour1.jpg"
-    },
-    {
-      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Tour_Package\\DanangTour2.jpg",
-      "PackagePath": "staticwebassets\\img\\Tour_Package\\DanangTour2.jpg"
-    },
-    {
-      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Tour_Package\\HanoiTour1.jpg",
-      "PackagePath": "staticwebassets\\img\\Tour_Package\\HanoiTour1.jpg"
-    },
-    {
-      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Tour_Package\\HanoiTour2.jpg",
-      "PackagePath": "staticwebassets\\img\\Tour_Package\\HanoiTour2.jpg"
-    },
-    {
-      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Tour_Package\\avalanched.jpg",
-      "PackagePath": "staticwebassets\\img\\Tour_Package\\avalanched.jpg"
-    },
-    {
       "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Tourist_Place\\DLMK1.jpg",
       "PackagePath": "staticwebassets\\img\\Tourist_Place\\DLMK1.jpg"
     },
@@ -16295,6 +16279,42 @@
     {
       "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Travel\\638509277643808903.jpg",
       "PackagePath": "staticwebassets\\img\\Travel\\638509277643808903.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Travel\\638511031908240896bus1.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\638511031908240896bus1.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Travel\\638511042312626640Player_in_the_Void.png",
+      "PackagePath": "staticwebassets\\img\\Travel\\638511042312626640Player_in_the_Void.png"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Travel\\638511042312954160walltexture.png",
+      "PackagePath": "staticwebassets\\img\\Travel\\638511042312954160walltexture.png"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Travel\\638511042313004380board.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\638511042313004380board.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Travel\\638511042313041514board.png",
+      "PackagePath": "staticwebassets\\img\\Travel\\638511042313041514board.png"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Travel\\638511042313081036wall.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\638511042313081036wall.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Travel\\638511042313123968gach.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\638511042313123968gach.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Travel\\638511044457149243bus11.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\638511044457149243bus11.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Travel\\638511044457504477bus12.jpg",
+      "PackagePath": "staticwebassets\\img\\Travel\\638511044457504477bus12.jpg"
     },
     {
       "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Travel\\VietJet1.jpg",
@@ -16415,6 +16435,54 @@
     {
       "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\property-6.jpg",
       "PackagePath": "staticwebassets\\img\\property-6.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\tblTour_Packages\\638511085134650424header.jpg",
+      "PackagePath": "staticwebassets\\img\\tblTour_Packages\\638511085134650424header.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\tblTour_Packages\\638511085261303689call-to-action.jpg",
+      "PackagePath": "staticwebassets\\img\\tblTour_Packages\\638511085261303689call-to-action.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\tblTour_Packages\\638511086290051643carousel-1.jpg",
+      "PackagePath": "staticwebassets\\img\\tblTour_Packages\\638511086290051643carousel-1.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\tblTour_Packages\\638511102279261692about.jpg",
+      "PackagePath": "staticwebassets\\img\\tblTour_Packages\\638511102279261692about.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\tblTour_Packages\\638511102941169742call-to-action.jpg",
+      "PackagePath": "staticwebassets\\img\\tblTour_Packages\\638511102941169742call-to-action.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\tblTour_Packages\\638511103236137289about.jpg",
+      "PackagePath": "staticwebassets\\img\\tblTour_Packages\\638511103236137289about.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\tblTour_Packages\\638511108651226408about.jpg",
+      "PackagePath": "staticwebassets\\img\\tblTour_Packages\\638511108651226408about.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\tblTour_Packages\\DanangTour1.jpg",
+      "PackagePath": "staticwebassets\\img\\tblTour_Packages\\DanangTour1.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\tblTour_Packages\\DanangTour2.jpg",
+      "PackagePath": "staticwebassets\\img\\tblTour_Packages\\DanangTour2.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\tblTour_Packages\\HanoiTour1.jpg",
+      "PackagePath": "staticwebassets\\img\\tblTour_Packages\\HanoiTour1.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\tblTour_Packages\\HanoiTour2.jpg",
+      "PackagePath": "staticwebassets\\img\\tblTour_Packages\\HanoiTour2.jpg"
+    },
+    {
+      "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\tblTour_Packages\\avalanched.jpg",
+      "PackagePath": "staticwebassets\\img\\tblTour_Packages\\avalanched.jpg"
     },
     {
       "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\team-1.jpg",

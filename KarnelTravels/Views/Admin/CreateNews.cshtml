@@ -1,4 +1,4 @@
-﻿@* @model CreateNewsViewModel
+﻿﻿@* @model CreateNewsViewModel
 
 @{
     ViewData["Title"] = "CreateNews";
@@ -218,7 +218,7 @@
                             <select asp-for="News.NewsItem.NewsObject" asp-items="Model.NewsObjectList" class="form-control">
                                 <option value="">---Select News Category---</option>
                             </select>
-                            
+
                             <span asp-validation-for="News.NewsItem.NewsObject" class="text-danger"></span>
                         </div>
                         <div class="form-group col-md-6">
@@ -257,18 +257,23 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label asp-for="News.NewsItem.NewsDetail">News Detail <span class="text-muted" style="font-size:10px">- Enter some details/descriptions for your news, as this will be considered
-                                the content for your news.
-                            </span></label>
+                            <label asp-for="News.NewsItem.NewsDetail">
+                                News Detail <span class="text-muted" style="font-size:10px">
+                                    - Enter some details/descriptions for your news, as this will be considered
+                                    the content for your news.
+                                </span>
+                            </label>
                             <textarea asp-for="News.NewsItem.NewsDetail" class="form-control" rows="10"></textarea>
                             <span asp-validation-for="News.NewsItem.NewsDetail" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label>Existing Images <span class="text-muted" style="font-size:10px">
-                                - Shown existed images for your news.
-                            </span></label>
+                            <label>
+                                Existing Images <span class="text-muted" style="font-size:10px">
+                                    - Shown existed images for your news.
+                                </span>
+                            </label>
                             <div id="existing-images">
                                 @if (Model.News.ImageUrls != null && Model.News.ImageUrls.Count > 0)
                                 {
@@ -289,11 +294,11 @@
                         <div class="form-group col-md-12">
                             <label for="imageUpload">
                                 Upload New Images <span class="text-muted" style="font-size:10px">
-                                - Click the upload button to give your news photos.
+                                    - Click the upload button to give your news photos.
                                 </span>
                             </label>
                             <input type="file" class="form-control-file" class="btn btn-info" id="imageUpload" name="files" multiple>
-                            <br/>
+                            <br />
                             <label for="fileDescriptions">
                                 Descriptions <span class="text-muted" style="font-size:10px">
                                     - Enter descriptions for photos you've chosen.
@@ -319,11 +324,9 @@
     <div class="col-md-3"></div>
 </div>
 <div class="container">
-    
 </div>
 
 <div>
-    
 </div>
 
 @section Scripts {
@@ -442,4 +445,3 @@
         });
     </script>
 }
-

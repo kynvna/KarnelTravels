@@ -1,13 +1,12 @@
-﻿@{
+﻿﻿@{
     ViewBag.Title = "FormCkeditor";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
 @model GetAllPack;
 <div>
-    <a class="btn btn-info" href="/admin/ViewCreateTourPackage">Create New Tour</a>
+    <a href="/admin/ViewCreateTourPackage">Create</a>
 </div>
-<br/>
 <div class="row">
     @foreach(var item in Model.Packages)
     {
