@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "News";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
     
 }
 
@@ -10,56 +10,40 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="tab-content">
+            <a href="javascript:history.back()">Go Back</a>
+            <hr />
             <div id="tab-1" class="tab-pane fade show p-0 active">
-               
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                        <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="/img/Hotel_Restaurant/@Model.Hotels.url" alt=""></a>
+                        <a><img class="img-fluid" src="/img/Hotel_Restaurant/@Model.Hotels.url" alt=""></a>
                     </div>
                     <div class="col-lg-8 col-md-8 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
                         <div class="p-4 pb-0">
-                            <a class="d-block h5 mb-2" asp-action="NewsDetail" asp-controller="Home">Tour Name</a><span><h5 class="text-primary mb-3">@Model.Hotels.Price</h5></span>
-                            <p><strong>Going to: </strong>
-                                City - City - City
+                            <a class="d-block h5 mb-2">Accomodation Name: </a><span><h5 class="text-primary mb-3"> @Model.Hotels.Name</h5></span>
+                            <p>
+                                <strong>
+                                    Customer Rating:
+                                </strong>
+                                <span><i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 5.0</span>
+                                &nbsp;<span><a class="btn btn-outline-warning" data-bs-toggle="pill" href="#tab-1">Already tried ? Rate this service</a></span>
                             </p>
                             <p>
-                                <strong>Transportation: </strong>
-                                Bus/Plane/ETC
+                                <strong>Estimation Service Price:  </strong> @Model.Hotels.Price $
                             </p>
                             <p>
-                                <strong>Accomodation: </strong>
-                                @Model.Hotels.Name
+                                <strong>Description: </strong>
+                                @Html.Raw(Model.Hotels.Description)
                             </p>
                         </div>
                     </div>
                     @foreach (var item in Model.Images)
                     {
                         <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                            <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="/img/Hotel_Restaurant/@item.Url" alt=""></a>
+                            <a><img class="img-fluid" src="/img/Hotel_Restaurant/@item.Url" alt=""></a>
                         </div>
                        
                     }
-                    
-                    <div class="col-lg-12 col-md-12 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                        <div class="p-0 pb-0">
-                            <p>
-                                <strong>
-                                    Customer Rating:
-                                </strong>
-                                <i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 5.0 
-                                &nbsp;&nbsp;<span><a class="btn btn-outline-warning" data-bs-toggle="pill" href="#tab-1">Already tried ? Rate this service</a></span>
-                            </p>
-                            <p>
-                                
-                                <strong>Description: </strong>
-                                @Html.Raw(Model.Hotels.Description)
-                            </p>
-                        </div>
-                    </div>
         </div>
-    </div>
-    <div class="row mt-4">
-        
     </div>
 </div>
 <!-- Property List End -->

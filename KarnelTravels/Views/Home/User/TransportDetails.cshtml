@@ -17,7 +17,7 @@
                     </div>
                     <div class="col-lg-8 col-md-8 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
                         <div class="p-4 pb-0">
-                            <a class="d-block h5 mb-2" asp-action="NewsDetail" asp-controller="Home">@Model.travelImg.Name</a>
+                            <a class="d-block h5 mb-2">Transportation Route: </a><span><h5 class="text-primary mb-3"> @Model.travelImg.Name</h5></span>
                             <p>
                                 <strong>
                                     Customer Rating:
@@ -51,8 +51,8 @@
         <div class="row wow fadeInUp" data-wow-delay="0.5s">
             @foreach (var item in Model.tblImageUrls)
             {
-                <div class="card border-0 col-md-3 h-100 m-2">
-                    <img class="card-img-top" src="/img/Travel/@item.Url" height="200px" alt="">
+                <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
+                    <img class="img-fluid" src="/img/Travel/@item.Url" height="200px" alt="">
                 </div>
             }
         </div>

@@ -1,6 +1,6 @@
 ﻿@{
     ViewData["Title"] = "News";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
     var ht = ViewBag.pack as TblTourPackage;
 }
 @model ViewPackageUser;
@@ -8,38 +8,13 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="tab-content">
+            <a href="javascript:history.back()">Go Back</a>
+            <hr />
             <div id="tab-1" class="tab-pane fade show p-0 active">
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                        <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="/img/tblTour_Packages/@Model.packageImg.url" alt=""></a>
-                    </div>
-                    <div class="col-lg-8 col-md-8 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
+                    <div class="col-lg-6 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
                         <div class="p-4 pb-0">
-                            <a class="d-block h5 mb-2" asp-action="NewsDetail" asp-controller="Home">Tour Name</a><span><h5 class="text-primary mb-3">@Model.packageImg.TotalPrice</h5></span>
-                            <p>
-                                <strong>Going to: </strong>
-                                City - City - City
-                            </p>
-                            <p>
-                                <strong>Transportation: </strong>
-                                @Model.packageImg.StartDate - @Model.packageImg.EndDate
-                            </p>
-                            <p>
-                                <strong>Accomodation: </strong>
-                                @Model.packageImg.Name
-                            </p>
-                        </div>
-                    </div>
-                    @foreach (var item in Model.Images)
-                    {
-                        <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                            <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="/img/tblTour_Packages/@item.Url" alt=""></a>
-                        </div>
-
-                    }
-                   
-                    <div class="col-lg-12 col-md-12 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                        <div class="p-0 pb-0">
+                            <a class="d-block h5 mb-2">Special Travelling Package</a><span><h5 class="text-primary mb-3">@Model.packageImg.Name</h5></span>
                             <p>
                                 <strong>
                                     Customer Rating:
@@ -48,8 +23,35 @@
                                 &nbsp;&nbsp;<span><a class="btn btn-outline-warning" data-bs-toggle="pill" href="#tab-1">Already tried ? Rate this service</a></span>
                             </p>
                             <p>
-
-                                <strong>Description: </strong>
+                                <strong><i class="fa fa-calendar"></i> Start Date: </strong>
+                                @Model.packageImg.StartDate
+                            </p>
+                            <p>
+                                <strong><i class="fa fa-calendar"></i> End Date:</strong>
+                                @Model.packageImg.StartDate
+                            </p>
+                        </div>
+                    </div>
+                    @*<div class="col-lg-6 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
+                    @foreach (var item in Model.Images)
+                    {
+                    <div class="col-lg-2 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
+                    <a><img class="img-fluid" src="/img/tblTour_Packages/@item.Url" alt=""></a>
+                    </div>
+                    }
+                    <div class="col-lg-2 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
+                    <a><img class="img-fluid" src="/img/tblTour_Packages/@Model.packageImg.url" alt=""></a>
+                    </div>
+                    <div class="col-lg-2 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
+                    <a><img class="img-fluid" src="/img/tblTour_Packages/@Model.packageImg.url" alt=""></a>
+                    </div>
+                    </div>*@
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-12 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
+                        <div class="p-4 pb-0">
+                            <p>
+                                <strong>Tour Detailed Schedule: </strong>
                                 @Html.Raw(@Model.packageImg.Description)
                             </p>
                         </div>

@@ -9,7 +9,7 @@
     <div class="container">
         <form action="/home/TravellingTransportViewSearch">
             <div class="row g-2">
-                <div class="col-md-10">
+                <div class="col-md-8">
                     <div class="row g-2">
                         <div class="col-md-4">
                             <select class="form-select border-0 py-3" name="tran">
@@ -44,6 +44,9 @@
                 </div>
                 <div class="col-md-2">
                     <button class="btn btn-dark border-0 w-100 py-3">Find</button>
+                </div>
+                <div class="col-md-2">
+                    <span><a class="btn btn-warning border-0 w-100 py-3" asp-controller="Home" asp-action="TravellingTransportView">Clear filter</a></span>
                 </div>
             </div>
         </form>
