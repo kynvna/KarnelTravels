@@ -43,7 +43,33 @@
                         </div>
                        
                     }
+                    
+                    <div class="col-lg-12 col-md-12 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
+                        <div class="p-0 pb-0">
+                            <p>
+                                <strong>
+                                    Customer Rating:
+                                </strong>
+                                <i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 5.0 
+                                &nbsp;&nbsp;<span>
+                                    <a class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#commentModal"
+                                       data-feedback-object="Hotel_Restaurant" data-object-id=@Model.Hotels.HrId>
+                                        Already tried? Rate this service
+                                    </a>
+
+                                </span>
+                            </p>
+                            <p>
+                                
+                                <strong>Description: </strong>
+                                @Html.Raw(Model.Hotels.Description)
+                            </p>
+                        </div>
+                    </div>
         </div>
+    </div>
+    <div class="row mt-4">
+        
     </div>
 </div>
 <!-- Property List End -->

@@ -28,6 +28,7 @@
 
     <!-- Template Stylesheet -->
     <link href="/css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -81,11 +82,16 @@
                     </div>
                    @*  <a class="btn btn-primary px-3 d-none d-lg-flex">Leave Feedback</a> *@
                     <!-- Trigger Button -->
-                    <a class="btn btn-primary px-3 d-none d-lg-flex" data-bs-toggle="modal" data-bs-target="#commentModal">Leave Feedback</a>
+                    
+                    <a class="btn btn-primary px-3 d-none d-lg-flex" data-bs-toggle="modal" data-bs-target="#commentModal"
+                       data-feedback-object="Company" data-object-id=1234>
+                        Leave Feedback
+                    </a>
                 </div>
                 <!-- Include the Feedback Modal -->
-               @*  @Html.Partial("_FeedbackModal") *@
-                @Html.Partial("_FeedbackModal", new FeedbackViewModel { IsSubmitted = false })
+              
+               @*  @Html.Partial("_FeedbackModal", new FeedbackViewModel { IsSubmitted = false }) *@
+                <partial name="_FeedbackModal" model="new FeedbackViewModel { IsSubmitted = false }" />
 
             </nav>
         </div>

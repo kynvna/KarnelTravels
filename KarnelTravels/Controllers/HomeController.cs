@@ -6,7 +6,11 @@ using System.Diagnostics;
 using System.Linq;
 using KarnelTravels.Repository;
 using System.Security.AccessControl;
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Drawing.Printing;
+
 
 namespace KarnelTravels.Controllers
 {
@@ -38,7 +42,7 @@ namespace KarnelTravels.Controllers
             var all = tourPackageRepository.GetAllPackImg(a, page, pageSize);
             return View(all);
         }
-        
+
         public IActionResult ProductView()
         {
             return View("User/ProductView");
@@ -136,13 +140,13 @@ namespace KarnelTravels.Controllers
                 return RedirectToAction("TravellingSightView"); // Redirect to a view displaying all tourist places
             }
         }
-        public IActionResult TravellingHotelView(int page = 1 , int pageSize = 6)
+        public IActionResult TravellingHotelView(int page = 1, int pageSize = 6)
         {
             string a = "Hotel_Restaurant";
             IHotelRepository hotelRepository = new IHotelRepository(_context);
             ViewHotelUser viewHotelAll = new ViewHotelUser();
-            var all = hotelRepository.GetAllHotel_Res_Re(a,page,pageSize);
-            var hotel = hotelRepository.GetAllHotel(a,page,pageSize);
+            var all = hotelRepository.GetAllHotel_Res_Re(a, page, pageSize);
+            var hotel = hotelRepository.GetAllHotel(a, page, pageSize);
             var res = hotelRepository.GetAllRestaurant(a, page, pageSize);
             var re = hotelRepository.GetAllResort(a, page, pageSize);
             /*getHotel_Res_Re.All = all;
@@ -167,7 +171,7 @@ namespace KarnelTravels.Controllers
             else
             {
                 SearchViewModel searchViewModel = new SearchViewModel();
-                var q = hotelRepository.SearchHotel(keyWord,a);
+                var q = hotelRepository.SearchHotel(keyWord, a);
                 searchViewModel.HotelRestaurants = q;
                 return View("User/TravellingHotelViewSearch", searchViewModel);
 
@@ -178,7 +182,7 @@ namespace KarnelTravels.Controllers
         {
             return View("User/TravellingRestaurantView");
         }
-        public IActionResult TravellingPackageView(int page  = 1 , int pageSize = 6 )
+        public IActionResult TravellingPackageView(int page = 1, int pageSize = 6)
         {
             ITourPackageRepository tourPackageRepository = new ITourPackageRepository(_context);
             GetAllPack getAllPack = new GetAllPack();
@@ -198,7 +202,7 @@ namespace KarnelTravels.Controllers
 
                 ITourPackageRepository tourPackageRepository = new ITourPackageRepository(_context);
                 SearchViewModel searchViewModel = new SearchViewModel();
-                var pack = tourPackageRepository.SearchTourPackages(keyWord ,a);
+                var pack = tourPackageRepository.SearchTourPackages(keyWord, a);
                 searchViewModel.ToursPackage = pack;
                 return View("User/TravellingPackageViewSearch", searchViewModel);
             }
@@ -266,30 +270,30 @@ namespace KarnelTravels.Controllers
             return View();
         }
 
-        public IActionResult TravellingTransportView(int page = 1 , int pageSize = 6)
+        public IActionResult TravellingTransportView(int page = 1, int pageSize = 6)
         {
             string a = "Travel";
             GetCar_Plane_Train getTran = new GetCar_Plane_Train();
             ITravelRepository travelRepository = new ITravelRepository(_context);
             ISpotRepository spotRepository = new ISpotRepository(_context);
             var spot = spotRepository.GetAllSpot();
-            var all = travelRepository.GetAllTravleImg(a,page,pageSize);
+            var all = travelRepository.GetAllTravleImg(a, page, pageSize);
             var car = travelRepository.GetAllCar(a);
             var plane = travelRepository.GetAllPlane(a);
             var train = travelRepository.GetAllTrain(a);
             var Transportation = travelRepository.GetAllTransportation();
-            
+
             getTran.Cars = car;
             getTran.Spots = spot;
             getTran.Planes = plane;
             getTran.Trains = train;
-            
+
             getTran.Transportations = Transportation;
             ViewBag.all = all;
             return View("User/TravellingTransportView", getTran);
         }
 
-        public IActionResult TravellingTransportViewSearch(int tran,int spot,int spot1)
+        public IActionResult TravellingTransportViewSearch(int tran, int spot, int spot1)
         {
 
             string a = "Travel";
@@ -297,15 +301,15 @@ namespace KarnelTravels.Controllers
             GetCar_Plane_Train getTran = new GetCar_Plane_Train();
             ISpotRepository spotRepository = new ISpotRepository(_context);
             var spotall = spotRepository.GetAllSpot();
-            
+
             var Transportation = travelRepository.GetAllTransportation();
             getTran.Spots = spotall;
             getTran.Transportations = Transportation;
-            var q = travelRepository.SpotSearch(a,tran, spot, spot1);
+            var q = travelRepository.SpotSearch(a, tran, spot, spot1);
             getTran.All = q;
             return View("User/TravellingTransportViewSearch", getTran);
         }
-        
+
         public IActionResult Privacy()
         {
             _logger.LogInformation("Accessing Privacy page.");
@@ -422,7 +426,7 @@ namespace KarnelTravels.Controllers
         {
             return View("User/FeedbackOnCompany");
         }
-        
+
         // This will go with an ID of a news - After which will be loaded to form the correspond news which is stored in a database
         // NewsDetail/id
         // This will go with an ID of a tour in selection of the user - After which will be loaded to form
@@ -447,7 +451,7 @@ namespace KarnelTravels.Controllers
             viewPackageUser.packageImg = pack;
             viewPackageUser.Images = img;
 
-            return View("User/PackageDetails",viewPackageUser);
+            return View("User/PackageDetails", viewPackageUser);
         }
 
         public IActionResult HotelDetails()
@@ -461,7 +465,7 @@ namespace KarnelTravels.Controllers
             var hotels = hotelRepository.GetTblHotelImgById(id, a);
             viewHotelUser.Hotels = hotels;
             viewHotelUser.Images = img;
-            return View("User/HotelDetails",viewHotelUser);
+            return View("User/HotelDetails", viewHotelUser);
         }
         public IActionResult TransportDetails()
         {
@@ -486,7 +490,7 @@ namespace KarnelTravels.Controllers
         }
         // This will go with an ID of a news - After which will be loaded to form the correspond news which is stored in a database
         // NewsDetail/id
-        
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
@@ -496,10 +500,29 @@ namespace KarnelTravels.Controllers
 
 
 
-        //----------submit feedbacks-----------------------//
         [HttpPost]
-        public JsonResult SubmitFeedback(FeedbackViewModel model)
+        public async Task<JsonResult> SubmitFeedback(FeedbackViewModel model, string recaptchaResponse)
         {
+            // Verify the reCAPTCHA response first
+            var client = new HttpClient();
+            var recaptchaVerificationUrl = "https://www.google.com/recaptcha/api/siteverify";
+            var recaptchaSecretKey = "6LfY39gpAAAAAJcc1wxVCXEA--zxygaAsKLZ_kf8";  // Replace with your actual secret key
+            var content = new FormUrlEncodedContent(new[]
+            {
+        new KeyValuePair<string, string>("secret", recaptchaSecretKey),
+        new KeyValuePair<string, string>("response", recaptchaResponse)
+    });
+
+            var response = await client.PostAsync(recaptchaVerificationUrl, content);
+            var jsonResult = await response.Content.ReadAsStringAsync();
+            var captchaResult = JsonConvert.DeserializeObject<GoogleRecaptchaVerification>(jsonResult);
+
+            if (!captchaResult.Success || captchaResult.Score < 0.5)  // Assuming a threshold score of 0.5
+            {
+                return Json(new { success = false, message = "CAPTCHA validation failed or score too low" });
+            }
+
+            // Proceed with storing feedback if CAPTCHA is passed
             if (ModelState.IsValid)
             {
                 var feedback = new TblFeedback
@@ -509,28 +532,48 @@ namespace KarnelTravels.Controllers
                     FeedbackObject = model.FeedbackObject,
                     ObjectId = model.ObjectId,
                     Status = model.Status,
-                    Date= DateTime.Now,
-                    Rating=model.Rating
-                    
+                    Date = DateTime.Now,
+                    Rating = model.Rating,
+                    IsRead=model.IsRead
                 };
                 if (model.FeedbackObject == "Company")
                 {
-                    feedback.ObjectName = "Kernal"; // for company
+                    feedback.ObjectName = "Karnel"; // for company
                 }
-                else 
+                else
                 {
-                    feedback.ObjectName = "To be define"; // Adjust accordingly
+                    feedback.ObjectName = "To be defined"; // Adjust accordingly
                 }
                 _context.TblFeedbacks.Add(feedback);
                 _context.SaveChanges();
 
-                // Return JSON indicating success
                 return Json(new { success = true });
             }
 
-            // Return JSON indicating failure
-            return Json(new { success = false });
+            return Json(new { success = false, message = "Invalid feedback model state" });
         }
+
+        // Supporting class to handle reCAPTCHA response
+        public class GoogleRecaptchaVerification
+        {
+            [JsonProperty("success")]
+            public bool Success { get; set; }
+
+            [JsonProperty("score")]
+            public float Score { get; set; }  // Add score property for reCAPTCHA v3
+
+            [JsonProperty("challenge_ts")]
+            public DateTime ChallengeTimestamp { get; set; }
+
+            [JsonProperty("hostname")]
+            public string Hostname { get; set; }
+
+            [JsonProperty("error-codes")]
+            public List<string> ErrorCodes { get; set; }
+        }
+
+
+        //----------searching news----------------//
         [HttpPost]
         public IActionResult SearchNews(string searchText, int? spotsId)
         {
@@ -551,7 +594,8 @@ namespace KarnelTravels.Controllers
                     (n.NewsObject == "Travel" && _context.TblTravels.Any(tt => tt.TravelId == n.ObjectId && tt.SpotDestination == spotsId))
                 );
             }
-
+            // Add sorting by Date in descending order before selecting
+            newsQuery = newsQuery.OrderByDescending(n => n.Date);
             // Select news data with image URLs
             var newsList = newsQuery.Select(news => new TblNewsWithImageUrls
             {
@@ -576,6 +620,8 @@ namespace KarnelTravels.Controllers
 
             return Json(spots); // Return spots data as JSON
         }
+
+
     }
 }
 

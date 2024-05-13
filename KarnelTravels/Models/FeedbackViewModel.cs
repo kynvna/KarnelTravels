@@ -8,6 +8,7 @@
         public string FeedbackObject { get; set; }  
         public int ObjectId { get; set; }
         public string Status { get; set; }
+        public int IsRead { get; set; }
         public bool IsSubmitted { get; set; } // Flag to indicate if the form has been submitted
     }
 }
