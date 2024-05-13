@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using KarnelTravels.Repository;
 using System.Security.AccessControl;
+using System.Drawing.Printing;
 
 namespace KarnelTravels.Controllers
 {
@@ -29,9 +30,13 @@ namespace KarnelTravels.Controllers
         //---------------------------------------------------------------------------
 
         //--ROUTINGS FOR REGULAR REDIRECT--
-        public IActionResult Index()
+        public IActionResult Index(int page = 1, int pageSize = 6)
         {
-            return View();
+            ITourPackageRepository tourPackageRepository = new ITourPackageRepository(_context);
+            GetAllPack getAllPack = new GetAllPack();
+            string a = "Tour_Package";
+            var all = tourPackageRepository.GetAllPackImg(a, page, pageSize);
+            return View(all);
         }
         
         public IActionResult ProductView()
@@ -179,7 +184,6 @@ namespace KarnelTravels.Controllers
             GetAllPack getAllPack = new GetAllPack();
             string a = "Tour_Package";
             var all = tourPackageRepository.GetAllPackImg(a , page , pageSize);
-            
             return View("User/TravellingPackageView", all);
         }
         public IActionResult TravellingPackageViewSearch(string keyWord)

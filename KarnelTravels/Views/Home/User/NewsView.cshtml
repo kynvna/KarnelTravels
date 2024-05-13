@@ -7,22 +7,14 @@
 <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
     <div class="container">
         <div class="row g-2">
-            <div class="col-md-10">
+            <div class="col-md-8">
                 <div class="row g-2">
-                    <div class="col-md-4">
-                        <input type="text" id="searchInput" class="form-control border-0 py-3" placeholder="What are you looking for ?">
+                    <div class="col-md-6">
+                        <input type="text" id="searchInput" class="form-control border-0 py-3" placeholder="Please enter the keyword you want to filter out the news - Ex: Plane,...">
                     </div>
-                    @* <div class="col-md-4">
-                    <select id="locationSelect" class="form-select border-0 py-3">
-                    <option value="" selected>Search by location</option>
-                    <option value="1">Property Type 1</option>
-                    <option value="2">Property Type 2</option>
-                    <option value="3">Property Type 3</option>
-                    </select>
-                    </div> *@
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <select id="spotsSelect" class="form-select border-0 py-3">
-                            <option value="" selected>Search by spots</option>
+                            <option value="" selected>--- Select region to filter news ---</option>
                             <!-- This will be populated dynamically with the spot names and IDs -->
                         </select>
                     </div>
@@ -30,6 +22,9 @@
             </div>
             <div class="col-md-2">
                 <button id="searchButton" class="btn btn-dark border-0 w-100 py-3">Find</button>
+            </div>
+            <div class="col-md-2">
+                <span><a class="btn btn-warning border-0 w-100 py-3" asp-controller="Home" asp-action="NewsView">Clear filter</a></span>
             </div>
         </div>
     </div>
@@ -42,7 +37,7 @@
             <div class="col-lg-6">
                 <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
                     <h1 class="mb-3">News</h1>
-                    <p>Placeholder for news page - used to carry newsletter and other information for the web page</p>
+                    <p>List of news in the website - Feel free to use the search bar for filtering the news you need</p>
                 </div>
             </div>
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
@@ -74,23 +69,30 @@
                     @foreach (var item in Model.News)
                     {
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <a href="@Url.Action("NewsDetail", "Home", new { id = item.NewsItem.NewsId })" class="text-decoration-none">
-                                <img src="@($"/img/{item.NewsItem.NewsObject}/{item.ImageUrls.FirstOrDefault()?.Url}")" alt="Description" style="width: 100%; height: auto;">
-                                <h2>@item.NewsItem.Description</h2>
-                                @* <ul>
-                            @foreach (var imageUrl in item.ImageUrls)
-                            {
-                            <li>@imageUrl.Url</li>
-                            }
-                            </ul> *@
-                            </a>
+                            <div class="property-item rounded overflow-hidden">
+                                <div class="position-relative overflow-hidden">
+                                    <a href="@Url.Action("NewsDetail", "Home", new { id = item.NewsItem.NewsId })" class="text-decoration-none">
+                                        <img src="@($"/img/{item.NewsItem.NewsObject}/{item.ImageUrls.FirstOrDefault()?.Url}")" alt="Description" class="img-fluid" style="width: 100%; height: auto;">
+                                    </a>
+                                    <div class="bg-success rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">@item.NewsItem.Status</div>
+                                    <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">NEWSHEAD</div>
+                                </div>
+                                <div class="p-4 pb-0">
+                                    <a href="@Url.Action("NewsDetail", "Home", new { id = item.NewsItem.NewsId })" class="text-decoration-none">
+                                        <p class="d-block h5 mb-2">@item.NewsItem.Description</p>
+                                    </a>
+                                    
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar text-primary me-2"></i><strong>Start:</strong> @item.NewsItem.Date</small>
+                                </div>
+                            </div>
                         </div>
+                        
                     }
-
-
                 </div>
 
-
+                <br/>
                 <!-- Pagination Controls -->
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">

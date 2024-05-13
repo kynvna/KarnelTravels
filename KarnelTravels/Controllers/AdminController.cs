@@ -50,7 +50,7 @@ namespace KarnelTravels.Controllers
                 if (item.UserName == Username && item.PassWord == Password)
                 {
                     HttpContext.Session.SetString("admin", id);
-                    return Redirect("/admin/AdminProfile");
+                    return Redirect("/admin/GetAllFeedBacks");
                 }
                 else
                 {
@@ -295,7 +295,7 @@ namespace KarnelTravels.Controllers
 
             return Redirect("/admin/ViewUploadImageHotel");
         }
-        public IActionResult AdminTransportView(int page = 1, int pageSize = 8)
+        public IActionResult AdminTransportView(int page = 1, int pageSize = 6)
         {
             string a = "Travel";
             ITravelRepository travelRepository = new ITravelRepository(_context);
