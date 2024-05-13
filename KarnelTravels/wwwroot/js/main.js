@@ -1,9 +1,6 @@
 (function ($) {
     "use strict";
- $(window).load(function() {
- // executes when complete page is fully loaded, including all frames, objects and images
- alert("window is loaded");
-});
+
     // Spinner
     var spinner = function () {
         setTimeout(function () {
@@ -14,22 +11,21 @@
     };
     spinner();
     
+    
     // Initiate the wowjs
     new WOW().init();
 
 
     // Sticky Navbar
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 10) {
+        if ($(this).scrollTop() > 45) {
             $('.nav-bar').addClass('sticky-top');
         } else {
             $('.nav-bar').removeClass('sticky-top');
         }
     });
     
-
-
- 
+    
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {

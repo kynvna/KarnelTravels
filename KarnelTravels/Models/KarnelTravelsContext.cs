@@ -38,7 +38,7 @@ public partial class KarnelTravelsContext : DbContext
     public virtual DbSet<TblTravel> TblTravels { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=KarnelTravels;Persist Security Info=True;User ID=sa;Password=IAmAdmin123;Encrypt=True;Trust Server Certificate=True");
+        => optionsBuilder.UseSqlServer("Name=ConnectionStrings:KarnelTravelsDatabase");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -69,10 +69,11 @@ public partial class KarnelTravelsContext : DbContext
 
             entity.ToTable("tblFeedbacks");
 
+            entity.Property(e => e.CustomerId).HasMaxLength(50);
+            entity.Property(e => e.Date).HasColumnType("datetime");
             entity.Property(e => e.FeedbackObject).HasMaxLength(50);
+            entity.Property(e => e.IsRead).HasColumnName("isRead");
             entity.Property(e => e.Status).HasMaxLength(50);
-
-            
         });
 
         modelBuilder.Entity<TblHotelRestaurant>(entity =>
@@ -82,6 +83,7 @@ public partial class KarnelTravelsContext : DbContext
             entity.ToTable("tblHotel_Restaurant");
 
             entity.Property(e => e.HrId).HasColumnName("HR_Id");
+            entity.Property(e => e.Imglink).HasMaxLength(255);
             entity.Property(e => e.Name).HasMaxLength(255);
             entity.Property(e => e.Price).HasColumnType("money");
             entity.Property(e => e.Status).HasMaxLength(50);
@@ -107,6 +109,7 @@ public partial class KarnelTravelsContext : DbContext
 
             entity.ToTable("tblNews");
 
+            entity.Property(e => e.Date).HasColumnType("datetime");
             entity.Property(e => e.NewsObject).HasMaxLength(50);
             entity.Property(e => e.Status).HasMaxLength(50);
         });
@@ -128,7 +131,7 @@ public partial class KarnelTravelsContext : DbContext
             entity.ToTable("tblTour_Packages");
 
             entity.Property(e => e.EndDate).HasColumnName("End_date");
-            entity.Property(e => e.Name).HasMaxLength(10);
+            entity.Property(e => e.Name).HasMaxLength(500);
             entity.Property(e => e.StartDate).HasColumnName("Start_date");
             entity.Property(e => e.TotalPrice)
                 .HasColumnType("money")

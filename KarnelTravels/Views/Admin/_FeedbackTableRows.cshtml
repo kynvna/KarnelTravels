@@ -2,20 +2,29 @@
 
 @foreach (var item in Model)
 {
-    <tr>
+    <tr class="feedback-row @(item.IsRead == 1 ? "viewed" : "not-read")" data-feedbackId="@item.FeedbackId">
         <td>@Html.DisplayFor(modelItem => item.FeedbackObject)</td>
         <td>@Html.DisplayFor(modelItem => item.ObjectName)</td>
         <td>@Html.DisplayFor(modelItem => item.CustomerId)</td>
-        <td>@Html.DisplayFor(modelItem => item.Feedback)</td>
+        <td class="truncated-text feedback-text" title="@Html.DisplayFor(modelItem => item.Feedback)">
+            @Html.DisplayFor(modelItem => item.Feedback)
+        </td>
         <td>@Html.DisplayFor(modelItem => item.Rating)</td>
-        <td>@Html.DisplayFor(modelItem => item.Status)</td>
+        @*  <td>@Html.DisplayFor(modelItem => item.Status)</td> *@
         <td>@Html.DisplayFor(modelItem => item.Date)</td>
         <td>
             <div class="btn-group" role="group">
-                <form asp-action="ToggleStatus" method="post" style="display:inline">
-                    <input type="hidden" name="id" value="@item.FeedbackId" />
-                    <input type="submit" value="@((item.Status == "Active") ? "Deactivate" : "Activate")" class="@((item.Status == "Active") ? "btn btn-warning" : "btn btn-success")" style="width: 100px;" />
-                </form>
+                @if (item.Status == "Active")
+                {
+                    <button class="btn btn-secondary" disabled style="width: 100px;">Active</button>
+                }
+                else
+                {
+                    <form asp-action="ActivateFeedback" method="post" style="display:inline">
+                        <input type="hidden" name="id" value="@item.FeedbackId" />
+                        <input type="submit" value="Activate" class="btn btn-success" style="width: 100px;" />
+                    </form>
+                }
                 <a asp-action="DeleteFeedback" asp-route-id="@item.FeedbackId" class="btn btn-danger" style="width: 100px;">Delete</a>
             </div>
         </td>

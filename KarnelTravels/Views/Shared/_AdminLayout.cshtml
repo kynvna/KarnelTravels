@@ -16,6 +16,7 @@
     <link href="/assets/css/main.min.css" rel="stylesheet" />
 
     <!-- PAGE LEVEL STYLES-->
+
 </head>
 
 <body class="fixed-navbar">
@@ -50,69 +51,23 @@
                 <!-- START TOP-RIGHT TOOLBAR-->
                 <ul class="nav navbar-toolbar">
                     <li class="dropdown dropdown-inbox">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <a class="nav-link" id="fetchUnreadFeedbacks" href="#">
                             <i class="fa fa-envelope-o"></i>
-                            <span class="badge badge-primary envelope-badge">9</span>
+                            <span class="badge badge-primary envelope-badge">
+                               
+                            </span>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media">
-                            <li class="dropdown-menu-header">
-                                <div>
-                                    <span><strong>9 New</strong> Messages</span>
-                                    <a class="pull-right" href="mailbox.html">view all</a>
-                                </div>
-                            </li>
-                            <li class="list-group list-group-divider scroller" data-height="240px" data-color="#71808f">
-                                <div>
-                                    <a class="list-group-item">
-                                        <div class="media">
-                                            <div class="media-img">
-                                                <img src="/assets/img/users/u1.jpg" />
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="font-strong"> </div>Jeanne Gonzalez<small class="text-muted float-right">Just now</small>
-                                                <div class="font-13">Your proposal interested me.</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a class="list-group-item">
-                                        <div class="media">
-                                            <div class="media-img">
-                                                <img src="/assets/img/users/u2.jpg" />
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="font-strong"></div>Becky Brooks<small class="text-muted float-right">18 mins</small>
-                                                <div class="font-13">Lorem Ipsum is simply.</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a class="list-group-item">
-                                        <div class="media">
-                                            <div class="media-img">
-                                                <img src="/assets/img/users/u3.jpg" />
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="font-strong"></div>Frank Cruz<small class="text-muted float-right">18 mins</small>
-                                                <div class="font-13">Lorem Ipsum is simply.</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a class="list-group-item">
-                                        <div class="media">
-                                            <div class="media-img">
-                                                <img src="/assets/img/users/u4.jpg" />
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="font-strong"></div>Rose Pearson<small class="text-muted float-right">3 hrs</small>
-                                                <div class="font-13">Lorem Ipsum is simply.</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
                     </li>
+
                     <li class="dropdown dropdown-notification">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell-o rel"><span class="notify-signal"></span></i></a>
+                        <a class="nav-link" asp-controller="Admin" asp-action="UnreadFeedbacks">
+                            <i class="fa fa-bell-o rel">
+                                <span >
+                                    
+                                </span>
+                            </i>
+                        </a>
+
                         <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media">
                             <li class="dropdown-menu-header">
                                 <div>
@@ -245,6 +200,34 @@
                 </ul>
             </div>
         </nav>
+        //---------insert script to call to fucntion geting unread feedgac
+        <script>
+            document.getElementById('fetchUnreadFeedbacks').addEventListener('click', function (event) {
+                event.preventDefault();  // Prevent the default anchor click behavior
+                const url = '@Url.Action("UnreadFeedbacks", "Admin")';  // Generate the URL for the AJAX request
+
+                fetch(url, {
+                    method: 'GET',  // or 'POST' if required
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();  // or response.text() if you're expecting text
+                    })
+                    .then(data => {
+                        console.log(data);  // Log data or update the DOM as needed
+                        // For example, update the badge count
+                        document.querySelector('.envelope-badge').textContent = data.unread + '/' + data.all;
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
+            });
+        </script>
+
         <!-- END SIDEBAR-->
         <div class="content-wrapper">
             <!-- START PAGE CONTENT-->

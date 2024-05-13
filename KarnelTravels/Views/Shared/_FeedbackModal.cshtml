@@ -1,4 +1,6 @@
 ﻿@model FeedbackViewModel
+<script src="https://www.google.com/recaptcha/api.js?render=6LfY39gpAAAAABRCvKeAVSuJsqsO_9ScTnPbuHMn"></script>
+
 
 <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -36,6 +38,11 @@
                         <input type="hidden" name="FeedbackObject" id="feedbackObject" />
                         <input type="hidden" name="ObjectId" id="objectId" />
                         <input type="hidden" name="Status" id="status" />
+                        <input type="hidden" name="IsRead" id="isRead" />
+                        <!-- Add reCAPTCHA -->
+                        <div class="form-outline mb-3">
+                        <div class="g-recaptcha" data-sitekey="66LfY39gpAAAAABRCvKeAVSuJsqsO_9ScTnPbuHMn" style="margin: auto;"></div>
+                        </div>
                         <div class="d-flex justify-content-between mt-3">
                             <button type="button" class="btn btn-primary" id="submitFeedback">Send feedback</button>
                         </div>
@@ -55,61 +62,102 @@
 </div>
 
 <script>
-    // Add event listener for the star rating
-    document.getElementById('starRating').addEventListener('click', function (event) {
-        if (event.target.dataset.rating) {
-            // Get the rating value from the clicked star
-            var rating = event.target.dataset.rating;
-            // Set the rating value to the hidden input field
-            document.getElementById('ratingValue').value = rating;
+    document.addEventListener('DOMContentLoaded', function () {
+        var starRating = document.getElementById('starRating');
+        if (starRating) {
+            starRating.addEventListener('click', function (event) {
+                if (event.target.dataset.rating) {
+                    // Get the rating value from the clicked star
+                    var rating = event.target.dataset.rating;
+                    // Set the rating value to the hidden input field
+                    document.getElementById('ratingValue').value = rating;
 
-            // Update the appearance of the stars based on the rating
-            var stars = document.querySelectorAll('#starRating i');
-            stars.forEach(star => {
-                star.classList.remove('fas', 'fa-star', 'text-warning'); // Remove solid star and color
-                star.classList.add('far'); // Switch to outline star
+                    // Update the appearance of the stars based on the rating
+                    var stars = document.querySelectorAll('#starRating i');
+                    stars.forEach(star => {
+                        star.classList.remove('fas', 'fa-star', 'text-warning'); // Remove solid star and color
+                        star.classList.add('far'); // Switch to outline star
 
-                // Highlight solid stars up to the selected rating
-                if (star.dataset.rating <= rating) {
-                    star.classList.add('fas', 'fa-star', 'text-warning');
-                    star.classList.remove('far');
+                        // Highlight solid stars up to the selected rating
+                        if (star.dataset.rating <= rating) {
+                            star.classList.add('fas', 'fa-star', 'text-warning');
+                            star.classList.remove('far');
+                        }
+                    });
                 }
             });
         }
-    });
 
-    // Update hidden inputs dynamically when the modal is shown
-    document.getElementById('commentModal').addEventListener('shown.bs.modal', function () {
-        document.getElementById('feedbackObject').value = 'Company';
-        document.getElementById('objectId').value = 1234;
-        document.getElementById('status').value = 'Active';
-        document.getElementById('ratingValue').value = rating;
-
-    });
-
-    // Attach a click event listener to the submit button
-    document.getElementById('submitFeedback').addEventListener('click', function () {
-        // Use FormData to collect form inputs
-        var formData = new FormData(document.getElementById('feedbackForm'));
-
-        // Make an AJAX POST request to submit the feedback
-        fetch('/Home/SubmitFeedback', {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => response.json())
-            .then(data => {
-                // Replace modal content with the "Thank You" message
-                document.getElementById('feedbackModalBody').innerHTML = `
-                        <div class="alert alert-success">
-                            <h5>Thank You for Your Feedback!</h5>
-                            <p>We appreciate your input and will use it to improve our services.</p>
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    `;
-            })
-            .catch(error => {
-                console.error('Error submitting feedback:', error);
+        @* var commentModal = document.getElementById('commentModal');
+        if (commentModal) {
+            commentModal.addEventListener('shown.bs.modal', function () {
+                document.getElementById('feedbackObject').value = 'Company';
+                document.getElementById('objectId').value = 1234;
+                document.getElementById('status').value = 'InActive';
+                document.getElementById('isRead').value = 0;
+                document.getElementById('ratingValue').value = document.getElementById('ratingValue').value || '5';
             });
+        } *@
+
+            var commentModal = document.getElementById('commentModal');
+        if (commentModal) {
+            commentModal.addEventListener('shown.bs.modal', function (event) {
+                var triggerElement = event.relatedTarget; // Element that triggered the modal
+
+                // Extract values from data attributes
+                var feedbackObject = triggerElement.getAttribute('data-feedback-object');
+                var objectId = triggerElement.getAttribute('data-object-id');
+
+                // Set the values in the modal
+                document.getElementById('feedbackObject').value = feedbackObject;
+                document.getElementById('objectId').value = objectId;
+                document.getElementById('status').value = 'InActive';
+                document.getElementById('isRead').value = 0;
+                document.getElementById('ratingValue').value = document.getElementById('ratingValue').value || '5';
+            });
+        }
+
+
+        var submitButton = document.getElementById('submitFeedback');
+        if (submitButton) {
+            submitButton.addEventListener('click', function (event) {
+                event.preventDefault();  // Prevent the default form submission
+
+                grecaptcha.ready(function () {
+                    grecaptcha.execute('6LfY39gpAAAAABRCvKeAVSuJsqsO_9ScTnPbuHMn', { action: 'submit' }).then(function (token) {
+                        // Append the reCAPTCHA response token to your form data
+                        var formData = new FormData(document.getElementById('feedbackForm'));
+                        formData.append('recaptchaResponse', token);  // Ensure your server-side is ready to handle this param
+
+                        // Make an AJAX POST request to submit the feedback
+                        fetch('/Home/SubmitFeedback', {
+                            method: 'POST',
+                            body: formData
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.success) {
+                                    // Replace modal content with the "Thank You" message
+                                    document.getElementById('feedbackModalBody').innerHTML = `
+                                    <div class="alert alert-success">
+                                        <h5>Thank You for Your Feedback!</h5>
+                                        <p>We appreciate your input and will use it to improve our services.</p>
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                    `;
+                                } else {
+                                    // Handle the case where reCAPTCHA or other server-side validation fails
+                                    alert('Feedback submission failed. ' + (data.message || 'Please try again.'));
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error submitting feedback:', error);
+                            });
+                    });
+                });
+            });
+        }
     });
 </script>
+
+

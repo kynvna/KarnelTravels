@@ -1135,9 +1135,11 @@ namespace KarnelTravels.Controllers
 
         //--------------------Feedbacks administration------------------------------//
 
-        // Method to toggle the status
+        
+
+        // Method to activate the feedback
         [HttpPost]
-        public IActionResult ToggleStatus(int id)
+        public IActionResult ActivateFeedback(int id)
         {
             var feedback = _context.TblFeedbacks.Find(id);
             if (feedback == null)
@@ -1145,51 +1147,42 @@ namespace KarnelTravels.Controllers
                 return NotFound();
             }
 
-            // Toggle between "Active" and "Not Active"
-            feedback.Status = feedback.Status == "Active" ? "Not Active" : "Active";
-            _context.SaveChanges();
+            // Set status to "Active" only if it is currently "Not Active"
+            if (feedback.Status != "Active")
+            {
+                feedback.Status = "Active";
+                _context.SaveChanges();
+                TempData["Message"] = "Feedback activated successfully.";
+                TempData["InActiveFeedbacks"] = _context.TblFeedbacks.Count(f => f.Status == "InActive");
+            }
+            else
+            {
+                TempData["Message"] = "Feedback is already active.";
+            }
 
             return RedirectToAction(nameof(GetAllFeedBacks));
         }
 
-        // GET: Feedback/EditFeedback/5
-        [HttpGet]
-        public IActionResult EditFeedback(int id)
-        {
-            var feedback = _context.TblFeedbacks.Find(id);
-            if (feedback == null)
-            {
-                return NotFound();
-            }
 
-            return View(feedback);
+        //----get all undread feedbacks----------//
+        public IActionResult UnreadFeedbacks()
+        {
+            var unreadFeedbacks = _context.TblFeedbacks.Where(f => f.IsRead == 0).OrderByDescending(t=>t.Date).ToList(); // Add ToList() to execute the query
+
+            // redirect and show these counts on another page,  using TempData:
+            TempData["UnreadFeedbackCount"] = unreadFeedbacks.Count;
+            return PartialView("_FeedbackTableRows", unreadFeedbacks);
+        }
+        //---get all inactive feedbacks--------------------//
+        public IActionResult InactiveFeedbacks()
+        {
+            var unreadFeedbacks = _context.TblFeedbacks.Where(f => f.Status == "InActive").OrderByDescending(t => t.Date).ToList(); // Add ToList() to execute the query
+
+            // redirect and show these counts on another page,  using TempData:
+            TempData["UnreadFeedbackCount"] = unreadFeedbacks.Count;
+            return PartialView("_FeedbackTableRows", unreadFeedbacks);
         }
 
-        // POST: Feedback/EditFeedback/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult EditFeedback(int id, [Bind("FeedbackId,Status")] TblFeedback updatedFeedback)
-        {
-            var feedback = _context.TblFeedbacks.Find(id);
-
-            if (feedback == null)
-            {
-                return NotFound();
-            }
-
-            feedback.Status = updatedFeedback.Status;
-
-            try
-            {
-                _context.SaveChanges();
-                return RedirectToAction(nameof(GetAllFeedBacks));
-            }
-            catch
-            {
-                ModelState.AddModelError(string.Empty, "Unable to update status. Try again later.");
-                return View(updatedFeedback);
-            }
-        }
 
         // GET: Feedback/DeleteFeedback/5
         [HttpGet]
@@ -1217,58 +1210,29 @@ namespace KarnelTravels.Controllers
 
             _context.TblFeedbacks.Remove(feedback);
             _context.SaveChanges();
+            
+            TempData["AllFeedbacks"] = _context.TblFeedbacks.Count();
 
             return RedirectToAction(nameof(GetAllFeedBacks));
         }
 
         // Assume this method already exists
-        public IActionResult GetAllFeedBacks()
+        public IActionResult GetAllFeedBacks(string sortOrder = "date_desc")
         {
-            var feedbacks = _context.TblFeedbacks.OrderByDescending(f => f.Date).ToList();
-
-            //foreach (var feedback in feedbacks)
-            //{
-            //    switch (feedback.FeedbackObject)
-            //    {
-            //        case "Company":
-            //            // Simulate fetching company name based on ObjectId
-            //            feedback.ObjectName = "KerNal";
-            //            break;
-            //        case "Hotel_Restaurant":
-            //            // Fetch the matching record from the TblHotelRestaurants table
-            //            var hotelRestaurant = _context.TblHotelRestaurants
-            //                 .FirstOrDefault(h => h.HrId == feedback.ObjectId);
-
-            //            // Ensure that a result was found before accessing its properties
-            //            feedback.ObjectName = hotelRestaurant?.Name ?? "Unknown Hotel/Restaurant";
-            //            break;
-            //        case "Travel":
-            //            var travel = _context.TblTravels
-            //                 .FirstOrDefault(h => h.TravelId == feedback.ObjectId);
-
-            //            // Ensure that a result was found before accessing its properties
-            //            feedback.ObjectName = travel?.Name ?? "Unknown travel";
-            //            break;
-            //        case "Tourist_Place":
-            //            var touristplace = _context.TblTouristPlaces
-            //                 .FirstOrDefault(h => h.Id == feedback.ObjectId);
-
-            //            // Ensure that a result was found before accessing its properties
-            //            feedback.ObjectName = touristplace?.Name ?? "Unknown touristplace";
-            //            break;
-            //        case "Tour_Package":
-            //            var tourpackage = _context.TblTourPackages
-            //                 .FirstOrDefault(h => h.PackageId == feedback.ObjectId);
-
-            //            // Ensure that a result was found before accessing its properties
-            //            feedback.ObjectName = tourpackage?.Name ?? "Unknown tourpackage";
-            //            break;
-            //        default:
-            //            feedback.ObjectName = "Unknown";
-            //            break;
-            //    }
-            //}
+            var feedbacks = new List<TblFeedback>();
+            if (sortOrder == "date_desc")
+            feedbacks = _context.TblFeedbacks.OrderByDescending(f => f.Date).ToList(); 
+            if(sortOrder== "date_asc")
+                feedbacks = _context.TblFeedbacks.OrderBy(f => f.Date).ToList();
+            TempData["AllFeedbacks"] = feedbacks.Count;
+            TempData["UnreadFeedbacks"] = _context.TblFeedbacks.Count(f => f.IsRead == 0);
+            TempData["InActiveFeedbacks"] = _context.TblFeedbacks.Count(f => f.Status == "InActive");
             GetObjectname(feedbacks);
+            // Check if the request is for partial view only (this could be a parameter or header check)
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            {
+                return PartialView("_FeedbackTableRows", feedbacks);
+            }
             return View(feedbacks);
         }
 
@@ -1280,7 +1244,7 @@ namespace KarnelTravels.Controllers
                 {
                     case "Company":
                         // Simulate fetching company name based on ObjectId
-                        feedback.ObjectName = "KerNal";
+                        feedback.ObjectName = "KarNel";
                         break;
                     case "Hotel_Restaurant":
                         var hotelRestaurant = _context.TblHotelRestaurants
@@ -1326,6 +1290,35 @@ namespace KarnelTravels.Controllers
             var sortedFeedbacks = feedbacks.OrderByDescending(f => f.Date).ToList();
 
             return PartialView("_FeedbackTableRows", sortedFeedbacks);
+        }
+
+        // -----------Mark feedback as read---------------//
+        [HttpPost]
+        public IActionResult MarkFeedbackAsRead(int feedbackId)
+        {
+            var feedback = _context.TblFeedbacks.FirstOrDefault(f => f.FeedbackId == feedbackId);
+            if (feedback != null)
+            {
+                if (feedback.IsRead != 1)
+                {
+                    feedback.IsRead = 1; // Mark as read
+                    _context.SaveChanges();
+
+                    // Update TempData after saving changes to ensure accurate count
+                    TempData["UnreadFeedbacks"] = _context.TblFeedbacks.Count(f => f.IsRead == 0);
+
+                    return Json(new { success = true, message = "Feedback marked as read." });
+                }
+                else
+                {
+                    // Even if no changes, update TempData to ensure UI is correct
+                    TempData["UnreadFeedbacks"] = _context.TblFeedbacks.Count(f => f.IsRead == 0);
+                    return Json(new { success = true, message = "Feedback was already marked as read." });
+                }
+            }
+            // Provide TempData update even if feedback not found to handle edge cases
+            TempData["UnreadFeedbacks"] = _context.TblFeedbacks.Count(f => f.IsRead == 0);
+            return Json(new { success = false, message = "Feedback not found." });
         }
 
 

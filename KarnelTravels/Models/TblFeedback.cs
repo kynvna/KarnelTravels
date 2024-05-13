@@ -12,9 +12,6 @@ public partial class TblFeedback
 
     public int? ObjectId { get; set; }
 
-    [NotMapped]
-    public string ObjectName { get; set; }
-
     public string? CustomerId { get; set; }
 
     public string? Feedback { get; set; }
@@ -24,4 +21,9 @@ public partial class TblFeedback
     public string? Status { get; set; }
 
     public DateTime? Date { get; set; }
+
+    public int? IsRead { get; set; }
+
+    [NotMapped]
+    public string ObjectName { get; set; }
 }

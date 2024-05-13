@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
 
 namespace KarnelTravels.Models;
 
@@ -20,6 +20,4 @@ public partial class TblNews
     public DateTime? Date { get; set; }
 
     public string? NewsDetail { get; set; }
-
-   
 }
