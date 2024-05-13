@@ -1,210 +1,11 @@
-﻿@* @model CreateNewsViewModel
+﻿@model CreateNewsViewModel
 
 @{
     ViewData["Title"] = "CreateNews";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
-<div class="ibox">
-    <div class="ibox-head">
-        <h2 class="ibox-title">
-            Create a news
-        </h2>
-    </div>
-    <div class="ibox-body">
-        <form asp-action="CreateNews" method="post" enctype="multipart/form-data">
-            <div class="row">
-                <div class="form-group col-md-4">
-                    <label asp-for="News.NewsItem.NewsObject" class="control-label">News Object</label>
-                    <select asp-for="News.NewsItem.NewsObject" asp-items="Model.NewsObjectList" class="form-control">
-                        <option value="">-- Select News Object --</option>
-                    </select>
-                    <span asp-validation-for="News.NewsItem.NewsObject" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="objectNameDropdown" class="control-label">Object Name</label>
-                    <select id="objectNameDropdown" name="News.NewsItem.ObjectId" class="form-control">
-                        <option value="">-- Select Object --</option>
-                    </select>
-                    <span asp-validation-for="News.NewsItem.ObjectId" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-4">
-                    <label asp-for="News.NewsItem.HotNews">Hot News</label>
-                    <div>
-                        <input asp-for="News.NewsItem.HotNews" type="radio" value="1" id="hotNewsYes">
-                        <label>Yes</label>
-                    </div>
-                    <div>
-                        <input asp-for="News.NewsItem.HotNews" type="radio" value="0" id="hotNewsNo">
-                        <label>No</label>
-                    </div>
-                    <span asp-validation-for="News.NewsItem.HotNews" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-6">
-                    <label asp-for="News.NewsItem.Description">Description</label>
-                    <input asp-for="News.NewsItem.Description" class="form-control" />
-                    <span asp-validation-for="News.NewsItem.Description" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-6">
-                    <label asp-for="News.NewsItem.Status">Status</label>
-                    <select asp-for="News.NewsItem.Status" asp-items="Model.StatusList" class="form-control">
-                        <option value="">-- Select Status --</option>
-                    </select>
-                    <span asp-validation-for="News.NewsItem.Status" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-12">
-                    <label asp-for="News.NewsItem.NewsDetail" class="control-label">News Detail</label>
-                    <textarea asp-for="News.NewsItem.NewsDetail" class="form-control" rows="10"></textarea>
-                    <span asp-validation-for="News.NewsItem.NewsDetail" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-4">
-                    <label>Existing Images</label>
-                    <div id="existing-images">
-                        @if (Model.News.ImageUrls != null && Model.News.ImageUrls.Count > 0)
-                        {
-                            foreach (var imageUrl in Model.News.ImageUrls)
-                            {
-                                <img src="@imageUrl.Url" alt="Thumbnail" style="width: 100px; height: 100px; margin-right: 5px;">
-                            }
-                        }
-                        else
-                        {
-                            <p>No thumbnails available.</p>
-                        }
-                    </div>
-                </div>
-                <!-- New Image Upload Area -->
-                <div class="form-group col-md-2">
-                    <label for="imageUpload">Upload New Images</label>
-                    <input type="file" class="form-control-file" id="imageUpload" name="files" multiple>
-                </div>
-                <div class="form-group col-md-6" id="imagePreview"></div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-12">
-                    <button type="submit" class="btn btn-primary">Create News</button>
-                    <a class="btn btn-danger" asp-action="AdminNewsView">Back to Newsboard</a>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-
-
-
-
-
-
-
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-
-    <script>
-        $(document).ready(function () {
-            console.log("Script loaded and event bound.");
-            var selectedNewsObject = ""; // Initialize a variable to store the selected news object
-
-            $('#News_NewsItem_NewsObject').change(function () {
-                selectedNewsObject = $(this).val(); // Update the selectedNewsObject variable
-                updateObjectNames(selectedNewsObject);
-            });
-
-            $('#objectNameDropdown').change(function () {
-                var objectId = $(this).val(); // Get the currently selected object ID
-                if (selectedNewsObject && objectId) { // Check if both values are available
-                    updateExistingImages(selectedNewsObject, objectId);
-                }
-            });
-
-            function updateObjectNames(newsObject) {
-                $.ajax({
-                    url: '@Url.Action("GetObjectNames", "Admin")',
-                    type: 'GET',
-                    data: { newsObject: newsObject },
-                    success: function (data) {
-                        var objectIdSelect = $('#objectNameDropdown');
-                        objectIdSelect.empty();
-                        objectIdSelect.append($('<option>', { value: "", text: "Select Object..." }));
-                        $.each(data, function (index, item) {
-                            objectIdSelect.append($('<option>', { value: item.id, text: item.name }));
-                        });
-                    },
-                    error: function (error) {
-                        console.error("Error fetching data: ", error);
-                    }
-                });
-            }
-
-            function updateExistingImages(newsObject, objectId) {
-                $.ajax({
-                    url: '@Url.Action("GetExistingImages", "Admin")',
-                    type: 'GET',
-                    data: { objectId: objectId, newsObject: newsObject },
-                    success: function (data) {
-                        var imagesDiv = $('#existing-images');
-                        imagesDiv.empty();
-                        if (data && data.length > 0) {
-                            data.forEach(function (imageUrl) {
-                                imagesDiv.append('<img src="/img/' + newsObject + '/' + imageUrl.url + '" alt="Thumbnail" style="width: 100px; height: 100px; margin-right: 5px;">');
-
-
-                            });
-                        } else {
-                            imagesDiv.append('<p>No thumbnails available.</p>');
-                        }
-                    },
-                    error: function (error) {
-                        console.error("Error fetching images: ", error);
-                    }
-                });
-            }
-        });
-
-        document.getElementById('imageUpload').addEventListener('change', function (event) {
-            var files = event.target.files;
-            var imagePreviewDiv = document.getElementById('imagePreview');
-            imagePreviewDiv.innerHTML = ''; // Clear existing previews
-
-            for (var i = 0; i < files.length; i++) {
-                var file = files[i];
-
-                // Ensure the file is an image
-                if (file.type.startsWith('image/')) {
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        var imgElement = document.createElement('img');
-                        imgElement.src = e.target.result;
-                        imgElement.style.width = '100px';  // Set the size as per your requirement
-                        imgElement.style.height = '100px';
-                        imgElement.style.marginRight = '5px';
-                        imagePreviewDiv.appendChild(imgElement);
-                    };
-
-                    reader.readAsDataURL(file); // Read the file as a Data URL to preview it
-                }
-            }
-        });
-    </script>
-}
-
- *@
-
-
-@model CreateNewsViewModel
-
-@{
-    ViewData["Title"] = "CreateNews";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-}
+@* <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script> *@
+<script src="https://cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
 
 <div class="row">
     <div class="col-md-3"></div>
@@ -257,12 +58,11 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label asp-for="News.NewsItem.NewsDetail">News Detail <span class="text-muted" style="font-size:10px">- Enter some details/descriptions for your news, as this will be considered
-                                the content for your news.
-                            </span></label>
-                            <textarea asp-for="News.NewsItem.NewsDetail" class="form-control" rows="10"></textarea>
+                            <label asp-for="News.NewsItem.NewsDetail">News Detail <span class="text-muted" style="font-size:10px">- Enter some details/descriptions for your news, as this will be considered the content for your news.</span></label>
+                            <textarea asp-for="News.NewsItem.NewsDetail" class="form-control" rows="10" id="news-detail-textarea"></textarea>
                             <span asp-validation-for="News.NewsItem.NewsDetail" class="text-danger"></span>
                         </div>
+
                     </div>
                     <div class="row">
                         <div class="form-group col-md-12">
@@ -279,7 +79,7 @@
                                 }
                                 else
                                 {
-                                    <p>No thumbnails available.</p>
+                                    <p>No images available.</p>
                                 }
                             </div>
                         </div>
@@ -332,6 +132,7 @@
     }
 
     <script>
+
         $(document).ready(function () {
             console.log("Script loaded and event bound.");
             var selectedNewsObject = ""; // Initialize variable to store the selected News Object
@@ -402,6 +203,43 @@
             }
 
             // Handle image file changes
+            // $('#imageUpload').on('change', function () {
+            //     var files = this.files;
+            //     var fileDescriptionsDiv = $('#fileDescriptions');
+            //     var imagePreviewDiv = $('#imagePreview');
+
+            //     // Clear existing previews and description inputs
+            //     fileDescriptionsDiv.empty();
+            //     imagePreviewDiv.empty();
+
+            //     for (var i = 0; i < files.length; i++) {
+            //         var file = files[i];
+
+            //         // Add a description input for each file
+            //         var descriptionInput = $('<input>', {
+            //             type: 'text',
+            //             name: 'fileDescriptions[' + i + ']',
+            //             class: 'form-control',
+            //             placeholder: 'Description for ' + file.name
+            //         });
+            //         fileDescriptionsDiv.append(descriptionInput);
+
+            //         // Ensure the file is an image for preview
+            //         if (file.type.startsWith('image/')) {
+            //             var reader = new FileReader();
+
+            //             reader.onload = function (e) {
+            //                 var imgElement = $('<img>', {
+            //                     src: e.target.result,
+            //                     style: 'width: 100px; height: 100px; margin-right: 5px;'
+            //                 });
+            //                 imagePreviewDiv.append(imgElement);
+            //             };
+
+            //             reader.readAsDataURL(file); // Read the file for preview
+            //         }
+            //     }
+            // });
             $('#imageUpload').on('change', function () {
                 var files = this.files;
                 var fileDescriptionsDiv = $('#fileDescriptions');
@@ -414,9 +252,14 @@
                 for (var i = 0; i < files.length; i++) {
                     var file = files[i];
 
+                    // Generate unique IDs for the input and image
+                    var inputId = 'descInput-' + i;
+                    var imageId = 'imgPreview-' + i;
+
                     // Add a description input for each file
                     var descriptionInput = $('<input>', {
                         type: 'text',
+                        id: inputId,
                         name: 'fileDescriptions[' + i + ']',
                         class: 'form-control',
                         placeholder: 'Description for ' + file.name
@@ -427,18 +270,32 @@
                     if (file.type.startsWith('image/')) {
                         var reader = new FileReader();
 
-                        reader.onload = function (e) {
-                            var imgElement = $('<img>', {
-                                src: e.target.result,
-                                style: 'width: 100px; height: 100px; margin-right: 5px;'
-                            });
-                            imagePreviewDiv.append(imgElement);
-                        };
+                        reader.onload = (function (imageId) { // Capture imageId in a closure
+                            return function (e) {
+                                var imgElement = $('<img>', {
+                                    src: e.target.result,
+                                    id: imageId,
+                                    style: 'width: 100px; height: 100px; margin-right: 5px;'
+                                });
+                                imagePreviewDiv.append(imgElement);
+                            };
+                        })(imageId);
 
-                        reader.readAsDataURL(file); // Read the file for preview
+                        reader.readAsDataURL(file);
                     }
+
+                    // Add event listeners to highlight the image when editing its description
+                    $('#' + inputId).on('focus', function () {
+                        var index = this.id.split('-')[1];
+                        $('#imgPreview-' + index).css('border', '3px solid blue');
+                    }).on('blur', function () {
+                        var index = this.id.split('-')[1];
+                        $('#imgPreview-' + index).css('border', '');
+                    });
                 }
             });
+
+            CKEDITOR.replace('news-detail-textarea');
         });
     </script>
 }
