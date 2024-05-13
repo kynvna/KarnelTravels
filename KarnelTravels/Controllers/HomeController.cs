@@ -9,6 +9,8 @@ using System.Security.AccessControl;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Linq;
+
 
 
 namespace KarnelTravels.Controllers
@@ -616,6 +618,22 @@ namespace KarnelTravels.Controllers
 
             return Json(spots); // Return spots data as JSON
         }
+        //-----get star rating-------------//
+
+        public IActionResult GetStarRating(string Object, int id)
+        {
+            var feedbacks = _context.TblFeedbacks.Where(f => f.FeedbackObject == Object && f.ObjectId == id).ToList();
+
+            if (!feedbacks.Any())
+            {
+                return Json(0);  // Automatically allows GET requests
+            }
+
+            float averageRating = (float)feedbacks.Average(f => f.Rating);
+
+            return Json(averageRating);
+        }
+
 
 
     }

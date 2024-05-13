@@ -46,7 +46,8 @@
                                 <strong>
                                     Customer Rating:
                                 </strong>
-                                <i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 5.0 
+                                <i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 
+                                <span class="star-rating">5.0</span>
                                 &nbsp;&nbsp;<span>
                                     <a class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#commentModal"
                                        data-feedback-object="Hotel_Restaurant" data-object-id=@Model.Hotels.HrId>
@@ -69,3 +70,21 @@
     </div>
 </div>
 <!-- Property List End -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                var travelId = '@Model.Hotels.HrId'; // Get the Travel ID from the model
+                var object = "Hotel_Restaurant";
+                $.ajax({
+                    url: '@Url.Action("GetStarRating", "Home")', // Ensure the controller and action names are correct
+                    type: 'GET',
+                    data: { Id: travelId, Object: object },
+                    success: function (data) {
+                        $('.star-rating').text(data.toFixed(1)); // Update all elements with class 'star-rating'
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Error fetching star rating: " + error);
+                    }
+                });
+            });
+        </script>
