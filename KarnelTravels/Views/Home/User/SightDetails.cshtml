@@ -9,7 +9,7 @@
     <div class="container">
         <div class="tab-content">
             <a href="javascript:history.back()">Go Back</a>
-            <hr/>
+            <hr />
             <div id="tab-1" class="tab-pane fade show p-0 active">
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-4 wow fadeInUp h-100" style="height:100%" data-wow-delay="0.5s">
@@ -18,7 +18,7 @@
                             {
                                 <img src="~/img/TblTourist_Place/@Url.Content(imageUrl)" class="img-fluid" alt="Tourist Place Image">
                             }
-                        </a> 
+                        </a>
                     </div>
                     <div class="col-lg-8 col-md-8 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
                         <div class="p-4 pb-0">
@@ -27,11 +27,17 @@
                                 <strong>
                                     Customer Rating:
                                 </strong>
-                                <span><i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 5.0</span>
-                                &nbsp;<span><a class="btn btn-outline-warning" data-bs-toggle="pill" href="#tab-1">Already tried ? Rate this service</a></span>
+                                <i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 5.0
+                                &nbsp;&nbsp;<span>
+                                    <a class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#commentModal"
+                                       data-feedback-object="Tourist_Place" data-object-id=@Model.Id>
+                                        Already tried? Rate this service
+                                    </a>
+                                </span>
                             </p>
-                            <p><strong>Status: </strong>
-                                @if(Model.Status == "true")
+                            <p>
+                                <strong>Status: </strong>
+                                @if (Model.Status == "true")
                                 {
                                     <span style="color:limegreen">Is currently active</span>
                                 }
@@ -45,46 +51,20 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                        <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="https://ieltscaptoc.com.vn/wp-content/uploads/2023/02/talk-about-travelling-4.jpg" alt=""></a>
+                </div>
+                <div class="row">
+                    <div class="row mt-4">
+                        @foreach (var imageUrl in Model.ImageUrl)
+                        {
+                            <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
+                                <div class="card h-100">
+                                    <img class="card-img-top" src="~/img/TblTourist_Place/@Url.Content(imageUrl)" height="200px" width="auto" alt="">
+                                </div>
+                            </div>
+                        }
                     </div>
-                    <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                        <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="https://ieltscaptoc.com.vn/wp-content/uploads/2023/02/talk-about-travelling-4.jpg" alt=""></a>
-                    </div>
-                    <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                        <a asp-action="NewsDetail" asp-controller="Home"><img class="img-fluid" src="https://ieltscaptoc.com.vn/wp-content/uploads/2023/02/talk-about-travelling-4.jpg" alt=""></a>
-                    </div>
-                    <div class="col-lg-12 col-md-12 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                        <div class="p-0 pb-0">
-                            <p>
-                                <strong>
-                                    Customer Rating:
-                                </strong>
-                                <i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 5.0 
-                                &nbsp;&nbsp;<span>
-                                    <a class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#commentModal"
-                                       data-feedback-object="Tourist_Place" data-object-id=@Model.Id>
-                                        Already tried? Rate this service
-                                    </a>
-                                </span>
-                            </p>
-                            <p>
-
-<!-- Sight Details Start -->
-<div class="container py-5">
-    <div class="row">
-        <div class="col-md-6">
-            <h2>@Model.Name</h2>
-            <p>@Model.Description</p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row mt-4">
-        @foreach (var imageUrl in Model.ImageUrl)
-        {
-            <div class="col-md-4 mb-3">
-                <img src="~/img/TblTourist_Place/@Url.Content(imageUrl)" class="img-fluid" alt="Tourist Place Image">
-            </div>
-        }
-    </div>
 </div>
-<!-- Property List End -->

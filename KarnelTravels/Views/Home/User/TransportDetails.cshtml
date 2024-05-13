@@ -22,8 +22,6 @@
                                 <strong>
                                     Customer Rating:
                                 </strong>
-                                <span><i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 5.0</span>
-                                &nbsp;<span><a class="btn btn-outline-warning" data-bs-toggle="pill" href="#tab-1">Already tried ? Rate this service</a></span>
                             </p>
                             <p><strong>Status: </strong>
                                 @if(Model.travelImg.Status == "true")
@@ -47,20 +45,19 @@
                                     </a>
                                 </span>
                             </p>
-                            <p>
-                                @Html.Raw(@Model.travelImg.Description)
-                            </p>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
+        <br/>
         <div class="row wow fadeInUp" data-wow-delay="0.5s">
             @foreach (var item in Model.tblImageUrls)
             {
                 <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                    <img class="img-fluid" src="/img/Travel/@item.Url" height="200px" alt="">
+                   <div class="card h-100">
+                        <img class="card-img-top" src="/img/Travel/@item.Url" height="200px" width="auto" alt="">
+                   </div>
                 </div>
             }
         </div>

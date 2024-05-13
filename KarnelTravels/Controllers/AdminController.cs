@@ -171,7 +171,7 @@ namespace KarnelTravels.Controllers
             string deletepath = Path.Combine(_env.WebRootPath, "img", "tblTour_Packages");
             /*string fileDelete = Path.Combine(deletepath, ls.);*/
             /*System.IO.File.Delete(fileDelete);*/
-          
+
             if (val != null)
             {
                 tblTourPackage.PackageId = newlyCreatedId;
@@ -202,7 +202,7 @@ namespace KarnelTravels.Controllers
                     tblImage.Url = fileName;
                     tblImage.Description = "upload";
                     tblImage.ObjectId = newlyCreatedId;
-                    tblImage.UrlObject = "tblTour_Packages";
+                    tblImage.UrlObject = "Tour_Package";
                     _context.TblImageUrls.Add(tblImage);
                     _context.SaveChanges();
 
@@ -520,7 +520,7 @@ namespace KarnelTravels.Controllers
         {
             return View("AdminSpotView");
         }
-        public IActionResult AdminHotelView(int page = 1, int pageSize = 8)
+        public IActionResult AdminHotelView(int page = 1, int pageSize = 6)
         {
             IHotelRepository hotelRepository = new IHotelRepository(_context);
 

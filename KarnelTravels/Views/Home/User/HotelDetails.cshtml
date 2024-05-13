@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "News";
     Layout = "~/Views/Shared/_UserLayout.cshtml";
-    
+
 }
 
 <!-- Property List Start -->
@@ -24,8 +24,13 @@
                                 <strong>
                                     Customer Rating:
                                 </strong>
-                                <span><i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 5.0</span>
-                                &nbsp;<span><a class="btn btn-outline-warning" data-bs-toggle="pill" href="#tab-1">Already tried ? Rate this service</a></span>
+                                <i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 5.0
+                                &nbsp;&nbsp;<span>
+                                    <a class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#commentModal"
+                                       data-feedback-object="Hotel_Restaurant" data-object-id=@Model.Hotels.CatId>
+                                        Already tried? Rate this service
+                                    </a>
+                                </span>
                             </p>
                             <p>
                                 <strong>Estimation Service Price:  </strong> @Model.Hotels.Price $
@@ -39,37 +44,14 @@
                     @foreach (var item in Model.Images)
                     {
                         <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                            <a><img class="img-fluid" src="/img/Hotel_Restaurant/@item.Url" alt=""></a>
+                            <div class="card h-100">
+                                <img class="card-img-top" src="/img/Hotel_Restaurant/@item.Url" height="200px" width="auto" alt="">
+                            </div>
                         </div>
-                       
                     }
-                    
-                    <div class="col-lg-12 col-md-12 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
-                        <div class="p-0 pb-0">
-                            <p>
-                                <strong>
-                                    Customer Rating:
-                                </strong>
-                                <i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 5.0 
-                                &nbsp;&nbsp;<span>
-                                    <a class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#commentModal"
-                                       data-feedback-object="Hotel_Restaurant" data-object-id=@Model.Hotels.HrId>
-                                        Already tried? Rate this service
-                                    </a>
-
-                                </span>
-                            </p>
-                            <p>
-                                
-                                <strong>Description: </strong>
-                                @Html.Raw(Model.Hotels.Description)
-                            </p>
-                        </div>
-                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row mt-4">
-        
-    </div>
 </div>
-<!-- Property List End -->
+    <!-- Property List End -->

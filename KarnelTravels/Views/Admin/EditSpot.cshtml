@@ -4,40 +4,46 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<div class="ibox">
-    <div class="ibox-head">
-        <h3 class="ibox-title">Editing current spot</h3>
-    </div>
-    <div class="ibox-body">
-        <form method="post" action="EditSpot" class="mt-3" autocomplete="off" enctype="multipart/form-data">
-            <div class="row">
-                <div class="form-group col-md-6">
-                    <label>Id</label>
-                    <input type="number" class="form-control" asp-for="Id" readonly />
-                    <span asp-validation-for="Id" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-6">
-                    <label>Spot's Name</label>
-                    <input type="text" class="form-control" asp-for="Name" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-               
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="ibox">
+            <div class="ibox-head">
+                <h3 class="ibox-title">Editing current spot</h3>
             </div>
-            <div class="row">
-                <div class="form-group col-md-12">
-                    <label>Active</label> &nbsp;
-                    <input type="checkbox" asp-for="Status" />
-                    <span asp-validation-for="Status" class="text-danger"></span>
-                </div>
-            </div>
+            <div class="ibox-body">
+                <form method="post" action="EditSpot" class="mt-3" autocomplete="off" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Id</label>
+                            <input type="number" class="form-control" asp-for="Id" readonly />
+                            <span asp-validation-for="Id" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Spot's Name</label>
+                            <input type="text" class="form-control" asp-for="Name" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
 
-            <div class="row">
-                <div class="form-group col-md-12">
-                    <button type="submit" class="btn btn-primary">Submit Changes</button>
-                    <a class="btn btn-danger" asp-action="AdminSpot" asp-controller="Admin">Go Back</a>
-                </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label>Active</label> &nbsp;
+                            <input type="checkbox" asp-for="Status" />
+                            <span asp-validation-for="Status" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <button type="submit" class="btn btn-primary">Submit Changes</button>
+                            <a class="btn btn-danger" asp-action="AdminSpot" asp-controller="Admin">Go Back</a>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
+    <div class="col-md-3"></div>
 </div>
 

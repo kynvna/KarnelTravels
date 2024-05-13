@@ -4,62 +4,68 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<div class="ibox">
-    <div class="ibox-head">
-        <div class="ibox-title">Editing Current Tourist Place</div>
-        <div class="ibox-tools">
-            <a class="ibox-collapse"><i class="fa fa-minus"></i></a>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="ibox">
+            <div class="ibox-head">
+                <div class="ibox-title">Editing Current Tourist Place</div>
+                <div class="ibox-tools">
+                    <a class="ibox-collapse"><i class="fa fa-minus"></i></a>
+                </div>
+            </div>
+            <div class="ibox-body">
+                <form method="post" action="EditTouristPlace" autocomplete="off" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-sm-4 form-group">
+                            <label>Id</label>
+                            <input type="text" class="form-control" asp-for="Id" readonly />
+                            <span asp-validation-for="Id" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-4 form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" asp-for="Name" placeholder="Please name your tourist place" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-4 form-group">
+                            <label>Select spot</label>
+                            <select class="form-control" asp-for="SportId" aria-describedby="basic-addon1" required>
+                                <option selected>Select your spot</option>
+                                @foreach (var spot in ViewBag.Spots)
+                                {
+                                    <option value="@spot.Id">@spot.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <label>Descrirption</label>
+                            <textarea rows="10" type="text" class="form-control" asp-for="Description" placeholder="Please describe your tourist place"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Image</label>
+                            <input type="file" id="files" name="files" class="form-control" multiple />
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label class="form-lable">Status</label>
+                            <select class="form-control" asp-for="Status" aria-describedby="basic-addon1" required>
+                                <option value="ACTIVE">Active</option>
+                                <option value="INACTIVE">Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button name="btnSave" id="btnSave" class="btn btn-success" type="submit">Save selected informations</button>
+                        <a asp-controller="Admin" asp-action="AdminTouristPlace" class="btn btn-danger" type="submit">Go back</a>
+                    </div>
+                </form>
+
+            </div>
         </div>
     </div>
-    <div class="ibox-body">
-        <form method="post" action="EditTouristPlace" autocomplete="off" enctype="multipart/form-data">
-            <div class="row">
-                <div class="col-sm-4 form-group">
-                    <label>Id</label>
-                    <input type="text" class="form-control" asp-for="Id" readonly />
-                    <span asp-validation-for="Id" class="text-danger"></span>
-                </div>
-                <div class="col-sm-4 form-group">
-                    <label>Name</label>
-                    <input type="text" class="form-control" asp-for="Name" placeholder="Please name your tourist place" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-                <div class="col-sm-4 form-group">
-                    <label>Select spot</label>
-                    <select class="form-control" asp-for="SportId" aria-describedby="basic-addon1" required>
-                        <option selected>Select your spot</option>
-                        @foreach (var spot in ViewBag.Spots)
-                        {
-                            <option value="@spot.Id">@spot.Name</option>
-                        }
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 form-group">
-                    <label>Descrirption</label>
-                    <textarea rows="10" type="text" class="form-control" asp-for="Description" placeholder="Please describe your tourist place"></textarea>
-                    <span asp-validation-for="Description" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 form-group">
-                    <label>Image</label>
-                    <input type="file" id="files" name="files" class="form-control" multiple />
-                </div>
-                <div class="col-sm-6 form-group">
-                    <label class="form-lable">Status</label>
-                    <select class="form-control" asp-for="Status" aria-describedby="basic-addon1" required>
-                        <option value="ACTIVE">Active</option>
-                        <option value="INACTIVE">Inactive</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
-                <button name="btnSave" id="btnSave" class="btn btn-success" type="submit">Save selected informations</button>
-                <a asp-controller="Admin" asp-action="AdminTouristPlace" class="btn btn-danger" type="submit">Go back</a>
-            </div>
-        </form>
-
-    </div>
+    <div class="col-md-3"></div>
 </div>

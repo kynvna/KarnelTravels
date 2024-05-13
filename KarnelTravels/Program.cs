@@ -10,15 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<KarnelTravels.Models.KarnelTravelsContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("KarnelTravelsDatabase")));
-
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddSession(options =>
-{
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Set session timeout duration
-    options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true; // Make the session cookie essential
-});
+builder.Services.AddSession();
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
@@ -197,4 +191,3 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Admin}/{action=Login}/{id?}");*/
 app.Run();
-

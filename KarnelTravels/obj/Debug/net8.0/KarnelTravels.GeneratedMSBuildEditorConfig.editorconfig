@@ -26,10 +26,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\EProject_Sem3\KarnelTravels
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/EProject_Sem3/KarnelTravels/Views/Admin/AdminHotel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Ib3RlbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/EProject_Sem3/KarnelTravels/Views/Admin/AdminHotelView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Ib3RlbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
