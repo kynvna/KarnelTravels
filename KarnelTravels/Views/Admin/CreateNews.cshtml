@@ -4,6 +4,8 @@
     ViewData["Title"] = "CreateNews";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+@* <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script> *@
+<script src="https://cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
 
 <div class="row">
     <div class="col-md-3"></div>
@@ -56,15 +58,11 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label asp-for="News.NewsItem.NewsDetail">
-                                News Detail <span class="text-muted" style="font-size:10px">
-                                    - Enter some details/descriptions for your news, as this will be considered
-                                    the content for your news.
-                                </span>
-                            </label>
-                            <textarea asp-for="News.NewsItem.NewsDetail" class="form-control" rows="10"></textarea>
+                            <label asp-for="News.NewsItem.NewsDetail">News Detail <span class="text-muted" style="font-size:10px">- Enter some details/descriptions for your news, as this will be considered the content for your news.</span></label>
+                            <textarea asp-for="News.NewsItem.NewsDetail" class="form-control" rows="10" id="news-detail-textarea"></textarea>
                             <span asp-validation-for="News.NewsItem.NewsDetail" class="text-danger"></span>
                         </div>
+
                     </div>
                     <div class="row">
                         <div class="form-group col-md-12">
@@ -83,7 +81,7 @@
                                 }
                                 else
                                 {
-                                    <p>No thumbnails available.</p>
+                                    <p>No images available.</p>
                                 }
                             </div>
                         </div>
@@ -128,6 +126,7 @@
     }
 
     <script>
+
         $(document).ready(function () {
             console.log("Script loaded and event bound.");
             var selectedNewsObject = ""; // Initialize variable to store the selected News Object
@@ -198,6 +197,43 @@
             }
 
             // Handle image file changes
+            // $('#imageUpload').on('change', function () {
+            //     var files = this.files;
+            //     var fileDescriptionsDiv = $('#fileDescriptions');
+            //     var imagePreviewDiv = $('#imagePreview');
+
+            //     // Clear existing previews and description inputs
+            //     fileDescriptionsDiv.empty();
+            //     imagePreviewDiv.empty();
+
+            //     for (var i = 0; i < files.length; i++) {
+            //         var file = files[i];
+
+            //         // Add a description input for each file
+            //         var descriptionInput = $('<input>', {
+            //             type: 'text',
+            //             name: 'fileDescriptions[' + i + ']',
+            //             class: 'form-control',
+            //             placeholder: 'Description for ' + file.name
+            //         });
+            //         fileDescriptionsDiv.append(descriptionInput);
+
+            //         // Ensure the file is an image for preview
+            //         if (file.type.startsWith('image/')) {
+            //             var reader = new FileReader();
+
+            //             reader.onload = function (e) {
+            //                 var imgElement = $('<img>', {
+            //                     src: e.target.result,
+            //                     style: 'width: 100px; height: 100px; margin-right: 5px;'
+            //                 });
+            //                 imagePreviewDiv.append(imgElement);
+            //             };
+
+            //             reader.readAsDataURL(file); // Read the file for preview
+            //         }
+            //     }
+            // });
             $('#imageUpload').on('change', function () {
                 var files = this.files;
                 var fileDescriptionsDiv = $('#fileDescriptions');
@@ -210,9 +246,14 @@
                 for (var i = 0; i < files.length; i++) {
                     var file = files[i];
 
+                    // Generate unique IDs for the input and image
+                    var inputId = 'descInput-' + i;
+                    var imageId = 'imgPreview-' + i;
+
                     // Add a description input for each file
                     var descriptionInput = $('<input>', {
                         type: 'text',
+                        id: inputId,
                         name: 'fileDescriptions[' + i + ']',
                         class: 'form-control',
                         placeholder: 'Description for ' + file.name
@@ -223,18 +264,32 @@
                     if (file.type.startsWith('image/')) {
                         var reader = new FileReader();
 
-                        reader.onload = function (e) {
-                            var imgElement = $('<img>', {
-                                src: e.target.result,
-                                style: 'width: 100px; height: 100px; margin-right: 5px;'
-                            });
-                            imagePreviewDiv.append(imgElement);
-                        };
+                        reader.onload = (function (imageId) { // Capture imageId in a closure
+                            return function (e) {
+                                var imgElement = $('<img>', {
+                                    src: e.target.result,
+                                    id: imageId,
+                                    style: 'width: 100px; height: 100px; margin-right: 5px;'
+                                });
+                                imagePreviewDiv.append(imgElement);
+                            };
+                        })(imageId);
 
-                        reader.readAsDataURL(file); // Read the file for preview
+                        reader.readAsDataURL(file);
                     }
+
+                    // Add event listeners to highlight the image when editing its description
+                    $('#' + inputId).on('focus', function () {
+                        var index = this.id.split('-')[1];
+                        $('#imgPreview-' + index).css('border', '3px solid blue');
+                    }).on('blur', function () {
+                        var index = this.id.split('-')[1];
+                        $('#imgPreview-' + index).css('border', '');
+                    });
                 }
             });
+
+            CKEDITOR.replace('news-detail-textarea');
         });
     </script>
 }

@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "/G4zHN+QivziXelUvQVC62AEPj9m4DBJ58HUrAqFp7M=",
+=======
+  "Hash": "zjLNPSB5afMpvQG95dRdcFRwAYEol8cctSHVhgyHftg=",
+>>>>>>> origin/ky
   "Source": "KarnelTravels",
   "BasePath": "_content/KarnelTravels",
   "Mode": "Default",
@@ -73395,7 +73399,49 @@
       "OriginalItemSpec": "wwwroot\\img\\Hotel_Restaurant\\638509708850443131lb1.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\638511213908663190property-4.jpg",
+=======
+      "Identity": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\638512279667122783.jpg",
+      "SourceId": "KarnelTravels",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\",
+      "BasePath": "_content/KarnelTravels",
+      "RelativePath": "img/Hotel_Restaurant/638512279667122783.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Hotel_Restaurant\\638512279667122783.jpg"
+    },
+    {
+      "Identity": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\638512279667647648.jpg",
+      "SourceId": "KarnelTravels",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\",
+      "BasePath": "_content/KarnelTravels",
+      "RelativePath": "img/Hotel_Restaurant/638512279667647648.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Hotel_Restaurant\\638512279667647648.jpg"
+    },
+    {
+      "Identity": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\banana.jpg",
+>>>>>>> origin/ky
       "SourceId": "KarnelTravels",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\",

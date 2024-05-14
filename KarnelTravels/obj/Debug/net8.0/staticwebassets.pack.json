@@ -15425,6 +15425,7 @@
       "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\638509708850443131lb1.jpg"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\638511213908663190property-4.jpg",
       "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\638511213908663190property-4.jpg"
     },
@@ -15514,6 +15515,17 @@
     },
     {
       "Id": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Caravelle Saigon1.jpg",
+=======
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\638512279667122783.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\638512279667122783.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\638512279667647648.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\638512279667647648.jpg"
+    },
+    {
+      "Id": "E:\\Source\\KarnelTravels\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\Caravelle Saigon1.jpg",
+>>>>>>> origin/ky
       "PackagePath": "staticwebassets\\img\\Hotel_Restaurant\\Caravelle Saigon1.jpg"
     },
     {
