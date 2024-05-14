@@ -62,7 +62,7 @@ namespace KarnelTravels.Controllers
 
 
 
-        public IActionResult AdminTourPackage(int page = 1, int pageSize = 8)
+        public IActionResult AdminTourPackage(int page = 1, int pageSize = 6)
         {
             ITourPackageRepository tourPackageRepository = new ITourPackageRepository(_context);
             GetAllPack getAllPack = new GetAllPack();
