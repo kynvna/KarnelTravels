@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bAv+DRQonby2SRxKWg9FI/29nNrxuAPA5JUuVPnCn94=",
+  "Hash": "/G4zHN+QivziXelUvQVC62AEPj9m4DBJ58HUrAqFp7M=",
   "Source": "KarnelTravels",
   "BasePath": "_content/KarnelTravels",
   "Mode": "Default",
@@ -73792,6 +73792,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Hotel_Restaurant\\638512193064609397bus1.jpg"
+    },
+    {
+      "Identity": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\638512715201069684.jpg",
+      "SourceId": "KarnelTravels",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\",
+      "BasePath": "_content/KarnelTravels",
+      "RelativePath": "img/Hotel_Restaurant/638512715201069684.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Hotel_Restaurant\\638512715201069684.jpg"
     },
     {
       "Identity": "D:\\EProject_Sem3\\KarnelTravels\\wwwroot\\img\\Hotel_Restaurant\\banana.jpg",
