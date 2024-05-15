@@ -118,7 +118,7 @@ namespace KarnelTravels.Controllers
                         foreach (var file in FileImg)
                         {
                             string fileName = DateTime.Now.Ticks + file.FileName;
-                            string uploadPath = Path.Combine(_env.WebRootPath, "img", "tblTour_Packages");
+                            string uploadPath = Path.Combine(_env.WebRootPath, "img", "Tour_Package");
 
                             string filePath = Path.Combine(uploadPath, fileName);
                             using (var stream = new FileStream(filePath, FileMode.Create))
@@ -153,7 +153,6 @@ namespace KarnelTravels.Controllers
             var img = imageRepository.GetAllImg(id, a);
             ViewBag.pack = pack;
 
-
             /*            ImageRepository imageRepository = new ImageRepository(_context);
             */
             var list = spotRepository.GetAllSpot();
@@ -168,7 +167,7 @@ namespace KarnelTravels.Controllers
             var val = Request.Form["mydata"].ToString();
             int newlyCreatedId = model.PackageId;
             /*var ls = travelRepository.GetTravelById(a);*/
-            string deletepath = Path.Combine(_env.WebRootPath, "img", "tblTour_Packages");
+            string deletepath = Path.Combine(_env.WebRootPath, "img", "Tour_Package");
             /*string fileDelete = Path.Combine(deletepath, ls.);*/
             /*System.IO.File.Delete(fileDelete);*/
 
@@ -191,7 +190,7 @@ namespace KarnelTravels.Controllers
                 foreach (var file in FileImg)
                 {
                     string fileName = DateTime.Now.Ticks + file.FileName;
-                    string uploadPath = Path.Combine(_env.WebRootPath, "img", "tblTour_Packages");
+                    string uploadPath = Path.Combine(_env.WebRootPath, "img", "Tour_Package");
 
                     string filePath = Path.Combine(uploadPath, fileName);
                     using (var stream = new FileStream(filePath, FileMode.Create))
