@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging; // Ensure ILogger is accessible
 using System.Diagnostics;
-using System.Linq;
 using KarnelTravels.Repository;
 using System.Security.AccessControl;
 using Newtonsoft.Json;
@@ -11,6 +10,8 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Drawing.Printing;
+using System.Collections.Generic;
+using System.Linq; // Import the LINQ namespace
 
 
 
@@ -486,10 +487,6 @@ namespace KarnelTravels.Controllers
         {
             return View("User/RestaurantDetails");
         }
-        public IActionResult AdvancedSearch()
-        {
-            return View("User/AdvancedSearch");
-        }
         // This will go with an ID of a news - After which will be loaded to form the correspond news which is stored in a database
         // NewsDetail/id
 
@@ -637,7 +634,35 @@ namespace KarnelTravels.Controllers
 
             return Json(averageRating);
         }
+        public IActionResult AdvancedSearch(string keyword)
+        {
+            var viewModel = new SearchResultViewModel();
 
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                viewModel.Hotels = _context.TblHotelRestaurants.ToList();
+                viewModel.TouristPlaces = _context.TblTouristPlaces.ToList();
+                viewModel.News = _context.TblNews.ToList();
+                viewModel.Packages = _context.TblTourPackages.ToList();
+                viewModel.Spots = _context.TblSpots.ToList();
+                viewModel.Transports = _context.TblTravels.ToList();
+
+                // Apply filters based on search parameters
+                if (!string.IsNullOrEmpty(keyword))
+                {
+                    viewModel.Hotels = viewModel.Hotels.Where(h => h.Name.Contains(keyword, StringComparison.OrdinalIgnoreCase)).ToList();
+                    viewModel.TouristPlaces = viewModel.TouristPlaces.Where(tp => tp.Name.Contains(keyword, StringComparison.OrdinalIgnoreCase)).ToList();
+                    viewModel.News = viewModel.News.Where(n => n.Description.Contains(keyword, StringComparison.OrdinalIgnoreCase)).ToList();
+                    viewModel.Packages = viewModel.Packages.Where(p => p.Name.Contains(keyword, StringComparison.OrdinalIgnoreCase)).ToList();
+                    viewModel.Transports = viewModel.Transports.Where(p => p.Name.Contains(keyword, StringComparison.OrdinalIgnoreCase)).ToList();
+
+                    // Apply similar filters for other entities
+                }
+
+            }
+
+            return View("User/AdvancedSearch", viewModel);
+        }
 
 
     }

@@ -361,7 +361,7 @@ namespace KarnelTravels.Controllers
                             tblImage.Url = fileName;
                             tblImage.Description = "upload";
                             tblImage.ObjectId = newlyCreatedId;
-                            tblImage.UrlObject = model.selectObject;
+                            tblImage.UrlObject = "Travel";
 
                             _context.TblImageUrls.Add(tblImage);
                             _context.SaveChanges();

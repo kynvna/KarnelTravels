@@ -1,479 +1,187 @@
-﻿@{
+﻿@model KarnelTravels.Models.SearchResultViewModel
+@{
     ViewData["Title"] = "Tours";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+    var errorMessage = TempData["errorMessage"]?.ToString();
+}
+@using System.Linq
+@if (!string.IsNullOrWhiteSpace(errorMessage))
+{
+    <div class="alert alert-danger">
+        <b>
+            Error:
+        </b>@errorMessage
+        <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 }
 
-<!-- Search Start -->
 <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
     <div class="container">
-        <div class="row g-2">
-            <div class="col-md-10">
-                <div class="row g-2">
-                    <div class="col-md-12">
-                        <input type="text" class="form-control border-0 py-3" placeholder="What are you looking for ?">
+        <form action="@Url.Action("AdvancedSearch", "Home")" method="GET">
+            <div class="row g-2">
+                <div class="col-md-8">
+                    <div class="row g-2">
+                        <div class="col-md-12">
+                            <input id="searchInput" name="keyword" type="text" class="form-control border-0 py-3" placeholder="Enter anything you want to search here, i mean anything !!! Ex: News,...">
+                        </div>
                     </div>
                 </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-dark border-0 w-100 py-3">Find</button>
+                </div>
+                <div class="col-md-2">
+                    <span><a class="btn btn-warning border-0 w-100 py-3" asp-controller="Home" asp-action="AdvancedSearch">Clear filter</a></span>
+                </div>
             </div>
-            <div class="col-md-2">
-                <button class="btn btn-dark border-0 w-100 py-3">Find</button>
-            </div>
-        </div>
+        </form>
     </div>
 </div>
-<!-- Search End -->
-<!-- Property List Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-0 gx-5 align-items-end">
-            <div class="col-lg-12 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
-                <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-danger active" data-bs-toggle="pill" href="#tab-1">Hot</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-2">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row g-0 gx-5 align-items-end">
-            <div class="col-lg-12 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
-                <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-danger active" data-bs-toggle="pill" href="#tab-1">Hot</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-2">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Condition</a>
-                    </li>
-                </ul>
+            <div class="col-lg-12">
+                <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
+                    <h1 class="mb-3 text-center">Discover Boldly - Find what you need</h1>
+                    <p class="text-center">
+                        Think of anywhere, any keywords, any categories you want to explore, then type in the search bar above. KARNEL will sort out all
+                        information based on your idea.
+                    </p>
+                </div>
             </div>
         </div>
         <div class="tab-content">
-            <div id="tab-1" class="tab-pane fade show p-0 active">
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a asp-action="TourDetails" asp-controller="Home"><img class="img-fluid" src="https://japannews.yomiuri.co.jp/wp-content/uploads/2023/09/10789230.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">International Tour</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">6 days 5 nights</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">27.000.000 VND</h5>
-                                <a class="d-block h5 mb-2" asp-action="TourDetails" asp-controller="Home">Hokkaido - Sapporo - Tokyo</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Tokyo - Japan</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
+            <div class="tab-pane fade show p-0 active">
+                @if (Model != null && Model.Transports.Any())
+                {
+                    <div class="row g-4 wow fadeInUp">
+                        <h1>Transports</h1>
+                        <div class="card-deck">
+                            @foreach (var transp in Model.Transports)
+                            {
+                                <div class="col-md-12">
+                                    <div class="card p-2">
+                                        <div class="card-body">
+                                            <a href="/home/TransportDetails?idt=@transp.TravelId" class="d-block h5 mb-2 card-title"><span style="text-decoration:none">@transp.Name</span></a>
+                                            <p class="card-text">@Html.Raw(@TruncateDescription(@transp.Description, 300))</p>
+                                            <a href="/home/TransportDetails?idt=@transp.TravelId" class="btn btn-warning">Discover</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                            }
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="https://japannews.yomiuri.co.jp/wp-content/uploads/2023/09/10789230.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">International Tour</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">6 days 5 nights</div>
+                }
+                <br />
+                @if (Model != null && Model.Hotels.Any())
+                {
+                    <div class="row g-4 wow fadeInUp">
+                        <h2>Hotels</h2>
+                        @foreach (var hotel in Model.Hotels)
+                        {
+                            <div class="col-md-12">
+                                <div class="card p-2">
+                                    <div class="card-body">
+                                        <a href="/home/HotelDetails?idt=@hotel.HrId" class="d-block h5 mb-2 card-title"><span style="text-decoration:none">@hotel.Name</span></a>
+                                        <p class="card-text">@Html.Raw(@TruncateDescription(hotel.Description, 300))</p>
+                                        <a href="/home/HotelDetails?idt=@hotel.HrId" class="btn btn-warning">Discover</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">27.000.000 VND</h5>
-                                <a class="d-block h5 mb-2" href="">Hokkaido - Sapporo - Tokyo</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Tokyo - Japan</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
+                            <br />
+                        }
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="https://japannews.yomiuri.co.jp/wp-content/uploads/2023/09/10789230.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">International Tour</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">6 days 5 nights</div>
+                }
+                <br />
+                @if (Model != null && Model.TouristPlaces.Any())
+                {
+                    <div class="row g-4 wow fadeInUp">
+                        <h2>Tourist Places</h2>
+                        @foreach (var place in Model.TouristPlaces)
+                        {
+                            <div class="col-md-12">
+                                <div class="card p-2">
+                                    <div class="card-body">
+                                        <h5 class="d-block h5 mb-2 card-title" onclick="location.href='@Url.Action("SightDetails", "Home", new { id = place.Id })'">@place.Name</h5>
+                                        <p class="card-text">@Html.Raw(@TruncateDescription(place.Description, 300))</p>
+                                        <p class="btn btn-warning" onclick="location.href='@Url.Action("SightDetails", "Home", new { id = place.Id })'">Discover</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">27.000.000 VND</h5>
-                                <a class="d-block h5 mb-2" href="">Hokkaido - Sapporo - Tokyo</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Tokyo - Japan</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
+                            <br />
+                        }
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="https://japannews.yomiuri.co.jp/wp-content/uploads/2023/09/10789230.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">International Tour</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">6 days 5 nights</div>
+                }
+                <br />
+                @if (Model != null && Model.News.Any())
+                {
+                    <div class="row g-4 wow fadeInUp">
+                        <h2>News</h2>
+                        @foreach (var news in Model.News)
+                        {
+                            <div class="col-md-12">
+                                <div class="card p-2">
+                                    <div class="card-body">
+                                        <h5 class="d-block h5 mb-2 card-title" onclick="location.href='@Url.Action("NewsDetail", "Home", new { id = news.NewsId })'">@news.Description</h5>
+                                        <p class="card-text">@Html.Raw(@TruncateDescription(news.NewsDetail, 300))</p>
+                                        <p class="btn btn-warning" onclick="location.href='@Url.Action("NewsDetail", "Home", new { id = news.NewsId })'">Discover</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">27.000.000 VND</h5>
-                                <a class="d-block h5 mb-2" href="">Hokkaido - Sapporo - Tokyo</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Tokyo - Japan</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
+                            <br />
+                        }
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="https://japannews.yomiuri.co.jp/wp-content/uploads/2023/09/10789230.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">International Tour</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">6 days 5 nights</div>
+                }
+                <br />
+                @if (Model != null && Model.Packages.Any())
+                {
+                    <div class="row g-4 wow fadeInUp">
+                        <h2>Packages</h2>
+                        @foreach (var package in Model.Packages)
+                        {
+                            <div class="col-md-12">
+                                <div class="card p-2">
+                                    <div class="card-body">
+                                        <a href="/home/PackageDetails?idt=@package.PackageId" class="d-block h5 mb-2 card-title"><span style="text-decoration:none">@package.Name</span></a>
+                                        <p class="card-text">@Html.Raw(@TruncateDescription(package.Description, 200))</p>
+                                        <a href="/home/PackageDetails?idt=@package.PackageId" class="btn btn-warning">View Package Details</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">27.000.000 VND</h5>
-                                <a class="d-block h5 mb-2" href="">Hokkaido - Sapporo - Tokyo</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Tokyo - Japan</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
+                            <br />
+                        }
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="https://japannews.yomiuri.co.jp/wp-content/uploads/2023/09/10789230.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">International Tour</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">6 days 5 nights</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">27.000.000 VND</h5>
-                                <a class="d-block h5 mb-2" href="">Hokkaido - Sapporo - Tokyo</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Tokyo - Japan</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
-                    </div>
-                </div>
-            </div>
-            <div id="tab-2" class="tab-pane fade show p-0">
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-1.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">$12,345</h5>
-                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-2.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Villa</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">$12,345</h5>
-                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">$12,345</h5>
-                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-4.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Building</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">$12,345</h5>
-                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-5.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">$12,345</h5>
-                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-6.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">$12,345</h5>
-                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center">
-                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
-                    </div>
-                </div>
-            </div>
-            <div id="tab-3" class="tab-pane fade show p-0">
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-1.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">$12,345</h5>
-                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-2.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Villa</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">$12,345</h5>
-                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-3.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">$12,345</h5>
-                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-4.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Building</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">$12,345</h5>
-                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-5.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">$12,345</h5>
-                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="/img/property-6.jpg" alt=""></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">$12,345</h5>
-                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center">
-                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </div>
 </div>
+
 <!-- Property List End -->
+@functions {
+    public string TruncateDescription(string description, int maxLength)
+    {
+        if (string.IsNullOrEmpty(description))
+            return string.Empty;
+
+        if (description.Length <= maxLength)
+            return description;
+
+        return description.Substring(0, maxLength) + "...";
+    }
+}
+
+    @section Scripts {
+    <script>
+        window.onload = function () {
+            document.getElementById("searchInput").focus();
+        };
+    </script>
+    }
+
+
+
+
+
+
+

@@ -4,6 +4,6 @@
     {
         public IEnumerable<TblImageUrl> Images { get; set; }
         public ViewPackageImg packageImg { get; set; }
-
+        
     }
 }

@@ -55,7 +55,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a asp-controller="Home" asp-action="Index" class="nav-item nav-link active">Home</a>
-                        <a asp-controller="Home" asp-action="AdvancedSearch" class="nav-item nav-link">Advanced Search</a>
+                        <a asp-controller="Home" asp-action="AdvancedSearch" class="nav-item nav-link">Discover</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travelling</a>
                             <div class="dropdown-menu rounded-0 m-0">
@@ -180,6 +180,7 @@
             window.scrollTo(0, 100);
         }
     </script>
+    @RenderSection("Scripts", required: false)
     <!-- Template Javascript -->
     <script src="/js/main.js"></script>
 </body>

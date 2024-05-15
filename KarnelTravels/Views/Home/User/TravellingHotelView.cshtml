@@ -30,8 +30,6 @@
                 </div>
             </div>
         </form>
-
-
     </div>
 </div>
 <!-- Search End -->
@@ -68,10 +66,10 @@
 
                     @foreach (var item in All.All)
                     {
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp card border-0" data-wow-delay="0.1s">
                             <div class="property-item rounded overflow-hidden">
                                 <div class="position-relative overflow-hidden">
-                                    <a href="/home/HotelDetails?idt=@item.HrId"><img class="img-fluid" src="/img/Hotel_Restaurant/@item.url" alt=""></a>
+                                    <a href="/home/HotelDetails?idt=@item.HrId"><img class="card-img-top" height="300px" src="/img/Hotel_Restaurant/@item.url" alt=""></a>
                                     <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Accomodations</div>
                                 </div>
                                 <div class="p-4 pb-0">
@@ -84,7 +82,7 @@
                         </div>
                     }
 
-                    <nav aria-label="Page navigation example">
+                    <nav aria-label="Page navigation example wow fadeInUp">
                         <ul class="pagination justify-content-center">
                             @if (All.CurrentPage > 1)
                             {
@@ -116,10 +114,10 @@
                 <div class="row g-4">
                     @foreach (var item in hotel.All)
                     {
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp card border-0" data-wow-delay="0.1s">
                             <div class="property-item rounded overflow-hidden">
                                 <div class="position-relative overflow-hidden">
-                                    <a href="/home/HotelDetails?idt=@item.HrId"><img class="img-fluid" src="/img/Hotel_Restaurant/@item.url" alt=""></a>
+                                    <a href="/home/HotelDetails?idt=@item.HrId"><img class="card-img-top" height="300px" src="/img/Hotel_Restaurant/@item.url" alt=""></a>
                                     <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Accomodations</div>
                                 </div>
                                 <div class="p-4 pb-0">
@@ -138,10 +136,10 @@
                 <div class="row g-4">
                     @foreach (var item in res.All)
                     {
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp card border-0" data-wow-delay="0.1s">
                             <div class="property-item rounded overflow-hidden">
                                 <div class="position-relative overflow-hidden">
-                                    <a href="/home/HotelDetails?idt=@item.HrId"><img class="img-fluid" src="/img/Hotel_Restaurant/@item.url" alt=""></a>
+                                    <a href="/home/HotelDetails?idt=@item.HrId"><img class="card-img-top" height="300px" src="/img/Hotel_Restaurant/@item.url" alt=""></a>
                                     <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Accomodations</div>
                                 </div>
                                 <div class="p-4 pb-0">
@@ -159,10 +157,10 @@
                 <div class="row g-4">
                     @foreach (var item in re.All)
                     {
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp card border-0" data-wow-delay="0.1s">
                             <div class="property-item rounded overflow-hidden">
                                 <div class="position-relative overflow-hidden">
-                                    <a href="/home/HotelDetails?idt=@item.HrId"><img class="img-fluid" src="/img/Hotel_Restaurant/@item.url" alt=""></a>
+                                    <a href="/home/HotelDetails?idt=@item.HrId"><img class="card-img-top" height="300px" src="/img/Hotel_Restaurant/@item.url" alt=""></a>
                                     <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Accomodations</div>
                                 </div>
                                 <div class="p-4 pb-0">

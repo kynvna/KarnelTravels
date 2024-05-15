@@ -22,21 +22,6 @@
                                 <strong>
                                     Customer Rating:
                                 </strong>
-                            </p>
-                            <p><strong>Status: </strong>
-                                @if(Model.travelImg.Status == "true")
-                                {
-                                    <span style="color:limegreen">Is currently active</span>
-                                }
-                                else
-                                {
-                                    <span style="color:red">Stopped transporting</span>
-                                }
-                            </p>
-                            <p>
-                                <strong>
-                                    Customer Rating:
-                                </strong>
                                 <i class="fa fa-star" style="color:#8B8000;" aria-hidden="true"></i>
                                 <span class="star-rating">5.0</span>
                                 &nbsp;&nbsp;<span>
@@ -45,8 +30,9 @@
                                         Already tried? Rate this service
                                     </a>
                                 </span>
-
                             </p>
+                            <p>@Html.Raw(@Model.travelImg.Description)</p>
+                            
                         </div>
                     </div>
                 </div>

@@ -64,13 +64,12 @@
                             </select>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="form-group col-md-10">
                             <input class="form-control" type="file" name="FileImg" multiple>
                         </div>
                         <div class="form-group col-md-2">
-                            <label>Activated <span> @Html.CheckBoxFor(Model => Model.Active)</span></label>
+                            Active @Html.CheckBoxFor(Model => Model.Active)
                         </div>
                     </div>
                     <div class="row">
