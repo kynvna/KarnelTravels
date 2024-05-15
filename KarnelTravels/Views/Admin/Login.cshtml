@@ -27,6 +27,7 @@
             <br/><br/><br/>
         </div>
         <form id="login-form" action="/admin/LoginAdmin" method="post">
+            <input type="hidden" name="ReturnUrl" value="@ViewBag.ReturnUrl" />
             <h2 class="login-title">Administrator</h2>
             <div class="form-group">
                 <div class="input-group-icon right">

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Azure;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,11 +14,32 @@ builder.Services.AddDbContext<KarnelTravels.Models.KarnelTravelsContext>(options
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddAuthentication(options =>
+{
+    // This sets the default scheme used for authentication.
+    // It's important this matches with how you intend to sign users in.
+    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+})
+    .AddCookie("Admin", options =>
+    {
+        options.LoginPath = "/Admin/Login";
+        options.AccessDeniedPath = "/Admin/AccessDenied";
+        options.Cookie.Name = "AdminAuthCookie";
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+
+    });
+
+
+
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30); // Set session timeout duration
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true; // Make the session cookie essential
+    options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Ensure HTTPS
+    options.Cookie.SameSite = SameSiteMode.Lax;
 });
 
 var app = builder.Build();
@@ -32,169 +54,10 @@ app.UseRouting();
 app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
-/*app.MapGet("/Admin/", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    
-});*/
 
-
-/*app.MapGet("/Admin/", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/AdminHotelView", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/ViewCreateAdminHotel", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/AdminProfile", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/AdminSpotView", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/AdminTourPackage", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/AdminTourView", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/AdminTransportView", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/FeedbackOnComp", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/FeedbackOnObj", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/Sitemap", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/ViewCreateAdminTransport", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/ViewCreateTourPackage", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/ViewEditAdminHotel", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/ViewEditAdminTourPackage", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});
-app.MapGet("/Admin/ViewEditAdminTransport", context =>
-{
-    var admin_id = context.Session.GetString("admin");
-    if (admin_id == null)
-    {
-        context.Response.Redirect("/home");
-    }
-    return Task.CompletedTask;
-});*/
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-
-/*app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Admin}/{action=Login}/{id?}");*/
 app.Run();
 
