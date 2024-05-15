@@ -62,7 +62,7 @@ namespace KarnelTravels.Controllers
 
 
 
-        public IActionResult AdminTourPackage(int page = 1, int pageSize = 6)
+        public IActionResult AdminTourPackage(int page = 1, int pageSize = 12)
         {
             ITourPackageRepository tourPackageRepository = new ITourPackageRepository(_context);
             GetAllPack getAllPack = new GetAllPack();
@@ -129,7 +129,7 @@ namespace KarnelTravels.Controllers
                             tblImage.Url = fileName;
                             tblImage.Description = "upload";
                             tblImage.ObjectId = newlyCreatedId;
-                            tblImage.UrlObject = model.selectObject;
+                            tblImage.UrlObject = "Tour_Package";
                             _context.TblImageUrls.Add(tblImage);
                             _context.SaveChanges();
 
@@ -295,7 +295,7 @@ namespace KarnelTravels.Controllers
 
             return Redirect("/admin/ViewUploadImageHotel");
         }
-        public IActionResult AdminTransportView(int page = 1, int pageSize = 6)
+        public IActionResult AdminTransportView(int page = 1, int pageSize = 12)
         {
             string a = "Travel";
             ITravelRepository travelRepository = new ITravelRepository(_context);
@@ -520,18 +520,11 @@ namespace KarnelTravels.Controllers
         {
             return View("AdminSpotView");
         }
-        public IActionResult AdminHotelView(int page = 1, int pageSize = 6)
+        public IActionResult AdminHotelView(int page = 1, int pageSize = 12)
         {
             IHotelRepository hotelRepository = new IHotelRepository(_context);
-
-
             string a = "Hotel_Restaurant";
             var all = hotelRepository.GetAllHotel_Res_Re(a, page, pageSize);
-
-
-
-
-
             return View(all);
 
         }

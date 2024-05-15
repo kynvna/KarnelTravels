@@ -23,7 +23,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label>Price<span class="text-muted" style="font-size:10px">- Select price</span></label>
-                            <input  class="form-control" name="TotalPrice">
+                            <input type="number" class="form-control" name="TotalPrice">
                         </div>
                     </div>
                     <div class="row">
@@ -49,22 +49,22 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-md-8">
+                        <div class="form-group col-md-12">
                             <label>Spot <span class="text-muted" style="font-size:10px">- Select departure spot</span></label>
                             <select class="form-control" name="spot">
                                 <option selected>-- Please Select Spot --</option>
                                 @foreach (var item in Model.tblSpots)
                                 {
-                                    <option value="@item.Id">@item.Name</option>
+                                    <option value="@item.Id">@item.Id - @item.Name</option>
                                 }
                             </select>
                         </div>
-                        <div class="form-group col-md-4">
-                            <label>Activated </label>
-                            <p><span>@Html.CheckBoxFor(Model => Model.Active)</span></p>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <input class="form-control" type="file" name="FileImg" multiple>
                         </div>
                     </div>
-                   
                     <br />
                     <div class="row">
                         <div class="form-group col-md-12">

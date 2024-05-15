@@ -43,30 +43,30 @@
                         <div class="form-group col-md-4">
                             <label>Departure <span class="text-muted" style="font-size:10px">- Leave if not changed</span></label>
                             <select class="form-control" name="spot">
-                                <option value="@Model.travel.SpotDeparture" selected>Select Departure Spot</option>
+                                <option value="@Model.travel.SpotDeparture" selected>@Model.travel.SpotDeparture</option>
                                 @foreach (var item in Model.Spots)
                                 {
-                                    <option value="@item.Id">@item.Name</option>
+                                    <option value="@item.Id">@item.Id - @item.Name</option>
                                 }
                             </select>
                         </div>
                         <div class="form-group col-md-4">
                             <label>Arrival <span class="text-muted" style="font-size:10px">- Leave if not changed</span></label>
                             <select class="form-control" name="spot1">
-                                <option value="@Model.travel.SpotDestination" selected>Select Arrival Spot</option>
+                                <option value="@Model.travel.SpotDestination" selected>@Model.travel.SpotDestination</option>
                                 @foreach (var item in Model.Spots)
                                 {
-                                    <option value="@item.Id">@item.Name</option>
+                                    <option value="@item.Id">@item.Id - @item.Name</option>
                                 }
                             </select>
                         </div>
                         <div class="form-group col-md-4">
                             <label>Type <span class="text-muted" style="font-size:10px">- Type of transportss</span></label>
                             <select class="form-control" name="Tran">
-                                <option value="@Model.travel.TransCategoryId" selected>Select Transportation</option>
+                                <option value="@Model.travel.TransCategoryId" selected>@Model.travel.TransCategoryId</option>
                                 @foreach (var item in Model.Transportations)
                                 {
-                                    <option value="@item.CatId">@item.CatName</option>
+                                    <option value="@item.CatId">@item.CatId - @item.CatName</option>
                                 }
                             </select>
                         </div>
@@ -108,7 +108,7 @@
                     <div class="row">
                         <div class="form-group col-md-12">
                             <button name="btnSave" id="btnSave" class="btn btn-success" type="submit">Submit</button>
-                            <a asp-action="AdminTransportView" class="btn btn-danger" asp-controller="Admin">Go Back</a>
+                            <a class="btn btn-danger" href="javascript:history.back()">Go Back</a>
                         </div>
                     </div>
                    

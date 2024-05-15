@@ -3,10 +3,9 @@
     ViewBag.Title = "FormCkeditor";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<a asp-action="CreateTouristPlace" asp-controller="Admin" class="btn btn-primary">Create New Place</a>
+<br/>
 <div class="ibox">
-    <div class="ibox-head">
-        <h3 class="ibox-title">Sight List</h3>
-    </div>
     <div class="ibox-body">
         <div class="card-group">
             @if (Model != null && Model.Any())

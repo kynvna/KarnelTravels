@@ -187,8 +187,8 @@
     <Folder Include="wwwroot\image\tblTour_Packages\" />
     <Folder Include="wwwroot\img\Hotel_Restaurant\" />
     <Folder Include="wwwroot\img\TblTourist_Place\" />
-    <Folder Include="wwwroot\img\tblTour_Packages\" />
     <Folder Include="wwwroot\img\Tourist_Place\" />
+    <Folder Include="wwwroot\img\Tour_Package\" />
     <Folder Include="wwwroot\img\Travel\" />
   </ItemGroup>
 
