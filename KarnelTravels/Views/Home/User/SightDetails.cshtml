@@ -39,8 +39,15 @@
                             <p>@Model.Description</p>
                         </div>
                     </div>
+                    @foreach (var imageUrl in Model.ImageUrl)
+                    {
+                        <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
+                            <div class="card h-100">
+                                <img class="card-img-top" src="~/img/TblTourist_Place/@Url.Content(imageUrl)" height="200px" width="auto" alt="">
+                            </div>
+                        </div>
+                    }
                 </div>
-                
             </div>
         </div>
     </div>

@@ -663,8 +663,6 @@ namespace KarnelTravels.Controllers
 
             return View("User/AdvancedSearch", viewModel);
         }
-
-
     }
 }
 

@@ -8,17 +8,13 @@
 
   <ItemGroup>
     <None Include="Views\Admin\AdminHotelView.cshtml" />
-    <None Include="Views\Admin\AdminProfile.cshtml" />
-    <None Include="Views\Admin\AdminTourView.cshtml" />
     <None Include="Views\Admin\AdminTransportView.cshtml" />
     <None Include="Views\Admin\Login.cshtml" />
-    <None Include="Views\Admin\Sitemap.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
     <None Include="Views\Home\Privacy.cshtml" />
     <None Include="Views\Home\Restaurant.cshtml" />
     <None Include="Views\Home\User\AboutUsView.cshtml" />
     <None Include="Views\Home\User\NewsView.cshtml" />
-    <None Include="Views\Home\User\ProductView.cshtml" />
     <None Include="Views\Home\User\TravellingHotelView.cshtml" />
     <None Include="Views\Home\User\TravellingPackageView.cshtml" />
     <None Include="Views\Home\User\TravellingSightView.cshtml" />

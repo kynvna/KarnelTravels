@@ -49,7 +49,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li class="dropdown-divider"></li>
-                            <a class="dropdown-item" asp-action="Index" asp-controller="Home"><i class="fa fa-power-off"></i>Logout</a>
+                            <a class="dropdown-item" asp-action="Logout" asp-controller="Admin"><i class="fa fa-power-off"></i>Logout</a>
                         </ul>
                     </li>
                 </ul>
@@ -77,22 +77,25 @@
                         </a>
                         <ul class="nav-2-level collapse">
                             <li>
-                                <a asp-action="AdminTransportView" asp-controller="Admin">Transportations <strong style="color:greenyellow">(DONE)</strong></a>
+                                <a asp-action="AdminTransportView" asp-controller="Admin">Transportations</a>
                             </li>
                             <li>
-                                <a asp-action="AdminHotelView" asp-controller="Admin">Hotels & Resorts <strong style="color:greenyellow">(DONE)</strong></a>
+                                <a asp-action="AdminHotelView" asp-controller="Admin">Hotels & Resorts</a>
                             </li>
                             <li>
-                                <a asp-action="AdminTouristPlace" asp-controller="Admin">Sights <strong style="color:greenyellow">(DONE)</strong></a>
+                                <a asp-action="AdminTouristPlace" asp-controller="Admin">Sights</a>
                             </li>
                             <li>
-                                <a asp-action="AdminSpot" asp-controller="Admin">Spots <strong style="color:greenyellow">(DONE)</strong></a>
+                                <a asp-action="AdminSpot" asp-controller="Admin">Spots</a>
                             </li>
                             <li>
-                                <a asp-action="AdminTourPackage" asp-controller="Admin">Package <strong style="color:greenyellow">(DONE)</strong></a>
+                                <a asp-action="AdminTourPackage" asp-controller="Admin">Package</a>
                             </li>
                             <li>
-                                <a asp-action="AdminNewsView" asp-controller="Admin">News <strong style="color:greenyellow">(DONE)</strong></a>
+                                <a asp-action="AdminNewsView" asp-controller="Admin">News</a>
+                            </li>
+                            <li>
+                                <a asp-action="GetChart" asp-controller="Admin">Admin Profile</a>
                             </li>
                         </ul>
                     </li>
@@ -103,7 +106,7 @@
                         </a>
                         <ul class="nav-2-level collapse">
                             <li>
-                                <a asp-action="GetAllFeedBacks" asp-controller="Admin">All Feedbacks <strong style="color:greenyellow">(DONE)</strong></a>
+                                <a asp-action="GetAllFeedBacks" asp-controller="Admin">All Feedbacks</a>
                             </li>
                         </ul>
                     </li>

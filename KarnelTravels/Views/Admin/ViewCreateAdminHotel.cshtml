@@ -3,6 +3,7 @@
 
 }
 @model GetHotel_Res_Re;
+<!--View to Create Hotels / Resorts / Restaurants-->
 <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
@@ -16,7 +17,7 @@
                                     - Please input name
                                 </span>
                             </label>
-                            <input type="text" class="form-control" name="Name">
+                            <input type="text" class="form-control" name="Name"/>
                         </div>
                         <div class="form-group col-md-6">
                             <label>
@@ -35,7 +36,6 @@
                                 </span>
                             </label>
                             <select class="form-control" name="spot">
-                                <option selected>-- Please select spot --</option>
                                 @foreach (var item in Model.tblSpots)
                                 {
                                     <option value="@item.Id">@item.Id - @item.Name</option>
@@ -49,7 +49,6 @@
                                 </span>
                             </label>
                             <select class="form-control" id="hotelDropdown" name="selectObject">
-                                <option selected>-- Please select spot --</option>
                                 <option value="Hotel_Restaurant">Hotel_Restaurant</option>
                             </select>
                         </div>
@@ -60,7 +59,6 @@
                                 </span>
                             </label>
                             <select class="form-control" name="catid">
-                                <option selected>-- Select category --</option>
                                 @foreach (var item in Model.HrCategories)
                                 {
                                     <option value="@item.CatId">@item.CatId - @item.CatName</option>

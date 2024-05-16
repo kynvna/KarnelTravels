@@ -10,9 +10,16 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using System.Security.AccessControl;
 using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication;
+using System.Security.Claims;
+using Newtonsoft.Json;
+using static KarnelTravels.Models.Chart;
+using Microsoft.Data.SqlClient;
 
 namespace KarnelTravels.Controllers
 {
+    [Authorize(AuthenticationSchemes = "Admin")]
     public class AdminController : Controller
     {
         private readonly IWebHostEnvironment _environment;
@@ -35,31 +42,67 @@ namespace KarnelTravels.Controllers
         {
             return View("Sitemap");
         }
-        public IActionResult Login()
+        
+        [AllowAnonymous]
+        public IActionResult Login(string returnUrl = null)
         {
+            ViewBag.ReturnUrl = returnUrl;
             return View();
         }
+        //-----------Logout-----------------------------//
 
-        public IActionResult LoginAdmin(string Username, string Password)
+        public async Task<IActionResult> Logout()
+        {
+            // Sign out the user and clear the authentication cookie
+            await HttpContext.SignOutAsync("Admin"); // Use the same authentication scheme as you used during login
+
+            // Optionally redirect to the login page or home page after successful logout
+            return RedirectToAction("Index", "Home");
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<IActionResult> LoginAdmin(string Username, string Password, bool RememberLogin = false, string returnUrl = null)
         {
             AdminLogin adminLogin = new AdminLogin(_context);
-            var user = adminLogin.Users();
-            foreach (var item in user)
+            var users = adminLogin.Users();
+
+            foreach (var item in users)
             {
-                string id = item.Id.ToString();
                 if (item.UserName == Username && item.PassWord == Password)
                 {
-                    HttpContext.Session.SetString("admin", id);
-                    return Redirect("/admin/GetAllFeedBacks");
-                }
-                else
-                {
-                    return Redirect("/admin/login");
+                    // Create the identity and principal for the signed-in user
+                    var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, Username) // Using username as the primary claim
+            };
+
+                    var identity = new ClaimsIdentity(claims, "Admin");
+                    var principal = new ClaimsPrincipal(identity);
+
+                    // Sign in the user with the specified authentication scheme
+                    await HttpContext.SignInAsync("Admin", principal, new AuthenticationProperties()
+                    {
+                        IsPersistent = RememberLogin // Whether the authentication session should persist across browser sessions
+                    });
+
+                    // Optional: Store additional user data in session if necessary
+                    HttpContext.Session.SetString("currentUserName", Username);
+
+                    if (Url.IsLocalUrl(returnUrl))
+                    {
+                        return Redirect(returnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("GetChart", "Admin");
+                    }
                 }
             }
-            return View();
-        }
 
+            // If no user is found or credentials are incorrect, redirect to the login page
+            return RedirectToAction("Login", "Admin");
+        }
 
 
         public IActionResult AdminTourPackage(int page = 1, int pageSize = 12)
@@ -231,7 +274,7 @@ namespace KarnelTravels.Controllers
             }
 
             // Build deletion path
-            string deletePath = Path.Combine(_env.WebRootPath, "img", "Hotel_Restaurant", image.Url);
+            string deletePath = Path.Combine(_env.WebRootPath, "img", "Tour_Package", image.Url);
 
             try
             {
@@ -1565,7 +1608,6 @@ namespace KarnelTravels.Controllers
 
 
 
-
         [HttpGet]
         public IActionResult EditTouristPlace(int id)
         {
@@ -1573,20 +1615,18 @@ namespace KarnelTravels.Controllers
             {
                 var spots = _context.TblSpots.ToList();
                 ViewBag.Spots = spots;
-
                 var tour = _context.TblTouristPlaces.FirstOrDefault(s => s.Id == id);
 
                 if (tour != null)
                 {
-                    var tours = new TblTouristPlace()
-                    {
-                        Name = tour.Name,
-                        Id = tour.Id,
-                        Status = tour.Status,
-                        SportId = tour.SportId,
-                        Description = tour.Description,
-                    };
-                    return View(tours);
+                    var imageUrls = _context.TblImageUrls
+                .Where(i => i.ObjectId == id && i.UrlObject == "TblTourist_Place")
+                .Select(i => i.Url) // Lấy ra chỉ định một trường (URL)
+                .ToList();
+
+                    // Truyền danh sách hình ảnh và đối tượng địa điểm du lịch đến view
+                    ViewBag.ImageUrls = imageUrls;
+                    return View(tour);
                 }
                 else
                 {
@@ -1600,6 +1640,8 @@ namespace KarnelTravels.Controllers
                 return RedirectToAction("AdminTouristPlace");
             }
         }
+
+
 
         [HttpPost]
         public IActionResult EditTouristPlace(TblTouristPlace model, List<IFormFile> files)
@@ -1713,6 +1755,37 @@ namespace KarnelTravels.Controllers
 
             return RedirectToAction("AdminTouristPlace");
         }
+        // This return the admin profile page - same functions as GetAllFeedBaks + Chart 
+        public IActionResult GetChart(string sortOrder = "date_desc")
+        {
+            List<DataPoint> dataPoints = new List<DataPoint>();
+            int Hotel_Restaurant = _context.TblFeedbacks.Where(t => t.FeedbackObject == "Hotel_Restaurant").Count();
+            int Travel = _context.TblFeedbacks.Where(t => t.FeedbackObject == "Travel").Count();
+            int Tourist_Place = _context.TblFeedbacks.Where(t => t.FeedbackObject == "Tourist_Place").Count();
+            int Tour_Package = _context.TblFeedbacks.Where(t => t.FeedbackObject == "Tour_Package").Count();
+            dataPoints.Add(new DataPoint("Hotel_Restaurant", Hotel_Restaurant));
+            dataPoints.Add(new DataPoint("Travel", Travel));
+            dataPoints.Add(new DataPoint("Tourist_Place", Tourist_Place));
+            dataPoints.Add(new DataPoint("Tour_Package", Tour_Package));
+            ViewBag.TotalFeedbacks = JsonConvert.SerializeObject(Hotel_Restaurant + Travel + Tourist_Place + Tour_Package);
+            ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
+            var feedbacks = new List<TblFeedback>();
+            if (sortOrder == "date_desc")
+                feedbacks = _context.TblFeedbacks.OrderByDescending(f => f.Date).ToList();
+            if (sortOrder == "date_asc")
+                feedbacks = _context.TblFeedbacks.OrderBy(f => f.Date).ToList();
+            TempData["AllFeedbacks"] = feedbacks.Count;
+            TempData["UnreadFeedbacks"] = _context.TblFeedbacks.Count(f => f.IsRead == 0);
+            TempData["InActiveFeedbacks"] = _context.TblFeedbacks.Count(f => f.Status == "InActive");
+            GetObjectname(feedbacks);
+            // Check if the request is for partial view only (this could be a parameter or header check)
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            {
+                return PartialView("_FeedbackTableRows", feedbacks);
+            }
+            return View(feedbacks);
+        }
+
 
     }
 }

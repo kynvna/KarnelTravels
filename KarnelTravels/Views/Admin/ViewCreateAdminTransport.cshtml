@@ -3,6 +3,7 @@
 
 }
 @model GetCar_Plane_Train;
+<!--This View Allow Administrator to create a new mean of transport-->
 <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
@@ -36,7 +37,6 @@
                         <div class="form-group col-md-4">
                             <label>Departure <span class="text-muted" style="font-size:10px">- Select departure spot</span></label>
                             <select class="form-control" name="spot">
-                                <option selected>Select Departure Spot</option>
                                 @foreach (var item in Model.Spots)
                                 {
                                     <option value="@item.Id">@item.Id - @item.Name</option>
@@ -46,7 +46,6 @@
                         <div class="form-group col-md-4">
                             <label>Arrival <span class="text-muted" style="font-size:10px">- Select arrival spot</span></label>
                             <select class="form-control" name="spot1">
-                                <option selected>Select Arrival Spot</option>
                                 @foreach (var item in Model.Spots)
                                 {
                                     <option value="@item.Id">@item.Id - @item.Name</option>
@@ -56,7 +55,6 @@
                         <div class="form-group col-md-4">
                             <label>Type <span class="text-muted" style="font-size:10px">- Select type of transport </span></label>
                             <select class="form-control" name="Tran">
-                                <option selected>Select Transportation</option>
                                 @foreach (var item in Model.Transportations)
                                 {
                                     <option value="@item.CatId">@item.CatId - @item.CatName</option>
@@ -90,6 +88,7 @@
                 </form>
             </div>
             <script src="~/ckeditor/ckeditor.js" type="text/javascript"></script>
+            <!--Script Section for rendering data-->
             @section scripts {
 
                 <script>
@@ -129,7 +128,9 @@
                     }
                 </script>
             }
+            <!--End of script section-->
         </div>
     </div>
     <div class="col-md-3"></div>
 </div>
+<!--This View Allow Administrator to create a new mean of transport-->

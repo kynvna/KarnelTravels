@@ -3,7 +3,7 @@
     ViewBag.Title = "FormCkeditor";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
+<!--This is the view to edit sight (or tourist-place) -->
 <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
@@ -30,7 +30,7 @@
                         <div class="col-sm-4 form-group">
                             <label>Select spot</label>
                             <select class="form-control" asp-for="SportId" aria-describedby="basic-addon1" required>
-                                <option selected>Select your spot</option>
+                                <option selected asp-for="SportId">Select your spot</option>
                                 @foreach (var spot in ViewBag.Spots)
                                 {
                                     <option value="@spot.Id">@spot.Name</option>
@@ -45,12 +45,38 @@
                             <span asp-validation-for="Description" class="text-danger"></span>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-6 form-group">
-                            <label>Image</label>
-                            <input type="file" id="files" name="files" class="form-control" multiple />
+                    @if (ViewBag.ImageUrls != null && ViewBag.ImageUrls.Count > 0)
+                    {
+                        <div class="row">
+                            <div class="from-group col-md-12">
+                                <label class="form-lable">Existing Images</label>
+                                <div class="row">
+                                    @foreach (var imageUrl in ViewBag.ImageUrls)
+                                    {
+                                        <div class="col-lg-3 mb-3">
+                                            <div class="card">
+                                                <img src="~/img/TblTourist_Place/@imageUrl" class="card-img-top" height="150px" alt="Existing Image" />
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-6 form-group">
+                    }
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label>Newly chosen photos</label>
+                            <div id="imagePreview"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="imageUpload">Upload New Images</label>
+                            <input type="file" class="form-control-file" id="imageUpload" name="files" multiple>
+                        </div>
+                    </div>                   
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
                             <label class="form-lable">Status</label>
                             <select class="form-control" asp-for="Status" aria-describedby="basic-addon1" required>
                                 <option value="ACTIVE">Active</option>
@@ -70,3 +96,45 @@
     </div>
     <div class="col-md-3"></div>
 </div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            console.log("Script loaded and event bound.");
+            var selectedNewsObject = ""; // Initialize variable to store the selected News Object
+
+
+
+            // Handle image file changes
+            $('#imageUpload').on('change', function () {
+                var files = this.files;
+                var fileDescriptionsDiv = $('#fileDescriptions');
+                var imagePreviewDiv = $('#imagePreview');
+
+                // Clear existing previews and description inputs
+                fileDescriptionsDiv.empty();
+                imagePreviewDiv.empty();
+
+                for (var i = 0; i < files.length; i++) {
+                    var file = files[i];
+
+
+
+                    // Ensure the file is an image for preview
+                    if (file.type.startsWith('image/')) {
+                        var reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            var imgElement = $('<img>', {
+                                src: e.target.result,
+                                style: 'width: 100px; height: 100px; margin-right: 5px;'
+                            });
+                            imagePreviewDiv.append(imgElement);
+                        };
+
+                        reader.readAsDataURL(file); // Read the file for preview
+                    }
+                }
+            });
+        });
+    </script>
+}

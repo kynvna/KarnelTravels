@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<KarnelTravels.Models.TblFeedback>
 
+<!--This is the view to show Table Rows of Feedbacks as the filter is loaded -->
 @foreach (var item in Model)
 {
     <tr class="feedback-row @(item.IsRead == 1 ? "viewed" : "not-read")" data-feedbackId="@item.FeedbackId">

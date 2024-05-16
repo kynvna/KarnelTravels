@@ -4,7 +4,7 @@
 
 }
 @model GetCar_Plane_Train;
-
+<!--This View allow the administrator to edit currently active means of transport -->
 <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
@@ -121,7 +121,9 @@
 <script src="~/ckeditor/ckeditor.js" type="text/javascript"></script>
 
 @section scripts {
+    
     <script>
+        //Scripts to show current images of this object
         CKEDITOR.replace('editor');
         //window.onload = function () {
 
@@ -170,7 +172,7 @@
                 }
             });
         });
-
+        // Script Sections for deleting images on-page
         function deleteImage(imageId) {
             const imageElement = $("#hotelImage_" + imageId);
             const deletebtn = $("#deletebtn");
@@ -198,3 +200,4 @@
         }
     </script>
 }
+<!--This View allow the administrator to edit currently active means of transport -->

@@ -3,6 +3,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
+<!--This is the view to show all tour packages to the admin -->
 @model GetAllPack;
 <div>
     <a class="btn btn-info" href="/admin/ViewCreateTourPackage">Create new tour package</a>
@@ -10,7 +11,7 @@
 <br/>
 <div class="ibox">
     <div class="ibox-head">
-        <h3 class="ibox-title">Hotel/Resort/Restaurant List</h3>
+        <h3 class="ibox-title">Tour Package List</h3>
     </div>
     <div class="ibox-body">
         <div class="card-group">
@@ -19,7 +20,7 @@
 
                 <div class="col-md-2 mt-1">
                     <div class="card h-100">
-                        <img class="card-top-img" src="~/img/tblTour_Packages/@item.url" height="200px" width="auto" />
+                        <img class="card-top-img" src="~/img/Tour_Package/@item.url" height="200px" width="auto" />
                         <div class="card-body">
                             <h5 class="card-title"><span><strong>Entity Name: </strong></span></h5>
                             <h6 class="card-title"><span style="color:navy">@item.Name</span></h6>

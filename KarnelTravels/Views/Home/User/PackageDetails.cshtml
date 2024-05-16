@@ -17,12 +17,12 @@
                             <a class="d-block h5 mb-2">Special Travelling Package</a><span><h5 class="text-primary mb-3">@Model.packageImg.Name</h5></span>
                             <p>
                                 <strong>
-                                    Customer Rating: 
+                                    Customer Rating:
                                 </strong>
-                                <i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i> 5.0
-                                &nbsp;&nbsp;<span>
+                                <i class="fa fa-star" style="color:#8B8000" aria-hidden="true"></i>
+                                <span class="star-rating">5.0</span>
                                     <a class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#commentModal"
-                                       data-feedback-object="Tour_Packages" data-object-id=@Model.packageImg.PackageId>
+                                       data-feedback-object="Tour_Package" data-object-id=@Model.packageImg.PackageId>
                                         Already tried? Rate this service
                                     </a>
                                 </span>
@@ -43,7 +43,7 @@
                     {
                         <div class="col-lg-4 col-md-4 wow fadeInUp" style="height:100%" data-wow-delay="0.5s">
                             <div class="card h-100">
-                                <img class="card-img-top" src="/img/tblTour_Packages/@item.Url" height="200px" width="auto" alt="">
+                                <img class="card-img-top" src="/img/Tour_Package/@item.Url" height="200px" width="auto" alt="">
                             </div>
                         </div>
                     }
@@ -65,7 +65,7 @@
     <script>
         $(document).ready(function () {
             var travelId = '@Model.packageImg.PackageId'; // Get the Travel ID from the model
-            var object = "Tour_Packages";
+            var object = "Tour_Package";
             $.ajax({
                 url: '@Url.Action("GetStarRating", "Home")', // Ensure the controller and action names are correct
                 type: 'GET',

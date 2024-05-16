@@ -6,6 +6,7 @@
     var q = ViewBag.pack as TblTourPackage;
     
 }
+<!--View to Edit Tour Packages-->
 @model GetHotel_Res_Re;
 <div class="row">
     
@@ -83,7 +84,7 @@
                         {
                             <div class="col-md-4">
                                 <div class="card h-100">
-                                    <img style="object-fit:cover;" height="200px" width="auto" id="hotelImage_@item.Id" src="~/img/tblTour_Packages/@item.Url" class="small-image" alt="">
+                                    <img style="object-fit:cover;" height="200px" width="auto" id="hotelImage_@item.Id" src="~/img/Tour_Package/@item.Url" class="small-image" alt="">
                                     <button id="deletebtn" class="btn btn-warning btn-sm delete-image-btn" data-image-id="@item.Id">
                                         <i class="fa fa-minus"></i> Delete
                                     </button>

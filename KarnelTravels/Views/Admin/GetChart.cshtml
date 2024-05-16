@@ -1,0 +1,295 @@
+﻿@model IEnumerable<KarnelTravels.Models.TblFeedback>
+﻿@{
+
+	ViewData["Title"] = "Admin Portal";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<!-- This is the admin profile, in this page present the overall feedbacks and a piechart to calculate number of feedbacks made.-->
+<!DOCTYPE HTML>
+<html>
+<head>
+	
+</head>
+<body>
+    <div class="row">
+        <div class="col-lg-3 col-md-4">
+            <div class="ibox">
+                <div class="ibox-body text-center">
+                    <div class="m-t-20">
+                        <img class="img-circle" src="/assets/img/users/u3.jpg" />
+                    </div>
+                    <h5 class="font-strong m-b-10 m-t-10">Administrator</h5>
+                    <div class="m-b-20 text-muted">Web Developer</div>
+                    <div class="profile-social m-b-20">
+                        <a href="javascript:;"><i class="fa fa-twitter"></i></a>
+                        <a href="javascript:;"><i class="fa fa-facebook"></i></a>
+                        <a href="javascript:;"><i class="fa fa-pinterest"></i></a>
+                        <a href="javascript:;"><i class="fa fa-dribbble"></i></a>
+                    </div>
+                    <div>
+                        <button class="btn btn-info btn-rounded m-b-5"><i class="fa fa-plus"></i> Follow</button>
+                        <button class="btn btn-default btn-rounded m-b-5">Message</button>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-body">
+                    <div class="row text-center m-b-20">
+                        <div class="col-4">
+                            <div class="font-24 profile-stat-count">140</div>
+                            <div class="text-muted">Followers</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="font-24 profile-stat-count">$780</div>
+                            <div class="text-muted">Sales</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="font-24 profile-stat-count">15</div>
+                            <div class="text-muted">Projects</div>
+                        </div>
+                    </div>
+                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 col-md-8">
+            <div class="ibox">
+                <div class="ibox-body">
+                    <ul class="nav nav-tabs tabs-line">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#tab-1" data-toggle="tab"><i class="ti-bar-chart"></i> Feedback QuickScreen</a>
+                        </li>
+                        <li class="nav-item">
+       
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab-1">
+                            <div class="row">
+                                <div class="col-md-8 form-group">
+                                    <select id="feedbackFilter" class="form-control" onchange="filterFeedbacks()">
+                                        <option value="All">All</option>
+                                        <option value="Company">Company</option>
+                                        <option value="Hotel_Restaurant">Hotel_Restaurant</option>
+                                        <option value="Travel">Travel</option>
+                                        <option value="Tourist_Place">Tourist_Place</option>
+                                        <option value="Tour_Package">Tour_Package</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <a href="#" id="loadUnreadFeedbacks" class="btn btn-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-arrow-down-fill" viewBox="0 0 16 16">
+                                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zm.192 8.159 6.57-4.027L8 9.586l1.239-.757.367.225A4.49 4.49 0 0 0 8 12.5c0 .526.09 1.03.256 1.5H2a2 2 0 0 1-1.808-1.144M16 4.697v4.974A4.5 4.5 0 0 0 12.5 8a4.5 4.5 0 0 0-1.965.45l-.338-.207z" />
+                                            <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.354-1.646a.5.5 0 0 1-.722-.016l-1.149-1.25a.5.5 0 1 1 .737-.676l.28.305V11a.5.5 0 0 1 1 0v1.793l.396-.397a.5.5 0 0 1 .708.708z" />
+                                        </svg>
+                                        Unread
+                                        @if (TempData["UnreadFeedbacks"] != null && TempData["AllFeedbacks"] != null)
+                                        {
+                                            var unreadFeedbacks = Convert.ToInt32(TempData["UnreadFeedbacks"]);
+                                            var allFeedbacks = Convert.ToInt32(TempData["AllFeedbacks"]);
+                                            @($"{unreadFeedbacks}/{allFeedbacks}")
+                                        }
+                                        else
+                                        {
+                                            @:0/0
+                                        }
+                                    </a>
+
+                                    <a href="#" id="loadInactiveFeedbacks" class="btn btn-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ban-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M2.71 12.584q.328.378.706.707l9.875-9.875a7 7 0 0 0-.707-.707l-9.875 9.875Z" />
+                                        </svg>
+                                        <i class="bi bi-ban-fill"></i>InActive
+                                        @if (TempData["InActiveFeedbacks"] != null)
+                                        {
+                                            var inactiveFeedbacks = Convert.ToInt32(TempData["InActiveFeedbacks"]);
+                                            @inactiveFeedbacks   <!-- This will output the number -->
+                                        }
+                                        else
+                                        {
+                                            @:0  <!-- This will output 0 if TempData is null -->
+                                        }
+                                    </a>
+                                </div>
+
+                            </div>
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Feedback Category</th>
+                                        <th>Feedback For</th>
+                                        <th>Customer</th>
+                                        <th>@Html.DisplayNameFor(model => model.Feedback)</th>
+                                        <th>@Html.DisplayNameFor(model => model.Rating)</th>
+                                        @*  <th>@Html.DisplayNameFor(model => model.Status)</th> *@
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Date)
+                                            <a href="@Url.Action("GetAllFeedBacks", new { sortOrder = "date_asc" })" class="sort-icon"><i class="fa fa-arrow-up"></i></a>
+                                            <a href="@Url.Action("GetAllFeedBacks", new { sortOrder = "date_desc" })" class="sort-icon"><i class="fa fa-arrow-down"></i></a>
+                                        </th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="feedbackTableBody">
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr class="feedback-row @(item.IsRead == 1 ? "viewed" : "not-read")" data-feedbackId="@item.FeedbackId">
+                                            <td>@Html.DisplayFor(modelItem => item.FeedbackObject)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.ObjectName)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.CustomerId)</td>
+                                            <td class="truncated-text feedback-text" title="@Html.DisplayFor(modelItem => item.Feedback)">
+                                                @Html.DisplayFor(modelItem => item.Feedback)
+                                            </td>
+                                            <td>@Html.DisplayFor(modelItem => item.Rating)</td>
+                                            @*  <td>@Html.DisplayFor(modelItem => item.Status)</td> *@
+                                            <td>@Html.DisplayFor(modelItem => item.Date)</td>
+                                            <td>
+                                                <div class="btn-group" role="group">
+                                                    @if (item.Status == "Active")
+                                                    {
+                                                        <button class="btn btn-secondary" disabled style="width: 100px;">Active</button>
+                                                    }
+                                                    else
+                                                    {
+                                                        <form asp-action="ActivateFeedback" method="post" style="display:inline">
+                                                            <input type="hidden" name="id" value="@item.FeedbackId" />
+                                                            <input type="submit" value="Activate" class="btn btn-success" style="width: 100px;" />
+                                                        </form>
+                                                    }
+                                                    <a asp-action="DeleteFeedback" asp-route-id="@item.FeedbackId" class="btn btn-danger" style="width: 100px;">Delete</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    const feedbackTextElements = document.querySelectorAll('.feedback-text');
+
+                                    feedbackTextElements.forEach(element => {
+                                        element.addEventListener('mouseenter', function () {
+                                            const row = this.closest('tr');
+                                            const feedbackId = row.getAttribute('data-feedbackid'); // Using getAttribute to access the data attribute
+                                            console.log("Feedback ID from data attribute:", feedbackId); // Log to see the value
+
+                                            if (!row.classList.contains('viewed') && feedbackId) {
+                                                fetch('/Admin/MarkFeedbackAsRead?feedbackId=' + feedbackId, {
+                                                    method: 'POST'
+                                                })
+                                                    .then(response => response.json())
+                                                    .then(data => {
+                                                        if (data.success) {
+                                                            row.classList.add('viewed'); // Mark the row as read
+                                                            row.classList.remove('not-read'); // Remove bold style permanently
+                                                        }
+                                                    })
+                                                    .catch(error => console.error('Error:', error)); // Error handling for fetch
+                                            }
+                                        });
+                                    });
+
+                                    // Filter functionality
+                                    document.getElementById("feedbackFilter").addEventListener('change', function () {
+                                        var selectedValue = this.value;
+                                        var xhr = new XMLHttpRequest();
+                                        xhr.open("GET", "/admin/GetFilteredFeedbacks?category=" + selectedValue, true);
+                                        xhr.onload = function () {
+                                            if (xhr.status === 200) {
+                                                document.getElementById("feedbackTableBody").innerHTML = xhr.responseText;
+                                            } else {
+                                                console.error("Failed to filter feedbacks: ", xhr.status, xhr.responseText);
+                                            }
+                                        };
+                                        xhr.onerror = function () {
+                                            console.error("Error during the AJAX request.");
+                                        };
+                                        xhr.send();
+                                    });
+                                });
+
+                                document.getElementById('loadUnreadFeedbacks').addEventListener('click', function (event) {
+                                    event.preventDefault();  // Prevent the default anchor behavior
+
+                                    const url = '@Url.Action("UnreadFeedbacks", "Admin")';  // Generate the URL for the AJAX request
+
+                                    fetch(url, {
+                                        method: 'GET',
+                                        headers: {
+                                            'Accept': 'application/json',
+                                            'Content-Type': 'application/json'
+                                        }
+                                    })
+                                        .then(response => {
+                                            if (!response.ok) {
+                                                throw new Error('Network response was not ok');
+                                            }
+                                            return response.text();
+                                        })
+                                        .then(html => {
+                                            document.getElementById('feedbackTableBody').innerHTML = html;
+                                        })
+                                        .catch(error => console.error('Error fetching unread feedbacks:', error));
+                                });
+
+                                document.getElementById('loadInactiveFeedbacks').addEventListener('click', function (event) {
+                                    event.preventDefault();  // Prevent the default anchor behavior
+
+                                    const url = '@Url.Action("InactiveFeedbacks", "Admin")';  // Generate the URL for the AJAX request
+
+                                    fetch(url, {
+                                        method: 'GET',
+                                        headers: {
+                                            'Accept': 'application/json',
+                                            'Content-Type': 'application/json'
+                                        }
+                                    })
+                                        .then(response => {
+                                            if (!response.ok) {
+                                                throw new Error('Network response was not ok');
+                                            }
+                                            return response.text();
+                                        })
+                                        .then(html => {
+                                            document.getElementById('feedbackTableBody').innerHTML = html;
+                                        })
+                                        .catch(error => console.error('Error fetching unread feedbacks:', error));
+                                });
+
+                            </script>
+                        </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                theme: "light2", // "light1", "light2", "dark1", "dark2"
+                exportEnabled: true,
+                animationEnabled: true,
+                title: {
+                    text: "Total Feedbacks : @ViewBag.TotalFeedbacks",
+                    fontSize: 21
+                },
+                data: [{
+                    type: "pie",
+                    startAngle: 160,
+                    toolTipContent: "<b>{label}</b>: {y}",
+                    indexLabel: "{label} - {y}",
+                    dataPoints: @Html.Raw(ViewBag.DataPoints)
+                                                            }]
+            });
+            chart.render();
+        }
+    </script>
+	<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+	<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+	<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+</body>
+</html>  
